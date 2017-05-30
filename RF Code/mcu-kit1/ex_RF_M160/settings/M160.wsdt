@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Workspace>
+  <ConfigDictionary>
+    
+  <CurrentConfigs><Project>M160/debug</Project></CurrentConfigs></ConfigDictionary>
+  <Desktop>
+    <Static>
+      <Workspace>
+        <ColumnWidths>
+          
+          
+          
+          
+        <Column0>246</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
+      </Workspace>
+      <Build>
+        
+        
+        
+        
+      <ColumnWidth0>20</ColumnWidth0><ColumnWidth1>904</ColumnWidth1><ColumnWidth2>241</ColumnWidth2><ColumnWidth3>60</ColumnWidth3></Build>
+      <TerminalIO/>
+    <Debug-Log><ColumnWidth0>26</ColumnWidth0><ColumnWidth1>893</ColumnWidth1></Debug-Log></Static>
+    <Windows>
+      
+      
+    <Wnd0>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-5004-2733</Identity>
+            <TabName>Workspace</TabName>
+            <Factory>Workspace</Factory>
+            <Session>
+              
+            <NodeDict><ExpandedNode>M160</ExpandedNode><ExpandedNode>M160/Output</ExpandedNode><ExpandedNode>M160/application</ExpandedNode><ExpandedNode>M160/application/ex.c</ExpandedNode><ExpandedNode>M160/basic rf</ExpandedNode><ExpandedNode>M160/common</ExpandedNode><ExpandedNode>M160/targets</ExpandedNode><ExpandedNode>M160/utilities</ExpandedNode></NodeDict></Session>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd0><Wnd1>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-5820-2922</Identity>
+            <TabName>Build</TabName>
+            <Factory>Build</Factory>
+            <Session/>
+          </Tab>
+        <Tab><Identity>TabID-1835-248</Identity><TabName>Debug Log</TabName><Factory>Debug-Log</Factory><Session/></Tab></Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd1></Windows>
+    <Editor>
+      
+      
+      
+      
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\ex.c</Filename><XPos>0</XPos><YPos>75</YPos><SelStart>2951</SelStart><SelEnd>2951</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\components\targets\mcu-kit1\hal_board.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>693</SelStart><SelEnd>693</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\components\targets\mcu-kit1\hal_board.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd></Tab><ActiveTab>2</ActiveTab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Positions>
+      
+      
+      
+      
+      
+    <Top><Row0><Sizes><Toolbar-05ea1fb0><key>iaridepm.enu1</key></Toolbar-05ea1fb0></Sizes></Row0></Top><Left><Row0><Sizes><Wnd0><Rect><Top>-2</Top><Left>-2</Left><Bottom>802</Bottom><Right>337</Right><x>-2</x><y>-2</y><xscreen>904</xscreen><yscreen>143</yscreen><sizeHorzCX>943633</sizeHorzCX><sizeHorzCY>144737</sizeHorzCY><sizeVertCX>353862</sizeVertCX><sizeVertCY>813765</sizeVertCY></Rect></Wnd0></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd1><Rect><Top>-2</Top><Left>-2</Left><Bottom>141</Bottom><Right>960</Right><x>-2</x><y>-2</y><xscreen>962</xscreen><yscreen>143</yscreen><sizeHorzCX>1004175</sizeHorzCX><sizeHorzCY>144737</sizeHorzCY><sizeVertCX>943633</sizeVertCX><sizeVertCY>144737</sizeVertCY></Rect></Wnd1></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+  </Desktop>
+</Workspace>
+
+

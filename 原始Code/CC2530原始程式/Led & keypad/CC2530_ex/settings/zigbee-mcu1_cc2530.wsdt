@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Workspace>
+  <ConfigDictionary>
+    
+    
+    
+  <CurrentConfigs><Project>switch/debug</Project><Project>io/debug</Project><Project>light/debug</Project><Project>test_tx/debug</Project><Project>test_rx/debug</Project></CurrentConfigs><CurrentProj>io</CurrentProj><OverviewSelected>1</OverviewSelected></ConfigDictionary>
+  <Desktop>
+    <Static>
+      <Workspace>
+        <ColumnWidths>
+          
+          
+          
+          
+        <Column0>226</Column0><Column1>41</Column1><Column2>31</Column2><Column3>14676820</Column3></ColumnWidths>
+      </Workspace>
+      <Find-in-Files>
+        
+        
+        
+      <ColumnWidth0>664</ColumnWidth0><ColumnWidth1>94</ColumnWidth1><ColumnWidth2>1138</ColumnWidth2></Find-in-Files>
+    <Build><ColumnWidth0>20</ColumnWidth0><ColumnWidth1>691</ColumnWidth1><ColumnWidth2>184</ColumnWidth2><ColumnWidth3>46</ColumnWidth3></Build></Static>
+    <Windows>
+      
+      
+    <Wnd2>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-17282-24699</Identity>
+            <TabName>Workspace</TabName>
+            <Factory>Workspace</Factory>
+            <Session>
+              
+            <NodeDict><ExpandedNode>&lt;ws></ExpandedNode></NodeDict></Session>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd2><Wnd3>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-4046-25561</Identity>
+            <TabName>Find in Files</TabName>
+            <Factory>Find-in-Files</Factory>
+            <Session/>
+          </Tab>
+        <Tab><Identity>TabID-4404-27646</Identity><TabName>Build</TabName><Factory>Build</Factory><Session/></Tab></Tabs>
+        
+      <SelectedTab>1</SelectedTab></Wnd3></Windows>
+    <Editor>
+      
+      
+      
+      
+    <Pane/><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Positions>
+      
+      
+      
+      
+      
+    <Top><Row0><Sizes><Toolbar-002765e8><key>iaridepm.enu1</key></Toolbar-002765e8></Sizes></Row0></Top><Left><Row0><Sizes><Wnd2><Rect><Top>-2</Top><Left>-2</Left><Bottom>678</Bottom><Right>318</Right><x>-2</x><y>-2</y><xscreen>102</xscreen><yscreen>178</yscreen><sizeHorzCX>103976</sizeHorzCX><sizeHorzCY>197998</sizeHorzCY><sizeVertCX>326198</sizeVertCX><sizeVertCY>756396</sizeVertCY></Rect></Wnd2></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd3><Rect><Top>-2</Top><Left>-2</Left><Bottom>176</Bottom><Right>983</Right><x>-2</x><y>-2</y><xscreen>985</xscreen><yscreen>178</yscreen><sizeHorzCX>1004077</sizeHorzCX><sizeHorzCY>197998</sizeHorzCY><sizeVertCX>103976</sizeVertCX><sizeVertCY>197998</sizeVertCY></Rect></Wnd3></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+  </Desktop>
+</Workspace>
+
+

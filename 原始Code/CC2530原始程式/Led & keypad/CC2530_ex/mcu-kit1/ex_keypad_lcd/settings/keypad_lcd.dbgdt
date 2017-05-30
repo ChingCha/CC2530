@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Project>
+  <Desktop>
+    <Static>
+      <Debug-Log><ColumnWidth0>20</ColumnWidth0><ColumnWidth1>1381</ColumnWidth1></Debug-Log>
+      <Build>
+        <ColumnWidth0>20</ColumnWidth0>
+        <ColumnWidth1>591</ColumnWidth1>
+        <ColumnWidth2>157</ColumnWidth2>
+        <ColumnWidth3>39</ColumnWidth3>
+      </Build>
+      <Workspace>
+        <ColumnWidths>
+          
+          
+          
+          
+        <Column0>294</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
+      </Workspace>
+      <Disassembly>
+        
+        
+      <MixedMode>1</MixedMode><CodeCovShow>0</CodeCovShow><InstrProfShow>1</InstrProfShow></Disassembly>
+    </Static>
+    <Windows>
+      
+      
+      
+    <Wnd3>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-28073-11223</Identity>
+            <TabName>Debug Log</TabName>
+            <Factory>Debug-Log</Factory>
+            <Session/>
+          </Tab>
+          <Tab>
+            <Identity>TabID-27551-11232</Identity>
+            <TabName>Build</TabName>
+            <Factory>Build</Factory>
+            <Session/>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd3><Wnd4>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-6054-11226</Identity>
+            <TabName>Workspace</TabName>
+            <Factory>Workspace</Factory>
+            <Session>
+              
+            <NodeDict><ExpandedNode>keypad_lcd</ExpandedNode><ExpandedNode>keypad_lcd/application</ExpandedNode><ExpandedNode>keypad_lcd/targets</ExpandedNode></NodeDict></Session>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd4><Wnd5>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-16802-11229</Identity>
+            <TabName>Disassembly</TabName>
+            <Factory>Disassembly</Factory>
+            <Session/>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd5></Windows>
+    <Editor>
+      
+      
+      
+      
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\keypad_lcd.c</Filename><XPos>0</XPos><YPos>5</YPos><SelStart>624</SelStart><SelEnd>624</SelEnd></Tab><ActiveTab>0</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\components\targets\mcu-kit1\hal_lcd.c</Filename><XPos>0</XPos><YPos>248</YPos><SelStart>8315</SelStart><SelEnd>8315</SelEnd></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Positions>
+      
+      
+      
+      
+      
+    <Top><Row0><Sizes><Toolbar-026beea0><key>iaridepm.enu1</key></Toolbar-026beea0></Sizes></Row0><Row1><Sizes><Toolbar-0270a740><key>debuggergui.enu1</key></Toolbar-0270a740></Sizes></Row1></Top><Left><Row0><Sizes><Wnd4><Rect><Top>-2</Top><Left>-2</Left><Bottom>753</Bottom><Right>368</Right><x>-2</x><y>-2</y><xscreen>370</xscreen><yscreen>218</yscreen><sizeHorzCX>235969</sizeHorzCX><sizeHorzCY>210019</sizeHorzCY><sizeVertCX>235969</sizeVertCX><sizeVertCY>727360</sizeVertCY></Rect></Wnd4></Sizes></Row0></Left><Right><Row0><Sizes><Wnd5><Rect><Top>-2</Top><Left>-2</Left><Bottom>753</Bottom><Right>368</Right><x>-2</x><y>-2</y><xscreen>370</xscreen><yscreen>218</yscreen><sizeHorzCX>235969</sizeHorzCX><sizeHorzCY>210019</sizeHorzCY><sizeVertCX>235969</sizeVertCX><sizeVertCY>727360</sizeVertCY></Rect></Wnd5></Sizes></Row0></Right><Bottom><Row0><Sizes><Wnd3><Rect><Top>-2</Top><Left>-2</Left><Bottom>216</Bottom><Right>1570</Right><x>-2</x><y>-2</y><xscreen>1572</xscreen><yscreen>218</yscreen><sizeHorzCX>1002551</sizeHorzCX><sizeHorzCY>210019</sizeHorzCY><sizeVertCX>235969</sizeVertCX><sizeVertCY>210019</sizeVertCY></Rect></Wnd3></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+  </Desktop>
+</Project>
+
+

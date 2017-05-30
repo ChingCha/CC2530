@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Workspace>
+  <ConfigDictionary>
+    
+  <CurrentConfigs><Project>keypad_lcd/debug</Project></CurrentConfigs></ConfigDictionary>
+  <Desktop>
+    <Static>
+      <Workspace>
+        <ColumnWidths>
+          
+          
+          
+          
+        <Column0>244</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
+      </Workspace>
+      <Build>
+        
+        
+        
+        
+      <ColumnWidth0>20</ColumnWidth0><ColumnWidth1>591</ColumnWidth1><ColumnWidth2>157</ColumnWidth2><ColumnWidth3>39</ColumnWidth3></Build>
+      <TerminalIO/>
+    </Static>
+    <Windows>
+      
+      
+    <Wnd0>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-16781-9387</Identity>
+            <TabName>Workspace</TabName>
+            <Factory>Workspace</Factory>
+            <Session>
+              
+            <NodeDict><ExpandedNode>keypad_lcd</ExpandedNode><ExpandedNode>keypad_lcd/application</ExpandedNode></NodeDict></Session>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd0><Wnd1>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-11616-9894</Identity>
+            <TabName>Build</TabName>
+            <Factory>Build</Factory>
+            <Session/>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd1></Windows>
+    <Editor>
+      
+      
+      
+      
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\keypad_lcd.c</Filename><XPos>0</XPos><YPos>60</YPos><SelStart>1680</SelStart><SelEnd>1692</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\components\targets\mcu-kit1\hal_lcd.c</Filename><XPos>0</XPos><YPos>246</YPos><SelStart>8070</SelStart><SelEnd>8092</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\components\targets\mcu-kit1\hal_keypad.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>418</SelStart><SelEnd>433</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\components\targets\mcu-kit1\hal_keypad.c</Filename><XPos>0</XPos><YPos>188</YPos><SelStart>4737</SelStart><SelEnd>4789</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\components\targets\mcu-kit1\hal_buzzer.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\components\targets\mcu-kit1\hal_buzzer.c</Filename><XPos>0</XPos><YPos>63</YPos><SelStart>2627</SelStart><SelEnd>2627</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\components\targets\mcu-kit1\hal_lcd.h</Filename><XPos>0</XPos><YPos>12</YPos><SelStart>456</SelStart><SelEnd>456</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\components\utils\util_lcd.c</Filename><XPos>0</XPos><YPos>79</YPos><SelStart>3136</SelStart><SelEnd>3136</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\components\targets\mcu-kit1\hal_uart.c</Filename><XPos>0</XPos><YPos>127</YPos><SelStart>4258</SelStart><SelEnd>4285</SelEnd></Tab><ActiveTab>8</ActiveTab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Positions>
+      
+      
+      
+      
+      
+    <Top><Row0><Sizes><Toolbar-05751fd0><key>iaridepm.enu1</key></Toolbar-05751fd0></Sizes></Row0></Top><Left><Row0><Sizes><Wnd0><Rect><Top>-2</Top><Left>-2</Left><Bottom>464</Bottom><Right>318</Right><x>-2</x><y>-2</y><xscreen>397</xscreen><yscreen>89</yscreen><sizeHorzCX>278792</sizeHorzCX><sizeHorzCY>127690</sizeHorzCY><sizeVertCX>224719</sizeVertCX><sizeVertCY>668580</sizeVertCY></Rect></Wnd0></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd1><Rect><Top>-2</Top><Left>-2</Left><Bottom>188</Bottom><Right>1426</Right><x>-2</x><y>-2</y><xscreen>1428</xscreen><yscreen>190</yscreen><sizeHorzCX>1002809</sizeHorzCX><sizeHorzCY>272597</sizeHorzCY><sizeVertCX>278792</sizeVertCX><sizeVertCY>127690</sizeVertCY></Rect></Wnd1></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+  </Desktop>
+</Workspace>
+
+

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Workspace>
+  <ConfigDictionary>
+    
+  <CurrentConfigs><Project>portio/ZIGBEE-MCU1</Project></CurrentConfigs></ConfigDictionary>
+  <Desktop>
+    <Static>
+      <Workspace>
+        <ColumnWidths>
+          
+          
+          
+          
+        <Column0>251</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
+      </Workspace>
+      <Build>
+        
+        
+        
+        
+      <ColumnWidth0>20</ColumnWidth0><ColumnWidth1>1395</ColumnWidth1><ColumnWidth2>372</ColumnWidth2><ColumnWidth3>93</ColumnWidth3></Build>
+    <TerminalIO/><Find-in-Files><ColumnWidth0>373</ColumnWidth0><ColumnWidth1>53</ColumnWidth1><ColumnWidth2>639</ColumnWidth2></Find-in-Files></Static>
+    <Windows>
+      
+      
+    <Wnd2>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-22785-3146</Identity>
+            <TabName>Workspace</TabName>
+            <Factory>Workspace</Factory>
+            <Session>
+              
+            <NodeDict><ExpandedNode>portio</ExpandedNode><ExpandedNode>portio/targets</ExpandedNode></NodeDict></Session>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd2><Wnd3>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-22263-3156</Identity>
+            <TabName>Build</TabName>
+            <Factory>Build</Factory>
+            <Session/>
+          </Tab>
+        <Tab><Identity>TabID-17629-185</Identity><TabName>Find in Files</TabName><Factory>Find-in-Files</Factory><Session/></Tab></Tabs>
+        
+      <SelectedTab>1</SelectedTab></Wnd3></Windows>
+    <Editor>
+      
+      
+      
+      
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>X:\prj\KIT\CC2530_EX\components\common\hal_mcu.c</Filename><XPos>0</XPos><YPos>24</YPos><SelStart>1214</SelStart><SelEnd>1214</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>X:\prj\KIT\CC2530_EX\components\targets\zigbee-mcu1\hal_led.c</Filename><XPos>0</XPos><YPos>33</YPos><SelStart>877</SelStart><SelEnd>890</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>X:\prj\KIT\CC2530_EX\components\targets\zigbee-mcu1\hal_board.h</Filename><XPos>0</XPos><YPos>56</YPos><SelStart>1824</SelStart><SelEnd>3504</SelEnd></Tab><ActiveTab>2</ActiveTab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Positions>
+      
+      
+      
+      
+      
+    <Top><Row0><Sizes><Toolbar-01b3c370><key>iaridepm.enu1</key></Toolbar-01b3c370></Sizes></Row0></Top><Left><Row0><Sizes><Wnd2><Rect><Top>-2</Top><Left>-2</Left><Bottom>498</Bottom><Right>325</Right><x>-2</x><y>-2</y><xscreen>200</xscreen><yscreen>208</yscreen><sizeHorzCX>183824</sizeHorzCX><sizeHorzCY>277704</sizeHorzCY><sizeVertCX>300551</sizeVertCX><sizeVertCY>667557</sizeVertCY></Rect></Wnd2></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd3><Rect><Top>-2</Top><Left>-2</Left><Bottom>206</Bottom><Right>1090</Right><x>-2</x><y>-2</y><xscreen>1092</xscreen><yscreen>208</yscreen><sizeHorzCX>1003676</sizeHorzCX><sizeHorzCY>277704</sizeHorzCY><sizeVertCX>183824</sizeVertCX><sizeVertCY>277704</sizeVertCY></Rect></Wnd3></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+  </Desktop>
+</Workspace>
+
+

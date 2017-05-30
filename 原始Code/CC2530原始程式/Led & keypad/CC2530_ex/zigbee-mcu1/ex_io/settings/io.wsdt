@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Workspace>
+  <ConfigDictionary>
+    
+  <CurrentConfigs><Project>io/debug</Project></CurrentConfigs></ConfigDictionary>
+  <Desktop>
+    <Static>
+      <Workspace>
+        <ColumnWidths>
+          
+          
+          
+          
+        <Column0>226</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
+      </Workspace>
+    <Build><ColumnWidth0>20</ColumnWidth0><ColumnWidth1>614</ColumnWidth1><ColumnWidth2>163</ColumnWidth2><ColumnWidth3>40</ColumnWidth3></Build><TerminalIO/><Debug-Log/></Static>
+    <Windows>
+      
+    <Wnd0>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-19011-14680</Identity>
+            <TabName>Workspace</TabName>
+            <Factory>Workspace</Factory>
+            <Session>
+              
+            <NodeDict><ExpandedNode>io</ExpandedNode><ExpandedNode>io/application</ExpandedNode><ExpandedNode>io/application/io.c</ExpandedNode><ExpandedNode>io/common</ExpandedNode><ExpandedNode>io/targets</ExpandedNode></NodeDict></Session>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd0><Wnd1><Tabs><Tab><Identity>TabID-19890-15277</Identity><TabName>Build</TabName><Factory>Build</Factory><Session/></Tab><Tab><Identity>TabID-12208-4675</Identity><TabName>Debug Log</TabName><Factory>Debug-Log</Factory><Session/></Tab></Tabs><SelectedTab>0</SelectedTab></Wnd1></Windows>
+    <Editor>
+      
+      
+      
+      
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\io.c</Filename><XPos>0</XPos><YPos>29</YPos><SelStart>1180</SelStart><SelEnd>1180</SelEnd></Tab><ActiveTab>0</ActiveTab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Positions>
+      
+      
+      
+      
+      
+    <Top><Row0><Sizes><Toolbar-00ccdc78><key>iaridepm.enu1</key></Toolbar-00ccdc78></Sizes></Row0></Top><Left><Row0><Sizes><Wnd0><Rect><Top>-2</Top><Left>-2</Left><Bottom>765</Bottom><Right>300</Right><x>-2</x><y>-2</y><xscreen>358</xscreen><yscreen>230</yscreen><sizeHorzCX>228316</sizeHorzCX><sizeHorzCY>221580</sizeHorzCY><sizeVertCX>192602</sizeVertCX><sizeVertCY>738921</sizeVertCY></Rect></Wnd0></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd1><Rect><Top>-2</Top><Left>-2</Left><Bottom>228</Bottom><Right>1570</Right><x>-2</x><y>-2</y><xscreen>1572</xscreen><yscreen>230</yscreen><sizeHorzCX>1002551</sizeHorzCX><sizeHorzCY>221580</sizeHorzCY><sizeVertCX>228316</sizeVertCX><sizeVertCY>221580</sizeVertCY></Rect></Wnd1></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+  </Desktop>
+</Workspace>
+
+
