@@ -62,7 +62,7 @@ static basicRfCfg_t basicRfConfig;
 //              payload
 //              appState - file scope variable. Holds application state
 //-------------------------------------------------------------------
-static void appSwitch()
+void appSend()
 {
     // Initialize BasicRF
     basicRfConfig.myAddr = SWITCH_ADDR;
@@ -71,31 +71,15 @@ static void appSwitch()
     // Keep Receiver off when not needed to save power
     basicRfReceiveOff();
 	
-	int32 a = 5;
-
-    // Main loop
-    while (1)
-    {
-		basicRfReceiveOff(); //ADD
-        uint8 v = halButtonPushed();
-        if (v == HAL_BUTTON_2)
-        {
-			halLcdDisplayWithButton(HAL_LCD_LINE_1,a,'D');
-			if(a > 0)
-			{
-				pTxData[0] = LIGHT1_TOGGLE_CMD;//LIGHT1_TOGGLE_CMD??
-				pTxData[1] = a--;
-				basicRfSendPacket(LIGHT_ADDR, pTxData, APP_PAYLOAD_LENGTH);
-				halLedToggle(1);
-				halLedToggle(2);
-				halLedToggle(3);
-				halBuzzer(100);
-				halMcuWaitMs(200);
-			}
-        }
-        halMcuWaitMs(20);
-        halLedToggle(7);
-    }
+	pTxData[0] = LIGHT1_TOGGLE_CMD;//LIGHT1_TOGGLE_CMD??
+	pTxData[1] = a;
+	basicRfSendPacket(LIGHT_ADDR, pTxData, APP_PAYLOAD_LENGTH);
+	halLedToggle(1);
+	halLedToggle(2);
+	halLedToggle(3);
+	halBuzzer(100);
+    halMcuWaitMs(20);
+    halLedToggle(7);
 }
 
 //-------------------------------------------------------------------
@@ -112,7 +96,6 @@ void main(void)
     #ifdef SECURITY_CCM
         basicRfConfig.securityKey = key;
     #endif 
-
     // Initalise board peripherals
 	/*halBoardInit
 		@fn      halBoardInit
@@ -121,10 +104,16 @@ void main(void)
  		@return  none
 	*/
     halBoardInit();
-
-    // Indicate that device is powered
     halLedSet(8);
-
-    // Enter Switch mode
-    appSwitch();
+	int32 a = 5;
+	while(1){
+		unit8 b = halButtonPushed();
+		if(b == HAL_BUTTON_2){
+			halLcdDisplayWithButton(HAL_LCD_LINE_1,a,'D');
+			if(a > 0){
+				a--;
+				appSend(a);
+			}
+		}
+	}
 }

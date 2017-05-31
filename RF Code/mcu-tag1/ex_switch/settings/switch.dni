@@ -28,9 +28,14 @@ ActionState=1
 Enabled=0
 ShowSource=1
 [DebugChecksum]
-Checksum=-883547911
+Checksum=1114216703
 [InstructionProfiling]
 Enabled=_ 0
+[Breakpoints]
+Count=0
+[ChipconEmu]
+Stop timers on halt=0
+Leave target running=1
 [Log file]
 LoggingEnabled=_ 0
 LogFile=_ ""
@@ -38,15 +43,6 @@ Category=_ 0
 [TermIOLog]
 LoggingEnabled=_ 0
 LogFile=_ ""
-[Breakpoints]
-Bp0=_ "STD_CODE" "{$PROJ_DIR$\switch.c}.85.6@1" 1 0 0 0 "" 0 ""
-Bp1=_ "STD_CODE" "{$PROJ_DIR$\switch.c}.86.6@1" 1 0 0 0 "" 0 ""
-Bp2=_ "STD_CODE" "{$PROJ_DIR$\switch.c}.87.6@1" 1 0 0 0 "" 0 ""
-Bp3=_ "STD_CODE" "{$PROJ_DIR$\switch.c}.79.19@1" 1 0 0 0 "" 0 ""
-Count=4
-[ChipconEmu]
-Stop timers on halt=1
-Leave target running=1
 [Aliases]
 A0=_ "C:\Users\user\Desktop\CC530\RF 原始Code\components\common\hal_rf.c" ""
 A1=_ "C:\Users\user\Desktop\CC530\RF 原始Code\components\targets\zigbee-mcu1\hal_board.c" ""

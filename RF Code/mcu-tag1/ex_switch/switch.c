@@ -79,19 +79,19 @@ void appSwitch()
         uint8 v = halButtonPushed();
         if (v == HAL_BUTTON_2)
         {
-	  halLcdDisplayWithButton(HAL_LCD_LINE_1,a,'D');
-	  if(a > 0)
-	  {
-	    pTxData[0] = LIGHT1_TOGGLE_CMD;
-	    pTxData[1] = a--;
-	    basicRfSendPacket(LIGHT_ADDR, pTxData, APP_PAYLOAD_LENGTH);
-	    halLedToggle(1);
-	    halLedToggle(2);
+		halLcdDisplayWithButton(HAL_LCD_LINE_1,a,'D');
+		if(a > 0)
+		{
+			pTxData[0] = LIGHT1_TOGGLE_CMD;
+			pTxData[1] = a--;
+			basicRfSendPacket(LIGHT_ADDR, pTxData, APP_PAYLOAD_LENGTH);
+			halLedToggle(1);
+			halLedToggle(2);
             halLedToggle(3);
             halBuzzer(100);
             halMcuWaitMs(200);
-	  }
-        }
+		}
+	}
         halMcuWaitMs(20);
         halLedToggle(7);
     }
@@ -117,7 +117,5 @@ void main(void)
 
     // Indicate that device is powered
     halLedSet(8);
-
-    // Enter Switch mode
     appSwitch();
 }
