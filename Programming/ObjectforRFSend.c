@@ -8,7 +8,7 @@ class RFsend{
 };
 
 
-int RFsend::append(){
+int32 RFsend::appsend(){
 	basicRfConfig.myAddr = SWITCH_ADDR;
     if (basicRfInit(&basicRfConfig) == FAILED){}
 	basicRfReceiveOff();
@@ -41,7 +41,7 @@ void main(){
 			halLcdDisplayWithButton(HAL_LCD_LINE_1,a,'D');
 			if(a > 0){
 				a--;
-				do.append(a);
+				do.appsend(a);
 			}
 		}
 	}
