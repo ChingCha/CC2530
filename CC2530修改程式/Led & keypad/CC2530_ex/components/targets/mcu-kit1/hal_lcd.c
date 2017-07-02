@@ -532,8 +532,7 @@ void halLcdDisplayWithButton(uint8 line, int32 lValue, char lChar)
     pLcdLineBuffer[0] = lChar;
     pLcdLineBuffer[1] = ':';
 	pLcdLineBuffer[2] = *pCounter;
-	for(int i = 3;i<=15;i++){
+	for(int i = 3;i<=15;i++)
 		pLcdLineBuffer[i] = ' ';
-	}
 	lcdWriteLine(line, pLcdLineBuffer);
 }

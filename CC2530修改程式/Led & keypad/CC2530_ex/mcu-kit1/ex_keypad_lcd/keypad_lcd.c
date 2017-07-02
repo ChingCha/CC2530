@@ -22,9 +22,8 @@ void main(void)
 		if (v == HAL_BUTTON_1)
 		{
 			halLcdDisplayWithButton(HAL_LCD_LINE_1,a,'D');
-            if(a > 0){
-				a--;
-			}		
+            if(a > 0)
+				a--;		
 		}
         halMcuWaitMs(300);    
     }
