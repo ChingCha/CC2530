@@ -1086,7 +1086,10 @@
   <group>
     <name>targets</name>
     <file>
-      <name>$PROJ_DIR$\..\..\components\targets\mcu-kit1\hal_board.c</name>
+      <name>$PROJ_DIR$\..\..\components\targets\zigbee-mcu1\hal_board.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\components\targets\zigbee-mcu1\hal_button.c</name>
     </file>
     <file>
       <name>$PROJ_DIR$\..\..\components\targets\mcu-kit1\hal_buzzer.c</name>

@@ -28,7 +28,7 @@ ActionState=1
 Enabled=0
 ShowSource=1
 [DebugChecksum]
-Checksum=592028785
+Checksum=326952539
 [InstructionProfiling]
 Enabled=_ 0
 [Log file]
@@ -39,13 +39,9 @@ Category=_ 0
 LoggingEnabled=_ 0
 LogFile=_ ""
 [Breakpoints]
-Bp0=_ "STD_CODE" "{$PROJ_DIR$\switch.c}.81.13@1" 1 0 0 0 "" 0 ""
-Bp1=_ "STD_CODE" "{$PROJ_DIR$\switch.c}.82.13@1" 1 0 0 0 "" 0 ""
-Bp2=_ "STD_CODE" "{$PROJ_DIR$\switch.c}.83.13@1" 1 0 0 0 "" 0 ""
-Bp3=_ "STD_CODE" "{$PROJ_DIR$\switch.c}.84.13@1" 1 0 0 0 "" 0 ""
-Count=4
+Count=0
 [ChipconEmu]
-Stop timers on halt=0
+Stop timers on halt=1
 Leave target running=1
 [Aliases]
 A0=_ "C:\Users\user\Desktop\CC530\RF ­ì©lCode\components\common\hal_rf.c" ""

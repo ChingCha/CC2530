@@ -1,6 +1,6 @@
 //-------------------------------------------------------------------
 // Filename: hal_led.c
-// Description: hal led library
+// Description: zigbee-mcu1 led implementation library
 //-------------------------------------------------------------------
 //-------------------------------------------------------------------
 // INCLUDES
@@ -12,6 +12,9 @@
 #include "hal_led.h"
 
 //-------------------------------------------------------------------
+// GLOBAL FUNCTIONS
+//-------------------------------------------------------------------
+//-------------------------------------------------------------------
 // @fn          halLedSet
 // @brief       Turn LED on.
 // @param       uint8 id - led to set
@@ -22,34 +25,33 @@ void halLedSet(uint8 id)
     switch (id)
     {
         case 1:
-            pLedData |= 0x01;
+            HAL_LED_SET_1();
             break;
         case 2:
-            pLedData |= 0x02;
+            HAL_LED_SET_2();
             break;
         case 3:
-            pLedData |= 0x04;
+            HAL_LED_SET_3();
             break;
         case 4:
-            pLedData |= 0x08;
+            HAL_LED_SET_4();
             break;
         case 5:
-            pLedData |= 0x10;
+            HAL_LED_SET_5();
             break;
         case 6:
-            pLedData |= 0x20;
+            HAL_LED_SET_6();
             break;
         case 7:
-            pLedData |= 0x40;
+            HAL_LED_SET_7();
             break;
         case 8:
-            pLedData |= 0x80;
+            HAL_LED_SET_8();
             break;
 
         default:
             break;
     }
-    HAL_LED_PORT(pLedData);
 }
 
 //-------------------------------------------------------------------
@@ -63,33 +65,32 @@ void halLedClear(uint8 id)
     switch (id)
     {
         case 1:
-            pLedData &= ~(0x01);
+            HAL_LED_CLR_1();
             break;
         case 2:
-            pLedData &= ~(0x02);
+            HAL_LED_CLR_2();
             break;
         case 3:
-            pLedData &= ~(0x04);
+            HAL_LED_CLR_3();
             break;
         case 4:
-            pLedData &= ~(0x08);
+            HAL_LED_CLR_4();
             break;
         case 5:
-            pLedData &= ~(0x10);
+            HAL_LED_CLR_5();
             break;
         case 6:
-            pLedData &= ~(0x20);
+            HAL_LED_CLR_6();
             break;
         case 7:
-            pLedData &= ~(0x40);
+            HAL_LED_CLR_7();
             break;
         case 8:
-            pLedData &= ~(0x80);
+            HAL_LED_CLR_8();
             break;
         default:
             break;
     }
-    HAL_LED_PORT(pLedData);
 }
 
 //-------------------------------------------------------------------
@@ -103,35 +104,33 @@ void halLedToggle(uint8 id)
     switch (id)
     {
         case 1:
-            pLedData ^= 0x01;
+            HAL_LED_TGL_1();
             break;
         case 2:
-            pLedData ^= 0x02;
+            HAL_LED_TGL_2();
             break;
         case 3:
-            pLedData ^= 0x04;
+            HAL_LED_TGL_3();
             break;
         case 4:
-            pLedData ^= 0x08;
+            HAL_LED_TGL_4();
             break;
         case 5:
-            pLedData ^= 0x10;
+            HAL_LED_TGL_5();
             break;
         case 6:
-            pLedData ^= 0x20;
+            HAL_LED_TGL_6();
             break;
         case 7:
-            pLedData ^= 0x40;
+            HAL_LED_TGL_7();
             break;
         case 8:
-            pLedData ^= 0x80;
+            HAL_LED_TGL_8();
             break;
         default:
             break;
     }
-    HAL_LED_PORT(pLedData);
 }
-
 
 //-------------------------------------------------------------------
 void halLedSetPort(uint8 port)

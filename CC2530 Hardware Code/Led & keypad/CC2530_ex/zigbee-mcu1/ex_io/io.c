@@ -31,7 +31,7 @@ void main(void)
     while (1)
     {
         uint8 v = halButtonPushed();
-        if (v == HAL_BUTTON_1) //左邊按鈕按下會從最右邊0LED開始
+        if (v == HAL_BUTTON_1)	//左邊按鈕按下會從最右邊0LED開始
         {
             halLedSet(1);
             halLedClear(2);
@@ -41,13 +41,13 @@ void main(void)
             halLedClear(6);
             halLedClear(7);
             halLedClear(8);
-            ch = 1;			//halLedClear引數：ch = 1
-            mode = 1;		//遞增遞減引數：mode = 1
+            ch = 1;				//halLedClear引數：ch = 1
+            mode = 1;			//LED模式引數：mode = 1
             halBuzzerOn(800);
             halMcuWaitMs(300);
             halBuzzerOff();
         }
-        if (v == HAL_BUTTON_2)//右邊按鈕按下，奇數偶數燈相互亮滅
+        if (v == HAL_BUTTON_2)	//右邊按鈕按下，奇數偶數燈相互亮滅
         {
             halLedSet(1);
             halLedClear(2);
@@ -57,32 +57,32 @@ void main(void)
             halLedClear(6);
             halLedSet(7);
             halLedClear(8);
-            mode = 3;		//遞增遞減引數：mode = 3
+            mode = 3;			//LED模式引數：mode = 3
             halBuzzerOn(2730);
             halMcuWaitMs(300);
             halBuzzerOff();
         }
-        if (mode == 1)	//mode = 1 ： 遞增
+        if (mode == 1)			//LED模式引數：mode = 1 ： 遞增
         {
             halLedClear(ch);
-            ch++;		//
+            ch++;				//halLedClear引數ch遞增
             halLedSet(ch);
-            if (ch >= 8)
+            if (ch >= 8)		//halLedClear由右至左clear到最後一顆燈，觸發mode：2
             {
-                mode = 2;
+                mode = 2;		
             }
         }
-        else if (mode == 2)
+        else if (mode == 2)		//LED模式引數：mode = 2 ： 遞減
         {
             halLedClear(ch);
-            ch--;
+            ch--;				//halLedClear引數ch遞減
             halLedSet(ch);
             if (ch <= 1)
             {
-                mode = 1;
+                mode = 1;		//halLedClear由左至右clear到最後一顆燈，觸發mode：1
             }
         }
-        else if (mode == 3)
+        else if (mode == 3)		//LED模式引數：mode = 3 ： 
         {
             halLedToggle(1);
             halLedToggle(2);

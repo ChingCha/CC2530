@@ -14,6 +14,7 @@
 #include "hal_buzzer.h"
 #include "hal_rf.h"
 #include "basic_rf.h"
+#include "hal_button.h"
 #include "M160.h"
 
 //-------------------------------------------------------------------
@@ -87,7 +88,7 @@ static void appLight()
             }
             if (pRxData[0] == LIGHT2_TOGGLE_CMD)
             {
-                halLcdWriteLine(HAL_LCD_LINE_1, "B");
+                halLcdWriteLine(HAL_LCD_LINE_2, "B");
                 M160_Off();
                 halLedToggle(4);
                 halLedToggle(5);

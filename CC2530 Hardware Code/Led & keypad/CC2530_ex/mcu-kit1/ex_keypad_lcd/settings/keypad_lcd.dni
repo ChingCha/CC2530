@@ -16,7 +16,7 @@ TriggerName=main
 LimitSize=0
 ByteLimit=50
 [DebugChecksum]
-Checksum=586710387
+Checksum=1968751752
 [InstructionProfiling]
 Enabled=_ 0
 [Log file]
@@ -32,10 +32,12 @@ Count=0
 Stop timers on halt=0
 Leave target running=1
 [Aliases]
-A0=_ "C:\Users\user\Desktop\CC530\CC2530修改程式\Led & keypad\CC2530_ex\components\common\hal_clock.c" ""
-A1=_ "C:\Users\user\Desktop\CC530\CC2530修改程式\Led & keypad\CC2530_ex\components\targets\mcu-kit1\hal_buzzer.c" ""
-A2=_ "C:\Users\user\Desktop\CC530\CC2530修改程式\Led & keypad\CC2530_ex\components\targets\mcu-kit1\hal_led.c" ""
-A3=_ "C:\Users\user\Desktop\CC530\CC2530修改程式\Led & keypad\CC2530_ex\components\targets\mcu-kit1\hal_uart.c" ""
-A4=_ "C:\Users\user\Desktop\CC530\CC2530修改程式\Led & keypad\CC2530_ex\components\targets\zigbee-mcu1\hal_button.c" ""
-Count=5
+A0=_ "C:\Users\user\Desktop\CC2530\CC2530修改程式\Led & keypad\CC2530_ex\mcu-kit1\ex_keypad_lcd\keypad_lcd.c" ""
+A1=_ "C:\Users\user\Desktop\CC530\CC2530修改程式\Led & keypad\CC2530_ex\components\common\hal_clock.c" ""
+A2=_ "C:\Users\user\Desktop\CC530\CC2530修改程式\Led & keypad\CC2530_ex\components\targets\mcu-kit1\hal_buzzer.c" ""
+A3=_ "C:\Users\user\Desktop\CC530\CC2530修改程式\Led & keypad\CC2530_ex\components\targets\mcu-kit1\hal_led.c" ""
+A4=_ "C:\Users\user\Desktop\CC530\CC2530修改程式\Led & keypad\CC2530_ex\components\targets\mcu-kit1\hal_uart.c" ""
+A5=_ "C:\Users\user\Desktop\CC530\CC2530修改程式\Led & keypad\CC2530_ex\components\targets\zigbee-mcu1\hal_button.c" ""
+A6=_ "C:\Users\user\Desktop\CC530\CC2530修改程式\Led & keypad\CC2530_ex\components\utils\util.c" "C:\Users\user\Desktop\CC2530\CC2530 Hardware Code\Led & keypad\CC2530_ex\components\utils\util.c"
+Count=7
 SuppressDialog=1

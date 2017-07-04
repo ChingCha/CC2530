@@ -1,6 +1,6 @@
 //-------------------------------------------------------------------
 // Filename: hal_buzzer.h
-// Description: hal buzzer library header file
+// Description: zigbee-mcu1 buzzer library header file
 //-------------------------------------------------------------------
 #define BUZZER_FREQ		2730 
 //-------------------------------------------------------------------

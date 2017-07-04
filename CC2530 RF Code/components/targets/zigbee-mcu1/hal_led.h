@@ -1,6 +1,6 @@
 //-------------------------------------------------------------------
-// Filename:     hal_led.h
-// Description:  hal led library header file
+// Filename: hal_led.h
+// Description: zigbee-mcu1 led library header file
 //-------------------------------------------------------------------
 //-------------------------------------------------------------------
 // GLOBAL FUNCTIONS

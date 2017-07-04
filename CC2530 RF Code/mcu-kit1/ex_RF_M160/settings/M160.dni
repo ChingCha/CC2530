@@ -28,7 +28,7 @@ TriggerName=main
 LimitSize=0
 ByteLimit=50
 [DebugChecksum]
-Checksum=2068343907
+Checksum=581609507
 [InstructionProfiling]
 Enabled=_ 0
 [Log file]
@@ -41,9 +41,10 @@ LogFile=_ ""
 [Breakpoints]
 Count=0
 [ChipconEmu]
-Stop timers on halt=1
+Stop timers on halt=0
 Leave target running=1
 [Aliases]
-A0=_ "C:\Users\user\Desktop\CC530\原始Code\RF 原始Code\mcu-kit1\ex_RF_M160\ex.c" ""
-Count=1
+A0=_ "C:\Users\user\Desktop\CC530\原始Code\RF 原始Code\components\common\hal_rf.c" "C:\Users\user\Desktop\CC2530\CC2530 RF Code\components\common\hal_rf.c"
+A1=_ "C:\Users\user\Desktop\CC530\原始Code\RF 原始Code\mcu-kit1\ex_RF_M160\ex.c" ""
+Count=2
 SuppressDialog=1

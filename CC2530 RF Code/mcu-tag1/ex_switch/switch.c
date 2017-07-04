@@ -71,27 +71,30 @@ void appSwitch()
     // Keep Receiver off when not needed to save power
     basicRfReceiveOff();
 	
-    int32 a = 5;
-	
     // Main loop
     while (1)
     {
-        uint8 v = halButtonPushed();
+		uint8 v = halButtonPushed();
         if (v == HAL_BUTTON_2)
         {
-		halLcdDisplayWithButton(HAL_LCD_LINE_1,a,'D');
-		if(a > 0)
-		{
-			pTxData[0] = LIGHT1_TOGGLE_CMD;
-			pTxData[1] = a--;
-			basicRfSendPacket(LIGHT_ADDR, pTxData, APP_PAYLOAD_LENGTH);
-			halLedToggle(1);
-			halLedToggle(2);
+            pTxData[0] = LIGHT1_TOGGLE_CMD;
+            basicRfSendPacket(LIGHT_ADDR, pTxData, APP_PAYLOAD_LENGTH);
+            halLedToggle(1);
+            halLedToggle(2);
             halLedToggle(3);
             halBuzzer(100);
             halMcuWaitMs(200);
-		}
-	}
+        }
+        if (v == HAL_BUTTON_1)
+        {
+            pTxData[0] = LIGHT2_TOGGLE_CMD;
+            basicRfSendPacket(LIGHT_ADDR, pTxData, APP_PAYLOAD_LENGTH);
+            halLedToggle(4);
+            halLedToggle(5);
+            halLedToggle(6);
+            halBuzzer(300);
+            halMcuWaitMs(200);
+        }
         halMcuWaitMs(20);
         halLedToggle(7);
     }
