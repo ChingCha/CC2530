@@ -6,54 +6,156 @@
   <configuration>
     <name>debug</name>
     <outputs>
-      <file>$PROJ_DIR$\io.c</file>
-      <file>$PROJ_DIR$\..\..\components\common\hal_clock.h</file>
-      <file>$PROJ_DIR$\..\..\components\common\hal_defs.h</file>
-      <file>$PROJ_DIR$\..\..\components\common\hal_cc8051.h</file>
       <file>$PROJ_DIR$\..\..\components\common\hal_clock.c</file>
+      <file>$PROJ_DIR$\..\..\components\common\hal_clock.h</file>
+      <file>$PROJ_DIR$\io.c</file>
+      <file>$PROJ_DIR$\..\..\components\common\hal_cc8051.h</file>
+      <file>$PROJ_DIR$\..\..\components\common\hal_defs.h</file>
+      <file>$TOOLKIT_DIR$\inc\ioCC2530.h</file>
+      <file>$PROJ_DIR$\debug\Obj\hal_mcu.r51</file>
+      <file>$PROJ_DIR$\debug\Obj\hal_board.r51</file>
+      <file>$PROJ_DIR$\debug\Obj\hal_button.r51</file>
+      <file>$PROJ_DIR$\debug\Obj\io.pbi</file>
+      <file>$PROJ_DIR$\debug\Obj\hal_clock.pbi</file>
+      <file>$PROJ_DIR$\debug\Obj\hal_buzzer.pbi</file>
+      <file>$PROJ_DIR$\debug\Obj\io.pbd</file>
+      <file>$PROJ_DIR$\debug\Exe\io.d51</file>
+      <file>$PROJ_DIR$\debug\Obj\hal_int.r51</file>
+      <file>$PROJ_DIR$\debug\Obj\hal_board.pbi</file>
+      <file>$TOOLKIT_DIR$\config\lnk_base.xcl</file>
+      <file>$PROJ_DIR$\..\..\components\common\hal_int.c</file>
       <file>$PROJ_DIR$\debug\Exe\io.hex</file>
-      <file>$PROJ_DIR$\debug\List\io.map</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_int.pbi</file>
-      <file>$PROJ_DIR$\debug\Obj\io.r51</file>
+      <file>$PROJ_DIR$\..\..\components\targets\zigbee-mcu1\hal_board.h</file>
       <file>$PROJ_DIR$\debug\Obj\hal_clock.r51</file>
-      <file>$TOOLKIT_DIR$\lib\clib\cl-pli-blxd-1e16x01.r51</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_buzzer.r51</file>
       <file>$PROJ_DIR$\debug\Obj\hal_button.pbi</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_led.r51</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_mcu.pbi</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_led.pbi</file>
-      <file>$TOOLKIT_DIR$\config\devices\Texas Instruments\lnk51ew_cc2530b.xcl</file>
+      <file>$PROJ_DIR$\..\..\components\common\hal_int.h</file>
+      <file>$PROJ_DIR$\..\..\components\common\hal_mcu.h</file>
+      <file>$PROJ_DIR$\debug\Obj\io.r51</file>
+      <file>$PROJ_DIR$\..\..\components\targets\zigbee-mcu1\hal_button.c</file>
+      <file>$PROJ_DIR$\..\..\components\targets\zigbee-mcu1\hal_board.c</file>
+      <file>$PROJ_DIR$\debug\List\io.map</file>
       <file>$PROJ_DIR$\..\..\components\targets\zigbee-mcu1\hal_led.h</file>
       <file>$PROJ_DIR$\..\..\components\targets\zigbee-mcu1\hal_led.c</file>
-      <file>$TOOLKIT_DIR$\inc\ioCC2530.h</file>
-      <file>$PROJ_DIR$\..\..\components\common\hal_mcu.c</file>
-      <file>$PROJ_DIR$\..\..\components\targets\zigbee-mcu1\hal_board.c</file>
-      <file>$PROJ_DIR$\debug\Exe\io.d51</file>
-      <file>$PROJ_DIR$\..\..\components\common\hal_mcu.h</file>
-      <file>$PROJ_DIR$\..\..\components\targets\zigbee-mcu1\hal_button.c</file>
-      <file>$PROJ_DIR$\..\..\components\targets\zigbee-mcu1\hal_buzzer.h</file>
-      <file>$PROJ_DIR$\debug\Obj\io.pbd</file>
-      <file>$PROJ_DIR$\debug\Obj\io.pbi</file>
-      <file>$TOOLKIT_DIR$\config\lnk_base.xcl</file>
-      <file>$PROJ_DIR$\..\..\components\targets\zigbee-mcu1\hal_board.h</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_mcu.r51</file>
-      <file>$PROJ_DIR$\..\..\components\targets\zigbee-mcu1\hal_button.h</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_int.r51</file>
       <file>$PROJ_DIR$\..\..\components\targets\zigbee-mcu1\hal_buzzer.c</file>
-      <file>$PROJ_DIR$\..\..\components\common\hal_int.c</file>
-      <file>$PROJ_DIR$\..\..\components\common\hal_int.h</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_clock.pbi</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_board.r51</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_buzzer.pbi</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_button.r51</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_board.pbi</file>
+      <file>$PROJ_DIR$\debug\Obj\hal_buzzer.r51</file>
+      <file>$PROJ_DIR$\debug\Obj\hal_led.r51</file>
+      <file>$PROJ_DIR$\debug\Obj\hal_int.pbi</file>
+      <file>$PROJ_DIR$\..\..\components\targets\zigbee-mcu1\hal_button.h</file>
+      <file>$PROJ_DIR$\debug\Obj\hal_mcu.pbi</file>
+      <file>$PROJ_DIR$\debug\Obj\hal_led.pbi</file>
+      <file>$PROJ_DIR$\..\..\components\targets\zigbee-mcu1\hal_buzzer.h</file>
+      <file>$TOOLKIT_DIR$\lib\clib\cl-pli-blxd-1e16x01.r51</file>
+      <file>$TOOLKIT_DIR$\config\devices\Texas Instruments\lnk51ew_cc2530b.xcl</file>
+      <file>$PROJ_DIR$\..\..\components\common\hal_mcu.c</file>
     </outputs>
+    <file>
+      <name>$PROJ_DIR$\..\..\components\common\hal_clock.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 10</file>
+        </tool>
+        <tool>
+          <name>ICC8051</name>
+          <file> 20</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 4 5 1</file>
+        </tool>
+        <tool>
+          <name>ICC8051</name>
+          <file> 4 5 1</file>
+        </tool>
+      </inputs>
+    </file>
     <file>
       <name>$PROJ_DIR$\io.c</name>
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 27</file>
+          <file> 9</file>
+        </tool>
+        <tool>
+          <name>ICC8051</name>
+          <file> 24</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 4 5 22 23 19 28 34 37</file>
+        </tool>
+        <tool>
+          <name>ICC8051</name>
+          <file> 4 5 22 23 19 28 34 37</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>[ROOT_NODE]</name>
+      <outputs>
+        <tool>
+          <name>XLINK</name>
+          <file> 27 18 13</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\debug\Obj\io.pbd</name>
+      <inputs>
+        <tool>
+          <name>BILINK</name>
+          <file> 15 21 11 10 33 36 35 9</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\debug\Exe\io.d51</name>
+      <outputs>
+        <tool>
+          <name>XLINK</name>
+          <file> 27 18</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>XLINK</name>
+          <file> 39 16 7 8 31 20 14 32 6 24 38</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\components\common\hal_int.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 33</file>
+        </tool>
+        <tool>
+          <name>ICC8051</name>
+          <file> 14</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 4 5 22</file>
+        </tool>
+        <tool>
+          <name>ICC8051</name>
+          <file> 4 5 22</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\components\targets\zigbee-mcu1\hal_button.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 21</file>
         </tool>
         <tool>
           <name>ICC8051</name>
@@ -63,89 +165,11 @@
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 2 19 35 23 29 17 31 25</file>
+          <file> 4 5 3 23 19 34</file>
         </tool>
         <tool>
           <name>ICC8051</name>
-          <file> 2 19 35 23 29 17 31 25</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\components\common\hal_clock.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 36</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 9</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 2 19 1</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 2 19 1</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>[ROOT_NODE]</name>
-      <outputs>
-        <tool>
-          <name>XLINK</name>
-          <file> 6 5 22</file>
-        </tool>
-      </outputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\components\targets\zigbee-mcu1\hal_led.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 15</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 13</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 2 19 3 23 29 17</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 2 19 3 23 29 17</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\components\common\hal_mcu.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 14</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 30</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 2 19 1 23 29</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 2 19 1 23 29</file>
+          <file> 4 5 3 23 19 34</file>
         </tool>
       </inputs>
     </file>
@@ -154,100 +178,30 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 40</file>
+          <file> 15</file>
         </tool>
         <tool>
           <name>ICC8051</name>
-          <file> 37</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 2 19 3 23 35 29 25</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 2 19 3 23 35 29 25</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\debug\Exe\io.d51</name>
-      <outputs>
-        <tool>
-          <name>XLINK</name>
-          <file> 6 5</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>XLINK</name>
-          <file> 16 28 37 39 11 9 32 13 30 8 10</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\components\targets\zigbee-mcu1\hal_button.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 12</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 39</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 2 19 3 23 29 31</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 2 19 3 23 29 31</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\debug\Obj\io.pbd</name>
-      <inputs>
-        <tool>
-          <name>BILINK</name>
-          <file> 40 12 38 36 7 15 14 27</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\components\targets\zigbee-mcu1\hal_buzzer.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 38</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 11</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 2 19 3 23 29 25</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 2 19 3 23 29 25</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\components\common\hal_int.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
           <file> 7</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 4 5 3 23 22 19 37</file>
+        </tool>
+        <tool>
+          <name>ICC8051</name>
+          <file> 4 5 3 23 22 19 37</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\components\targets\zigbee-mcu1\hal_led.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 36</file>
         </tool>
         <tool>
           <name>ICC8051</name>
@@ -257,11 +211,57 @@
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 2 19 35</file>
+          <file> 4 5 3 23 19 28</file>
         </tool>
         <tool>
           <name>ICC8051</name>
-          <file> 2 19 35</file>
+          <file> 4 5 3 23 19 28</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\components\targets\zigbee-mcu1\hal_buzzer.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 11</file>
+        </tool>
+        <tool>
+          <name>ICC8051</name>
+          <file> 31</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 4 5 3 23 19 37</file>
+        </tool>
+        <tool>
+          <name>ICC8051</name>
+          <file> 4 5 3 23 19 37</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\components\common\hal_mcu.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 35</file>
+        </tool>
+        <tool>
+          <name>ICC8051</name>
+          <file> 6</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 4 5 1 23 19</file>
+        </tool>
+        <tool>
+          <name>ICC8051</name>
+          <file> 4 5 1 23 19</file>
         </tool>
       </inputs>
     </file>

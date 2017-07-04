@@ -1,0 +1,122 @@
+@自動綁定 -　溫度傳感器(SimpleApp)
+
+
+
+---------文獻修改----------
+20110706初版
+NULL
+
+20110712二版
+-增加注意事項
+
+
+20111215三版
+-修改注意事項 . 硬體套件 . 安裝 等說明
+-將本說明文件移至外部方便觀看
+
+
+
+---------注意事項----------
+
+1. 如果不使用LCD , 且逾使用NET1或者TAG1者 , 請將LCD_SUPPORTED=DEBUG切換成xLCD_SUPPORTED=DEBUG關閉LCD
+   否則會無法運作 .
+
+2.如逾使用/關閉RS485 , 請至Options>Define RS485 .
+
+3.如逾使用/關閉感測模組 , 請至Options>Define M170(M140/MXXX) .
+
+#目前可使用之模組 (M140 . M170 . M200 . M220)
+
+
+
+---------硬體套件----------
+
+
+[0802]ZStack-Simapp半自動綁定版 For KIT1.rar  -->  給KIT1使用
+
+[0802]ZStack-Simapp半自動綁定版 For KIT2.rar  -->  給KIT2使用
+
+[0819上課用]ZStack-Simapp半自動綁定版.rar  -->  不建議使用(工程師上課使用 For KIT1)
+
+
+----------安裝方式---------
+
+安裝以下兩個檔案
+Coordinator/Router[CollectorEB]  -->   K1 = Coordinator ,K2 = Router
+Enddevice[SensorEB]  -->  K1 . K2 = EndDevice
+
+
+---------Uart鮑率----------
+
+[###]本裝置初始值115200,8,N,1[###]
+
+
+若要更改Uart鮑率值
+
+可在MT_UART.h
+	|
+	|---------->MT_UART_DEFAULT_BAUDRATE   HAL_UART_BR_鮑率值   //修改鮑率值
+	|
+	|---------->MT_UART_DEFAULT_OVERFLOW   FALSE/TRUE  //是否開啟硬體流量控制
+
+
+
+---------裝機方式--------------
+
+
+
+
+[Enddevice]------RF---->[Router]------RF------>[Coordinator]
+						      /
+						     /
+					  	    /
+					      RS232 to USB
+						  /
+						 \/
+				       [PC資料收集-溫度與電壓]
+
+
+---------控制方式-1[Coordinator & EndDevice]----------
+
+
+
+1.Coordinator先開機 , 開機期間再按壓K1 ,成為Coordinator .     //若沒有三台KIT1+MCU , 建議設定為Coordinator .   
+
+2.Coordinator在開機後幾秒鐘再按壓一次K1 ,會形成自動綁定 .                                             
+
+3.Enddevice在開機後幾秒鐘會自動綁定[若綁定 , Enddevice的LED1則會亮黃燈 ,此時coordinator會顯示Rsp Sent.]
+
+
+
+[###]就算單一方斷線 , 也可重新自動連線上 .[###]
+
+
+
+
+---------控制方式-2[Coordinator & Router & EndDevice]----------
+
+
+1.Coordinator先開機 , 開機期間再按壓K1 ,成為Coordinator .
+  |
+  |-->1-2.Coordinator在開機後幾秒鐘再按壓一次K1 ,會形成自動綁定 .  
+
+2.Router之後開機 , 開機期間再按壓K2 ,成為Router .                                                        
+
+3.Enddevice緊接在Router之後開機 , 之後幾秒鐘會自動綁定[若綁定 , Enddevice的LED1則會亮黃燈 ,此時coordinator會顯示Rsp Sent.]
+
+
+
+[###]就算單一方斷線 , 也可重新自動連線上 .[###]
+
+
+[!!!]敞若要連結Router , 則嚴禁Coordinator先開機 , 以免Router無法取得分配位址 , 又或者因為PANID被Router占用 , 則Coordinator在開機後會自動變更非我們所需要的PANID[!!!!]
+
+
+
+--------未完成之HAL定位--------
+
+
+
+
+1.KeyPad(I2C)
+
