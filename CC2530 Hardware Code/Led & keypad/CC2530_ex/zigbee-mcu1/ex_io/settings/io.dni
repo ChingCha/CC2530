@@ -1,8 +1,7 @@
 [CodeCoverage]
 Enabled=_ 0
 [DisAssemblyWindow]
-NumStates=_ 1
-State 1=_ 1
+NumStates=_ 0
 [Profiling]
 Enabled=0
 [StackPlugin]
@@ -28,13 +27,9 @@ ActionState=1
 Enabled=0
 ShowSource=1
 [DebugChecksum]
-Checksum=279237529
+Checksum=20077277
 [InstructionProfiling]
 Enabled=_ 0
-[Log file]
-LoggingEnabled=_ 0
-LogFile=_ ""
-Category=_ 0
 [TermIOLog]
 LoggingEnabled=_ 0
 LogFile=_ ""
@@ -43,6 +38,10 @@ Count=0
 [ChipconEmu]
 Stop timers on halt=0
 Leave target running=1
+[Log file]
+LoggingEnabled=_ 0
+LogFile=_ ""
+Category=_ 0
 [Aliases]
 Count=0
 SuppressDialog=0

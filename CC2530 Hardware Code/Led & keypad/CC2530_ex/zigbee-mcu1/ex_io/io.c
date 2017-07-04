@@ -31,7 +31,7 @@ void main(void)
     while (1)
     {
         uint8 v = halButtonPushed();
-        if (v == HAL_BUTTON_1)
+        if (v == HAL_BUTTON_1) //左邊按鈕按下會從最右邊0LED開始
         {
             halLedSet(1);
             halLedClear(2);
@@ -41,13 +41,13 @@ void main(void)
             halLedClear(6);
             halLedClear(7);
             halLedClear(8);
-            ch = 1;
-            mode = 1;
+            ch = 1;			//halLedClear引數：ch = 1
+            mode = 1;		//遞增遞減引數：mode = 1
             halBuzzerOn(800);
             halMcuWaitMs(300);
             halBuzzerOff();
         }
-        if (v == HAL_BUTTON_2)
+        if (v == HAL_BUTTON_2)//右邊按鈕按下，奇數偶數燈相互亮滅
         {
             halLedSet(1);
             halLedClear(2);
@@ -57,15 +57,15 @@ void main(void)
             halLedClear(6);
             halLedSet(7);
             halLedClear(8);
-            mode = 3;
+            mode = 3;		//遞增遞減引數：mode = 3
             halBuzzerOn(2730);
             halMcuWaitMs(300);
             halBuzzerOff();
         }
-        if (mode == 1)
+        if (mode == 1)	//mode = 1 ： 遞增
         {
             halLedClear(ch);
-            ch++;
+            ch++;		//
             halLedSet(ch);
             if (ch >= 8)
             {
