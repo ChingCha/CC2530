@@ -6,11 +6,11 @@
 // INCLUDES
 //-------------------------------------------------------------------
 #include "hal_defs.h"
+#include "hal_mcu.h"
 #include "hal_board.h"
 #include "hal_led.h"
 #include "hal_lcd.h"
 #include "hal_int.h"
-#include "hal_mcu.h"
 #include "hal_button.h"
 #include "hal_buzzer.h"
 #include "hal_rf.h"
@@ -20,6 +20,7 @@
 // CONSTANTS
 //-------------------------------------------------------------------
 // Application parameters
+
 #define RF_CHANNEL                18      // 2.4 GHz RF channel
 
 // BasicRF address definitions
@@ -34,6 +35,7 @@
 #define IDLE                      0
 #define SEND_CMD                  1
 
+
 //-------------------------------------------------------------------
 //LOCAL FUNCTIONS
 //-------------------------------------------------------------------
@@ -41,6 +43,7 @@
 //-------------------------------------------------------------------
 // LOCAL VARIABLES
 //-------------------------------------------------------------------
+
 static uint8 pTxData[APP_PAYLOAD_LENGTH];
 static basicRfCfg_t basicRfConfig;
 
@@ -50,7 +53,8 @@ static basicRfCfg_t basicRfConfig;
     {
         0xc0, 0xc1, 0xc2, 0xc3, 0xc4, 0xc5, 0xc6, 0xc7, 0xc8, 0xc9, 0xca, 0xcb, 0xcc, 0xcd, 0xce, 0xcf, 
     };
-#endif 
+#endif
+
 
 //-------------------------------------------------------------------
 // @fn          appSwitch
@@ -61,8 +65,10 @@ static basicRfCfg_t basicRfConfig;
 //              payload
 //              appState - file scope variable. Holds application state
 // @return      none
+// @無法先行宣告
 //-------------------------------------------------------------------
-void appSwitch()
+
+void appSwitch1(int32 w)
 {
     // Initialize BasicRF
     basicRfConfig.myAddr = SWITCH_ADDR;
@@ -72,53 +78,80 @@ void appSwitch()
     basicRfReceiveOff();
 	
     // Main loop
-    while (1)
-    {
-		uint8 v = halButtonPushed();
-        if (v == HAL_BUTTON_2)
-        {
-            pTxData[0] = LIGHT1_TOGGLE_CMD;
-            basicRfSendPacket(LIGHT_ADDR, pTxData, APP_PAYLOAD_LENGTH);
-            halLedToggle(1);
-            halLedToggle(2);
-            halLedToggle(3);
-            halBuzzer(100);
-            halMcuWaitMs(200);
-        }
-        if (v == HAL_BUTTON_1)
-        {
-            pTxData[0] = LIGHT2_TOGGLE_CMD;
-            basicRfSendPacket(LIGHT_ADDR, pTxData, APP_PAYLOAD_LENGTH);
-            halLedToggle(4);
-            halLedToggle(5);
-            halLedToggle(6);
-            halBuzzer(300);
-            halMcuWaitMs(200);
-        }
-        halMcuWaitMs(20);
+    do{
+		pTxData[0] = w;
+        basicRfSendPacket(LIGHT_ADDR, pTxData, APP_PAYLOAD_LENGTH);
+        halLedToggle(1);
+        halLedToggle(2);
+        halLedToggle(3);
+        halBuzzer(100);
+        halMcuWaitMs(200);
         halLedToggle(7);
-    }
+	}while (w<0);
 }
+
+void appSwitch2(int32 m)
+{
+    // Initialize BasicRF
+    basicRfConfig.myAddr = SWITCH_ADDR;
+    if (basicRfInit(&basicRfConfig) == FAILED){}
+
+    // Keep Receiver off when not needed to save power
+    basicRfReceiveOff();
+	
+    // Main loop
+    do{
+		pTxData[0] = m;
+		basicRfSendPacket(LIGHT_ADDR, pTxData, APP_PAYLOAD_LENGTH);
+		halLedToggle(4);
+		halLedToggle(5);
+		halLedToggle(6);
+		halBuzzer(300);
+		halMcuWaitMs(200);
+        halLedToggle(7);
+	}while (m<0);
+}
+
 
 //-------------------------------------------------------------------
 // @fn          main
 // @brief       This is the main entry of the "portion" application.
 // @return      none
 //-------------------------------------------------------------------
-void main(void)
+int main()
 {
     // Config basicRF
-    basicRfConfig.panId = PAN_ID;
+	basicRfConfig.panId = PAN_ID;
     basicRfConfig.channel = RF_CHANNEL;
     basicRfConfig.ackRequest = TRUE;
     #ifdef SECURITY_CCM
         basicRfConfig.securityKey = key;
     #endif 
 
+
     // Initalise board peripherals
     halBoardInit();
 
     // Indicate that device is powered
     halLedSet(8);
-    appSwitch();
+	int32 w = 5;
+	int32 m = 10;
+	while (1)
+    {
+        uint8 v = halButtonPushed();
+		if (v == HAL_BUTTON_2){
+			halLcdDisplayWithButton(HAL_LCD_LINE_1,w,'W');
+            if(w > 0)
+				w--;
+				appSwitch1(w);		
+		}
+		else if(v == HAL_BUTTON_1){
+			halLcdDisplayWithButton(HAL_LCD_LINE_2,m,'M');
+			if(m > 0)
+				m--;
+				appSwitch2(m);
+		}
+        halMcuWaitMs(300);    
+    }
+	return 0;
 }

@@ -12,7 +12,7 @@
 #include "util.h"
 #include "util_lcd.h"
 
-void main(void)
+int main()
 {
     halBoardInit();//程式一開始的初始化函式
     halLedSet(8);//標示裝置以通電
@@ -33,5 +33,6 @@ void main(void)
 		}
         halMcuWaitMs(300);    
     }
+	return 0;
 }    
 

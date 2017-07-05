@@ -16,9 +16,14 @@ TriggerName=main
 LimitSize=0
 ByteLimit=50
 [DebugChecksum]
-Checksum=1968751752
+Checksum=-380947242
 [InstructionProfiling]
 Enabled=_ 0
+[Breakpoints]
+Count=0
+[ChipconEmu]
+Stop timers on halt=0
+Leave target running=1
 [Log file]
 LoggingEnabled=_ 0
 LogFile=_ ""
@@ -26,18 +31,14 @@ Category=_ 0
 [TermIOLog]
 LoggingEnabled=_ 0
 LogFile=_ ""
-[Breakpoints]
-Count=0
-[ChipconEmu]
-Stop timers on halt=0
-Leave target running=1
 [Aliases]
-A0=_ "C:\Users\user\Desktop\CC2530\CC2530修改程式\Led & keypad\CC2530_ex\mcu-kit1\ex_keypad_lcd\keypad_lcd.c" ""
-A1=_ "C:\Users\user\Desktop\CC530\CC2530修改程式\Led & keypad\CC2530_ex\components\common\hal_clock.c" ""
-A2=_ "C:\Users\user\Desktop\CC530\CC2530修改程式\Led & keypad\CC2530_ex\components\targets\mcu-kit1\hal_buzzer.c" ""
-A3=_ "C:\Users\user\Desktop\CC530\CC2530修改程式\Led & keypad\CC2530_ex\components\targets\mcu-kit1\hal_led.c" ""
-A4=_ "C:\Users\user\Desktop\CC530\CC2530修改程式\Led & keypad\CC2530_ex\components\targets\mcu-kit1\hal_uart.c" ""
-A5=_ "C:\Users\user\Desktop\CC530\CC2530修改程式\Led & keypad\CC2530_ex\components\targets\zigbee-mcu1\hal_button.c" ""
-A6=_ "C:\Users\user\Desktop\CC530\CC2530修改程式\Led & keypad\CC2530_ex\components\utils\util.c" "C:\Users\user\Desktop\CC2530\CC2530 Hardware Code\Led & keypad\CC2530_ex\components\utils\util.c"
-Count=7
+A0=_ "C:\Users\user\Desktop\CC2530\CC2530 Hardware Code\Led & keypad\CC2530_ex\components\targets\mcu-kit1\hal_led.c" ""
+A1=_ "C:\Users\user\Desktop\CC2530\CC2530修改程式\Led & keypad\CC2530_ex\mcu-kit1\ex_keypad_lcd\keypad_lcd.c" ""
+A2=_ "C:\Users\user\Desktop\CC530\CC2530修改程式\Led & keypad\CC2530_ex\components\common\hal_clock.c" ""
+A3=_ "C:\Users\user\Desktop\CC530\CC2530修改程式\Led & keypad\CC2530_ex\components\targets\mcu-kit1\hal_buzzer.c" ""
+A4=_ "C:\Users\user\Desktop\CC530\CC2530修改程式\Led & keypad\CC2530_ex\components\targets\mcu-kit1\hal_led.c" ""
+A5=_ "C:\Users\user\Desktop\CC530\CC2530修改程式\Led & keypad\CC2530_ex\components\targets\mcu-kit1\hal_uart.c" ""
+A6=_ "C:\Users\user\Desktop\CC530\CC2530修改程式\Led & keypad\CC2530_ex\components\targets\zigbee-mcu1\hal_button.c" ""
+A7=_ "C:\Users\user\Desktop\CC530\CC2530修改程式\Led & keypad\CC2530_ex\components\utils\util.c" "C:\Users\user\Desktop\CC2530\CC2530 Hardware Code\Led & keypad\CC2530_ex\components\utils\util.c"
+Count=8
 SuppressDialog=1
