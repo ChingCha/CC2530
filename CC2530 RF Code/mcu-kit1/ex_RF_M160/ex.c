@@ -27,7 +27,7 @@
 #define PAN_ID                0x1111
 #define SWITCH_ADDR           0x2222
 #define LIGHT_ADDR            0x3333
-#define APP_PAYLOAD_LENGTH        1
+#define APP_PAYLOAD_LENGTH        127
 #define LIGHT1_TOGGLE_CMD         '1'
 #define LIGHT2_TOGGLE_CMD         '2'
 
@@ -58,31 +58,10 @@ static basicRfCfg_t basicRfConfig;
 // @return      none
 //-------------------------------------------------------------------
 
-void appRecieve1(){
-	
-	do{
-		
-		
-		//halLcdDisplayWithButton(HAL_LCD_LINE_1,w,'W');
-		halLedToggle(1);
-		halLedToggle(2);
-		halLedToggle(3);
-		halBuzzer(300);
-	}while(pRxData[0] != LIGHT1_TOGGLE_CMD);
-}
+//void appRecieve1(){}
 
-void appRecieve2(){
-	
-	do{
-		
-		
-		//halLcdDisplayWithButton(HAL_LCD_LINE_2,m,'M');
-		halLedToggle(4);
-		halLedToggle(5);
-		halLedToggle(6);
-		halBuzzer(300);
-	}while(pRxData[0] != LIGHT2_TOGGLE_CMD);
-}
+//void appRecieve2(){}
+
 
 //-------------------------------------------------------------------
 // @fn          main
@@ -108,30 +87,39 @@ int main()
     halBuzzer(300);
 	//int32 w = 5;
 	//int32 m = 10;
-
+	
 	// Initialize BasicRF
     basicRfConfig.myAddr = LIGHT_ADDR;
     if (basicRfInit(&basicRfConfig) == FAILED){}
-	
-	// Keep Receiver on
+
+    // Keep Receiver on
     basicRfReceiveOn();
 	
 	while(1){
 
 		while (!basicRfPacketIsReady()){
             halLedToggle(7);
-            halMcuWaitMs(20);
+            halMcuWaitMs(100);
         }
 		
-		if (basicRfReceive(pRxData, APP_PAYLOAD_LENGTH, NULL) > 0){
+		while(basicRfReceive(pRxData, APP_PAYLOAD_LENGTH, NULL) > 0){
 			
 			if (pRxData[0] == LIGHT1_TOGGLE_CMD){
 				//pRxData[1] = w;
-				appRecieve1();
+				halLcdDisplayWithButton(HAL_LCD_LINE_1,w,'W');
+				halLedToggle(1);
+				halLedToggle(2);
+				halLedToggle(3);
+				halBuzzer(300);
+	
 			}
 			if (pRxData[0] == LIGHT2_TOGGLE_CMD){
 				//pRxData[1] = m;
-				appRecieve2();
+				halLcdDisplayWithButton(HAL_LCD_LINE_2,m,'W');
+				halLedToggle(4);
+				halLedToggle(5);
+				halLedToggle(6);
+				halBuzzer(300);
 			}	
 		}	
 	}

@@ -27,7 +27,7 @@
 #define PAN_ID                0x1111
 #define SWITCH_ADDR           0x2222
 #define LIGHT_ADDR            0x3333
-#define APP_PAYLOAD_LENGTH        1
+#define APP_PAYLOAD_LENGTH        127
 #define LIGHT1_TOGGLE_CMD         '1'
 #define LIGHT2_TOGGLE_CMD         '2'
 
@@ -142,18 +142,18 @@ int main()
     {
         uint8 v = halButtonPushed();
 		if (v == HAL_BUTTON_2){
-			halLcdDisplayWithButton(HAL_LCD_LINE_1,w,'W');
             if(w > 0)
 				w--;
-				appSwitch1(w);		
+			halLcdDisplayWithButton(HAL_LCD_LINE_1,w,'W');
+			appSwitch1(w);				
 		}
 		else if(v == HAL_BUTTON_1){
-			halLcdDisplayWithButton(HAL_LCD_LINE_2,m,'M');
 			if(m > 0)
 				m--;
-				appSwitch2(m);
+			halLcdDisplayWithButton(HAL_LCD_LINE_2,m,'M');
+			appSwitch2(m);
 		}
-        halMcuWaitMs(300);    
+        halMcuWaitMs(100);    
     }
 	return 0;
 }

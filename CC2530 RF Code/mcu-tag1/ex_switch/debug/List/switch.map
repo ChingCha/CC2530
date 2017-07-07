@@ -2,7 +2,7 @@
 #                                                                              #
 #      IAR Universal Linker V5.0.2.5/W32                                       #
 #                                                                              #
-#           Link time     =  06/Jul/2017  19:23:54                             #
+#           Link time     =  07/Jul/2017  16:24:53                             #
 #           Target CPU    =  x51                                               #
 #           List file     =  "C:\Users\spshih\Desktop\Eating\CC2530\CC2530\CC2 #
 #                            530 RF Code\mcu-tag1\ex_switch\debug\List\switch. #
@@ -300,22 +300,22 @@ Absolute parts
   SEGMENTS IN THE MODULE
   ======================
 XDATA_I
-  Relative segment, address: XDATA 00000329 - 00000334 (0xc bytes), align: 0
+  Relative segment, address: XDATA 000003A7 - 000003B2 (0xc bytes), align: 0
   Segment part 6.             Intra module refs:   ?Subroutine2
                                                    basicRfInit
                                                    basicRfRxFrmDoneIsr
            LOCAL                   ADDRESS         
            =====                   =======         
-           rxi                     00000329 
+           rxi                     000003A7 
     -------------------------------------------------------------------------
 XDATA_I
-  Relative segment, address: XDATA 00000335 - 00000338 (0x4 bytes), align: 0
+  Relative segment, address: XDATA 000003B3 - 000003B6 (0x4 bytes), align: 0
   Segment part 12.            Intra module refs:   ?Subroutine2 (switch)
                                                    basicRfInit
                                                    convInt32ToText (util)
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           __Constant_0            00000335 
+           __Constant_0            000003B3 
     -------------------------------------------------------------------------
 XDATA_Z
   Relative segment, address: XDATA 00000101 - 00000107 (0x7 bytes), align: 0
@@ -1133,11 +1133,11 @@ XDATA_Z
   Segment part 62.            Intra module refs:   halLcdDisplayWithButton
     -------------------------------------------------------------------------
 XDATA_I
-  Relative segment, address: XDATA 00000339 - 0000033C (0x4 bytes), align: 0
+  Relative segment, address: XDATA 000003B7 - 000003BA (0x4 bytes), align: 0
   Segment part 13.            Intra module refs:   main (switch)
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           __Constant_1            00000339 
+           __Constant_1            000003B7 
     -------------------------------------------------------------------------
 <BANKED_CODE> 1 (was BANKED_CODE)
   Relative segment, address: CODE 00000BC9 - 00000C02 (0x3a bytes), align: 0
@@ -1834,7 +1834,7 @@ BANK_RELAYS
   SEGMENTS IN THE MODULE
   ======================
 XDATA_Z
-  Relative segment, address: XDATA 00000316 - 00000316 (0x1 bytes), align: 0
+  Relative segment, address: XDATA 00000316 - 00000394 (0x7f bytes), align: 0
   Segment part 6.             Intra module refs:   ?Subroutine1
                                                    appSwitch1
                                                    appSwitch2
@@ -1843,12 +1843,12 @@ XDATA_Z
            pTxData                 00000316 
     -------------------------------------------------------------------------
 XDATA_Z
-  Relative segment, address: XDATA 00000317 - 0000031C (0x6 bytes), align: 0
+  Relative segment, address: XDATA 00000395 - 0000039A (0x6 bytes), align: 0
   Segment part 7.             Intra module refs:   ?Subroutine3
                                                    main
            LOCAL                   ADDRESS         
            =====                   =======         
-           basicRfConfig           00000317 
+           basicRfConfig           00000395 
     -------------------------------------------------------------------------
 <BANKED_CODE> 1 (was BANKED_CODE)
   Relative segment, address: CODE 00000932 - 0000095C (0x2b bytes), align: 0
@@ -1911,33 +1911,33 @@ XDATA_Z
                ISTACK = 00000000 ( 00000002 )
     -------------------------------------------------------------------------
 XDATA_I
-  Relative segment, address: XDATA 0000033D - 00000340 (0x4 bytes), align: 0
+  Relative segment, address: XDATA 000003BB - 000003BE (0x4 bytes), align: 0
   Segment part 10.            Intra module refs:   main
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           __Constant_5            0000033D 
+           __Constant_5            000003BB 
     -------------------------------------------------------------------------
 XDATA_ID
   Relative segment, address: CODE 00000156 - 00000159 (0x4 bytes), align: 0
   Segment part 11.            Intra module refs:   __Constant_5
     -------------------------------------------------------------------------
 XDATA_I
-  Relative segment, address: XDATA 00000341 - 00000344 (0x4 bytes), align: 0
+  Relative segment, address: XDATA 000003BF - 000003C2 (0x4 bytes), align: 0
   Segment part 12.            Intra module refs:   main
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           __Constant_9            00000341 
+           __Constant_9            000003BF 
     -------------------------------------------------------------------------
 XDATA_ID
   Relative segment, address: CODE 0000015A - 0000015D (0x4 bytes), align: 0
   Segment part 13.            Intra module refs:   __Constant_9
     -------------------------------------------------------------------------
 XDATA_I
-  Relative segment, address: XDATA 00000345 - 00000348 (0x4 bytes), align: 0
+  Relative segment, address: XDATA 000003C3 - 000003C6 (0x4 bytes), align: 0
   Segment part 16.            Intra module refs:   main
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           __Constant_ffffffff     00000345 
+           __Constant_ffffffff     000003C3 
     -------------------------------------------------------------------------
 XDATA_ID
   Relative segment, address: CODE 0000015E - 00000161 (0x4 bytes), align: 0
@@ -1981,12 +1981,12 @@ BANK_RELAYS
            ?Subroutine0            00000D15 
     -------------------------------------------------------------------------
 XDATA_Z
-  Relative segment, address: XDATA 0000031D - 00000328 (0xc bytes), align: 0
+  Relative segment, address: XDATA 0000039B - 000003A6 (0xc bytes), align: 0
   Segment part 28.            Intra module refs:   convInt32ToText
            LOCAL                   ADDRESS         
            =====                   =======         
            convInt32ToText::pValueToTextBuffer
-                                   0000031D 
+                                   0000039B 
     -------------------------------------------------------------------------
 XDATA_ID
   Relative segment, address: CODE 00000162 - 00000165 (0x4 bytes), align: 0
@@ -2001,11 +2001,11 @@ BANK_RELAYS
                                    00000274        Segment part 62 (hal_lcd)
     -------------------------------------------------------------------------
 XDATA_I
-  Relative segment, address: XDATA 00000349 - 0000034C (0x4 bytes), align: 0
+  Relative segment, address: XDATA 000003C7 - 000003CA (0x4 bytes), align: 0
   Segment part 31.            Intra module refs:   convInt32ToText
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           __Constant_a            00000349 
+           __Constant_a            000003C7 
 
     *************************************************************************
 
@@ -2666,12 +2666,12 @@ hal_rf                     403             5      2
 hal_rf_security                            3
 hal_uart                   231             9    262
   + common                  62
-switch                     405                   19
+switch                     405                  145
 util                       294                   16
 N/A (command line)                 16           256     64
 N/A (alignment)
 ----------               -----     --     --    ---     --      -
-Total:                   4 389     18     40    844     64      8
+Total:                   4 389     18     40    970     64      8
   + common                 134
 
 
@@ -2727,8 +2727,8 @@ SFR_AN               DATA          00000080 - 00000080           1   rel    0
                      DATA          000000F7 - 000000F7           1 
                      DATA          000000FD - 000000FF           3 
 XSTACK               XDATA         00000001 - 00000100         100   rel    0
-XDATA_Z              XDATA         00000101 - 00000328         228   rel    0
-XDATA_I              XDATA         00000329 - 0000034C          24   rel    0
+XDATA_Z              XDATA         00000101 - 000003A6         2A6   rel    0
+XDATA_I              XDATA         000003A7 - 000003CA          24   rel    0
 ISTACK               IDATA         000000C0 - 000000FF          40   rel    0
 
                 ****************************************
@@ -2739,7 +2739,7 @@ ISTACK               IDATA         000000C0 - 000000FF          40   rel    0
 
  4 523 bytes of CODE  memory
     18 bytes of DATA  memory (+ 40 absolute )
-   844 bytes of XDATA memory
+   970 bytes of XDATA memory
     64 bytes of IDATA memory
      8 bits  of BIT   memory
 

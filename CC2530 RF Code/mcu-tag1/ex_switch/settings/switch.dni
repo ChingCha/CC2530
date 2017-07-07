@@ -28,9 +28,14 @@ ActionState=1
 Enabled=0
 ShowSource=1
 [DebugChecksum]
-Checksum=-2002929664
+Checksum=1626591389
 [InstructionProfiling]
 Enabled=_ 0
+[Breakpoints]
+Count=0
+[ChipconEmu]
+Stop timers on halt=0
+Leave target running=1
 [Log file]
 LoggingEnabled=_ 0
 LogFile=_ ""
@@ -38,11 +43,6 @@ Category=_ 0
 [TermIOLog]
 LoggingEnabled=_ 0
 LogFile=_ ""
-[Breakpoints]
-Count=0
-[ChipconEmu]
-Stop timers on halt=0
-Leave target running=1
 [Aliases]
 A0=_ "C:\Users\user\Desktop\CC2530\RF Code\mcu-tag1\ex_switch\switch.c" ""
 A1=_ "C:\Users\user\Desktop\CC530\RF ­ì©lCode\components\common\hal_rf.c" ""
