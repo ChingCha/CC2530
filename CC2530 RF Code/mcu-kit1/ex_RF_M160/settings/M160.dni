@@ -28,9 +28,14 @@ TriggerName=main
 LimitSize=0
 ByteLimit=50
 [DebugChecksum]
-Checksum=581609507
+Checksum=1904286870
 [InstructionProfiling]
 Enabled=_ 0
+[Breakpoints]
+Count=0
+[ChipconEmu]
+Stop timers on halt=0
+Leave target running=1
 [Log file]
 LoggingEnabled=_ 0
 LogFile=_ ""
@@ -38,13 +43,11 @@ Category=_ 0
 [TermIOLog]
 LoggingEnabled=_ 0
 LogFile=_ ""
-[Breakpoints]
-Count=0
-[ChipconEmu]
-Stop timers on halt=0
-Leave target running=1
 [Aliases]
-A0=_ "C:\Users\user\Desktop\CC530\原始Code\RF 原始Code\components\common\hal_rf.c" "C:\Users\user\Desktop\CC2530\CC2530 RF Code\components\common\hal_rf.c"
-A1=_ "C:\Users\user\Desktop\CC530\原始Code\RF 原始Code\mcu-kit1\ex_RF_M160\ex.c" ""
-Count=2
+A0=_ "C:\Users\user\Desktop\CC2530\CC2530 RF Code\components\common\hal_rf.c" "C:\Users\spshih\Desktop\Eating\CC2530\CC2530\CC2530 RF Code\components\common\hal_rf.c"
+A1=_ "C:\Users\user\Desktop\CC2530\CC2530 RF Code\components\targets\mcu-kit1\hal_keypad.c" ""
+A2=_ "C:\Users\user\Desktop\CC2530\CC2530 RF Code\components\targets\mcu-kit1\hal_led.c" "C:\Users\spshih\Desktop\Eating\CC2530\CC2530\CC2530 RF Code\components\targets\mcu-kit1\hal_led.c"
+A3=_ "C:\Users\user\Desktop\CC530\原始Code\RF 原始Code\components\common\hal_rf.c" "C:\Users\user\Desktop\CC2530\CC2530 RF Code\components\common\hal_rf.c"
+A4=_ "C:\Users\user\Desktop\CC530\原始Code\RF 原始Code\mcu-kit1\ex_RF_M160\ex.c" ""
+Count=5
 SuppressDialog=1

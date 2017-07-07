@@ -57,46 +57,31 @@ static basicRfCfg_t basicRfConfig;
 //              pRxData - file scope variable. Pointer to buffer for RX data
 // @return      none
 //-------------------------------------------------------------------
-static void appLight()
-{
-    // Initialize BasicRF
-    basicRfConfig.myAddr = LIGHT_ADDR;
-    if (basicRfInit(&basicRfConfig) == FAILED){}
 
-    // Keep Receiver on
-    basicRfReceiveOn();
+void appRecieve1(){
+	
+	do{
+		
+		
+		//halLcdDisplayWithButton(HAL_LCD_LINE_1,w,'W');
+		halLedToggle(1);
+		halLedToggle(2);
+		halLedToggle(3);
+		halBuzzer(300);
+	}while(pRxData[0] != LIGHT1_TOGGLE_CMD);
+}
 
-    // Main loop
-    while (TRUE)
-    {
-        M160_Init();
-        while (!basicRfPacketIsReady())
-        {
-            halLedToggle(7);
-            halMcuWaitMs(20);
-        }
-        if (basicRfReceive(pRxData, APP_PAYLOAD_LENGTH, NULL) > 0)
-        {
-            if (pRxData[0] == LIGHT1_TOGGLE_CMD)
-            {
-                halLcdWriteLine(HAL_LCD_LINE_1, "A");
-                M160_On(100);
-                halLedToggle(1);
-                halLedToggle(2);
-                halLedToggle(3);
-                halBuzzer(300);
-            }
-            if (pRxData[0] == LIGHT2_TOGGLE_CMD)
-            {
-                halLcdWriteLine(HAL_LCD_LINE_2, "B");
-                M160_Off();
-                halLedToggle(4);
-                halLedToggle(5);
-                halLedToggle(6);
-                halBuzzer(300);
-            }
-        }
-    }
+void appRecieve2(){
+	
+	do{
+		
+		
+		//halLcdDisplayWithButton(HAL_LCD_LINE_2,m,'M');
+		halLedToggle(4);
+		halLedToggle(5);
+		halLedToggle(6);
+		halBuzzer(300);
+	}while(pRxData[0] != LIGHT2_TOGGLE_CMD);
 }
 
 //-------------------------------------------------------------------
@@ -104,7 +89,7 @@ static void appLight()
 // @brief       This is the main entry of the "portio" application.
 // @return      none
 //-------------------------------------------------------------------
-void main(void)
+int main()
 {
     // Config basicRF
     basicRfConfig.panId = PAN_ID;
@@ -117,13 +102,42 @@ void main(void)
     // Initalise board peripherals
     halBoardInit();
     halLcdInit();
-    M160_Init();
 
     // Indicate that device is powered
     halLedSet(8);
     halBuzzer(300);
+	//int32 w = 5;
+	//int32 m = 10;
 
-    //Enter Light mode
-    appLight();
+	// Initialize BasicRF
+    basicRfConfig.myAddr = LIGHT_ADDR;
+    if (basicRfInit(&basicRfConfig) == FAILED){}
+	
+	// Keep Receiver on
+    basicRfReceiveOn();
+	
+	while(1){
+
+		while (!basicRfPacketIsReady()){
+            halLedToggle(7);
+            halMcuWaitMs(20);
+        }
+		
+		if (basicRfReceive(pRxData, APP_PAYLOAD_LENGTH, NULL) > 0){
+			
+			if (pRxData[0] == LIGHT1_TOGGLE_CMD){
+				//pRxData[1] = w;
+				appRecieve1();
+			}
+			if (pRxData[0] == LIGHT2_TOGGLE_CMD){
+				//pRxData[1] = m;
+				appRecieve2();
+			}	
+		}	
+	}
+	
+	
+	
+	return 0;
 
 }

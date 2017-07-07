@@ -59,6 +59,16 @@ static basicRfCfg_t basicRfConfig;
 static void appLight()
 {
     // Initialize BasicRF(初始化 BasicRF)
+	/*basicRfInit:
+	初始化基本射頻數據結構。
+	在芯片中設置通道，短地址和PAN id
+	並配置數據包接收時的中斷
+	*/
+	/*basicRfConfig:
+	初始化基本射頻數據結構。
+	在芯片中設置通道，短地址和PAN id
+	並配置數據包接收時的中斷
+	*/
     basicRfConfig.myAddr = LIGHT_ADDR;
     if (basicRfInit(&basicRfConfig) == FAILED){}
 

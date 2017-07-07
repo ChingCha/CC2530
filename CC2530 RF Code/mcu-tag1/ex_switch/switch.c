@@ -79,7 +79,8 @@ void appSwitch1(int32 w)
 	
     // Main loop
     do{
-		pTxData[0] = w;
+		pTxData[0] = LIGHT1_TOGGLE_CMD;
+		pTxData[1] = w;
         basicRfSendPacket(LIGHT_ADDR, pTxData, APP_PAYLOAD_LENGTH);
         halLedToggle(1);
         halLedToggle(2);
@@ -101,7 +102,8 @@ void appSwitch2(int32 m)
 	
     // Main loop
     do{
-		pTxData[0] = m;
+		pTxData[0] = LIGHT2_TOGGLE_CMD;
+		pTxData[1] = m;
 		basicRfSendPacket(LIGHT_ADDR, pTxData, APP_PAYLOAD_LENGTH);
 		halLedToggle(4);
 		halLedToggle(5);
@@ -135,7 +137,7 @@ int main()
     // Indicate that device is powered
     halLedSet(8);
 	int32 w = 5;
-	int32 m = 10;
+	int32 m = 9;
 	while (1)
     {
         uint8 v = halButtonPushed();
