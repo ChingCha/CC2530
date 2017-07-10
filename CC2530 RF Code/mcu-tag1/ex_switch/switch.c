@@ -46,6 +46,8 @@
 
 static uint8 pTxData[APP_PAYLOAD_LENGTH];
 static basicRfCfg_t basicRfConfig;
+int32 w = 5;
+int32 m = 9;
 
 #ifdef SECURITY_CCM
     // Security key
@@ -65,10 +67,10 @@ static basicRfCfg_t basicRfConfig;
 //              payload
 //              appState - file scope variable. Holds application state
 // @return      none
-// @ç„¡æ³•å…ˆè¡Œå®£å‘Š
+// @?¡æ??ˆè?å®??
 //-------------------------------------------------------------------
 
-void appSwitch1(int32 w)
+void appSwitch1()
 {
     // Initialize BasicRF
     basicRfConfig.myAddr = SWITCH_ADDR;
@@ -91,7 +93,7 @@ void appSwitch1(int32 w)
 	}while (w<0);
 }
 
-void appSwitch2(int32 m)
+void appSwitch2()
 {
     // Initialize BasicRF
     basicRfConfig.myAddr = SWITCH_ADDR;
@@ -136,8 +138,7 @@ int main()
 
     // Indicate that device is powered
     halLedSet(8);
-	int32 w = 5;
-	int32 m = 9;
+
 	while (1)
     {
         uint8 v = halButtonPushed();
@@ -145,13 +146,13 @@ int main()
             if(w > 0)
 				w--;
 			halLcdDisplayWithButton(HAL_LCD_LINE_1,w,'W');
-			appSwitch1(w);				
+			appSwitch1();				
 		}
 		else if(v == HAL_BUTTON_1){
 			if(m > 0)
 				m--;
 			halLcdDisplayWithButton(HAL_LCD_LINE_2,m,'M');
-			appSwitch2(m);
+			appSwitch2();
 		}
         halMcuWaitMs(100);    
     }
