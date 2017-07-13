@@ -527,7 +527,7 @@ pCounter = convInt32ToText(lValue);			//pCounter經過"convInt32ToText"轉換為Text(
 // @date		2017/04/27  
 // @creater		TOM   
 //-------------------------------------------------------------------
-void halLcdDisplayWithButton(uint8 line, int32 lValue, char lChar)
+void halLcdDisplayWithButton(uint8 line,char lChar,int32 lValue)
 {
 	char *pCounter;
 	pCounter = convInt32ToText(lValue);

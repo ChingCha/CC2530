@@ -68,7 +68,7 @@ static basicRfCfg_t basicRfConfig;
 // @brief       This is the main entry of the "portio" application.
 // @return      none
 //-------------------------------------------------------------------
-int main()
+int main() 
 {
     // Config basicRF
     basicRfConfig.panId = PAN_ID;
@@ -85,8 +85,8 @@ int main()
     // Indicate that device is powered
     halLedSet(8);
     halBuzzer(300);
-	//int32 w = 5;
-	//int32 m = 10;
+	//int32 water = 5;
+	//int32 milk = 9;
 	
 	// Initialize BasicRF
     basicRfConfig.myAddr = LIGHT_ADDR;
@@ -99,23 +99,25 @@ int main()
 
 		while (!basicRfPacketIsReady()){
             halLedToggle(7);
-            halMcuWaitMs(100);
+            halMcuWaitMs(10);
         }
 		
 		while(basicRfReceive(pRxData, APP_PAYLOAD_LENGTH, NULL) > 0){
 			
-			if (pRxData[0] == LIGHT1_TOGGLE_CMD){
-				//pRxData[1] = w;
-				halLcdDisplayWithButton(HAL_LCD_LINE_1,w,'W');
+			if(pRxData[0] == LIGHT1_TOGGLE_CMD){
+				//if( > 0)
+					//water--;
+				halLcdDisplayWithButton(HAL_LCD_LINE_1,'W',pRxData[1]);
 				halLedToggle(1);
 				halLedToggle(2);
 				halLedToggle(3);
 				halBuzzer(300);
 	
 			}
-			if (pRxData[0] == LIGHT2_TOGGLE_CMD){
-				//pRxData[1] = m;
-				halLcdDisplayWithButton(HAL_LCD_LINE_2,m,'W');
+			if(pRxData[0] == LIGHT2_TOGGLE_CMD){
+				//if(pRxData[1] > 0)
+					//milk--;
+				halLcdDisplayWithButton(HAL_LCD_LINE_2,'M',pRxData[1]);
 				halLedToggle(4);
 				halLedToggle(5);
 				halLedToggle(6);
@@ -124,8 +126,5 @@ int main()
 		}	
 	}
 	
-	
-	
 	return 0;
-
 }

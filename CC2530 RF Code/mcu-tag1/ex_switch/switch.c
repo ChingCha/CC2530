@@ -44,11 +44,6 @@
 // LOCAL VARIABLES
 //-------------------------------------------------------------------
 
-static uint8 pTxData[APP_PAYLOAD_LENGTH];
-static basicRfCfg_t basicRfConfig;
-int32 w = 5;
-int32 m = 9;
-
 #ifdef SECURITY_CCM
     // Security key
     static uint8 key[] = 
@@ -69,53 +64,11 @@ int32 m = 9;
 // @return      none
 // @?¡æ??ˆè?å®??
 //-------------------------------------------------------------------
+static uint8 pTxData[APP_PAYLOAD_LENGTH];
+static basicRfCfg_t basicRfConfig;
 
-void appSwitch1()
-{
-    // Initialize BasicRF
-    basicRfConfig.myAddr = SWITCH_ADDR;
-    if (basicRfInit(&basicRfConfig) == FAILED){}
-
-    // Keep Receiver off when not needed to save power
-    basicRfReceiveOff();
-	
-    // Main loop
-    do{
-		pTxData[0] = LIGHT1_TOGGLE_CMD;
-		pTxData[1] = w;
-        basicRfSendPacket(LIGHT_ADDR, pTxData, APP_PAYLOAD_LENGTH);
-        halLedToggle(1);
-        halLedToggle(2);
-        halLedToggle(3);
-        halBuzzer(100);
-        halMcuWaitMs(200);
-        halLedToggle(7);
-	}while (w<0);
-}
-
-void appSwitch2()
-{
-    // Initialize BasicRF
-    basicRfConfig.myAddr = SWITCH_ADDR;
-    if (basicRfInit(&basicRfConfig) == FAILED){}
-
-    // Keep Receiver off when not needed to save power
-    basicRfReceiveOff();
-	
-    // Main loop
-    do{
-		pTxData[0] = LIGHT2_TOGGLE_CMD;
-		pTxData[1] = m;
-		basicRfSendPacket(LIGHT_ADDR, pTxData, APP_PAYLOAD_LENGTH);
-		halLedToggle(4);
-		halLedToggle(5);
-		halLedToggle(6);
-		halBuzzer(300);
-		halMcuWaitMs(200);
-        halLedToggle(7);
-	}while (m<0);
-}
-
+void appSwitch1(int drinkw);
+void appSwitch2(int drinkm);
 
 //-------------------------------------------------------------------
 // @fn          main
@@ -139,22 +92,67 @@ int main()
     // Indicate that device is powered
     halLedSet(8);
 
+	int32 water = 5;
+	int32 milk = 9;
+	
+	// Initialize BasicRF
+    basicRfConfig.myAddr = SWITCH_ADDR;
+    if (basicRfInit(&basicRfConfig) == FAILED){}
+
+    // Keep Receiver off when not needed to save power
+    basicRfReceiveOff();
+	
 	while (1)
     {
         uint8 v = halButtonPushed();
 		if (v == HAL_BUTTON_2){
-            if(w > 0)
-				w--;
-			halLcdDisplayWithButton(HAL_LCD_LINE_1,w,'W');
-			appSwitch1();				
+            if(water > 0)
+				water--;
+			halLcdDisplayWithButton(HAL_LCD_LINE_1,'W',water);
+			appSwitch1(water);				
 		}
 		else if(v == HAL_BUTTON_1){
-			if(m > 0)
-				m--;
-			halLcdDisplayWithButton(HAL_LCD_LINE_2,m,'M');
-			appSwitch2();
+			if(milk > 0)
+				milk--;
+			halLcdDisplayWithButton(HAL_LCD_LINE_2,'M',milk);
+			appSwitch2(milk);
 		}
         halMcuWaitMs(100);    
     }
 	return 0;
+}
+
+void appSwitch1(int drinkw){
+	
+    // Main loop 
+    do{
+		pTxData[0] = LIGHT1_TOGGLE_CMD;
+		pTxData[1] = drinkw;
+		
+        basicRfSendPacket(LIGHT_ADDR, pTxData, APP_PAYLOAD_LENGTH);
+        halLedToggle(1);
+        halLedToggle(2);
+        halLedToggle(3);
+        halBuzzer(100);
+        halMcuWaitMs(200);
+        halLedToggle(7);
+	}while (drinkw<0);
+}
+
+void appSwitch2(int drinkm){
+
+	
+    // Main loop
+    do{
+		pTxData[0] = LIGHT2_TOGGLE_CMD;
+		pTxData[1] = drinkm;
+		
+		basicRfSendPacket(LIGHT_ADDR, pTxData, APP_PAYLOAD_LENGTH);
+		halLedToggle(4);
+		halLedToggle(5);
+		halLedToggle(6);
+		halBuzzer(300);
+		halMcuWaitMs(200);
+        halLedToggle(7);
+	}while (drinkm<0);
 }
