@@ -641,8 +641,13 @@
       <name>$PROJ_DIR$\..\..\components\common\hal_rf_security.c</name>
       <outputs>
         <tool>
+<<<<<<< HEAD
+          <name>XLINK</name>
+          <file> 8 5 59</file>
+=======
           <name>ICC8051</name>
           <file> 44</file>
+>>>>>>> 665585f9ddc3394b753c9414c103068ffd0243fc
         </tool>
         <tool>
           <name>BICOMP</name>
