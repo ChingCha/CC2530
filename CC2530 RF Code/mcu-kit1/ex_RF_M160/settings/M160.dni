@@ -28,15 +28,9 @@ TriggerName=main
 LimitSize=0
 ByteLimit=50
 [DebugChecksum]
-Checksum=13627237
+Checksum=1929882174
 [InstructionProfiling]
 Enabled=_ 0
-[Breakpoints]
-Bp0=_ "STD_CODE" "{$PROJ_DIR$\..\..\components\common\hal_lcd.c}.533.2@1" 0 0 0 0 "" 0 ""
-Count=1
-[ChipconEmu]
-Stop timers on halt=0
-Leave target running=1
 [Log file]
 LoggingEnabled=_ 0
 LogFile=_ ""
@@ -44,6 +38,11 @@ Category=_ 0
 [TermIOLog]
 LoggingEnabled=_ 0
 LogFile=_ ""
+[Breakpoints]
+Count=0
+[ChipconEmu]
+Stop timers on halt=0
+Leave target running=1
 [Aliases]
 A0=_ "C:\Users\spshih\Desktop\Eating\CC2530\CC2530\CC2530 RF Code\components\targets\zigbee-mcu1\hal_board.c" "C:\Users\user\Desktop\CC2530\CC2530 RF Code\components\targets\zigbee-mcu1\hal_board.c"
 A1=_ "C:\Users\spshih\Desktop\Eating\CC2530\CC2530\CC2530 RF Code\components\utils\util.c" "C:\Users\user\Desktop\CC2530\CC2530 RF Code\components\utils\util.c"

@@ -16,7 +16,7 @@
           
           
           
-        <Column0>141</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
+        <Column0>229</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
       </Workspace>
       <Disassembly>
         
@@ -71,14 +71,14 @@
       
       
       
-    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\ex.c</Filename><XPos>0</XPos><YPos>65</YPos><SelStart>2411</SelStart><SelEnd>2411</SelEnd></Tab><ActiveTab>0</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\components\basicrf\basic_rf.c</Filename><XPos>0</XPos><YPos>509</YPos><SelStart>17830</SelStart><SelEnd>17830</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\components\common\hal_lcd.c</Filename><XPos>0</XPos><YPos>527</YPos><SelStart>16700</SelStart><SelEnd>16700</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\components\common\hal_lcd.h</Filename><XPos>0</XPos><YPos>21</YPos><SelStart>1230</SelStart><SelEnd>1230</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\components\common\hal_button.h</Filename><XPos>0</XPos><YPos>1</YPos><SelStart>431</SelStart><SelEnd>431</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\components\utils\util.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>442</SelStart><SelEnd>442</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\components\common\hal_int.h</Filename><XPos>0</XPos><YPos>9</YPos><SelStart>540</SelStart><SelEnd>540</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\components\basicrf\basic_rf.h</Filename><XPos>0</XPos><YPos>52</YPos><SelStart>2461</SelStart><SelEnd>2461</SelEnd></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\components\module\M160.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\ex.c</Filename><XPos>0</XPos><YPos>74</YPos><SelStart>2810</SelStart><SelEnd>2810</SelEnd></Tab><ActiveTab>1</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\components\common\hal_lcd.c</Filename><XPos>0</XPos><YPos>517</YPos><SelStart>16552</SelStart><SelEnd>16552</SelEnd></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
     <Positions>
       
       
       
       
       
-    <Top><Row0><Sizes><Toolbar-0086dc08><key>iaridepm.enu1</key></Toolbar-0086dc08></Sizes></Row0><Row1><Sizes><Toolbar-0a0234b0><key>debuggergui.enu1</key></Toolbar-0a0234b0></Sizes></Row1></Top><Left><Row0><Sizes><Wnd1><Rect><Top>-2</Top><Left>-2</Left><Bottom>502</Bottom><Right>215</Right><x>-2</x><y>-2</y><xscreen>217</xscreen><yscreen>157</yscreen><sizeHorzCX>158858</sizeHorzCX><sizeHorzCY>216253</sizeHorzCY><sizeVertCX>158858</sizeVertCX><sizeVertCY>694215</sizeVertCY></Rect></Wnd1></Sizes></Row0></Left><Right><Row0><Sizes><Wnd2><Rect><Top>-2</Top><Left>-2</Left><Bottom>502</Bottom><Right>215</Right><x>-2</x><y>-2</y><xscreen>217</xscreen><yscreen>157</yscreen><sizeHorzCX>158858</sizeHorzCX><sizeHorzCY>216253</sizeHorzCY><sizeVertCX>158858</sizeVertCX><sizeVertCY>694215</sizeVertCY></Rect></Wnd2></Sizes></Row0></Right><Bottom><Row0><Sizes><Wnd0><Rect><Top>-2</Top><Left>-2</Left><Bottom>155</Bottom><Right>1368</Right><x>-2</x><y>-2</y><xscreen>1370</xscreen><yscreen>157</yscreen><sizeHorzCX>1002928</sizeHorzCX><sizeHorzCY>216253</sizeHorzCY><sizeVertCX>158858</sizeVertCX><sizeVertCY>216253</sizeVertCY></Rect></Wnd0></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+    <Top><Row0><Sizes><Toolbar-05a11f10><key>iaridepm.enu1</key></Toolbar-05a11f10></Sizes></Row0><Row1><Sizes><Toolbar-05ac8738><key>debuggergui.enu1</key></Toolbar-05ac8738></Sizes></Row1></Top><Left><Row0><Sizes><Wnd1><Rect><Top>-2</Top><Left>-2</Left><Bottom>714</Bottom><Right>303</Right><x>-2</x><y>-2</y><xscreen>305</xscreen><yscreen>216</yscreen><sizeHorzCX>158854</sizeHorzCX><sizeHorzCY>216650</sizeHorzCY><sizeVertCX>158854</sizeVertCX><sizeVertCY>718154</sizeVertCY></Rect></Wnd1></Sizes></Row0></Left><Right><Row0><Sizes><Wnd2><Rect><Top>-2</Top><Left>-2</Left><Bottom>714</Bottom><Right>303</Right><x>-2</x><y>-2</y><xscreen>305</xscreen><yscreen>216</yscreen><sizeHorzCX>158854</sizeHorzCX><sizeHorzCY>216650</sizeHorzCY><sizeVertCX>158854</sizeVertCX><sizeVertCY>718154</sizeVertCY></Rect></Wnd2></Sizes></Row0></Right><Bottom><Row0><Sizes><Wnd0><Rect><Top>-2</Top><Left>-2</Left><Bottom>214</Bottom><Right>1922</Right><x>-2</x><y>-2</y><xscreen>1924</xscreen><yscreen>216</yscreen><sizeHorzCX>1002083</sizeHorzCX><sizeHorzCY>216650</sizeHorzCY><sizeVertCX>158854</sizeVertCX><sizeVertCY>216650</sizeVertCY></Rect></Wnd0></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
   </Desktop>
 </Project>
 

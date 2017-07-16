@@ -25,11 +25,11 @@
 
 // BasicRF address definitions
 #define PAN_ID                	0x1111
-#define BVM_ADDR           		0x2233		//B³c½æ¾÷ªºRF¦ì§}
-#define VM_ONE_ADDR            	0x3333		//²Ä¤@°ÏVM Co-ordinator¦ì§}
+#define BVM_ADDR           		0x2233		//Bè²©è³£æ©Ÿçš„RFä½å€
+#define VM_ONE_ADDR            	0x3333		//ç¬¬ä¸€å€VM Co-ordinatorä½å€
 #define APP_PAYLOAD_LENGTH        127
-#define BVM_GREENTEA     '3'					//B³c½æ¾÷¶¼«~(¤ô)ªº¿ëÃÑ½X
-#define BVM_BLACKTEA     '4'					//B³c½æ¾÷¶¼«~(¤û¥¤)ªº¿ëÃÑ½X
+#define BVM_GREENTEA     '3'					//Bè²©è³£æ©Ÿé£²å“(æ°´)çš„è¾¨è­˜ç¢¼
+#define BVM_BLACKTEA     '4'					//Bè²©è³£æ©Ÿé£²å“(ç‰›å¥¶)çš„è¾¨è­˜ç¢¼
 
 // Application states
 #define IDLE                      0
@@ -54,7 +54,7 @@
 
 
 //-------------------------------------------------------------------
-// @			¥ı¦æ«Å§i¨ç¼Æ°Ï
+// @			å…ˆè¡Œå®£å‘Šå‡½æ•¸å€
 // @fn          Drink of A vendingmachine
 // @brief       Application code for switch application. Puts MCU in
 //              endless loop to wait for commands from switch.
@@ -64,11 +64,11 @@
 //              appState - file scope variable. Holds application state
 // @return      none
 //-------------------------------------------------------------------
-static uint8 pTxData[APP_PAYLOAD_LENGTH];	//Tx¸ê®Æªº¤W­­
-static basicRfCfg_t basicRfConfig;			//«Å§iRFConfig²ÕºA
+static uint8 pTxData[APP_PAYLOAD_LENGTH];	//Txè³‡æ–™çš„ä¸Šé™
+static basicRfCfg_t basicRfConfig;			//å®£å‘ŠRFConfigçµ„æ…‹
 
-void B_greentea(int B_drinkg);		//B³c½æ¾÷¶¼«~(ºñ¯ù)ªº¥\¯à
-void B_blacktea(int B_drinkb);		//B³c½æ¾÷¶¼«~(¬õ¯ù)ªº¥\¯à
+void B_greentea(int B_drinkg);		//Bè²©è³£æ©Ÿé£²å“(ç¶ èŒ¶)çš„åŠŸèƒ½
+void B_blacktea(int B_drinkb);		//Bè²©è³£æ©Ÿé£²å“(ç´…èŒ¶)çš„åŠŸèƒ½
 
 //-------------------------------------------------------------------
 // @fn          main
@@ -77,34 +77,34 @@ void B_blacktea(int B_drinkb);		//B³c½æ¾÷¶¼«~(¬õ¯ù)ªº¥\¯à
 //-------------------------------------------------------------------
 int main()
 {
-	basicRfConfig.panId = PAN_ID;			//«ü©wRF ID
-    basicRfConfig.channel = RF_CHANNEL;		//«ü©wRF Channel
-    basicRfConfig.ackRequest = TRUE;		//«Ê¥]¶Ç»¼·|¦³ACK¦^À³
+	basicRfConfig.panId = PAN_ID;			//æŒ‡å®šRF ID
+    basicRfConfig.channel = RF_CHANNEL;		//æŒ‡å®šRF Channel
+    basicRfConfig.ackRequest = TRUE;		//å°åŒ…å‚³éæœƒæœ‰ACKå›æ‡‰
     #ifdef SECURITY_CCM
-        basicRfConfig.securityKey = key;	//«Ê¥]¶Ç»¼¦w¥ş¾÷¨î
+        basicRfConfig.securityKey = key;	//å°åŒ…å‚³éå®‰å…¨æ©Ÿåˆ¶
     #endif 
 
-    halBoardInit();							//CC2530¥DªOªì©l¤Æ
+    halBoardInit();							//CC2530ä¸»æ¿åˆå§‹åŒ–
 
-    halLedSet(8);							//¹q·½«ü¥Ü¿O
+    halLedSet(8);							//é›»æºæŒ‡ç¤ºç‡ˆ
 
-	int32 greentea = 7;						//B³c½æ¾÷¶¼«~(ºñ¯ù)ªº¼Æ¶q
-	int32 blacktea = 3;						//B³c½æ¾÷¶¼«~(¬õ¯ù)ªº¼Æ¶q
+	int32 greentea = 7;						//Bè²©è³£æ©Ÿé£²å“(ç¶ èŒ¶)çš„æ•¸é‡
+	int32 blacktea = 3;						//Bè²©è³£æ©Ÿé£²å“(ç´…èŒ¶)çš„æ•¸é‡
 	
-	// RFªì©l¤Æ
+	// RFåˆå§‹åŒ–
     basicRfConfig.myAddr = BVM_ADDR;
     if (basicRfInit(&basicRfConfig) == FAILED){}
 
-    basicRfReceiveOff();					//¨ÏRF±µ¦¬ºİ¬°±`Ãö¡AÂÇ¦¹¬Ù¹q
+    basicRfReceiveOff();					//ä½¿RFæ¥æ”¶ç«¯ç‚ºå¸¸é—œï¼Œè—‰æ­¤çœé›»
 	
 	while (1)
     {
-        uint8 v = halButtonPushed();							//vµ¥©ó«ö¤UBUTTON
-		if (v == HAL_BUTTON_2){									//­Yv±µ¦¬¨ìBUTTON_2ªº°T¸¹
-            if(greentea > 0)										//­YB³c½æ¾÷¶¼«~(ºñ¯ù)ªº¼Æ¶q¤j©ó0
-				greentea--;										//B³c½æ¾÷¶¼«~(ºñ¯ù)ªº¼Æ¶q¦©1
-			halLcdDisplayWithButton(HAL_LCD_LINE_1,'G',greentea);	//Åã¥Ü©óLCD
-			B_greentea(greentea);										//±N¤Ş¼Ægreentea¶Ç¦ÜB_greentea¨ç¼Æ¤¤ªº°Ñ¼ÆB_drinkg
+        uint8 v = halButtonPushed();							//vç­‰æ–¼æŒ‰ä¸‹BUTTON
+		if (v == HAL_BUTTON_2){									//è‹¥væ¥æ”¶åˆ°BUTTON_2çš„è¨Šè™Ÿ
+            if(greentea > 0)										//è‹¥Bè²©è³£æ©Ÿé£²å“(ç¶ èŒ¶)çš„æ•¸é‡å¤§æ–¼0
+				greentea--;										//Bè²©è³£æ©Ÿé£²å“(ç¶ èŒ¶)çš„æ•¸é‡æ‰£1
+			halLcdDisplayWithButton(HAL_LCD_LINE_1,'G',greentea);	//é¡¯ç¤ºæ–¼LCD
+			B_greentea(greentea);										//å°‡å¼•æ•¸greenteaå‚³è‡³B_greenteaå‡½æ•¸ä¸­çš„åƒæ•¸B_drinkg
 		}
 		else if(v == HAL_BUTTON_1){
 			if(blacktea > 0)
@@ -118,16 +118,16 @@ int main()
 }
 
 //-------------------------------------------------------------------
-// @¨ç¼Æ©w¸q°Ï
+// @å‡½æ•¸å®šç¾©å€
 //-------------------------------------------------------------------
 
 void B_greentea(int B_drinkg){
 	 
     do{
-		pTxData[0] = BVM_GREENTEA;	//Tx°}¦C­º­Ó¤¸¯À¬°AVM_greentea¿ëÃÑ½X
-		pTxData[1] = B_drinkg;	//Tx°}¦C²Ä¤G­Ó¤¸¯À¬°¬[¤W¶¼®Æ¼Æ¶q(B_drinkg)
+		pTxData[0] = BVM_GREENTEA;	//Txé™£åˆ—é¦–å€‹å…ƒç´ ç‚ºAVM_greenteaè¾¨è­˜ç¢¼
+		pTxData[1] = B_drinkg;	//Txé™£åˆ—ç¬¬äºŒå€‹å…ƒç´ ç‚ºæ¶ä¸Šé£²æ–™æ•¸é‡(B_drinkg)
 		
-        //µo°e«Ê¥]¡A«Ê¥]¤º®e¬°{±µ¦¬¥Øªº¦a(VM Co-ordinator¦ì§})¡BTx¸ê®Æ¡BTx¸ê®Æ¤W­­}
+        //ç™¼é€å°åŒ…ï¼Œå°åŒ…å…§å®¹ç‚º{æ¥æ”¶ç›®çš„åœ°(VM Co-ordinatorä½å€)ã€Txè³‡æ–™ã€Txè³‡æ–™ä¸Šé™}
 		basicRfSendPacket(VM_ONE_ADDR, pTxData, APP_PAYLOAD_LENGTH);
         
         halBuzzer(100);
