@@ -24,7 +24,7 @@
     <Windows>
       
       
-    <Wnd0>
+    <Wnd2>
         <Tabs>
           <Tab>
             <Identity>TabID-19542-30997</Identity>
@@ -32,11 +32,11 @@
             <Factory>Workspace</Factory>
             <Session>
               
-            <NodeDict><ExpandedNode>M160</ExpandedNode><ExpandedNode>M160/application</ExpandedNode><ExpandedNode>M160/targets</ExpandedNode></NodeDict></Session>
+            <NodeDict><ExpandedNode>M160</ExpandedNode><ExpandedNode>M160/application</ExpandedNode><ExpandedNode>M160/application/ex.c</ExpandedNode><ExpandedNode>M160/application/ex.c/Output</ExpandedNode><ExpandedNode>M160/targets</ExpandedNode></NodeDict></Session>
           </Tab>
         </Tabs>
         
-      <SelectedTab>0</SelectedTab></Wnd0><Wnd1>
+      <SelectedTab>0</SelectedTab></Wnd2><Wnd3>
         <Tabs>
           <Tab>
             <Identity>TabID-22868-4512</Identity>
@@ -46,20 +46,20 @@
           </Tab>
         </Tabs>
         
-      <SelectedTab>0</SelectedTab></Wnd1></Windows>
+      <SelectedTab>0</SelectedTab></Wnd3></Windows>
     <Editor>
       
       
       
       
-    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\ex.c</Filename><XPos>0</XPos><YPos>74</YPos><SelStart>2810</SelStart><SelEnd>2810</SelEnd></Tab><ActiveTab>0</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\components\common\hal_lcd.c</Filename><XPos>0</XPos><YPos>523</YPos><SelStart>16430</SelStart><SelEnd>16430</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\components\common\hal_button.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>402</SelStart><SelEnd>402</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\components\utils\util.h</Filename><XPos>0</XPos><YPos>30</YPos><SelStart>906</SelStart><SelEnd>906</SelEnd></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\ex.c</Filename><XPos>0</XPos><YPos>74</YPos><SelStart>2810</SelStart><SelEnd>2810</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\components\common\hal_lcd.c</Filename><XPos>0</XPos><YPos>523</YPos><SelStart>16430</SelStart><SelEnd>16430</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\components\common\hal_button.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>402</SelStart><SelEnd>402</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\components\utils\util.h</Filename><XPos>0</XPos><YPos>30</YPos><SelStart>906</SelStart><SelEnd>906</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>D:\IAR\8051\inc\ioCC2530.h</Filename><XPos>0</XPos><YPos>234</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd></Tab><ActiveTab>4</ActiveTab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
     <Positions>
       
       
       
       
       
-    <Top><Row0><Sizes><Toolbar-00751f10><key>iaridepm.enu1</key></Toolbar-00751f10></Sizes></Row0><Row1><Sizes/></Row1><Row2><Sizes/></Row2></Top><Left><Row0><Sizes><Wnd0><Rect><Top>-2</Top><Left>-2</Left><Bottom>752</Bottom><Right>399</Right><x>-2</x><y>-2</y><xscreen>401</xscreen><yscreen>202</yscreen><sizeHorzCX>208854</sizeHorzCX><sizeHorzCY>202608</sizeHorzCY><sizeVertCX>208854</sizeVertCX><sizeVertCY>756269</sizeVertCY></Rect></Wnd0></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd1><Rect><Top>-2</Top><Left>-2</Left><Bottom>200</Bottom><Right>1922</Right><x>-2</x><y>-2</y><xscreen>1924</xscreen><yscreen>202</yscreen><sizeHorzCX>1002083</sizeHorzCX><sizeHorzCY>202608</sizeHorzCY><sizeVertCX>208854</sizeVertCX><sizeVertCY>202608</sizeVertCY></Rect></Wnd1></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+    <Top><Row0><Sizes><Toolbar-050f1f10><key>iaridepm.enu1</key></Toolbar-050f1f10></Sizes></Row0></Top><Left><Row0><Sizes><Wnd2><Rect><Top>-2</Top><Left>-2</Left><Bottom>752</Bottom><Right>399</Right><x>-2</x><y>-2</y><xscreen>401</xscreen><yscreen>202</yscreen><sizeHorzCX>208854</sizeHorzCX><sizeHorzCY>202608</sizeHorzCY><sizeVertCX>208854</sizeVertCX><sizeVertCY>756269</sizeVertCY></Rect></Wnd2></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd3><Rect><Top>-2</Top><Left>-2</Left><Bottom>200</Bottom><Right>1922</Right><x>-2</x><y>-2</y><xscreen>1924</xscreen><yscreen>202</yscreen><sizeHorzCX>1002083</sizeHorzCX><sizeHorzCY>202608</sizeHorzCY><sizeVertCX>208854</sizeVertCX><sizeVertCY>202608</sizeVertCY></Rect></Wnd3></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
   </Desktop>
 </Workspace>
 
