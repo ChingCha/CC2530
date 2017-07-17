@@ -30,4 +30,5 @@ void halLcdWriteLines(char *line1, char *line2);
 void halLcdDisplayUint16(uint8 line, uint8 col, uint8 radix, uint16 value);
 void halLcdDisplayUint8(uint8 line, uint8 col, uint8 radix, uint8 value);
 void halLcdDisplayItem(uint8 line, int32 lValue, char lChar, int32 rValue, char rChar);
-void halLcdDisplayWithButton(uint8 line,char First_Char,int32 First_Value);
+void halLcdDisplayWithAVM(uint8 line,char lChar,int32 lValue);
+void halLcdDisplayWithBVM(uint8 line,char lChar,int32 lValue);

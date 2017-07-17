@@ -12,7 +12,7 @@
 #include "hal_mcu.h"
 #include "hal_board.h"
 #include "hal_lcd.h"
-#include "hal_button.h"
+//#include "hal_button.h"
 #include "util.h"
 #include <string.h>
 
@@ -518,7 +518,7 @@ pCounter = convInt32ToText(lValue);			//pCounter經過"convInt32ToText"轉換為Text(
     lcdWriteLine(line, pLcdLineBuffer);
 }
 //-------------------------------------------------------------------
-// @fn          halLcdDisplayWithButton
+// @fn          AVendingMachineDisply
 // @refence		Obeject++ Ch.9-7 p.297       
 // @param       
 //              
@@ -527,22 +527,43 @@ pCounter = convInt32ToText(lValue);			//pCounter經過"convInt32ToText"轉換為Text(
 // @date		2017/04/27  
 // @creater		TOM   
 //-------------------------------------------------------------------
-void halLcdDisplayWithButton(uint8 line,char First_Char,int32 First_Value)
+void halLcdDisplayWithAVM(uint8 line,char lChar,int32 lValue)
 {
-	char *F_Value;								//字串指標化，F_Value指向char型態的指標
-	F_Value = convInt32ToText(First_Value);		//F_Value指向convInt32ToText(First_Value)
-    pLcdLineBuffer[0] = First_Char;
+	char *pCounter;
+	pCounter = convInt32ToText(lValue);
+    pLcdLineBuffer[0] = lChar;
     pLcdLineBuffer[1] = ':';
-	pLcdLineBuffer[2] = *F_Value;
-	
-	//迴圈處理剩餘pLcdLineBuffer[]
+	pLcdLineBuffer[2] = *pCounter;
 	for(int i = 3;i<=15;i++){
 		pLcdLineBuffer[i] = ' ';
 	}
+	lcdWriteLine(line, pLcdLineBuffer);
+}
+//-------------------------------------------------------------------
+// @fn          BVendingMachineDisply
+// @refence		Obeject++ Ch.9-7 p.297       
+// @param       
+//              
+//              
+// @return    
+// @date		2017/04/27  
+// @creater		TOM   
+//-------------------------------------------------------------------
+void halLcdDisplayWithBVM(uint8 line,char lChar,int32 lValue)
+{
+	char *pCounter;
+	pCounter = convInt32ToText(lValue);
+    
+	pLcdLineBuffer[0] = ' ';
+	pLcdLineBuffer[1] = ' ';
+	pLcdLineBuffer[2] = ' ';
 	
-	/*	Write line on display
-	@line:顯示餘第幾行
-	@pLcdLineBuffer[LCD_LINE_LENGTH] //陣列元素數量限制(16)
-	*/
+	pLcdLineBuffer[3] = lChar;
+    pLcdLineBuffer[4] = ':';
+	pLcdLineBuffer[5] = *pCounter;
+	
+	for(int i = 3;i<=15;i++){
+		pLcdLineBuffer[i] = ' ';
+	}
 	lcdWriteLine(line, pLcdLineBuffer);
 }

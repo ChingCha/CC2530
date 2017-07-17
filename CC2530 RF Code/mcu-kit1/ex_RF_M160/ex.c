@@ -136,15 +136,15 @@ int main()
 // @函數定義區
 //-------------------------------------------------------------------
 void A_water(int A_drinkw){
-	halLcdDisplayWithButton(HAL_LCD_LINE_1,'W',A_drinkw);
+	halLcdDisplayWithAVM(HAL_LCD_LINE_1,'W',A_drinkw);
 }
 
 void A_milk(int A_drinkm){
-	halLcdDisplayWithButton(HAL_LCD_LINE_2,'M',A_drinkm);
+	halLcdDisplayWithAVM(HAL_LCD_LINE_2,'M',A_drinkm);
 }
 void B_greentea(int B_drinkg){
-	halLcdDisplayWithButton(HAL_LCD_LINE_1,'G',B_drinkg);
+	halLcdDisplayWithBVM(HAL_LCD_LINE_1,'G',B_drinkg);
 }		
 void B_blacktea(int B_drinkb){
-	halLcdDisplayWithButton(HAL_LCD_LINE_2,'B',B_drinkb);
+	halLcdDisplayWithBVM(HAL_LCD_LINE_2,'B',B_drinkb);
 }		
