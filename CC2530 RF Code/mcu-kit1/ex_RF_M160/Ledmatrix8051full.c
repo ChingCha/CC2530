@@ -1,41 +1,41 @@
-//�ޤJ���Y��
+//引入標頭檔
 #include "ioCC2530.h"
 
-//MAX7219�Ȧs�������w�q
+//MAX7219暫存器巨集定義
 
-#define DECODE_MODE  0x09   //�ѽX����Ȧs��
-#define INTENSITY    0x0A   //�G�ױ���Ȧs��
-#define SCAN_LIMIT   0x0B   //���y�ɭ��Ȧs��
-#define SHUT_DOWN    0x0C   //���_�Ҧ��Ȧs��
-#define DISPLAY_TEST 0x0F   //���ձ���Ȧs�� 
+#define DECODE_MODE  0x09   //解碼控制暫存器
+#define INTENSITY    0x0A   //亮度控制暫存器
+#define SCAN_LIMIT   0x0B   //掃描界限暫存器
+#define SHUT_DOWN    0x0C   //關斷模式暫存器
+#define DISPLAY_TEST 0x0F   //測試控制暫存器 
 
-#define INTENSITY_MIN     0x00   // �̤p��ܫG��
-#define INTENSITY_MAX     0x0F   // �̤j��ܫG��
+#define INTENSITY_MIN     0x00   // 最小顯示亮度
+#define INTENSITY_MAX     0x0F   // 最大顯示亮度
 
-//CC2530�}��\�२���w�q
+//CC2530腳位功能巨集定義
 
-#define MAX7219DIN    P0_4		//CC2530 P0_4>>>�Ҳ�DIN�}��
-#define MAX7219LOAD     P0_5		//CC2530 P0_5>>>�Ҳ�CS(LOAD)�}��
-#define MAX7219CLK    P0_6		//CC2530 P0_6>>>�Ҳ�CLK�}��
+#define MAX7219DIN    P0_4		//CC2530 P0_4>>>模組DIN腳位
+#define MAX7219LOAD     P0_5		//CC2530 P0_5>>>模組CS(LOAD)腳位
+#define MAX7219CLK    P0_6		//CC2530 P0_6>>>模組CLK腳位
 
 unsigned char value[1]={0x80};
 
-//��ƫŧi
+//函數宣告
 void MAX7219_Init(void);
 void MAX7219_SendByte (unsigned char dataout);
 void MAX7219_Write (unsigned char reg_number, unsigned char dataout);
 
-//CC2530 Port & MAX7219��l�ƨ�ơA�ó]�mMAX7219����������Ȧs��
+//CC2530 Port & MAX7219初始化函數，並設置MAX7219內部的控制暫存器
 void MAX7219_Init(){
 	
-	P0SEL &= ~0x70;	//��P0_4�B5�B6�]�m���q��I/O Port�\��
-	P1DIR |= 0x70;	//��P0_4�B5�B6 Prot�ǿ��V�]�m����X
+	P0SEL &= ~0x70;	//把P0_4、5、6設置為通用I/O Port功能
+	P1DIR |= 0x70;	//把P0_4、5、6 Prot傳輸方向設置為輸出
 	
-	MAX7219_Write(SHUT_DOWN,0x01);         //�}�ҥ��`�u�@�Ҧ��]0xX1�^
-    MAX7219_Write(DISPLAY_TEST,0x00);      //��ܤu�@�Ҧ��]0xX0�^
-    MAX7219_Write(DECODE_MODE,0xff);       //��Υ��ѽX�Ҧ�
-    MAX7219_Write(SCAN_LIMIT,0x07);        //8�uLED����
-    MAX7219_Write(INTENSITY,0x04);          //�]�m��l�G��   
+	MAX7219_Write(SHUT_DOWN,0x01);         //開啟正常工作模式（0xX1）
+    MAX7219_Write(DISPLAY_TEST,0x00);      //選擇工作模式（0xX0）
+    MAX7219_Write(DECODE_MODE,0xff);       //選用全解碼模式
+    MAX7219_Write(SCAN_LIMIT,0x07);        //8只LED全用
+    MAX7219_Write(INTENSITY,0x04);          //設置初始亮度   
 	
 }
 

@@ -10,6 +10,7 @@ sbit CLK=P1^0;           //MAX7219串列時鐘        13腳
 //函數宣告
 void Write7219(unsigned char address,unsigned char dat);
 void Initial(void);
+
 //位址、資料發送副程式
 void Write7219(unsigned char address,unsigned char dat)
 {   
@@ -42,7 +43,7 @@ void Initial(void)
     Write7219(SCAN_LIMIT,0x07);        //8只LED全用
     Write7219(INTENSITY,0x04);          //設置初始亮度      
 }
-測試程式
+
 void main(void)
 {
     unsigned char i; 

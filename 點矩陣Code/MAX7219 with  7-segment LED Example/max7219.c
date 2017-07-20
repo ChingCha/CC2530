@@ -73,7 +73,7 @@
 * Macros
 *********************************************************************************************************
 */
-#define DATA_PORT     P3                              // assume "DATA" is on P3.5
+#define DATA_PORT	  P3                              // assume "DATA" is on P3.5
 #define DATA_DDR      P3
 #define DATA_BIT      0x20
 #define DATA_0()      (DATA_PORT &= ~DATA_BIT)
