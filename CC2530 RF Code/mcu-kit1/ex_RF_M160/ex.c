@@ -30,13 +30,12 @@
 	#define AVM_ADDR           		0x2222
 	#define AVM_WATER         		'1'
 	#define AVM_MILK         		'2'
-
+	
 	// B Vending Machine
 	#define BVM_ADDR           		0x2233
 	#define BVM_GREENTEA     		'3'					//B販賣機飲品(水)的辨識碼
 	#define BVM_BLACKTEA     		'4'					//B販賣機飲品(牛奶)的辨識碼
-	
-	
+
 #define VM_ONE_ADDR            	0x3333
 #define APP_PAYLOAD_LENGTH        127
 
@@ -97,6 +96,8 @@ int main()
     // Indicate that device is powered
     halLedSet(8);
     halBuzzer(300);
+	//int32 water = 5;
+	//int32 milk = 9;
 	
 	// Initialize BasicRF
     basicRfConfig.myAddr = VM_ONE_ADDR;
@@ -116,7 +117,7 @@ int main()
 			
 			if(pRxData[0] == AVM_WATER)
 				A_water(pRxData[1]);
-	
+		
 			if(pRxData[0] == AVM_MILK)
 				A_milk(pRxData[1]);
 			
@@ -125,7 +126,6 @@ int main()
 			
 			if(pRxData[0] == BVM_BLACKTEA)
 				B_blacktea(pRxData[1]);
-			
 		}	
 	}
 	
@@ -143,8 +143,8 @@ void A_milk(int A_drinkm){
 	halLcdDisplayWithAVM(HAL_LCD_LINE_2,'M',A_drinkm);
 }
 void B_greentea(int B_drinkg){
-	halLcdDisplayWithBVM(HAL_LCD_LINE_1,'G',B_drinkg);
+	halLcdDisplayWithAVM(HAL_LCD_LINE_1,'G',B_drinkg);
 }		
 void B_blacktea(int B_drinkb){
-	halLcdDisplayWithBVM(HAL_LCD_LINE_2,'B',B_drinkb);
+	halLcdDisplayWithAVM(HAL_LCD_LINE_2,'B',B_drinkb);
 }		
