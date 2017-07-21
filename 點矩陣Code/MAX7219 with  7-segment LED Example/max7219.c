@@ -120,6 +120,10 @@ static unsigned char MAX7219_LookupCode (char character);
 * Returns    : none
 *********************************************************************************************************
 */
+
+//語法沒問題，MAX7219暫存照此步驟
+//或許，得用CC2530入門課程實例檢測I/O有無正常運作
+
 void MAX7219_Init (void)
 {
   DATA_DDR |= DATA_BIT;                               // configure "DATA" as output
@@ -174,6 +178,10 @@ void MAX7219_ShutdownStop (void)
 * Returns    : none
 *********************************************************************************************************
 */
+
+//優先測試
+
+
 void MAX7219_DisplayTestStart (void)
 {
   MAX7219_Write(REG_DISPLAY_TEST, 1);                 // put MAX7219 into "display test" mode
@@ -316,6 +324,10 @@ static unsigned char MAX7219_LookupCode (char character)
 * Returns    : none
 *********************************************************************************************************
 */
+
+//位址(指定到哪一個暫存器)、資料發送副程式，待釐清
+
+
 static void MAX7219_Write (unsigned char reg_number, unsigned char dataout)
 {
   LOAD_1();                                           // take LOAD high to begin
@@ -335,6 +347,9 @@ static void MAX7219_Write (unsigned char reg_number, unsigned char dataout)
 * Returns    : none
 *********************************************************************************************************
 */
+
+//資料發送副程式，得釐清
+
 static void MAX7219_SendByte (unsigned char dataout)
 {
   char i;
