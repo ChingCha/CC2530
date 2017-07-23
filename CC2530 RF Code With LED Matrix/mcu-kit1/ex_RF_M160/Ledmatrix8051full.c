@@ -1,15 +1,5 @@
 //引入標頭檔
 #include "ioCC2530.h"
-#include "hal_defs.h"
-#include "hal_board.h"
-#include "hal_led.h"
-#include "hal_lcd.h"
-#include "hal_int.h"
-#include "hal_mcu.h"
-#include "hal_buzzer.h"
-#include "hal_rf.h"
-#include "basic_rf.h"
-#include "hal_button.h"
 
 //MAX7219暫存器巨集定義
 
@@ -25,10 +15,10 @@
 //CC2530腳位功能巨集定義
 
 #define MAX7219DIN    P0_4		//CC2530 P0_4>>>模組DIN腳位
-#define MAX7219LOAD   P0_5		//CC2530 P0_5>>>模組CS(LOAD)腳位
+#define MAX7219LOAD     P0_5		//CC2530 P0_5>>>模組CS(LOAD)腳位
 #define MAX7219CLK    P0_6		//CC2530 P0_6>>>模組CLK腳位
 
-//unsigned char value[1]={0x80};
+unsigned char value[1]={0x80};
 
 //函數宣告
 void MAX7219_Init(void);
@@ -36,36 +26,24 @@ void MAX7219_SendByte (unsigned char dataout);
 void MAX7219_Write (unsigned char reg_number, unsigned char dataout);
 void MAX7219_DisplayTestStart (void);
 
-//延遲函數
-void Delay(unsigned int t)
-{
-  while(t--);
-}
-
 //CC2530 Port & MAX7219初始化函數，並設置MAX7219內部的控制暫存器
 void MAX7219_Init(){
 	
 	P0SEL &= ~0x70;	//把P0_4、5、6設置為通用I/O Port功能
 	P1DIR |= 0x70;	//把P0_4、5、6 Prot傳輸方向設置為輸出
 	
-	MAX7219_Write(REG_DECODE, 0x00);          	// set to "no decode" for all digits
-	MAX7219_Write(REG_INTENSITY,0x0F);			// light max
-	MAX7219_Write(REG_SCAN_LIMIT, 0x07);      	// set up to scan all eight digits                 
-	MAX7219_Write(REG_SHUTDOWN,0x01);			// Normal operation
-	MAX7219_Write(REG_DISPLAY_TEST,0x00);     	// Normal operation
-
+	MAX7219_Write(REG_SCAN_LIMIT, 7);                   // set up to scan all eight digits
+	MAX7219_Write(REG_DECODE, 0x00);                    // set to "no decode" for all digitsMAX7219_ShutdownStop();                             // select normal operation (i.e. not shutdown)
+	MAX7219_DisplayTestStop();                          // select normal operation (i.e. not test mode)
+	MAX7219_Clear();                                    // clear all digits
+	MAX7219_SetBrightness(INTENSITY_MAX);               // set to maximum intensity
 	
 }
 
 int main(){
 	
-	//KIT板初始化
-	halBoardInit();
-	halLcdInit();
-	
 	MAX7219_Init();
-	MAX7219_DisplayTestStart();
-	Delay(1000);
+
 	
 	return 0;
 }
@@ -130,5 +108,3 @@ void MAX7219_DisplayTestStart (void)
 {
   MAX7219_Write(REG_DISPLAY_TEST, 1);                 // put MAX7219 into "display test" mode
 }
-
-

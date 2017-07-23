@@ -1,4 +1,4 @@
-//å¼•å…¥æ¨™é ­æª”
+//¤Ş¤J¼ĞÀYÀÉ
 #include "ioCC2530.h"
 #include "hal_defs.h"
 #include "hal_board.h"
@@ -11,7 +11,7 @@
 #include "basic_rf.h"
 #include "hal_button.h"
 
-//MAX7219æš«å­˜å™¨å·¨é›†å®šç¾©
+//MAX7219¼È¦s¾¹¥¨¶°©w¸q
 
 #define REG_DECODE        0x09                        // "decode mode" register
 #define REG_INTENSITY     0x0a                        // "intensity" register
@@ -22,31 +22,31 @@
 #define INTENSITY_MIN     0x00                        // minimum display intensity
 #define INTENSITY_MAX     0x0f                        // maximum display intensity
 
-//CC2530è…³ä½åŠŸèƒ½å·¨é›†å®šç¾©
+//CC2530¸}¦ì¥\¯à¥¨¶°©w¸q
 
-#define MAX7219DIN    P0_4		//CC2530 P0_4>>>æ¨¡çµ„DINè…³ä½
-#define MAX7219LOAD   P0_5		//CC2530 P0_5>>>æ¨¡çµ„CS(LOAD)è…³ä½
-#define MAX7219CLK    P0_6		//CC2530 P0_6>>>æ¨¡çµ„CLKè…³ä½
+#define MAX7219DIN    P0_4		//CC2530 P0_4>>>¼Ò²ÕDIN¸}¦ì
+#define MAX7219LOAD     P0_5		//CC2530 P0_5>>>¼Ò²ÕCS(LOAD)¸}¦ì
+#define MAX7219CLK    P0_6		//CC2530 P0_6>>>¼Ò²ÕCLK¸}¦ì
 
 //unsigned char value[1]={0x80};
 
-//å‡½æ•¸å®£å‘Š
+//¨ç¼Æ«Å§i
 void MAX7219_Init(void);
 void MAX7219_SendByte (unsigned char dataout);
 void MAX7219_Write (unsigned char reg_number, unsigned char dataout);
 void MAX7219_DisplayTestStart (void);
 
-//å»¶é²å‡½æ•¸
+//©µ¿ğ¨ç¼Æ
 void Delay(unsigned int t)
 {
   while(t--);
 }
 
-//CC2530 Port & MAX7219åˆå§‹åŒ–å‡½æ•¸ï¼Œä¸¦è¨­ç½®MAX7219å…§éƒ¨çš„æ§åˆ¶æš«å­˜å™¨
+//CC2530 Port & MAX7219ªì©l¤Æ¨ç¼Æ¡A¨Ã³]¸mMAX7219¤º³¡ªº±±¨î¼È¦s¾¹
 void MAX7219_Init(){
 	
-	P0SEL &= ~0x70;	//æŠŠP0_4ã€5ã€6è¨­ç½®ç‚ºé€šç”¨I/O PortåŠŸèƒ½
-	P1DIR |= 0x70;	//æŠŠP0_4ã€5ã€6 Protå‚³è¼¸æ–¹å‘è¨­ç½®ç‚ºè¼¸å‡º
+	P0SEL &= ~0x70;	//§âP0_4¡B5¡B6³]¸m¬°³q¥ÎI/O Port¥\¯à
+	P1DIR |= 0x70;	//§âP0_4¡B5¡B6 Prot¶Ç¿é¤è¦V³]¸m¬°¿é¥X
 	
 	MAX7219_Write(REG_DECODE, 0x00);          	// set to "no decode" for all digits
 	MAX7219_Write(REG_INTENSITY,0x0F);			// light max
@@ -59,7 +59,7 @@ void MAX7219_Init(){
 
 int main(){
 	
-	//KITæ¿åˆå§‹åŒ–
+	//KITªOªì©l¤Æ
 	halBoardInit();
 	halLcdInit();
 	
