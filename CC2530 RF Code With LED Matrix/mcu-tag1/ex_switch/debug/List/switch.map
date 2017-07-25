@@ -2,61 +2,83 @@
 #                                                                              #
 #      IAR Universal Linker V5.0.2.5/W32                                       #
 #                                                                              #
-#           Link time     =  21/Jul/2017  00:35:21                             #
+#           Link time     =  25/Jul/2017  18:54:21                             #
 #           Target CPU    =  x51                                               #
-#           List file     =  "C:\Users\user\Desktop\CC2530\CC2530 RF Code\mcu- #
-#                            tag1\ex_switch\debug\List\switch.map"             #
-#           Output file 1 =  "C:\Users\user\Desktop\CC2530\CC2530 RF Code\mcu- #
-#                            tag1\ex_switch\debug\Exe\switch.hex"              #
+#           List file     =  "C:\Users\user\Desktop\CC2530\CC2530 RF Code With #
+#                             LED Matrix\mcu-tag1\ex_switch\debug\List\switch. #
+#                            map"                                              #
+#           Output file 1 =  "C:\Users\user\Desktop\CC2530\CC2530 RF Code With #
+#                             LED Matrix\mcu-tag1\ex_switch\debug\Exe\switch.h #
+#                            ex"                                               #
 #                            Format: intel-extended                            #
-#           Output file 2 =  "C:\Users\user\Desktop\CC2530\CC2530 RF Code\mcu- #
-#                            tag1\ex_switch\debug\Exe\switch.d51"              #
+#           Output file 2 =  "C:\Users\user\Desktop\CC2530\CC2530 RF Code With #
+#                             LED Matrix\mcu-tag1\ex_switch\debug\Exe\switch.d #
+#                            51"                                               #
 #                            Format: debug                                     #
 #                            UBROF version 10.0.3                              #
 #                            Using library modules for C-SPY (-rt)             #
 #           Command line  =  -ID:\IAR\8051\CONFIG\ -D_NR_OF_BANKS=0x07         #
 #                            -D_CODEBANK_END=0xFFFF -D_CODEBANK_START=0x8000   #
 #                            -D?CBANK_MASK=0x07 -D?CBANK=0x9F                  #
-#                            "C:\Users\user\Desktop\CC2530\CC2530 RF Code\mcu- #
-#                            tag1\ex_switch\debug\Obj\basic_rf.r51"            #
-#                            "C:\Users\user\Desktop\CC2530\CC2530 RF Code\mcu- #
-#                            tag1\ex_switch\debug\Obj\basic_rf_security.r51"   #
-#                            "C:\Users\user\Desktop\CC2530\CC2530 RF Code\mcu- #
-#                            tag1\ex_switch\debug\Obj\hal_board.r51"           #
-#                            "C:\Users\user\Desktop\CC2530\CC2530 RF Code\mcu- #
-#                            tag1\ex_switch\debug\Obj\hal_button.r51"          #
-#                            "C:\Users\user\Desktop\CC2530\CC2530 RF Code\mcu- #
-#                            tag1\ex_switch\debug\Obj\hal_buzzer.r51"          #
-#                            "C:\Users\user\Desktop\CC2530\CC2530 RF Code\mcu- #
-#                            tag1\ex_switch\debug\Obj\hal_clock.r51"           #
-#                            "C:\Users\user\Desktop\CC2530\CC2530 RF Code\mcu- #
-#                            tag1\ex_switch\debug\Obj\hal_int.r51"             #
-#                            "C:\Users\user\Desktop\CC2530\CC2530 RF Code\mcu- #
-#                            tag1\ex_switch\debug\Obj\hal_keypad.r51"          #
-#                            "C:\Users\user\Desktop\CC2530\CC2530 RF Code\mcu- #
-#                            tag1\ex_switch\debug\Obj\hal_lcd.r51"             #
-#                            "C:\Users\user\Desktop\CC2530\CC2530 RF Code\mcu- #
-#                            tag1\ex_switch\debug\Obj\hal_led.r51"             #
-#                            "C:\Users\user\Desktop\CC2530\CC2530 RF Code\mcu- #
-#                            tag1\ex_switch\debug\Obj\hal_mcu.r51"             #
-#                            "C:\Users\user\Desktop\CC2530\CC2530 RF Code\mcu- #
-#                            tag1\ex_switch\debug\Obj\hal_rf.r51"              #
-#                            "C:\Users\user\Desktop\CC2530\CC2530 RF Code\mcu- #
-#                            tag1\ex_switch\debug\Obj\hal_rf_security.r51"     #
-#                            "C:\Users\user\Desktop\CC2530\CC2530 RF Code\mcu- #
-#                            tag1\ex_switch\debug\Obj\hal_uart.r51"            #
-#                            "C:\Users\user\Desktop\CC2530\CC2530 RF Code\mcu- #
-#                            tag1\ex_switch\debug\Obj\switch.r51"              #
-#                            "C:\Users\user\Desktop\CC2530\CC2530 RF Code\mcu- #
-#                            tag1\ex_switch\debug\Obj\util.r51"                #
-#                            "C:\Users\user\Desktop\CC2530\CC2530 RF Code\mcu- #
-#                            tag1\ex_switch\debug\Obj\util_buffer.r51"         #
+#                            "C:\Users\user\Desktop\CC2530\CC2530 RF Code With #
+#                             LED Matrix\mcu-tag1\ex_switch\debug\Obj\basic_rf #
+#                            .r51"                                             #
+#                            "C:\Users\user\Desktop\CC2530\CC2530 RF Code With #
+#                             LED Matrix\mcu-tag1\ex_switch\debug\Obj\basic_rf #
+#                            _security.r51"                                    #
+#                            "C:\Users\user\Desktop\CC2530\CC2530 RF Code With #
+#                             LED Matrix\mcu-tag1\ex_switch\debug\Obj\hal_boar #
+#                            d.r51"                                            #
+#                            "C:\Users\user\Desktop\CC2530\CC2530 RF Code With #
+#                             LED Matrix\mcu-tag1\ex_switch\debug\Obj\hal_butt #
+#                            on.r51"                                           #
+#                            "C:\Users\user\Desktop\CC2530\CC2530 RF Code With #
+#                             LED Matrix\mcu-tag1\ex_switch\debug\Obj\hal_buzz #
+#                            er.r51"                                           #
+#                            "C:\Users\user\Desktop\CC2530\CC2530 RF Code With #
+#                             LED Matrix\mcu-tag1\ex_switch\debug\Obj\hal_cloc #
+#                            k.r51"                                            #
+#                            "C:\Users\user\Desktop\CC2530\CC2530 RF Code With #
+#                             LED Matrix\mcu-tag1\ex_switch\debug\Obj\hal_int. #
+#                            r51"                                              #
+#                            "C:\Users\user\Desktop\CC2530\CC2530 RF Code With #
+#                             LED Matrix\mcu-tag1\ex_switch\debug\Obj\hal_keyp #
+#                            ad.r51"                                           #
+#                            "C:\Users\user\Desktop\CC2530\CC2530 RF Code With #
+#                             LED Matrix\mcu-tag1\ex_switch\debug\Obj\hal_lcd. #
+#                            r51"                                              #
+#                            "C:\Users\user\Desktop\CC2530\CC2530 RF Code With #
+#                             LED Matrix\mcu-tag1\ex_switch\debug\Obj\hal_led. #
+#                            r51"                                              #
+#                            "C:\Users\user\Desktop\CC2530\CC2530 RF Code With #
+#                             LED Matrix\mcu-tag1\ex_switch\debug\Obj\hal_mcu. #
+#                            r51"                                              #
+#                            "C:\Users\user\Desktop\CC2530\CC2530 RF Code With #
+#                             LED Matrix\mcu-tag1\ex_switch\debug\Obj\hal_rf.r #
+#                            51"                                               #
+#                            "C:\Users\user\Desktop\CC2530\CC2530 RF Code With #
+#                             LED Matrix\mcu-tag1\ex_switch\debug\Obj\hal_rf_s #
+#                            ecurity.r51"                                      #
+#                            "C:\Users\user\Desktop\CC2530\CC2530 RF Code With #
+#                             LED Matrix\mcu-tag1\ex_switch\debug\Obj\hal_uart #
+#                            .r51"                                             #
+#                            "C:\Users\user\Desktop\CC2530\CC2530 RF Code With #
+#                             LED Matrix\mcu-tag1\ex_switch\debug\Obj\switch.r #
+#                            51"                                               #
+#                            "C:\Users\user\Desktop\CC2530\CC2530 RF Code With #
+#                             LED Matrix\mcu-tag1\ex_switch\debug\Obj\util.r51 #
+#                            "                                                 #
+#                            "C:\Users\user\Desktop\CC2530\CC2530 RF Code With #
+#                             LED Matrix\mcu-tag1\ex_switch\debug\Obj\util_buf #
+#                            fer.r51"                                          #
 #                            -o                                                #
-#                            "C:\Users\user\Desktop\CC2530\CC2530 RF Code\mcu- #
-#                            tag1\ex_switch\debug\Exe\switch.d51"              #
+#                            "C:\Users\user\Desktop\CC2530\CC2530 RF Code With #
+#                             LED Matrix\mcu-tag1\ex_switch\debug\Exe\switch.d #
+#                            51"                                               #
 #                            -l                                                #
-#                            "C:\Users\user\Desktop\CC2530\CC2530 RF Code\mcu- #
-#                            tag1\ex_switch\debug\List\switch.map"             #
+#                            "C:\Users\user\Desktop\CC2530\CC2530 RF Code With #
+#                             LED Matrix\mcu-tag1\ex_switch\debug\List\switch. #
+#                            map"                                              #
 #                            -xmsn -ID:\IAR\8051\CONFIG\ -f                    #
 #                            "D:\IAR\8051\config\devices\Texas Instruments\lnk #
 #                            51ew_cc2530F256_banked.xcl"                       #
@@ -141,8 +163,8 @@
 #                            -e_medium_write=_formatted_write                  #
 #                            -e_medium_read=_formatted_read -rt                #
 #                            "-Ointel-extended=C:\Users\user\Desktop\CC2530\CC #
-#                            2530 RF Code\mcu-tag1\ex_switch\debug\Exe\switch. #
-#                            hex"                                              #
+#                            2530 RF Code With LED Matrix\mcu-tag1\ex_switch\d #
+#                            ebug\Exe\switch.hex"                              #
 #                            -s __program_start                                #
 #                            D:\IAR\8051\LIB\CLIB\cl-pli-blxd-1e16x01.r51      #
 #                            -D_IDATA_STACK_SIZE=0x40                          #
@@ -167,7 +189,7 @@
                 *                                      *
                 ****************************************
 
-       Program entry at : CODE      000000E3  Relocatable, from module : CSTARTUP
+       Program entry at : CODE      000000BA  Relocatable, from module : CSTARTUP
 
 
 
@@ -239,9 +261,7 @@ Absolute parts
            _BANK0_END              00007FFF 
            _BANK0_START            00000000 
            ?ESP                    0000009B 
-           ?VB                     00000020        ?BANKED_ENTER_XDATA (?BANKED_ENTER_XDATA)
-                                                   ?BANKED_LEAVE_XDATA (?BANKED_LEAVE_XDATA)
-                                                   ?INTERRUPT_ENTER_XSP (?INTERRUPT_ENTER_XSP)
+           ?VB                     00000020        ?INTERRUPT_ENTER_XSP (?INTERRUPT_ENTER_XSP)
                                                    ?INTERRUPT_LEAVE_XSP (?INTERRUPT_LEAVE_XSP)
            _BREG_START             00000000 
            _REGISTER_BANK_START    00000000 
@@ -264,22 +284,22 @@ Absolute parts
            _NR_OF_BANKS            00000007 
     *************************************************************************
 
-  FILE NAME : C:\Users\user\Desktop\CC2530\CC2530 RF Code\mcu-tag1\ex_switch\debug\Obj\basic_rf.r51
+  FILE NAME : C:\Users\user\Desktop\CC2530\CC2530 RF Code With LED Matrix\mcu-tag1\ex_switch\debug\Obj\basic_rf.r51
     *************************************************************************
 
-  FILE NAME : C:\Users\user\Desktop\CC2530\CC2530 RF Code\mcu-tag1\ex_switch\debug\Obj\basic_rf_security.r51
+  FILE NAME : C:\Users\user\Desktop\CC2530\CC2530 RF Code With LED Matrix\mcu-tag1\ex_switch\debug\Obj\basic_rf_security.r51
     *************************************************************************
 
-  FILE NAME : C:\Users\user\Desktop\CC2530\CC2530 RF Code\mcu-tag1\ex_switch\debug\Obj\hal_board.r51
+  FILE NAME : C:\Users\user\Desktop\CC2530\CC2530 RF Code With LED Matrix\mcu-tag1\ex_switch\debug\Obj\hal_board.r51
   PROGRAM MODULE, NAME : hal_board
 
   SEGMENTS IN THE MODULE
   ======================
 SFR_AN
   Relative segment, address: DATA 00000080 - 00000080 (0x1 bytes), align: 0
-  Segment part 1. ROOT.       Intra module refs:   MAX7219_SendByte (switch)
-                                                   MAX7219_Write (switch)
+  Segment part 1. ROOT.       Intra module refs:   LEDRunning (switch)
                                                    T1_ISR (hal_buzzer)
+                                                   main (switch)
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
            _A_P0                   00000080 
@@ -309,7 +329,7 @@ SFR_AN
     -------------------------------------------------------------------------
 SFR_AN
   Relative segment, address: DATA 000000F3 - 000000F3 (0x1 bytes), align: 0
-  Segment part 4. ROOT.       Intra module refs:   MAX7219_Init (switch)
+  Segment part 4. ROOT.       Intra module refs:   main (switch)
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
            P0SEL                   000000F3 
@@ -337,14 +357,14 @@ SFR_AN
     -------------------------------------------------------------------------
 SFR_AN
   Relative segment, address: DATA 000000FD - 000000FD (0x1 bytes), align: 0
-  Segment part 8. ROOT.
+  Segment part 8. ROOT.       Intra module refs:   main (switch)
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
            P0DIR                   000000FD 
     -------------------------------------------------------------------------
 SFR_AN
   Relative segment, address: DATA 000000FE - 000000FE (0x1 bytes), align: 0
-  Segment part 9. ROOT.       Intra module refs:   MAX7219_Init (switch)
+  Segment part 9. ROOT.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
            P1DIR                   000000FE 
@@ -358,7 +378,7 @@ SFR_AN
 
     *************************************************************************
 
-  FILE NAME : C:\Users\user\Desktop\CC2530\CC2530 RF Code\mcu-tag1\ex_switch\debug\Obj\hal_button.r51
+  FILE NAME : C:\Users\user\Desktop\CC2530\CC2530 RF Code With LED Matrix\mcu-tag1\ex_switch\debug\Obj\hal_button.r51
   PROGRAM MODULE, NAME : hal_button
 
   SEGMENTS IN THE MODULE
@@ -366,7 +386,7 @@ SFR_AN
 
     *************************************************************************
 
-  FILE NAME : C:\Users\user\Desktop\CC2530\CC2530 RF Code\mcu-tag1\ex_switch\debug\Obj\hal_buzzer.r51
+  FILE NAME : C:\Users\user\Desktop\CC2530\CC2530 RF Code With LED Matrix\mcu-tag1\ex_switch\debug\Obj\hal_buzzer.r51
   PROGRAM MODULE, NAME : hal_buzzer
 
   SEGMENTS IN THE MODULE
@@ -417,11 +437,11 @@ SFR_AN
            T1CCTL0                 000000E5 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 000002D3 - 000002D6 (0x4 bytes), align: 0
+  Relative segment, address: CODE 000001DE - 000001E1 (0x4 bytes), align: 0
   Segment part 23.            Intra module refs:   T1_ISR::??INTVEC 75
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           T1_ISR                  000002D3 
+           T1_ISR                  000001DE 
                interrupt function
                ISTACK = 00000000 ( 00000001 )
     -------------------------------------------------------------------------
@@ -434,7 +454,7 @@ INTVEC
 
     *************************************************************************
 
-  FILE NAME : C:\Users\user\Desktop\CC2530\CC2530 RF Code\mcu-tag1\ex_switch\debug\Obj\hal_clock.r51
+  FILE NAME : C:\Users\user\Desktop\CC2530\CC2530 RF Code With LED Matrix\mcu-tag1\ex_switch\debug\Obj\hal_clock.r51
   PROGRAM MODULE, NAME : hal_clock
 
   SEGMENTS IN THE MODULE
@@ -469,7 +489,7 @@ SFR_AN
 
     *************************************************************************
 
-  FILE NAME : C:\Users\user\Desktop\CC2530\CC2530 RF Code\mcu-tag1\ex_switch\debug\Obj\hal_int.r51
+  FILE NAME : C:\Users\user\Desktop\CC2530\CC2530 RF Code With LED Matrix\mcu-tag1\ex_switch\debug\Obj\hal_int.r51
   PROGRAM MODULE, NAME : hal_int
 
   SEGMENTS IN THE MODULE
@@ -486,7 +506,7 @@ SFR_AN
 
     *************************************************************************
 
-  FILE NAME : C:\Users\user\Desktop\CC2530\CC2530 RF Code\mcu-tag1\ex_switch\debug\Obj\hal_keypad.r51
+  FILE NAME : C:\Users\user\Desktop\CC2530\CC2530 RF Code With LED Matrix\mcu-tag1\ex_switch\debug\Obj\hal_keypad.r51
   PROGRAM MODULE, NAME : hal_keypad
 
   SEGMENTS IN THE MODULE
@@ -494,7 +514,7 @@ SFR_AN
 
     *************************************************************************
 
-  FILE NAME : C:\Users\user\Desktop\CC2530\CC2530 RF Code\mcu-tag1\ex_switch\debug\Obj\hal_lcd.r51
+  FILE NAME : C:\Users\user\Desktop\CC2530\CC2530 RF Code With LED Matrix\mcu-tag1\ex_switch\debug\Obj\hal_lcd.r51
   PROGRAM MODULE, NAME : hal_lcd
 
   SEGMENTS IN THE MODULE
@@ -502,7 +522,7 @@ SFR_AN
 
     *************************************************************************
 
-  FILE NAME : C:\Users\user\Desktop\CC2530\CC2530 RF Code\mcu-tag1\ex_switch\debug\Obj\hal_led.r51
+  FILE NAME : C:\Users\user\Desktop\CC2530\CC2530 RF Code With LED Matrix\mcu-tag1\ex_switch\debug\Obj\hal_led.r51
   PROGRAM MODULE, NAME : hal_led
 
   SEGMENTS IN THE MODULE
@@ -510,7 +530,7 @@ SFR_AN
 
     *************************************************************************
 
-  FILE NAME : C:\Users\user\Desktop\CC2530\CC2530 RF Code\mcu-tag1\ex_switch\debug\Obj\hal_mcu.r51
+  FILE NAME : C:\Users\user\Desktop\CC2530\CC2530 RF Code With LED Matrix\mcu-tag1\ex_switch\debug\Obj\hal_mcu.r51
   PROGRAM MODULE, NAME : hal_mcu
 
   SEGMENTS IN THE MODULE
@@ -524,7 +544,7 @@ SFR_AN
 
     *************************************************************************
 
-  FILE NAME : C:\Users\user\Desktop\CC2530\CC2530 RF Code\mcu-tag1\ex_switch\debug\Obj\hal_rf.r51
+  FILE NAME : C:\Users\user\Desktop\CC2530\CC2530 RF Code With LED Matrix\mcu-tag1\ex_switch\debug\Obj\hal_rf.r51
   PROGRAM MODULE, NAME : hal_rf
 
   SEGMENTS IN THE MODULE
@@ -579,11 +599,11 @@ XDATA_Z
            pfISR                   00000101 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 000002D7 - 0000030E (0x38 bytes), align: 0
+  Relative segment, address: CODE 000001E2 - 00000219 (0x38 bytes), align: 0
   Segment part 71.            Intra module refs:   rfIsr::??INTVEC 131
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           rfIsr                   000002D7 
+           rfIsr                   000001E2 
                interrupt function
                XSTACK = 00000000 ( 0000000E )
     -------------------------------------------------------------------------
@@ -596,7 +616,7 @@ INTVEC
 
     *************************************************************************
 
-  FILE NAME : C:\Users\user\Desktop\CC2530\CC2530 RF Code\mcu-tag1\ex_switch\debug\Obj\hal_rf_security.r51
+  FILE NAME : C:\Users\user\Desktop\CC2530\CC2530 RF Code With LED Matrix\mcu-tag1\ex_switch\debug\Obj\hal_rf_security.r51
   PROGRAM MODULE, NAME : hal_rf_security
 
   SEGMENTS IN THE MODULE
@@ -624,7 +644,7 @@ SFR_AN
 
     *************************************************************************
 
-  FILE NAME : C:\Users\user\Desktop\CC2530\CC2530 RF Code\mcu-tag1\ex_switch\debug\Obj\hal_uart.r51
+  FILE NAME : C:\Users\user\Desktop\CC2530\CC2530 RF Code With LED Matrix\mcu-tag1\ex_switch\debug\Obj\hal_uart.r51
   PROGRAM MODULE, NAME : hal_uart
 
   SEGMENTS IN THE MODULE
@@ -705,28 +725,28 @@ XDATA_Z
            uartCfg                 00000103 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 0000030F - 00000355 (0x47 bytes), align: 0
+  Relative segment, address: CODE 0000021A - 00000260 (0x47 bytes), align: 0
   Segment part 36.            Intra module refs:   halUart0RxIsr::??INTVEC 19
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           halUart0RxIsr           0000030F 
+           halUart0RxIsr           0000021A 
                interrupt function
                ISTACK = 00000000 ( 00000007 )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00000356 - 0000035D (0x8 bytes), align: 0
+  Relative segment, address: CODE 00000261 - 00000268 (0x8 bytes), align: 0
   Segment part 37.            Intra module refs:   halUart0RxIsr
                                                    halUart0TxIsr
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine2            00000356 
+           ?Subroutine2            00000261 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 0000035E - 000003AF (0x52 bytes), align: 0
+  Relative segment, address: CODE 00000269 - 000002BA (0x52 bytes), align: 0
   Segment part 38.            Intra module refs:   halUart0TxIsr::??INTVEC 59
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           halUart0TxIsr           0000035E 
+           halUart0TxIsr           00000269 
                interrupt function
                ISTACK = 00000000 ( 00000007 )
     -------------------------------------------------------------------------
@@ -748,86 +768,55 @@ INTVEC
 
     *************************************************************************
 
-  FILE NAME : C:\Users\user\Desktop\CC2530\CC2530 RF Code\mcu-tag1\ex_switch\debug\Obj\switch.r51
+  FILE NAME : C:\Users\user\Desktop\CC2530\CC2530 RF Code With LED Matrix\mcu-tag1\ex_switch\debug\Obj\switch.r51
   PROGRAM MODULE, NAME : switch
 
   SEGMENTS IN THE MODULE
   ======================
-XDATA_I
-  Relative segment, address: XDATA 00000209 - 00000209 (0x1 bytes), align: 0
-  Segment part 9.             Intra module refs:   main
+<BANKED_CODE> 1 (was BANKED_CODE)
+  Relative segment, address: CODE 000002BB - 000002CD (0x13 bytes), align: 0
+  Segment part 9.             Intra module refs:   delay::?relay
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           value                   00000209 
+           delay                   000002BB 
     -------------------------------------------------------------------------
 <BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 000003B0 - 000003E3 (0x34 bytes), align: 0
-  Segment part 11.            Intra module refs:   MAX7219_Init::?relay
+  Relative segment, address: CODE 000002CE - 000002FC (0x2f bytes), align: 0
+  Segment part 11.            Intra module refs:   LEDRunning::?relay
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           MAX7219_Init            000003B0 
+           LEDRunning              000002CE 
                calls direct
                ISTACK = 00000000 ( 00000002 )
     -------------------------------------------------------------------------
 <BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 000003E4 - 000003F5 (0x12 bytes), align: 0
+  Relative segment, address: CODE 000002FD - 0000030B (0xf bytes), align: 0
   Segment part 13.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           main                    000003E4        ?call_main (?cmain)
+           main                    000002FD        ?call_main (?cmain)
                calls direct
-    -------------------------------------------------------------------------
-<BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 000003F6 - 00000423 (0x2e bytes), align: 0
-  Segment part 15.            Intra module refs:   MAX7219_SendByte::?relay
-           ENTRY                   ADDRESS         REF BY
-           =====                   =======         ======
-           MAX7219_SendByte        000003F6 
-               XSTACK = 00000009 ( 00000000 )
-               ISTACK = 00000000 ( 00000002 )
-    -------------------------------------------------------------------------
-<BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 00000424 - 0000043D (0x1a bytes), align: 0
-  Segment part 17.            Intra module refs:   MAX7219_Write::?relay
-           ENTRY                   ADDRESS         REF BY
-           =====                   =======         ======
-           MAX7219_Write           00000424 
-               calls direct
-               XSTACK = 00000000 ( 00000009 )
-    -------------------------------------------------------------------------
-XDATA_ID
-  Relative segment, address: CODE 00000142 - 00000142 (0x1 bytes), align: 0
-  Segment part 10.            Intra module refs:   value
     -------------------------------------------------------------------------
 BANK_RELAYS
-  Relative segment, address: CODE 00000143 - 00000148 (0x6 bytes), align: 0
+  Relative segment, address: CODE 00000119 - 0000011E (0x6 bytes), align: 0
+  Segment part 10.            Intra module refs:   LEDRunning
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           delay::?relay           00000119 
+    -------------------------------------------------------------------------
+BANK_RELAYS
+  Relative segment, address: CODE 0000011F - 00000124 (0x6 bytes), align: 0
   Segment part 12.            Intra module refs:   main
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           MAX7219_Init::?relay    00000143 
-    -------------------------------------------------------------------------
-BANK_RELAYS
-  Relative segment, address: CODE 00000149 - 0000014E (0x6 bytes), align: 0
-  Segment part 16.            Intra module refs:   MAX7219_Write
-                                                   main
-           ENTRY                   ADDRESS         REF BY
-           =====                   =======         ======
-           MAX7219_SendByte::?relay
-                                   00000149 
-    -------------------------------------------------------------------------
-BANK_RELAYS
-  Relative segment, address: CODE 0000014F - 00000154 (0x6 bytes), align: 0
-  Segment part 18.            Intra module refs:   MAX7219_Init
-           ENTRY                   ADDRESS         REF BY
-           =====                   =======         ======
-           MAX7219_Write::?relay   0000014F 
+           LEDRunning::?relay      0000011F 
 
     *************************************************************************
 
-  FILE NAME : C:\Users\user\Desktop\CC2530\CC2530 RF Code\mcu-tag1\ex_switch\debug\Obj\util.r51
+  FILE NAME : C:\Users\user\Desktop\CC2530\CC2530 RF Code With LED Matrix\mcu-tag1\ex_switch\debug\Obj\util.r51
     *************************************************************************
 
-  FILE NAME : C:\Users\user\Desktop\CC2530\CC2530 RF Code\mcu-tag1\ex_switch\debug\Obj\util_buffer.r51
+  FILE NAME : C:\Users\user\Desktop\CC2530\CC2530 RF Code With LED Matrix\mcu-tag1\ex_switch\debug\Obj\util_buffer.r51
     *************************************************************************
 
   FILE NAME : D:\IAR\8051\LIB\CLIB\cl-pli-blxd-1e16x01.r51
@@ -872,22 +861,15 @@ CSTART
                                                    uartCfg (hal_uart)
     -------------------------------------------------------------------------
 CSTART
-  Relative segment, address: CODE 000000A4 - 000000CC (0x29 bytes), align: 0
-  Segment part 28.
-           ENTRY                   ADDRESS         REF BY
-           =====                   =======         ======
-           __INIT_XDATA_I          000000A4        value (switch)
-    -------------------------------------------------------------------------
-CSTART
-  Relative segment, address: CODE 000000CD, align: 0
+  Relative segment, address: CODE 000000A4, align: 0
   Segment part 32.            Intra module refs:   __low_level_init_call
     -------------------------------------------------------------------------
 CSTART
-  Relative segment, address: CODE 000000CD - 000000E2 (0x16 bytes), align: 0
+  Relative segment, address: CODE 000000A4 - 000000B9 (0x16 bytes), align: 0
   Segment part 33.            Intra module refs:   ?cmain
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           ?call_main              000000CD 
+           ?call_main              000000A4 
 
     -------------------------------------------------------------------------
   LIBRARY MODULE, NAME : CSTARTUP
@@ -920,29 +902,29 @@ INTVEC
   Segment part 5. ROOT.       Intra module refs:   Segment part 6
     -------------------------------------------------------------------------
 CSTART
-  Relative segment, address: CODE 000000E3 - 000000E8 (0x6 bytes), align: 0
+  Relative segment, address: CODE 000000BA - 000000BF (0x6 bytes), align: 0
   Segment part 6. ROOT.       Intra module refs:   Segment part 5
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           __program_start         000000E3        Absolute parts (?ABS_ENTRY_MOD)
-           ?RESET_SP               000000E6 
+           __program_start         000000BA        Absolute parts (?ABS_ENTRY_MOD)
+           ?RESET_SP               000000BD 
     -------------------------------------------------------------------------
 CSTART
-  Relative segment, address: CODE 000000E9 - 000000EE (0x6 bytes), align: 0
+  Relative segment, address: CODE 000000C0 - 000000C5 (0x6 bytes), align: 0
   Segment part 8.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           ?RESET_XSP              000000E9        ?XSP (VIRTUAL_REGISTERS)
+           ?RESET_XSP              000000C0        ?XSP (VIRTUAL_REGISTERS)
     -------------------------------------------------------------------------
 CSTART
-  Relative segment, address: CODE 000000EF - 000000F1 (0x3 bytes), align: 0
+  Relative segment, address: CODE 000000C6 - 000000C8 (0x3 bytes), align: 0
   Segment part 9.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           ?RESET_CODE_BANK        000000EF        Absolute parts (?BANKED_CODE_SUPPORT)
+           ?RESET_CODE_BANK        000000C6        Absolute parts (?BANKED_CODE_SUPPORT)
     -------------------------------------------------------------------------
 CSTART
-  Relative segment, address: CODE 000000F2 - 000000F4 (0x3 bytes), align: 0
+  Relative segment, address: CODE 000000C9 - 000000CB (0x3 bytes), align: 0
   Segment part 13.            Intra module refs:   Absolute parts
 
     -------------------------------------------------------------------------
@@ -962,11 +944,8 @@ VREG
   Segment part 1.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           ?V0                     00000008        ?BANKED_ENTER_XDATA (?BANKED_ENTER_XDATA)
-                                                   ?BANKED_LEAVE_XDATA (?BANKED_LEAVE_XDATA)
-                                                   ?INTERRUPT_ENTER_XSP (?INTERRUPT_ENTER_XSP)
+           ?V0                     00000008        ?INTERRUPT_ENTER_XSP (?INTERRUPT_ENTER_XSP)
                                                    ?INTERRUPT_LEAVE_XSP (?INTERRUPT_LEAVE_XSP)
-                                                   MAX7219_SendByte (switch)
                                                    halUart0TxIsr (hal_uart)
     -------------------------------------------------------------------------
 XSP
@@ -974,9 +953,7 @@ XSP
   Segment part 3.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           ?XSP                    00000010        ?BANKED_ENTER_XDATA (?BANKED_ENTER_XDATA)
-                                                   ?BANKED_LEAVE_XDATA (?BANKED_LEAVE_XDATA)
-                                                   ?INTERRUPT_ENTER_XSP (?INTERRUPT_ENTER_XSP)
+           ?XSP                    00000010        ?INTERRUPT_ENTER_XSP (?INTERRUPT_ENTER_XSP)
                                                    ?INTERRUPT_LEAVE_XSP (?INTERRUPT_LEAVE_XSP)
                                                    ?RESET_XSP (CSTARTUP)
 
@@ -986,42 +963,15 @@ XSP
   SEGMENTS IN THE MODULE
   ======================
 CSTART
-  Relative segment, address: CODE 000000F5 - 0000013E (0x4a bytes), align: 0
+  Relative segment, address: CODE 000000CC - 00000115 (0x4a bytes), align: 0
   Segment part 3.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           ?BCALL_07               000000F5        ?call_main (?cmain)
-           ?BRET_07                0000010B        ?BANKED_LEAVE_XDATA (?BANKED_LEAVE_XDATA)
-                                                   MAX7219_Init (switch)
-                                                   MAX7219_SendByte (switch)
-                                                   main (switch)
-           ?BDISPATCH_07           00000118        MAX7219_Init::?relay (switch)
-                                                   MAX7219_SendByte::?relay (switch)
-                                                   MAX7219_Write::?relay (switch)
-
-    -------------------------------------------------------------------------
-  LIBRARY MODULE, NAME : ?S_SHL
-
-  SEGMENTS IN THE MODULE
-  ======================
-RCODE
-  Relative segment, address: CODE 00000155 - 00000157 (0x3 bytes), align: 0
-  Segment part 0.
-           ENTRY                   ADDRESS         REF BY
-           =====                   =======         ======
-           ?S_SHL                  00000155        MAX7219_SendByte (switch)
-    -------------------------------------------------------------------------
-RCODE
-  Relative segment, address: CODE 00000158 - 0000015A (0x3 bytes), align: 0
-  Segment part 1.             Intra module refs:   Segment part 2
-           ENTRY                   ADDRESS         REF BY
-           =====                   =======         ======
-           ?S_SHL_REW              00000158 
-    -------------------------------------------------------------------------
-RCODE
-  Relative segment, address: CODE 0000015B - 00000167 (0xd bytes), align: 0
-  Segment part 2.             Intra module refs:   ?S_SHL
-                                                   ?S_SHL_REW
+           ?BCALL_07               000000CC        ?call_main (?cmain)
+           ?BRET_07                000000E2        LEDRunning (switch)
+                                                   delay (switch)
+           ?BDISPATCH_07           000000EF        LEDRunning::?relay (switch)
+                                                   delay::?relay (switch)
 
     -------------------------------------------------------------------------
   LIBRARY MODULE, NAME : ?CALL_IND
@@ -1029,35 +979,11 @@ RCODE
   SEGMENTS IN THE MODULE
   ======================
 RCODE
-  Relative segment, address: CODE 00000168 - 00000169 (0x2 bytes), align: 0
+  Relative segment, address: CODE 00000125 - 00000126 (0x2 bytes), align: 0
   Segment part 0.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           ?CALL_IND               00000168        rfIsr (hal_rf)
-
-    -------------------------------------------------------------------------
-  LIBRARY MODULE, NAME : ?BANKED_ENTER_XDATA
-
-  SEGMENTS IN THE MODULE
-  ======================
-RCODE
-  Relative segment, address: CODE 0000016A - 000001D5 (0x6c bytes), align: 0
-  Segment part 1.
-           ENTRY                   ADDRESS         REF BY
-           =====                   =======         ======
-           ?BANKED_ENTER_XDATA     0000016A        MAX7219_Write (switch)
-
-    -------------------------------------------------------------------------
-  LIBRARY MODULE, NAME : ?BANKED_LEAVE_XDATA
-
-  SEGMENTS IN THE MODULE
-  ======================
-RCODE
-  Relative segment, address: CODE 000001D6 - 0000021B (0x46 bytes), align: 0
-  Segment part 1.
-           ENTRY                   ADDRESS         REF BY
-           =====                   =======         ======
-           ?BANKED_LEAVE_XDATA     000001D6        MAX7219_Write (switch)
+           ?CALL_IND               00000125        rfIsr (hal_rf)
 
     -------------------------------------------------------------------------
   LIBRARY MODULE, NAME : ?INTERRUPT_ENTER_XSP
@@ -1065,11 +991,11 @@ RCODE
   SEGMENTS IN THE MODULE
   ======================
 RCODE
-  Relative segment, address: CODE 0000021C - 0000027A (0x5f bytes), align: 0
+  Relative segment, address: CODE 00000127 - 00000185 (0x5f bytes), align: 0
   Segment part 1.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           ?INTERRUPT_ENTER_XSP    0000021C        rfIsr (hal_rf)
+           ?INTERRUPT_ENTER_XSP    00000127        rfIsr (hal_rf)
 
     -------------------------------------------------------------------------
   LIBRARY MODULE, NAME : ?INTERRUPT_LEAVE_XSP
@@ -1077,11 +1003,11 @@ RCODE
   SEGMENTS IN THE MODULE
   ======================
 RCODE
-  Relative segment, address: CODE 0000027B - 000002D2 (0x58 bytes), align: 0
+  Relative segment, address: CODE 00000186 - 000001DD (0x58 bytes), align: 0
   Segment part 1.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           ?INTERRUPT_LEAVE_XSP    0000027B        rfIsr (hal_rf)
+           ?INTERRUPT_LEAVE_XSP    00000186        rfIsr (hal_rf)
 
     -------------------------------------------------------------------------
   LIBRARY MODULE, NAME : ?low_level_init
@@ -1089,11 +1015,11 @@ RCODE
   SEGMENTS IN THE MODULE
   ======================
 CSTART
-  Relative segment, address: CODE 0000013F - 00000141 (0x3 bytes), align: 0
+  Relative segment, address: CODE 00000116 - 00000118 (0x3 bytes), align: 0
   Segment part 6. ROOT.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           __low_level_init        0000013F        __low_level_init_call (?cmain)
+           __low_level_init        00000116        __low_level_init_call (?cmain)
 
 
 
@@ -1108,20 +1034,17 @@ Module                 CODE      DATA      XDATA  IDATA    BIT
 ------                 ----      ----      -----  -----    ---
                       (Rel)  (Rel)  (Abs)  (Rel)  (Rel)  (Rel)
 ?BANKED_CODE_SUPPORT     74
-?BANKED_ENTER_XDATA     108
-?BANKED_LEAVE_XDATA      70
 ?CALL_IND                 2
 ?INTERRUPT_ENTER_XSP     95
 ?INTERRUPT_LEAVE_XSP     88
-?S_SHL                   19
 ?cexit                    5
-?cmain                   88
+?cmain                   47
 ?low_level_init           3
 CSTARTUP                 18
   + common                3
 VIRTUAL_REGISTERS                2                           8
-hal_board                               1
-  + shared                              9
+hal_board                               2
+  + shared                              8
 hal_buzzer                4             6
   + common               78
 hal_clock                               4
@@ -1134,11 +1057,11 @@ hal_rf                   56             5      2
 hal_rf_security                         3
 hal_uart                161             9    262
   + common               62
-switch                  161                    1
+switch                   93
 N/A (command line)              16           256     64
 N/A (alignment)
 ----------              ---     --     --    ---     --      -
-Total:                  952     18     40    521     64      8
+Total:                  646     18     40    520     64      8
   + common              134
 
 
@@ -1152,21 +1075,14 @@ Total:                  952     18     40    521     64      8
 SEGMENT              SPACE    START ADDRESS   END ADDRESS     SIZE  TYPE  ALIGN
 =======              =====    =============   ===========     ====  ====  =====
 INTVEC               CODE          00000000 - 00000085          86   com    0
-CSTART               CODE          00000086 - 00000141          BC   rel    0
-IXDATA_ID            CODE               00000142                     dse    0
-IDATA_ID             CODE               00000142                     dse    0
-BDATA_ID             CODE               00000142                     dse    0
-PDATA_ID             CODE               00000142                     dse    0
-BIT_ID               CODE               00000142                     dse    0
-DATA_ID              CODE               00000142                     dse    0
-XDATA_ID             CODE          00000142 - 00000142           1   rel    0
-BANK_RELAYS          CODE          00000143 - 00000154          12   rel    0
-RCODE                CODE          00000155 - 000002D2         17E   rel    0
-CODE_C               CODE               000002D3                     dse    0
-DIFUNCT              CODE               000002D3                     dse    0
-CODE_N               CODE               000002D3                     dse    0
-NEAR_CODE            CODE          000002D3 - 000003AF          DD   rel    0
-<BANKED_CODE> 1      CODE          000003B0 - 0000043D          8E   rel    0
+CSTART               CODE          00000086 - 00000118          93   rel    0
+BANK_RELAYS          CODE          00000119 - 00000124           C   rel    0
+RCODE                CODE          00000125 - 000001DD          B9   rel    0
+CODE_N               CODE               000001DE                     dse    0
+DIFUNCT              CODE               000001DE                     dse    0
+CODE_C               CODE               000001DE                     dse    0
+NEAR_CODE            CODE          000001DE - 000002BA          DD   rel    0
+<BANKED_CODE> 1      CODE          000002BB - 0000030B          51   rel    0
 REGISTERS            DATA          00000000 - 00000007           8   rel    0
 VREG                 DATA          00000008 - 0000000F           8   rel    0
 PSP                  DATA               00000010                     dse    0
@@ -1195,7 +1111,6 @@ SFR_AN               DATA          00000080 - 00000080           1   rel    0
                      DATA          000000FD - 000000FF           3 
 XSTACK               XDATA         00000001 - 00000100         100   rel    0
 XDATA_Z              XDATA         00000101 - 00000208         108   rel    0
-XDATA_I              XDATA         00000209 - 00000209           1   rel    0
 ISTACK               IDATA         000000C0 - 000000FF          40   rel    0
 
                 ****************************************
@@ -1204,11 +1119,11 @@ ISTACK               IDATA         000000C0 - 000000FF          40   rel    0
                 *                                      *
                 ****************************************
 
- 1 086 bytes of CODE  memory
-    18 bytes of DATA  memory (+ 40 absolute )
-   521 bytes of XDATA memory
-    64 bytes of IDATA memory
-     8 bits  of BIT   memory
+ 780 bytes of CODE  memory
+  18 bytes of DATA  memory (+ 40 absolute )
+ 520 bytes of XDATA memory
+  64 bytes of IDATA memory
+   8 bits  of BIT   memory
 
 Errors: none
 Warnings: none
