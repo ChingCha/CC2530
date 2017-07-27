@@ -12,7 +12,6 @@
 #include "hal_mcu.h"
 #include "hal_board.h"
 #include "hal_lcd.h"
-//#include "hal_button.h"
 #include "util.h"
 #include <string.h>
 
@@ -527,41 +526,13 @@ pCounter = convInt32ToText(lValue);			//pCounter經過"convInt32ToText"轉換為Text(
 // @date		2017/04/27  
 // @creater		TOM   
 //-------------------------------------------------------------------
-void halLcdDisplayWithAVM(uint8 line,char lChar,int32 lValue)
+void halLcdDisplayWithVM(uint8 line,char lChar,int32 lValue)
 {
 	char *pCounter;
 	pCounter = convInt32ToText(lValue);
     pLcdLineBuffer[0] = lChar;
     pLcdLineBuffer[1] = ':';
 	pLcdLineBuffer[2] = *pCounter;
-	for(int i = 3;i<=15;i++){
-		pLcdLineBuffer[i] = ' ';
-	}
-	lcdWriteLine(line, pLcdLineBuffer);
-}
-//-------------------------------------------------------------------
-// @fn          BVendingMachineDisply
-// @refence		Obeject++ Ch.9-7 p.297       
-// @param       
-//              
-//              
-// @return    
-// @date		2017/04/27  
-// @creater		TOM   
-//-------------------------------------------------------------------
-void halLcdDisplayWithBVM(uint8 line,char lChar,int32 lValue)
-{
-	char *pCounter;
-	pCounter = convInt32ToText(lValue);
-    
-	pLcdLineBuffer[0] = ' ';
-	pLcdLineBuffer[1] = ' ';
-	pLcdLineBuffer[2] = ' ';
-	
-	pLcdLineBuffer[3] = lChar;
-    pLcdLineBuffer[4] = ':';
-	pLcdLineBuffer[5] = *pCounter;
-	
 	for(int i = 3;i<=15;i++){
 		pLcdLineBuffer[i] = ' ';
 	}

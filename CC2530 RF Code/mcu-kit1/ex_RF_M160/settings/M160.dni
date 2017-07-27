@@ -28,7 +28,7 @@ TriggerName=main
 LimitSize=0
 ByteLimit=50
 [DebugChecksum]
-Checksum=1648388924
+Checksum=1565642212
 [InstructionProfiling]
 Enabled=_ 0
 [Log file]
@@ -49,7 +49,7 @@ A1=_ "C:\Users\spshih\Desktop\Eating\CC2530\CC2530\CC2530 RF Code\components\uti
 A2=_ "C:\Users\spshih\Desktop\Eating\CC2530\CC2530\CC2530 RF Code\mcu-kit1\ex_RF_M160\ex.c" "C:\Users\user\Desktop\CC2530\CC2530 RF Code\mcu-kit1\ex_RF_M160\ex.c"
 A3=_ "C:\Users\user\Desktop\CC2530\CC2530 RF Code\components\common\hal_mcu.c" "C:\Users\spshih\Desktop\Eating\CC2530\CC2530\CC2530 RF Code\components\common\hal_mcu.c"
 A4=_ "C:\Users\user\Desktop\CC2530\CC2530 RF Code\components\common\hal_rf.c" "C:\Users\spshih\Desktop\Eating\CC2530\CC2530\CC2530 RF Code\components\common\hal_rf.c"
-A5=_ "C:\Users\user\Desktop\CC2530\CC2530 RF Code\components\targets\mcu-kit1\hal_keypad.c" ""
+A5=_ "C:\Users\user\Desktop\CC2530\CC2530 RF Code\components\targets\mcu-kit1\hal_keypad.c" "C:\Users\spshih\Desktop\Eating\CC2530\CC2530\CC2530 RF Code\components\targets\mcu-kit1\hal_keypad.c"
 A6=_ "C:\Users\user\Desktop\CC2530\CC2530 RF Code\components\targets\mcu-kit1\hal_led.c" "C:\Users\spshih\Desktop\Eating\CC2530\CC2530\CC2530 RF Code\components\targets\mcu-kit1\hal_led.c"
 A7=_ "C:\Users\user\Desktop\CC2530\CC2530 RF Code\components\utils\util.c" "C:\Users\spshih\Desktop\Eating\CC2530\CC2530\CC2530 RF Code\components\utils\util.c"
 A8=_ "C:\Users\user\Desktop\CC530\原始Code\RF 原始Code\components\common\hal_rf.c" "C:\Users\user\Desktop\CC2530\CC2530 RF Code\components\common\hal_rf.c"

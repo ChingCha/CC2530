@@ -28,8 +28,8 @@
 #define BVM_ADDR           		0x2233		//B販賣機的RF位址
 #define VM_ONE_ADDR            	0x3333		//第一區VM Co-ordinator位址
 #define APP_PAYLOAD_LENGTH        127
-#define BVM_GREENTEA     '3'					//B販賣機飲品(水)的辨識碼
-#define BVM_BLACKTEA     '4'					//B販賣機飲品(牛奶)的辨識碼
+#define BVM_GREENTEA     '3'					//B販賣機飲品(綠茶)的辨識碼
+#define BVM_BLACKTEA     '4'					//B販賣機飲品(紅茶)的辨識碼
 
 // Application states
 #define IDLE                      0
@@ -89,7 +89,7 @@ int main()
     halLedSet(8);							//電源指示燈
 
 	int32 greentea = 7;						//B販賣機飲品(綠茶)的數量
-	int32 blacktea = 3;						//B販賣機飲品(紅茶)的數量
+	int32 blacktea = 8;						//B販賣機飲品(紅茶)的數量
 	
 	// RF初始化
     basicRfConfig.myAddr = BVM_ADDR;
@@ -101,15 +101,15 @@ int main()
     {
         uint8 v = halButtonPushed();							//v等於按下BUTTON
 		if (v == HAL_BUTTON_2){									//若v接收到BUTTON_2的訊號
-            if(greentea > 0)										//若B販賣機飲品(綠茶)的數量大於0
+            if(greentea > 0)									//若B販賣機飲品(綠茶)的數量大於0
 				greentea--;										//B販賣機飲品(綠茶)的數量扣1
-			halLcdDisplayWithBVM(HAL_LCD_LINE_1,'G',greentea);	//顯示於LCD
-			B_greentea(greentea);										//將引數greentea傳至B_greentea函數中的參數B_drinkg
+			halLcdDisplayWithVM(HAL_LCD_LINE_1,'G',greentea);	//顯示於LCD
+			B_greentea(greentea);								//將引數greentea傳至B_greentea函數中的參數B_drinkg
 		}
 		else if(v == HAL_BUTTON_1){
 			if(blacktea > 0)
 				blacktea--;
-			halLcdDisplayWithBVM(HAL_LCD_LINE_2,'B',blacktea);
+			halLcdDisplayWithVM(HAL_LCD_LINE_2,'B',blacktea);
 			B_blacktea(blacktea);
 		}
         halMcuWaitMs(100);    

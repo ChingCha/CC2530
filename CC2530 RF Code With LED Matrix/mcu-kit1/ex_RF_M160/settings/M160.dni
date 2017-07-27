@@ -28,7 +28,7 @@ TriggerName=main
 LimitSize=0
 ByteLimit=50
 [DebugChecksum]
-Checksum=1090154124
+Checksum=1506558834
 [InstructionProfiling]
 Enabled=_ 0
 [Log file]
@@ -47,7 +47,7 @@ Leave target running=1
 A0=_ "C:\Users\spshih\Desktop\Eating\CC2530\CC2530\CC2530 RF Code\components\targets\zigbee-mcu1\hal_board.c" "C:\Users\user\Desktop\CC2530\CC2530 RF Code\components\targets\zigbee-mcu1\hal_board.c"
 A1=_ "C:\Users\spshih\Desktop\Eating\CC2530\CC2530\CC2530 RF Code\components\utils\util.c" "C:\Users\user\Desktop\CC2530\CC2530 RF Code\components\utils\util.c"
 A2=_ "C:\Users\spshih\Desktop\Eating\CC2530\CC2530\CC2530 RF Code\mcu-kit1\ex_RF_M160\ex.c" "C:\Users\user\Desktop\CC2530\CC2530 RF Code\mcu-kit1\ex_RF_M160\ex.c"
-A3=_ "C:\Users\user\Desktop\CC2530\CC2530 RF Code\components\common\hal_mcu.c" "C:\Users\spshih\Desktop\Eating\CC2530\CC2530\CC2530 RF Code\components\common\hal_mcu.c"
+A3=_ "C:\Users\user\Desktop\CC2530\CC2530 RF Code\components\common\hal_mcu.c" "C:\Users\spshih\Desktop\Eating\CC2530\CC2530\CC2530 RF Code With LED Matrix\components\common\hal_mcu.c"
 A4=_ "C:\Users\user\Desktop\CC2530\CC2530 RF Code\components\common\hal_rf.c" "C:\Users\spshih\Desktop\Eating\CC2530\CC2530\CC2530 RF Code\components\common\hal_rf.c"
 A5=_ "C:\Users\user\Desktop\CC2530\CC2530 RF Code\components\targets\mcu-kit1\hal_keypad.c" ""
 A6=_ "C:\Users\user\Desktop\CC2530\CC2530 RF Code\components\targets\mcu-kit1\hal_led.c" "C:\Users\spshih\Desktop\Eating\CC2530\CC2530\CC2530 RF Code\components\targets\mcu-kit1\hal_led.c"

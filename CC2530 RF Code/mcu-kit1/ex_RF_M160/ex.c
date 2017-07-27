@@ -15,7 +15,6 @@
 #include "hal_rf.h"
 #include "basic_rf.h"
 #include "hal_button.h"
-#include "M160.h"
 
 //-------------------------------------------------------------------
 // CONSTANTS
@@ -96,8 +95,6 @@ int main()
     // Indicate that device is powered
     halLedSet(8);
     halBuzzer(300);
-	//int32 water = 5;
-	//int32 milk = 9;
 	
 	// Initialize BasicRF
     basicRfConfig.myAddr = VM_ONE_ADDR;
@@ -136,15 +133,15 @@ int main()
 // @函數定義區
 //-------------------------------------------------------------------
 void A_water(int A_drinkw){
-	halLcdDisplayWithAVM(HAL_LCD_LINE_1,'W',A_drinkw);
+	halLcdDisplayWithVM(HAL_LCD_LINE_1,'W',A_drinkw);
 }
 
 void A_milk(int A_drinkm){
-	halLcdDisplayWithAVM(HAL_LCD_LINE_2,'M',A_drinkm);
+	halLcdDisplayWithVM(HAL_LCD_LINE_2,'M',A_drinkm);
 }
 void B_greentea(int B_drinkg){
-	halLcdDisplayWithAVM(HAL_LCD_LINE_1,'G',B_drinkg);
+	halLcdDisplayWithVM(HAL_LCD_LINE_1,'G',B_drinkg);
 }		
 void B_blacktea(int B_drinkb){
-	halLcdDisplayWithAVM(HAL_LCD_LINE_2,'B',B_drinkb);
+	halLcdDisplayWithVM(HAL_LCD_LINE_2,'B',B_drinkb);
 }		

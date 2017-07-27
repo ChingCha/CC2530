@@ -1,94 +1,152 @@
-//引入標頭檔
-#include "ioCC2530.h"
+//-------------------------------------------------------------------
+// Filename: switch.c
+// Description: 
+//-------------------------------------------------------------------
+//-------------------------------------------------------------------
+// INCLUDES
+//-------------------------------------------------------------------
+#include "hal_defs.h"
+#include "hal_mcu.h"
+#include "hal_board.h"
+#include "hal_led.h"
+#include "hal_lcd.h"
+#include "hal_int.h"
+#include "hal_button.h"
+#include "hal_buzzer.h"
+#include "hal_rf.h"
+#include "basic_rf.h"
 
-//MAX7219暫存器巨集定義
+//-------------------------------------------------------------------
+// CONSTANTS
+//-------------------------------------------------------------------
+// Application parameters
 
-#define DECODE_MODE  0x09   //解碼控制暫存器
-#define INTENSITY    0x0A   //亮度控制暫存器
-#define SCAN_LIMIT   0x0B   //掃描界限暫存器
-#define SHUT_DOWN    0x0C   //關斷模式暫存器
-#define DISPLAY_TEST 0x0F   //測試控制暫存器 
+#define RF_CHANNEL                18      // 2.4 GHz RF channel
 
-#define INTENSITY_MIN     0x00   // 最小顯示亮度
-#define INTENSITY_MAX     0x0F   // 最大顯示亮度
+// BasicRF address definitions
+#define PAN_ID                	0x1111
+#define AVM_ADDR           		0x2222		//A販賣機的RF位址
+#define VM_ONE_ADDR            	0x3333		//第一區VM Co-ordinator位址
+#define APP_PAYLOAD_LENGTH        127
+#define AVM_WATER     '1'					
+#define AVM_MILK     '2'					
 
-//CC2530腳位功能巨集定義
+// Application states
+#define IDLE                      0
+#define SEND_CMD                  1
 
-#define MAX7219DIN    P0_4		//CC2530 P0_4>>>模組DIN腳位
-#define MAX7219LOAD     P0_5		//CC2530 P0_5>>>模組CS(LOAD)腳位
-#define MAX7219CLK    P0_6		//CC2530 P0_6>>>模組CLK腳位
 
-unsigned char value[1]={0x80};
+//-------------------------------------------------------------------
+//LOCAL FUNCTIONS
+//-------------------------------------------------------------------
 
-//函數宣告
-void MAX7219_Init(void);
-void MAX7219_SendByte (unsigned char dataout);
-void MAX7219_Write (unsigned char reg_number, unsigned char dataout);
+//-------------------------------------------------------------------
+// LOCAL VARIABLES
+//-------------------------------------------------------------------
 
-//CC2530 Port & MAX7219初始化函數，並設置MAX7219內部的控制暫存器
-void MAX7219_Init(){
+#ifdef SECURITY_CCM
+    // Security key
+    static uint8 key[] = 
+    {
+        0xc0, 0xc1, 0xc2, 0xc3, 0xc4, 0xc5, 0xc6, 0xc7, 0xc8, 0xc9, 0xca, 0xcb, 0xcc, 0xcd, 0xce, 0xcf, 
+    };
+#endif
+
+
+//-------------------------------------------------------------------
+// @			先行宣告函數區
+// @fn          Drink of A vendingmachine
+// @brief       Application code for switch application. Puts MCU in
+//              endless loop to wait for commands from switch.
+// @param       basicRfConfig - file scope variable. Basic RF configuration data
+//              pTxData - file scope variable. Pointer to buffer for TX
+//              payload
+//              appState - file scope variable. Holds application state
+// @return      none
+//-------------------------------------------------------------------
+static uint8 pTxData[APP_PAYLOAD_LENGTH];	//Tx資料的上限
+static basicRfCfg_t basicRfConfig;			//宣告RFConfig組態
+
+void A_water(int A_drinkw);
+void A_milk(int A_drinkm);	
+
+//-------------------------------------------------------------------
+// @fn          main
+// @brief       This is the main entry of the "portion" application.
+// @return      none
+//-------------------------------------------------------------------
+int main()
+{
+	basicRfConfig.panId = PAN_ID;			//指定RF ID
+    basicRfConfig.channel = RF_CHANNEL;		//指定RF Channel
+    basicRfConfig.ackRequest = TRUE;		//封包傳遞會有ACK回應
+    #ifdef SECURITY_CCM
+        basicRfConfig.securityKey = key;	//封包傳遞安全機制
+    #endif 
+
+    halBoardInit();							//CC2530主板初始化
+
+    halLedSet(8);							//電源指示燈
+
+	int32 water = 9;						
+	int32 milk = 5;						
 	
-	P0SEL &= ~0x70;	//把P0_4、5、6設置為通用I/O Port功能
-	P1DIR |= 0x70;	//把P0_4、5、6 Prot傳輸方向設置為輸出
-	
-	MAX7219_Write(SHUT_DOWN,0x01);         //開啟正常工作模式（0xX1）
-    MAX7219_Write(DISPLAY_TEST,0x00);      //選擇工作模式（0xX0）
-    MAX7219_Write(DECODE_MODE,0xff);       //選用全解碼模式
-    MAX7219_Write(SCAN_LIMIT,0x07);        //8只LED全用
-    MAX7219_Write(INTENSITY,0x04);          //設置初始亮度   
-	
-}
+	// RF初始化
+    basicRfConfig.myAddr = AVM_ADDR;
+    if (basicRfInit(&basicRfConfig) == FAILED){}
 
-int main(){
+    basicRfReceiveOff();					//使RF接收端為常關，藉此省電
 	
-	MAX7219_Init();
-	MAX7219_SendByte(value[1]);
-	
+	while (1)
+    {
+        uint8 v = halButtonPushed();							//v等於按下BUTTON
+		if (v == HAL_BUTTON_2){									//若v接收到BUTTON_2的訊號
+            if(water > 0)										//若A販賣機飲品(水)的數量大於0
+				water--;										//A販賣機飲品(水)的數量扣1
+			halLcdDisplayWithVM(HAL_LCD_LINE_1,'G',water);		//顯示於LCD
+			A_water(water);										//將引數water傳至B_water函數中的參數A_drinkw
+		}
+		else if(v == HAL_BUTTON_1){
+			if(milk > 0)
+				milk--;
+			halLcdDisplayWithVM(HAL_LCD_LINE_2,'B',milk);
+			A_milk(milk);
+		}
+        halMcuWaitMs(100);    
+    }
 	return 0;
 }
 
+//-------------------------------------------------------------------
+// @函數定義區
+//-------------------------------------------------------------------
 
-
-
-/*
-*********************************************************************************************************
-* MAX7219_SendByte()
-*
-* Description: Send one byte to the MAX7219
-* Arguments  : dataout = data to send
-* Returns    : none
-*********************************************************************************************************
-*/
-void MAX7219_SendByte (unsigned char dataout)
-{
-  char i;
-  for (i=8; i>0; i--) {
-    unsigned char mask = 1 << (i - 1);                // calculate bitmask
-    MAX7219CLK=0;                                     // bring CLK low
-    if (dataout & mask)                               // output one data bit
-      MAX7219DIN=1;                                   //  "1"
-    else                                              //  or
-      MAX7219DIN=0;                                       //  "0"
-    MAX7219CLK=1;                                          // bring CLK high
-	}
+void A_water(int A_drinkw){
+	 
+    do{
+		pTxData[0] = AVM_WATER;	//Tx陣列首個元素為AVM_water辨識碼
+		pTxData[1] = A_drinkw;	//Tx陣列第二個元素為架上飲料數量(A_drinkw)
+		
+        //發送封包，封包內容為{接收目的地(VM Co-ordinator位址)、Tx資料、Tx資料上限}
+		basicRfSendPacket(VM_ONE_ADDR, pTxData, APP_PAYLOAD_LENGTH);
+        
+        halBuzzer(100);
+        halMcuWaitMs(200);
+        halLedToggle(7);
+	}while (A_drinkw<0);
 }
 
-/*
-*********************************************************************************************************
-* MAX7219_Write()
-*
-* Description: Write to MAX7219
-* Arguments  : reg_number = register to write to
-*              dataout = data to write to MAX7219
-* Returns    : none
-*********************************************************************************************************
-*/
-void MAX7219_Write (unsigned char reg_number, unsigned char dataout)
-{
-  MAX7219LOAD=1;                                           // take LOAD high to begin
-  MAX7219_SendByte(reg_number);                       // write register number to MAX7219
-  MAX7219_SendByte(dataout);                          // write data to MAX7219
-  MAX7219LOAD=0;                                           // take LOAD low to latch in data
-  MAX7219LOAD=1;                                           // take LOAD high to end
-}
+void A_milk(int A_drinkm){
 
+	
+    do{
+		pTxData[0] = AVM_MILK;
+		pTxData[1] = A_drinkm;
+		
+		basicRfSendPacket(VM_ONE_ADDR, pTxData, APP_PAYLOAD_LENGTH);
+
+		halBuzzer(300);
+		halMcuWaitMs(200);
+        halLedToggle(7);
+	}while (A_drinkm<0);
+}
