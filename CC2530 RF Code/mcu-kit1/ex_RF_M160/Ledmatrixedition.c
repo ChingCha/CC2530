@@ -21,14 +21,12 @@
 //函數宣告
 void Write7219(unsigned char address,unsigned char dat);
 void MAX7219_Init(void);
-void delay(unsigned int t);
-static void MAX7219_SendByte (unsigned char dataout);
-static void MAX7219_Write (unsigned char reg_number, unsigned char dataout);
+void delay(unsigned int t); 
 
 int main(){
 	
     MAX7219_Init();               //MAX7219初始化
-    MAX7219_Write(DIGIT0,0x40);      //數碼管顯示1~8
+    Write7219(DIGIT0,0x01);      //數碼管顯示1~8
 	delay(6000);
 	return 0;
 
@@ -39,7 +37,7 @@ int main(){
 void MAX7219_Init(){
 	
 	P0SEL &= ~0x70;						//把P0_4、5、6設置為通用I/O Port功能
-	P1DIR |= 0x70;						//把P0_4、5、6 Prot傳輸方向設置為輸出
+	P0DIR |= 0x70;						//把P0_4、5、6 Prot傳輸方向設置為輸出
 	
 	Write7219(SHUT_DOWN,0x01);         //開啟正常工作模式（0xX1）
     Write7219(DISPLAY_TEST,0x00);      //選擇工作模式（0xX0）
@@ -79,27 +77,4 @@ void Write7219(unsigned char address,unsigned char dat)
 void delay(unsigned int t)
 {
   while(t--);
-}
-
-static void MAX7219_SendByte (unsigned char dataout)
-{
-  char i;
-  for (i=8; i>0; i--) {
-    unsigned char mask = 1 << (i - 1);                // calculate bitmask
-    MAX7219CLK=0;                                          // bring CLK low
-    if (dataout & mask)                               // output one data bit
-      MAX7219DIN=1;                                       //  "1"
-    else                                              //  or
-      MAX7219DIN=0;                                       //  "0"
-    MAX7219CLK=1;                                          // bring CLK high
-	}
-}
-
-static void MAX7219_Write (unsigned char reg_number, unsigned char dataout)
-{
-  MAX7219CS=1;                                           // take LOAD high to begin
-  MAX7219_SendByte(reg_number);                       // write register number to MAX7219
-  MAX7219_SendByte(dataout);                          // write data to MAX7219
-  MAX7219CS=0;                                           // take LOAD low to latch in data
-  MAX7219CS=1;                                           // take LOAD high to end
 }

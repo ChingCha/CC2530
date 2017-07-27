@@ -3,7 +3,7 @@
 
 //MAX7219暫存器巨集定義
 
-#define DIGIT0		 0x01	//DIGIT0暫存器
+#define DIGIT0		 0x01								//DIGIT0暫存器
 #define REG_DECODE        0x09                        // "decode mode" register
 #define REG_INTENSITY     0x0a                        // "intensity" register
 #define REG_SCAN_LIMIT    0x0b                        // "scan limit" register
@@ -16,13 +16,37 @@
 //CC2530腳位功能巨集定義
 
 #define MAX7219DIN    P0_4		//CC2530 P0_4>>>模組DIN腳位
+/*8051定義法
+#define DIN_PORT	P0
+#define DIN_DDR		P0
+#define DIN_BIT		0x10
+#define DIN_0()     (DIN_PORT &= ~DIN_BIT)
+#define DIN_1()     (DIN_PORT |=  DIN_BIT)
+*/
 #define MAX7219LOAD   P0_5		//CC2530 P0_5>>>模組CS(LOAD)腳位
+/*8051定義法
+#define LOAD_PORT      P0                              // assume "CLK" is on P3.4
+#define LOAD_DDR       P0
+#define LOAD_BIT       0x20
+#define LOAD_0()       (LOAD_PORT &= ~LOAD_BIT)
+#define LOAD_1()       (LOAD_PORT |=  LOAD_BIT)
+*/
 #define MAX7219CLK    P0_6		//CC2530 P0_6>>>模組CLK腳位
+/*8051定義法
+#define CLK_PORT      P0                              // assume "CLK" is on P3.4
+#define CLK_DDR       P0
+#define CLK_BIT       0x40
+#define CLK_0()       (CLK_PORT &= ~CLK_BIT)
+#define CLK_1()       (CLK_PORT |=  CLK_BIT)
+*/
 
 //函數宣告
 static void MAX7219_SendByte (unsigned char DINout);
 static void MAX7219_Write (unsigned char reg_number, unsigned char DINout);
 void MAX7219_Init(void);
+void MAX7219_DisplayTestStart (void);
+void MAX7219_ShutdownStop (void);
+void MAX7219_DisplayTestStop (void);
 void MAX7219_Clear (void);
 void MAX7219_SetBrightness (char brightness);
 
@@ -38,22 +62,35 @@ void MAX7219_Init(){
 	P0SEL &= ~0x70;	//把P0_4、5、6設置為通用I/O Port功能
 	P0DIR |= 0x70;	//把P0_4、5、6 Prot傳輸方向設置為輸出
 	
+/*8051
+DIN_DDR |= DIN_BIT;                               // configure "DIN" as output
+CLK_DDR  |= CLK_BIT;                                // configure "CLK"  as output
+LOAD_DDR |= LOAD_BIT;
+*/	
+	
+	
 	MAX7219_Write(REG_DECODE, 0x00);          	// set to "no decode" for all digits
-	MAX7219_Write(REG_SCAN_LIMIT, 8);      	// set up to scan all eight digits
-	MAX7219_Write(REG_SHUTDOWN, 1);
-	MAX7219_Write(REG_DISPLAY_TEST, 0);	
-	MAX7219_Clear(); 
-	MAX7219_SetBrightness(0x06); 
+	//MAX7219_Write(REG_INTENSITY,0x0F);			
+	MAX7219_Write(REG_SCAN_LIMIT, 7);      	// set up to scan all eight digits                 
+	//MAX7219_Write(REG_SHUTDOWN,0x01);			
+	//MAX7219_Write(REG_DISPLAY_TEST,0x00);     	
+	MAX7219_ShutdownStop(); 				// Normal operation
+	MAX7219_DisplayTestStart(); 				// Normal operation
+	MAX7219_Clear();
+	MAX7219_SetBrightness(INTENSITY_MAX); // light max
 }
 
 int main(){
 	
 	MAX7219_Init();
-	MAX7219_Write(DIGIT0,0x04);
-	Delay(60000);
+	//MAX7219_Write(DIGIT0,0x40);
+	//Delay(60000); 
 	
 	return 0;
 }
+
+
+
 
 /*
 *********************************************************************************************************
@@ -66,15 +103,15 @@ int main(){
 */
 void MAX7219_SendByte (unsigned char DINout)
 {
+  MAX7219CLK = 0;
   char i;
   for (i=8; i>0; i--) {
-    unsigned char mask = 1 << (i - 1);                // calculate bitmask
-	MAX7219CLK=0;                                     
-    if (DINout & mask)                               // output one DIN bit
-	  MAX7219DIN=1;                                   
-    else                                              
-	  MAX7219DIN=0;										  // bring CLK high
-    MAX7219CLK=1;                                          
+    if(DINout & 0x80)
+		MAX7219DIN = 1;
+	else
+		MAX7219DIN = 0;
+	DINout<<=1;
+	MAX7219CLK = 1;
 	}
 }
 
@@ -90,13 +127,61 @@ void MAX7219_SendByte (unsigned char DINout)
 */
 void MAX7219_Write (unsigned char reg_number, unsigned char DINout)
 {
-  MAX7219LOAD=1;                                           // take LOAD high to begin
+	/*8051
+	LOAD_1();                                           // take LOAD high to begin
+	MAX7219_SendByte(reg_number);                       // write register number to MAX7219
+	MAX7219_SendByte(DINout);                          // write DIN to MAX7219
+	LOAD_0();                                           // take LOAD low to latch in DIN
+	LOAD_1();
+	*/	
+  MAX7219LOAD=0;                                           // take LOAD high to begin
   MAX7219_SendByte(reg_number);                       // write register number to MAX7219
   MAX7219_SendByte(DINout);                          // write DIN to MAX7219
-  MAX7219LOAD=0;                                           // take LOAD low to latch in DIN
   MAX7219LOAD=1;                                           // take LOAD high to end
+ 
 }
 
+/*
+*********************************************************************************************************
+* MAX7219_DisplayTestStart()
+*
+* Description: Start a display test.
+* Arguments  : none
+* Returns    : none
+*********************************************************************************************************
+*/
+
+
+void MAX7219_DisplayTestStart (void)
+{
+  MAX7219_Write(REG_DISPLAY_TEST, 1);                 // put MAX7219 into "display test" mode
+}
+/*
+*********************************************************************************************************
+* MAX7219_ShutdownStop()
+*
+* Description: Take the display out of shutdown mode.
+* Arguments  : none
+* Returns    : none
+*********************************************************************************************************
+*/
+void MAX7219_ShutdownStop (void)
+{
+  MAX7219_Write(REG_SHUTDOWN, 1);                     // put MAX7219 into "normal" mode
+}
+/*
+*********************************************************************************************************
+* MAX7219_DisplayTestStop()
+*
+* Description: Stop a display test.
+* Arguments  : none
+* Returns    : none
+*********************************************************************************************************
+*/
+void MAX7219_DisplayTestStop (void)
+{
+  MAX7219_Write(REG_DISPLAY_TEST, 0);                 // put MAX7219 into "normal" mode
+}
 
 /*
 *********************************************************************************************************
