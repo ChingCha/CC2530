@@ -20,3 +20,4 @@ void MAX7219_Write (unsigned char reg_number, unsigned char DINout);
 void MAX7219_Init(void);
 void MAX7219_Clear (void);
 void MAX7219_SetBrightness (char brightness);
+void Delay(unsigned int t);

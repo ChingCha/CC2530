@@ -89,3 +89,9 @@ void MAX7219_SetBrightness (char brightness)
   brightness &= 0x0f;                                 // mask off extra bits
   MAX7219_Write(REG_INTENSITY, brightness);           // set brightness
 }
+
+//延遲函數
+void Delay(unsigned int t)
+{
+  while(t--);
+}

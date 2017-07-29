@@ -120,7 +120,7 @@ static void appLight()
 //-------------------------------------------------------------------
 void main(void)
 {
-    // Config basicRF
+    // Config basicRF(配置BasicRF)
     basicRfConfig.panId = PAN_ID;
     basicRfConfig.channel = RF_CHANNEL;
     basicRfConfig.ackRequest = TRUE;
@@ -128,12 +128,12 @@ void main(void)
         basicRfConfig.securityKey = key;
     #endif 
 
-    // Initalise board peripherals
+    // Initalise board peripherals(初始化擴充板)
     halBoardInit();
     halLcdInit();
     M160_Init();
 
-    // Indicate that device is powered
+    // Indicate that device is powered(電源指示燈)
     halLedSet(8);
     halBuzzer(300);
 

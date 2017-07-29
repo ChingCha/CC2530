@@ -9,6 +9,7 @@
 #include "hal_lcd.h"
 #include "util.h"
 #include <string.h>
+
 //-------------------------------------------------------------------
 // CONSTANTS AND DEFINES
 //-------------------------------------------------------------------
@@ -64,12 +65,10 @@
 
 void A_water(int A_drinkw){
 	halLcdDisplayWithVM(HAL_LCD_LINE_1,'W',A_drinkw);
-	MAX7219_Write(DIGIT0,0x01);
 }
 
 void A_milk(int A_drinkm){
 	halLcdDisplayWithVM(HAL_LCD_LINE_2,'M',A_drinkm);
-	MAX7219_Write(DIGIT1,0x02);
 }
 void B_greentea(int B_drinkg){
 	halLcdDisplayWithVM(HAL_LCD_LINE_1,'G',B_drinkg);
