@@ -1,13 +1,12 @@
 //飲料函數意義
 
-#include "hal_drink.h"
-#include "hal_ledmatrix.h"
 #include "hal_defs.h"
 #include "hal_cc8051.h"
 #include "hal_mcu.h"
 #include "hal_board.h"
 #include "hal_lcd.h"
 #include "util.h"
+#include "hal_drink.h"
 #include <string.h>
 
 //-------------------------------------------------------------------
@@ -63,16 +62,19 @@
 #define LCD_LINE_COUNT                  2
 #define LCD_LINE_LENGTH                 16
 
-void A_water(int A_drinkw){
-	halLcdDisplayWithVM(HAL_LCD_LINE_1,'W',A_drinkw);
+//Recieve
+void A1_Recieve(int A1_Value){
+	halLcdDisplayWithVM(HAL_LCD_LINE_1,'W',A1_Value);
 }
 
-void A_milk(int A_drinkm){
-	halLcdDisplayWithVM(HAL_LCD_LINE_2,'M',A_drinkm);
+void A2_Recieve(int A2_Value){
+	halLcdDisplayWithVM(HAL_LCD_LINE_2,'M',A2_Value);
 }
-void B_greentea(int B_drinkg){
-	halLcdDisplayWithVM(HAL_LCD_LINE_1,'G',B_drinkg);
+void B1_Recieve(int B1_Value){
+	halLcdDisplayWithVM(HAL_LCD_LINE_1,'G',B1_Value);
 }		
-void B_blacktea(int B_drinkb){
-	halLcdDisplayWithVM(HAL_LCD_LINE_2,'B',B_drinkb);
+void B2_Recieve(int B2_Value){
+	halLcdDisplayWithVM(HAL_LCD_LINE_2,'B',B2_Value);
 }	
+
+//Send

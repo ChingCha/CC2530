@@ -2,6 +2,8 @@
 
 #define DIGIT0		 	0x01	//A販賣機暫存器
 #define DIGIT1		 	0x02	//B販賣機暫存器
+#define DIGIT2			0x03
+#define DIGIT7			0x08
 #define REG_DECODE        0x09                        // "decode mode" register
 #define REG_INTENSITY     0x0a                        // "intensity" register
 #define REG_SCAN_LIMIT    0x0b                        // "scan limit" register

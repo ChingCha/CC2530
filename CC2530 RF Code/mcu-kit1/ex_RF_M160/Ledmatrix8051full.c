@@ -49,7 +49,7 @@ void MAX7219_Init(){
 int main(){
 	
 	MAX7219_Init();
-	MAX7219_Write(DIGIT7,0x01);
+	MAX7219_Write(DIGIT1,0x01);
 	
 	return 0;
 }

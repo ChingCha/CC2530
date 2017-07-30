@@ -1,5 +1,5 @@
-//飲料函數定義
-void A_water(int A_drinkw);
-void A_milk(int A_drinkm);
-void B_greentea(int B_drinkg);		
-void B_blacktea(int B_drinkb);	
+//飲�??�數定義
+void A1_Recieve(int A1_Value);
+void A2_Recieve(int A2_Value);
+void B1_Recieve(int B1_Value);		
+void B2_Recieve(int B2_Value);	

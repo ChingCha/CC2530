@@ -9,7 +9,7 @@ void MAX7219_Init(){
 	P0DIR |= 0x70;	//把P0_4、5、6 Prot傳輸方向設置為輸出
 	
 	MAX7219_Write(REG_DECODE, 0x00);          	// set to "no decode" for all digits
-	MAX7219_Write(REG_SCAN_LIMIT, 8);      	// set up to scan all eight digits
+	MAX7219_Write(REG_SCAN_LIMIT,0x07);      	// set up to scan all eight digits
 	MAX7219_Write(REG_SHUTDOWN, 1);
 	MAX7219_Write(REG_DISPLAY_TEST, 0);	
 	MAX7219_Clear(); 
@@ -71,7 +71,7 @@ void MAX7219_Write (unsigned char reg_number, unsigned char DINout)
 void MAX7219_Clear (void)
 {
   char i;
-  for (i=0; i < 8; i++)
+  for (i=0; i < 9; i++)
     MAX7219_Write(i, 0x00);                           // turn all segments off
 }
 
@@ -95,3 +95,4 @@ void Delay(unsigned int t)
 {
   while(t--);
 }
+

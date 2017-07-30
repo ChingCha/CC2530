@@ -103,13 +103,13 @@ int main()
 		if (v == HAL_BUTTON_2){									//若v接收到BUTTON_2的訊號
             if(water > 0)										//若B販賣機飲品(綠茶)的數量大於0
 				water--;										//B販賣機飲品(綠茶)的數量扣1
-			halLcdDisplayWithAVM(HAL_LCD_LINE_1,'G',water);	//顯示於LCD
+			halLcdDisplayWithVM(HAL_LCD_LINE_1,'G',water);	//顯示於LCD
 			A_water(water);										//將引數water傳至B_water函數中的參數A_drinkw
 		}
 		else if(v == HAL_BUTTON_1){
 			if(milk > 0)
 				milk--;
-			halLcdDisplayWithAVM(HAL_LCD_LINE_2,'B',milk);
+			halLcdDisplayWithVM(HAL_LCD_LINE_2,'B',milk);
 			A_milk(milk);
 		}
         halMcuWaitMs(100);    

@@ -1,5 +1,3 @@
-//CC2530底層標頭檔
-#include "ioCC2530.h"
 //CC2530模組(KIT板)標頭檔
 #include "hal_defs.h"
 #include "hal_board.h"
@@ -91,27 +89,24 @@ int main()
 		
 		while(basicRfReceive(pRxData, APP_PAYLOAD_LENGTH, NULL) > 0){
 			
-			if(pRxData[0] == AVM_WATER){
-				A_water(pRxData[1]);
-				MAX7219_Write(DIGIT0,0x01);
+			switch(pRxData[0]){
+				case '1':
+					A1_Recieve(pRxData[1]);
+					MAX7219_Write(DIGIT0,0x01);
+					break;
+				case '2':
+					A2_Recieve(pRxData[1]);
+					MAX7219_Write(DIGIT0,0x02);
+					break;
+				case '3':
+					B1_Recieve(pRxData[1]);
+					MAX7219_Write(DIGIT1,0x01);
+					break;
+				case '4':
+					B2_Recieve(pRxData[1]);
+					MAX7219_Write(DIGIT1,0x02);
+					break;
 			}
-				
-		
-			if(pRxData[0] == AVM_MILK){
-				A_milk(pRxData[1]);
-				MAX7219_Write(DIGIT0,0x02);
-			}
-				
-			
-			if(pRxData[0] == BVM_GREENTEA){
-				B_greentea(pRxData[1]);
-			}
-				
-			
-			if(pRxData[0] == BVM_BLACKTEA){
-				B_blacktea(pRxData[1]);
-			}
-				
 		}	
 	}
 	
