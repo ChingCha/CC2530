@@ -93,18 +93,26 @@ int main()
 				case '1':
 					A1_Recieve(pRxData[1]);
 					MAX7219_Write(DIGIT0,0x01);
+					if(pRxData[1]==0)
+						A1_Warning();
 					break;
 				case '2':
 					A2_Recieve(pRxData[1]);
 					MAX7219_Write(DIGIT0,0x02);
+					if(pRxData[1]==0)
+						A2_Warning();
 					break;
 				case '3':
 					B1_Recieve(pRxData[1]);
 					MAX7219_Write(DIGIT1,0x01);
+					if(pRxData[1]==0)
+						B1_Warning();
 					break;
 				case '4':
 					B2_Recieve(pRxData[1]);
 					MAX7219_Write(DIGIT1,0x02);
+					if(pRxData[1]==0)
+						B2_Warning();
 					break;
 			}
 		}	

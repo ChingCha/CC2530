@@ -96,3 +96,38 @@ void Delay(unsigned int t)
   while(t--);
 }
 
+//A1警示
+void A1_Warning(){
+	MAX7219_Write(DIGIT0,0x001);
+	Delay(60000);
+	MAX7219_Write(DIGIT0,0x00);
+	Delay(60000);
+}
+
+//A2警示
+void A2_Warning(){
+	MAX7219_Write(DIGIT0,0x002);
+	Delay(60000);
+	MAX7219_Write(DIGIT0,0x00);
+	Delay(60000);
+}
+
+
+//B1警示
+void B1_Warning(){
+	MAX7219_Write(DIGIT1,0x01);
+	Delay(60000);
+	MAX7219_Write(DIGIT1,0x00);
+	Delay(60000);
+}
+
+
+//B2警示
+void B2_Warning(){
+	MAX7219_Write(DIGIT1,0x02);
+	Delay(60000);
+	MAX7219_Write(DIGIT1,0x00);
+	Delay(60000);
+}
+
+

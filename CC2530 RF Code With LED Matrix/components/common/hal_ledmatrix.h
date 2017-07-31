@@ -23,3 +23,7 @@ void MAX7219_Init(void);
 void MAX7219_Clear (void);
 void MAX7219_SetBrightness (char brightness);
 void Delay(unsigned int t);
+void A1_Warning();
+void A2_Warning();
+void B1_Warning();
+void B2_Warning();

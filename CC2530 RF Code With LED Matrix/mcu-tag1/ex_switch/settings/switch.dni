@@ -28,7 +28,7 @@ ActionState=1
 Enabled=0
 ShowSource=1
 [DebugChecksum]
-Checksum=-2099003792
+Checksum=-479526153
 [InstructionProfiling]
 Enabled=_ 0
 [Log file]
@@ -44,15 +44,16 @@ Count=0
 Stop timers on halt=0
 Leave target running=1
 [Aliases]
-A0=_ "C:\Users\spshih\Desktop\Eating\CC2530\CC2530\CC2530 RF Code\components\basicrf\basic_rf.c" "C:\Users\user\Desktop\CC2530\CC2530 RF Code\components\basicrf\basic_rf.c"
-A1=_ "C:\Users\spshih\Desktop\Eating\CC2530\CC2530\CC2530 RF Code\mcu-tag1\ex_switch\switch.c" "C:\Users\user\Desktop\CC2530\CC2530 RF Code\mcu-tag1\ex_switch\switch.c"
-A2=_ "C:\Users\user\Desktop\CC2530\CC2530 RF Code\components\common\hal_rf.c" "C:\Users\spshih\Desktop\Eating\CC2530\CC2530\CC2530 RF Code With LED Matrix\components\common\hal_rf.c"
-A3=_ "C:\Users\user\Desktop\CC2530\CC2530 RF Code\components\targets\zigbee-mcu1\hal_board.c" "C:\Users\spshih\Desktop\Eating\CC2530\CC2530\CC2530 RF Code With LED Matrix\components\targets\zigbee-mcu1\hal_board.c"
-A4=_ "C:\Users\user\Desktop\CC2530\CC2530 RF Code\components\targets\zigbee-mcu1\hal_buzzer.c" "C:\Users\spshih\Desktop\Eating\CC2530\CC2530\CC2530 RF Code With LED Matrix\components\targets\zigbee-mcu1\hal_buzzer.c"
-A5=_ "C:\Users\user\Desktop\CC2530\RF Code\mcu-tag1\ex_switch\switch.c" ""
-A6=_ "C:\Users\user\Desktop\CC530\RF 原始Code\components\common\hal_rf.c" ""
-A7=_ "C:\Users\user\Desktop\CC530\RF 原始Code\components\targets\zigbee-mcu1\hal_board.c" ""
-A8=_ "C:\Users\user\Desktop\CC530\RF 原始Code\components\targets\zigbee-mcu1\hal_led.c" "C:\Users\user\Desktop\CC2530\CC2530 RF Code\components\targets\zigbee-mcu1\hal_led.c"
-A9=_ "C:\Users\user\Desktop\CC530\RF 原始Code\mcu-tag1\ex_switch\switch.c" "C:\Users\user\Desktop\CC2530\RF Code\mcu-tag1\ex_switch\switch.c"
-Count=10
+A0=_ "C:\Users\spshih\Desktop\Eating\CC2530\CC2530\CC2530 RF Code With LED Matrix\components\common\hal_lcd.c" ""
+A1=_ "C:\Users\spshih\Desktop\Eating\CC2530\CC2530\CC2530 RF Code\components\basicrf\basic_rf.c" "C:\Users\user\Desktop\CC2530\CC2530 RF Code\components\basicrf\basic_rf.c"
+A2=_ "C:\Users\spshih\Desktop\Eating\CC2530\CC2530\CC2530 RF Code\mcu-tag1\ex_switch\switch.c" "C:\Users\user\Desktop\CC2530\CC2530 RF Code\mcu-tag1\ex_switch\switch.c"
+A3=_ "C:\Users\user\Desktop\CC2530\CC2530 RF Code\components\common\hal_rf.c" "C:\Users\spshih\Desktop\Eating\CC2530\CC2530\CC2530 RF Code With LED Matrix\components\common\hal_rf.c"
+A4=_ "C:\Users\user\Desktop\CC2530\CC2530 RF Code\components\targets\zigbee-mcu1\hal_board.c" "C:\Users\spshih\Desktop\Eating\CC2530\CC2530\CC2530 RF Code With LED Matrix\components\targets\zigbee-mcu1\hal_board.c"
+A5=_ "C:\Users\user\Desktop\CC2530\CC2530 RF Code\components\targets\zigbee-mcu1\hal_buzzer.c" "C:\Users\spshih\Desktop\Eating\CC2530\CC2530\CC2530 RF Code With LED Matrix\components\targets\zigbee-mcu1\hal_buzzer.c"
+A6=_ "C:\Users\user\Desktop\CC2530\RF Code\mcu-tag1\ex_switch\switch.c" ""
+A7=_ "C:\Users\user\Desktop\CC530\RF 原始Code\components\common\hal_rf.c" ""
+A8=_ "C:\Users\user\Desktop\CC530\RF 原始Code\components\targets\zigbee-mcu1\hal_board.c" ""
+A9=_ "C:\Users\user\Desktop\CC530\RF 原始Code\components\targets\zigbee-mcu1\hal_led.c" "C:\Users\user\Desktop\CC2530\CC2530 RF Code\components\targets\zigbee-mcu1\hal_led.c"
+A10=_ "C:\Users\user\Desktop\CC530\RF 原始Code\mcu-tag1\ex_switch\switch.c" "C:\Users\user\Desktop\CC2530\RF Code\mcu-tag1\ex_switch\switch.c"
+Count=11
 SuppressDialog=1
