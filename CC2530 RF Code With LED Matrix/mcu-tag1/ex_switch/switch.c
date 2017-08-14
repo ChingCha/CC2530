@@ -17,12 +17,12 @@
 #define RF_CHANNEL                18      // 2.4 GHz RF channel
 
 // BasicRF address definitions
-#define PAN_ID                	0x1111
-#define AVM_ADDR           		0x2222		//B販賣機的RF位址
+#define PAN_ID                	0x1111		//PAN_ID
+#define AVM_ADDR           		0x2222		//B販賣機的RF位址(NwkAddr)
 #define VM_ONE_ADDR            	0x3333		//第一區VM Co-ordinator位址
 #define APP_PAYLOAD_LENGTH        127
-#define AVM_WATER     '1'					
-#define AVM_MILK     '2'					
+#define AVM_WATER     '1'					//Endpoint(1~240)
+#define AVM_MILK     '2'					//Endpoint(1~240)
 
 // Application states
 #define IDLE                      0
