@@ -1,13 +1,14 @@
 #include "ioCC2530.h"
 
- #define LED1 P0_4
- #define LED2 P0_5
+ #define LED1 P1_2
+ #define LED2 P1_3
 
 
 void delay(unsigned int t)
 {
   while(t--);
 }
+
 void LEDRunning()
 {
     LED1 = 1;
@@ -22,11 +23,11 @@ void LEDRunning()
 
 void main(void)
 {
-   P0SEL &= ~0x30;	//通用I/O Port
-   P0DIR |= 0x30;	//設置為輸出
+   P1SEL &= ~0x0C;	//通用I/O Port
+   P1DIR |= 0x0C;	//設置為輸出
   
-   P0_4=0;
-   P0_5=0;
+   P1_2 = 0;
+   P1_3 = 0;
   
    while(1)
    {
