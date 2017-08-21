@@ -33,13 +33,13 @@ void ScanKeys()
       while(SW1 == 1);    //等待按鈕鬆開
 	  
 	  //判斷按下按鈕前，LED是ON還是OFF
-      if((Stat_key & 0x01) == 0x01)
+      if(Stat_key == 0x01)
       {
-        Stat_key &= ~0x01;  
+        Stat_key &= ~0x01;	//將按鈕狀態設置為0x00 
         LED5 = 0;
       }
       else{
-        Stat_key |= 0x01;
+        Stat_key |= 0x01;	//將按鈕狀態設置為0x01
         LED5 = 1;
       } 
     }
@@ -51,8 +51,10 @@ void ScanKeys()
     Delay(100);           
     if(SW2 == 1)
     {                     
-      while(SW2 == 1);    
-      if((Stat_key & 0x02) == 0x02)
+      while(SW2 == 1);
+
+		
+      if(Stat_key == 0x02)
       {
         Stat_key &= ~0x02;
         LED6 = 0;
