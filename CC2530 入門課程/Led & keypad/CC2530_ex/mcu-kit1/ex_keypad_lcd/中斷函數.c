@@ -19,10 +19,6 @@ void Init_Port(){
 	LED7 = 0;
 }
 
-void Init1_Timer1(){
-	
-}
-
 //主函式跑馬燈
 void LED_Running(){
 	LED5 = 1;
