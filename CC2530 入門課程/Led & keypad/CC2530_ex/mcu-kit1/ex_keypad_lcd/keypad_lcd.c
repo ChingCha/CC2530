@@ -1,54 +1,92 @@
 #include "ioCC2530.h"
+#include "string.h"
 
-#define LED6 P0_6
-#define LED5 P0_5
-
-//å®šæ™‚å™¨åˆå§‹åŒ–å‡½æ•¸
-void Init_Timer1(){
-	T1CC0L = 0xd4;	//æœ€å¤§è¨ˆæ•¸å€¼ä½8ä½å…ƒ
-	T1CC0H = 0x30;	//æœ€å¤§è¨ˆæ•¸å€¼é«˜8ä½å…ƒ
-	
-	T1CCTL0 |= 0x04;	//é–‹å•Ÿå®šæ™‚å™¨1é€šé“0çš„è¼¸å‡ºæ¯”è¼ƒæ¨¡å¼
-	
-	T1IE = 1;		//è‡´èƒ½å®šæ™‚å™¨1ä¸­æ–·ï¼Œ1ç§’å®šæ™‚
-	T1OVFIM = 1;	//è‡´èƒ½å®šæ™‚å™¨1æº¢å‡ºä¸­æ–·ï¼Œ1ç§’å®šæ™‚
-	EA = 1;			//è‡´èƒ½ç¸½ä¸­æ–·
-	
-	T1CTL = 0x0e;	//åˆ†é »ä¿‚æ•¸ï¼š128(1110:e)ï¼Œæ¨¡æ¨¡å¼
-	
+#define LED1 P0_4
+#define LED2 P0_5
+unsigned char dataRecv;
+unsigned char Flag = 0;
+/*===================UR0ªì©l¤Æ¨ç?====================*/
+void Init_Uart0()
+{
+  PERCFG = 0x00;    //¦ê¤f0ªº¤Ş?¬M®g¨ì¦ì¸m1¡A§YP0_2©MP0_3
+					//¥~³]±±¨î¼È¦s¾¹USART0ªºI/O¦ì¸m0¡G¦ì¸m1¡G¦ì¸m2
+  P0SEL = 0x0C;     //?P0_2©MP0_3ºİ¤f?¸m¦¨¥~?¥\¯à
+  U0BAUD = 59;      //16MHzªº¨t????¥Í9600BPSªºªi¯S²v
+  U0GCR = 9;
+  U0UCR |= 0x80;    //¸T¤î¬y±±¡A8¦ì?Õu¡A²M°£??¾¹
+  U0CSR |= 0xC0;    //??UART¼Ò¦¡¡A­P¯à±µ¦¬¾¹
+  UTX0IF = 0;       //²M°£TX?°e¤¤??§Ó
+  URX0IF = 0;       //²M°£RX±µ¦¬¤¤??§Ó
+  URX0IE = 1;       //¨Ï¯àURAT0ªº±µ¦¬¤¤?
+  EA = 1;           //¨Ï¯à?¤¤?
 }
-
-unsigned char count = 0;
-
-//å®šæ™‚å™¨ä¸­æ–·æœå‹™å‡½æ•¸
-#pragma vector = T1_VECTOR		
-__interrupt void Timer1_Service(){	
-	T1STAT &= ~0x01;	//æ¸…é™¤å®šæ™‚å™¨1é€šé“0ä¸­æ–·æ¨™èªŒ
-	count++;			//ç´¯åŠ è®Šæ•¸
-	
-	if(count%10 == 0)	//å®šæ™‚å™¨1ç§’åˆ°
-	{	
-		LED5 = ~LED5;	//è½‰æ…‹		
-	}
-	if(count == 100)	//å®šæ™‚å™¨10ç§’åˆ°
-	{	
-		LED6 = ~LED6;	//LED6äº®ï¼Œåœ¨10ç§’æ»…
-		count = 0;
-	}
+/*================UR0±µ¦¬¤¤?ªA?¨ç?================*/
+#pragma vector = URX0_VECTOR
+__interrupt void UR0_RecvInt()
+{
+  URX0IF = 0;           //²M°£RX±µ¦¬¤¤??§Ó
+  dataRecv =  U0DBUF;   //??Õu?±µ¦¬????¥X
+  Flag = 1;             //?¸m±µ¦¬«ü¥O?§Ó
 }
-
-//Portåˆå§‹åŒ–
-void Init_Port(){
-	P0SEL &= ~0x60;		//å°‡P0_5ã€6è¨­ç½®ç‚ºé€šç”¨I/O         
-	P0DIR |= 0x60;		//å°‡P0_5ã€6è¨­ç½®ç‚ºè¼¸å‡º           
-
-	LED5 = 0;               
-	LED6 = 0;
+/*=================UR0?°e?¦r?¨ç?=================*/
+void UR0SendByte(unsigned char dat)
+{
+  U0DBUF = dat;         //?­n?°eªº1¦r??Õu?¤JU0DBUF
+  while(!UTX0IF);       //µ¥«İTX¤¤??§Ó¡A§Y?Õu?°e§¹¦¨
+  UTX0IF = 0;           //²M°£TX¤¤??§Ó¡A­ã?¤U¤@¦¸?°e
 }
-
+/*=================UR0?°e¦r²Å¦ê¨ç?===============*/
+void UR0SendString(unsigned char *str)
+{
+  while(*str != '\0')       //?°e¤@?¦r²Å¦ê
+  {
+    UR0SendByte(*str++);    //³v??°e¦r²Å¦ê¤¤ªº¦r?
+  }
+}
+/*================?¦æ¤W¦ìÉóªº«ü¥O=================*/
+void ExecuteTheOrder()
+{
+  Flag = 0 ;            //²M°£±µ¦¬«ü¥O?§Ó
+  switch(dataRecv)
+  {
+    case 0xa1:
+      LED1 = 1;
+      UR0SendString("The LED1 is Open!\r\n");
+    break;
+    case 0xa2:
+      LED1 = 0;
+      UR0SendString("The LED1 is Closed!\r\n");
+    break;
+    case 0xb1:
+      LED2 = 1;
+      UR0SendString("The LED2 is Open!\r\n");
+    break;
+    case 0xb2:
+      LED2 = 0;
+      UR0SendString("The LED2 is Closed!\r\n");
+    break;
+  }
+}
+/*=================ºİ¤fªì©l¤Æ¨ç?====================*/
+void Init_Port()
+{
+	P0SEL &= ~0x30;		//±NP0_4¡B5³]¸m¬°³q¥ÎI/O
+	P0DIR |= 0x30;		//±NP0_4¡B5 Port ³]¸m¬°¿é¥X
+	LED1 = 0;
+	LED2 = 0;
+} 
+/*===================¥D¨ç?=========================*/
 void main()
 {
-  Init_Port();		//åˆå§‹åŒ–Port
-  Init_Timer1();	//åˆå§‹åŒ–Timer1
-  while(1);  		//???
+  Init_Port();         //ªì©l¤Æºİ¤f
+  Init_Uart0();        //ªì©l¤Æ¦ê¤f0
+  //¥ı?°e¤@?¦r²Å¦ê¡A??¦ê¤f0?Õu??¬O§_¥¿ÚÌ
+  UR0SendString("123");
+  while(1)
+  {
+    if(Flag == 1)      //¬d?¬O§_¦¬¨ì¤W¦ìÉó«ü¥O
+    {
+      ExecuteTheOrder();    //¸ÑªR¦}?¦æ«ü¥O
+    }
+  }
 }

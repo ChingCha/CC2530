@@ -31,7 +31,7 @@ void LED_Running(){
 	Delay(60000);
 }
 
-//設計外部中斷初始化函數
+//外部中斷初始化函數
 void Init_INTP(){
 	IEN2 |= 0x10;	//Port1中斷致能(Port 0、1、2、3對應01、10、11)
 	P1IEN |= 0x04;	//Port1_2外部中斷致能
@@ -39,7 +39,7 @@ void Init_INTP(){
 	EA = 1;
 }
 
-//設計外部中斷主函數
+//外部中斷主函數
 #pragma vector = P1INT_VECTOR		//外部中斷1的向量入口
 __interrupt void Init1_Service(){	//外部中斷的主函數
 	LED7 = ~LED7;	//原來LED的現態(ON/OFF)要轉變為次態(OFF/ON)
