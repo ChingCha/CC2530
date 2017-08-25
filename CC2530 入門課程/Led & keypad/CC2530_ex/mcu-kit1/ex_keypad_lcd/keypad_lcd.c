@@ -1,24 +1,28 @@
 #include "ioCC2530.h"
 #include "string.h"
 
-#define LED1 P0_4
-#define LED2 P0_5
+#define LED1 P1_3
+#define LED2 P1_4
+
 unsigned char dataRecv;
 unsigned char Flag = 0;
 /*===================UR0初始化函?====================*/
 void Init_Uart0()
 {
-  PERCFG = 0x00;    //串口0的引?映射到位置1，即P0_2和P0_3
-					//外設控制暫存器USART0的I/O位置0：位置1：位置2
-  P0SEL = 0x0C;     //?P0_2和P0_3端口?置成外?功能
-  U0BAUD = 59;      //16MHz的系????生9600BPS的波特率
-  U0GCR = 9;
-  U0UCR |= 0x80;    //禁止流控，8位?据，清除??器
-  U0CSR |= 0xC0;    //??UART模式，致能接收器
-  UTX0IF = 0;       //清除TX?送中??志
-  URX0IF = 0;       //清除RX接收中??志
-  URX0IE = 1;       //使能URAT0的接收中?
-  EA = 1;           //使能?中?
+  
+	
+  
+	PERCFG = 0x00;    //串口0的引?映射到位置1，即P0_2和P0_3
+						//外設控制暫存器USART0的I/O位置0：位置1：位置2
+	P0SEL = 0x0C;     //?P0_2和P0_3端口?置成外?功能
+	U0BAUD = 59;      //16MHz的系????生9600BPS的波特率
+	U0GCR = 9;
+	U0UCR |= 0x80;    //禁止流控，8位?据，清除??器
+	U0CSR |= 0xC0;    //??UART模式，致能接收器
+	UTX0IF = 0;       //清除TX?送中??志
+	URX0IF = 0;       //清除RX接收中??志
+	URX0IE = 1;       //使能URAT0的接收中?
+	EA = 1;           //使能?中?
 }
 /*================UR0接收中?服?函?================*/
 #pragma vector = URX0_VECTOR
@@ -70,10 +74,10 @@ void ExecuteTheOrder()
 /*=================端口初始化函?====================*/
 void Init_Port()
 {
-	P0SEL &= ~0x30;		//將P0_4、5設置為通用I/O
-	P0DIR |= 0x30;		//將P0_4、5 Port 設置為輸出
-	LED1 = 0;
-	LED2 = 0;
+	P1SEL &= ~0x18;       //?P1_3和P1_4?置?通用I/O端口功能
+	P1DIR |= 0x18;        //?P1_3和P1_4的端口?置??出
+	LED1 = 0;             //??LED5?
+	LED2 = 0; 
 } 
 /*===================主函?=========================*/
 void main()
@@ -81,7 +85,7 @@ void main()
   Init_Port();         //初始化端口
   Init_Uart0();        //初始化串口0
   //先?送一?字符串，??串口0?据??是否正确
-  UR0SendString("123");
+  UR0SendString("12345");
   while(1)
   {
     if(Flag == 1)      //查?是否收到上位机指令
