@@ -1,10 +1,10 @@
 #include "ioCC2530.h"
 #include "string.h"
 
-#define LED1 P1_3
-#define LED2 P1_4
+#define LED1 P1_4
+#define LED2 P1_5
 
-//#define uint unsigned int
+#define uint unsigned int
 
 unsigned char DataRecieve;		//讀取緩衝區資料的變數
 unsigned char Flag = 0;			//接收指令標誌的變數
@@ -31,23 +31,23 @@ void Init_UART0(){
 	U0BAUD = 59;	//16MHz的系統時鐘產生9600BPS鮑率
 	U0GCR = 9;
 	
-	//U0UCR |= 0x80;	//禁止流控，8bit數據，清除緩衝器
+	U0UCR |= 0x80;	//禁止流控，8bit數據，清除緩衝器
 	U0CSR |= 0x80;	//選擇UART模式(7)，致能接收器(6)
 	
 	UTX0IF = 0;		//清除TX發送中斷標誌
 	//URX0IF = 0;		//清除RX接收中斷標誌
 	//URX0IE = 1;		//致能URAT0的接收中斷
-	//EA = 1;			//致能總中斷
+	EA = 1;			//致能總中斷
 
 }
 
 //LED Port 初始化函數
 void Init_Port(){
 	
-	P0SEL &= ~0x30;		//將P0_4、5設置為通用I/O
-	P0DIR |= 0x30;		//將P0_4、5 Port 設置為輸出
-	LED1 = 0;
-	LED2 = 0;
+	P1SEL &= ~0x30;		//將P1_4、5設置為通用I/O
+	P1DIR |= 0x30;		//將P1_4、5 Port 設置為輸出
+	LED1 = 1;
+	LED2 = 1;
 }
 
 //串口0發送字串

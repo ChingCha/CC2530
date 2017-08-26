@@ -16,7 +16,7 @@
           
           
           
-        <Column0>244</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
+        <Column0>118</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
       </Workspace>
       <Disassembly>
         
@@ -51,7 +51,7 @@
             <Factory>Workspace</Factory>
             <Session>
               
-            <NodeDict><ExpandedNode>keypad_lcd</ExpandedNode><ExpandedNode>keypad_lcd/application</ExpandedNode><ExpandedNode>keypad_lcd/targets</ExpandedNode></NodeDict></Session>
+            <NodeDict><ExpandedNode>keypad_lcd</ExpandedNode><ExpandedNode>keypad_lcd/application</ExpandedNode><ExpandedNode>keypad_lcd/application/keypad_lcd.c</ExpandedNode><ExpandedNode>keypad_lcd/targets</ExpandedNode></NodeDict></Session>
           </Tab>
         </Tabs>
         
@@ -71,14 +71,14 @@
       
       
       
-    <Pane/><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\keypad_lcd.c</Filename><XPos>0</XPos><YPos>74</YPos><SelStart>1978</SelStart><SelEnd>1978</SelEnd></Tab><ActiveTab>0</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>D:\IAR\8051\inc\clib\sysmac.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>D:\IAR\8051\inc\clib\string.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>194</SelStart><SelEnd>194</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\components\targets\mcu-kit1\hal_uart.c</Filename><XPos>0</XPos><YPos>61</YPos><SelStart>2448</SelStart><SelEnd>2448</SelEnd></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
     <Positions>
       
       
       
       
       
-    <Top><Row0><Sizes><Toolbar-00fbe3b0><key>iaridepm.enu1</key></Toolbar-00fbe3b0></Sizes></Row0><Row1><Sizes><Toolbar-09ccecf8><key>debuggergui.enu1</key></Toolbar-09ccecf8></Sizes></Row1><Row2><Sizes/></Row2></Top><Left><Row0><Sizes><Wnd1><Rect><Top>-2</Top><Left>-2</Left><Bottom>458</Bottom><Right>318</Right><x>-2</x><y>-2</y><xscreen>3738</xscreen><yscreen>247</yscreen><sizeHorzCX>2736457</sizeHorzCX><sizeHorzCY>340220</sizeHorzCY><sizeVertCX>234261</sizeVertCX><sizeVertCY>633609</sizeVertCY></Rect></Wnd1></Sizes></Row0></Left><Right><Row0><Sizes><Wnd2><Rect><Top>-2</Top><Left>-2</Left><Bottom>458</Bottom><Right>195</Right><x>-2</x><y>-2</y><xscreen>3738</xscreen><yscreen>247</yscreen><sizeHorzCX>2736457</sizeHorzCX><sizeHorzCY>340220</sizeHorzCY><sizeVertCX>144217</sizeVertCX><sizeVertCY>633609</sizeVertCY></Rect></Wnd2></Sizes></Row0></Right><Bottom><Row0><Sizes><Wnd0><Rect><Top>-2</Top><Left>-2</Left><Bottom>199</Bottom><Right>1368</Right><x>-2</x><y>-2</y><xscreen>1370</xscreen><yscreen>201</yscreen><sizeHorzCX>1002928</sizeHorzCX><sizeHorzCY>276860</sizeHorzCY><sizeVertCX>2736457</sizeVertCX><sizeVertCY>340220</sizeVertCY></Rect></Wnd0></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+    <Top><Row0><Sizes><Toolbar-051c1fd0><key>iaridepm.enu1</key></Toolbar-051c1fd0></Sizes></Row0><Row1><Sizes><Toolbar-085a0e38><key>debuggergui.enu1</key></Toolbar-085a0e38></Sizes></Row1><Row2><Sizes/></Row2></Top><Left><Row0><Sizes><Wnd1><Rect><Top>-2</Top><Left>-2</Left><Bottom>645</Bottom><Right>192</Right><x>-2</x><y>-2</y><xscreen>5254</xscreen><yscreen>339</yscreen><sizeHorzCX>5484342</sizeHorzCX><sizeHorzCY>343117</sizeHorzCY><sizeVertCX>202505</sizeVertCX><sizeVertCY>654858</sizeVertCY></Rect></Wnd1></Sizes></Row0></Left><Right><Row0><Sizes><Wnd2><Rect><Top>-2</Top><Left>-2</Left><Bottom>645</Bottom><Right>120</Right><x>-2</x><y>-2</y><xscreen>5254</xscreen><yscreen>339</yscreen><sizeHorzCX>5484342</sizeHorzCX><sizeHorzCY>343117</sizeHorzCY><sizeVertCX>127349</sizeVertCX><sizeVertCY>654858</sizeVertCY></Rect></Wnd2></Sizes></Row0></Right><Bottom><Row0><Sizes><Wnd0><Rect><Top>-2</Top><Left>-2</Left><Bottom>274</Bottom><Right>960</Right><x>-2</x><y>-2</y><xscreen>962</xscreen><yscreen>276</yscreen><sizeHorzCX>1004175</sizeHorzCX><sizeHorzCY>279352</sizeHorzCY><sizeVertCX>5484342</sizeVertCX><sizeVertCY>343117</sizeVertCY></Rect></Wnd0></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
   </Desktop>
 </Project>
 
