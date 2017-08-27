@@ -4,6 +4,8 @@
 #define LED1 P1_3
 #define LED2 P1_4
 
+#define uint unsigned int
+
 unsigned char DataRecieve;		//讀取緩衝區資料的變數
 unsigned char Flag = 0;			//接收指令標誌的變數
 
@@ -18,14 +20,9 @@ void main()
 {
   Init_Port();	
   set_main_clock();
-  Init_UART0();
-  
-  //UART2.c外加
-  U0CSR |=0X40;//USART0 接收使能
-  IEN0 |=0X04;//usart0 接收中?使能
-  EA=1;//??中?
+  Init_UART0();		
 
-  UR0SendString("我是陳奕廷");
+  UR0SendByte('A');
   while(1)
   {
     if(Flag == 1)      //查?是否收到上位机指令
@@ -50,9 +47,9 @@ void Init_UART0(){
 	U0CSR |= 0x80;	//選擇UART模式(7)，致能接收器(6)
 	
 	UTX0IF = 0;		//清除TX發送中斷標誌
-	//URX0IF = 0;		//清除RX接收中斷標誌
-	//URX0IE = 1;		//致能URAT0接收中斷<1>
-	//EA = 1;			//致能總中斷
+	URX0IF = 0;		//清除RX接收中斷標誌
+	URX0IE = 1;		//致能URAT0接收中斷<1>
+	EA = 1;			//致能總中斷
 
 }
 
