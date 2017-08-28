@@ -21,7 +21,7 @@ void main()
   set_main_clock();
   Init_UART0();
   
-  UR0SendString("CC2530 Course");
+  UR0SendString("我是陳奕廷");
   while(1)
   {
     if(Flag == 1)      //是否收到上位機指令?
@@ -37,7 +37,7 @@ void Init_UART0(){
 	//對應的引腳為外設功能
 
 	PERCFG = 0x00;	//串口0的引腳映射到位置1，即P0_2、3
-	P0SEL |= 0x0C;	//將P0_2、3 Port 設置成外設功能
+	P0SEL = 0x0C;	//將P0_2、3 Port 設置成外設功能
 	P2DIR &= ~0x3F;	//P0外設優先級USART0最高
 	
 	U0BAUD = 59;	//16MHz的系統時鐘產生9600BPS鮑率
