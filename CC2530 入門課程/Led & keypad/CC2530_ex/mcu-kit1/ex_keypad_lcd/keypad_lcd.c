@@ -99,22 +99,22 @@ void ExecuteTheOrder(){
 	Flag = 0;	//清除接收指令標誌
 	switch(DataRecieve){
 		
-		case 0x01:
+		case 1:
 			LED1 = 1;
 			UR0SendString("The LED1 is Open!");
 		break;
 		
-		case 0x02:
+		case 2:
 			LED1 = 0;
 			UR0SendString("The LED1 is Closed!");
 		break;
 		
-		case 0x03:
+		case 3:
 			LED2 = 1;
 			UR0SendString("The LED2 is Open!");
 		break;
 		
-		case 0x04:
+		case 4:
 			LED2 = 0;
 			UR0SendString("The LED2 is Closed!");
 		break;
