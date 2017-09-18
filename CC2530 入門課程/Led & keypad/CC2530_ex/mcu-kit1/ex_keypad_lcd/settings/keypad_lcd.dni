@@ -16,7 +16,7 @@ TriggerName=main
 LimitSize=0
 ByteLimit=50
 [DebugChecksum]
-Checksum=-513210816
+Checksum=1301963159
 [InstructionProfiling]
 Enabled=_ 0
 [Log file]
@@ -32,7 +32,7 @@ Count=0
 Stop timers on halt=0
 Leave target running=1
 [Aliases]
-A0=_ "C:\Users\user\Desktop\CC2530\CC2530 Hardware Code\Led & keypad\CC2530_ex\components\common\hal_digio.c" "G:\Workspace\CC2530\CC2530 入門課程\Led & keypad\CC2530_ex\components\common\hal_digio.c"
+A0=_ "C:\Users\user\Desktop\CC2530\CC2530 Hardware Code\Led & keypad\CC2530_ex\components\common\hal_digio.c" "D:\Texas Instruments\CC2530\CC2530 入門課程\Led & keypad\CC2530_ex\components\common\hal_digio.c"
 A1=_ "C:\Users\user\Desktop\CC2530\CC2530 Hardware Code\Led & keypad\CC2530_ex\components\common\hal_rf.c" "G:\Workspace\CC2530\CC2530 入門課程\Led & keypad\CC2530_ex\components\common\hal_rf.c"
 A2=_ "C:\Users\user\Desktop\CC2530\CC2530 Hardware Code\Led & keypad\CC2530_ex\components\targets\mcu-kit1\hal_led.c" ""
 A3=_ "C:\Users\user\Desktop\CC2530\CC2530 Hardware Code\Led & keypad\CC2530_ex\components\targets\mcu-kit1\hal_uart.c" "G:\Workspace\CC2530\CC2530 入門課程\Led & keypad\CC2530_ex\components\targets\mcu-kit1\hal_uart.c"
