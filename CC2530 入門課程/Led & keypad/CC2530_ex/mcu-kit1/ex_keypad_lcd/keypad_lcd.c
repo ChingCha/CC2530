@@ -1,6 +1,8 @@
 #include "ioCC2530.h"
 
 #define LED5 P1_0
+#define SW1 P0_3
+#define SW2 P0_4
 
 void set_main_clock();
 void PortInit();
@@ -9,10 +11,10 @@ void Delay(unsigned int t);
 
 void main()
 {
-	int i;
+	//int i;
 
 	//各工作週期陣列
-    int dutycycle[11]={0xF7,0xE1,0xC8,0xAF,0x96,0x7D,0x64,0x4B,0x32,0x19,0x0A};
+    //int dutycycle[11]={0xF7,0xE1,0xC8,0xAF,0x96,0x7D,0x64,0x4B,0x32,0x19,0x0A};
 	
 	PortInit();
 
@@ -21,18 +23,38 @@ void main()
 	T1Init();
 
 	while(1){
-
-		for(i=0;i<11;i++){	
-
-			T1CC2H = 0x00;
-
-			T1CC2L = dutycycle[i];
-
-			Delay(60000);
-
+		
+		if(SW1 == 0){
+			
+			Delay(100);
+		
+			while(SW1 == 0){
+			
+			
+				//Duty Cycle = 10%
+				T1CC2H = 0x00;
+				T1CC2L = 0xE1;
+			
+			}
 		}
-	}
+	
+		if(SW2 == 0){
+		
+			Delay(100);
+		
+			while(SW2 == 0){
 
+			
+				//Duty Cycle = 90%
+				T1CC2H = 0x00;
+				T1CC2L = 0x19;
+			}
+		}
+			
+	}
+	
+	
+	
 }
 
 void Delay(unsigned int t){
@@ -41,8 +63,11 @@ void Delay(unsigned int t){
 
 void PortInit()
 {
-    P0SEL &= ~0x00;		//P1_0設置為通用I/O
-    P0DIR |= 0x01; 		//P1_0設置為輸出
+    P1SEL &= ~0x00;		//P1_0設置為通用I/O
+    P1DIR |= 0x01; 		//P1_0設置為輸出
+	P0SEL &= ~0x18;		//P0_3、4為通用I/O
+	P0DIR &= ~0x18;		//P0_3、4設置為輸入
+	
 	LED5 = 0;			//LED初始狀態
 }
 
@@ -64,18 +89,18 @@ void T1Init()
 	
     T1CCTL2 = 0x1C;             //比較相等為1，計數器回0則清零
 	
-    //裝Timer通道0初值
+    //裝Timer1通道0初值
     T1CC0H = 0x00;
-    T1CC0L = 0xFA;              //PWM信號週期?1ms，頻率為1KHZ
+    T1CC0L = 0xFA;              //PWM信號週期1ms，頻率為1KHZ
 	
-    //?Timer通道2比?值
-    T1CC2H = 0x00;
+    //Timer1通道2比值
+    //T1CC2H = 0x00;
     //T1CC2L = 0xF7; 	//1%的正工作週期
     //T1CC2L = 0xE1; 	//10%的正工作週期
     //T1CC2L = 0xC8; 	//20%的正工作週期
     //T1CC2L = 0xAF; 	//30%的正工作週期
     //T1CC2L = 0x96; 	//40%的正工作週期
-    T1CC2L = 0x7D; 		//50%的正工作週期
+    //T1CC2L = 0x7D; 	//50%的正工作週期
     //T1CC2L = 0x64; 	//60%的正工作週期
     //T1CC2L = 0x4B; 	//70%的正工作週期
     //T1CC2L = 0x32; 	//80%的正工作週期
