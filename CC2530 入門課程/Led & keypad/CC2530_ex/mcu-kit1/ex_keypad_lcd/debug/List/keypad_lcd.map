@@ -2,97 +2,97 @@
 #                                                                              #
 #      IAR Universal Linker V5.0.2.5/W32                                       #
 #                                                                              #
-#           Link time     =  18/Sep/2017  23:02:34                             #
+#           Link time     =  19/Sep/2017  22:58:37                             #
 #           Target CPU    =  x51                                               #
-#           List file     =  "D:\WorkSpace\CC2530\CC2530 入門課程\Led & keypad #
-#                            \CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\List\keyp #
-#                            ad_lcd.map"                                       #
-#           Output file 1 =  "D:\WorkSpace\CC2530\CC2530 入門課程\Led & keypad #
-#                            \CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\Exe\keypa #
-#                            d_lcd.hex"                                        #
+#           List file     =  "D:\Texas Instruments\CC2530\CC2530 入門課程\Led  #
+#                            & keypad\CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\L #
+#                            ist\keypad_lcd.map"                               #
+#           Output file 1 =  "D:\Texas Instruments\CC2530\CC2530 入門課程\Led  #
+#                            & keypad\CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\E #
+#                            xe\keypad_lcd.hex"                                #
 #                            Format: intel-extended                            #
-#           Output file 2 =  "D:\WorkSpace\CC2530\CC2530 入門課程\Led & keypad #
-#                            \CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\Exe\keypa #
-#                            d_lcd.d51"                                        #
+#           Output file 2 =  "D:\Texas Instruments\CC2530\CC2530 入門課程\Led  #
+#                            & keypad\CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\E #
+#                            xe\keypad_lcd.d51"                                #
 #                            Format: debug                                     #
 #                            UBROF version 10.0.3                              #
 #                            Using library modules for C-SPY (-rt)             #
-#           Command line  =  -ID:\IAR\8051\CONFIG\ -D_NR_OF_BANKS=0x07         #
+#           Command line  =  -IP:\IAR\8051\CONFIG\ -D_NR_OF_BANKS=0x07         #
 #                            -D_CODEBANK_END=0xFFFF -D_CODEBANK_START=0x8000   #
 #                            -D?CBANK_MASK=0x07 -D?CBANK=0x9F                  #
-#                            "D:\WorkSpace\CC2530\CC2530 入門課程\Led & keypad #
-#                            \CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\Obj\basic #
-#                            _rf.r51"                                          #
-#                            "D:\WorkSpace\CC2530\CC2530 入門課程\Led & keypad #
-#                            \CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\Obj\basic #
-#                            _rf_security.r51"                                 #
-#                            "D:\WorkSpace\CC2530\CC2530 入門課程\Led & keypad #
-#                            \CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\Obj\hal_a #
-#                            dc.r51"                                           #
-#                            "D:\WorkSpace\CC2530\CC2530 入門課程\Led & keypad #
-#                            \CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\Obj\hal_b #
-#                            oard.r51"                                         #
-#                            "D:\WorkSpace\CC2530\CC2530 入門課程\Led & keypad #
-#                            \CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\Obj\hal_b #
-#                            utton.r51"                                        #
-#                            "D:\WorkSpace\CC2530\CC2530 入門課程\Led & keypad #
-#                            \CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\Obj\hal_b #
-#                            uzzer.r51"                                        #
-#                            "D:\WorkSpace\CC2530\CC2530 入門課程\Led & keypad #
-#                            \CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\Obj\hal_c #
-#                            lock.r51"                                         #
-#                            "D:\WorkSpace\CC2530\CC2530 入門課程\Led & keypad #
-#                            \CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\Obj\hal_d #
-#                            igio.r51"                                         #
-#                            "D:\WorkSpace\CC2530\CC2530 入門課程\Led & keypad #
-#                            \CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\Obj\hal_i #
-#                            nt.r51"                                           #
-#                            "D:\WorkSpace\CC2530\CC2530 入門課程\Led & keypad #
-#                            \CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\Obj\hal_k #
-#                            eypad.r51"                                        #
-#                            "D:\WorkSpace\CC2530\CC2530 入門課程\Led & keypad #
-#                            \CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\Obj\hal_l #
-#                            cd.r51"                                           #
-#                            "D:\WorkSpace\CC2530\CC2530 入門課程\Led & keypad #
-#                            \CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\Obj\hal_l #
-#                            ed.r51"                                           #
-#                            "D:\WorkSpace\CC2530\CC2530 入門課程\Led & keypad #
-#                            \CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\Obj\hal_m #
-#                            cu.r51"                                           #
-#                            "D:\WorkSpace\CC2530\CC2530 入門課程\Led & keypad #
-#                            \CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\Obj\hal_r #
-#                            f.r51"                                            #
-#                            "D:\WorkSpace\CC2530\CC2530 入門課程\Led & keypad #
-#                            \CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\Obj\hal_r #
-#                            f_security.r51"                                   #
-#                            "D:\WorkSpace\CC2530\CC2530 入門課程\Led & keypad #
-#                            \CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\Obj\hal_r #
-#                            f_util.r51"                                       #
-#                            "D:\WorkSpace\CC2530\CC2530 入門課程\Led & keypad #
-#                            \CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\Obj\hal_u #
-#                            art.r51"                                          #
-#                            "D:\WorkSpace\CC2530\CC2530 入門課程\Led & keypad #
-#                            \CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\Obj\keypa #
-#                            d_lcd.r51"                                        #
-#                            "D:\WorkSpace\CC2530\CC2530 入門課程\Led & keypad #
-#                            \CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\Obj\util. #
-#                            r51"                                              #
-#                            "D:\WorkSpace\CC2530\CC2530 入門課程\Led & keypad #
-#                            \CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\Obj\util_ #
-#                            buffer.r51"                                       #
-#                            "D:\WorkSpace\CC2530\CC2530 入門課程\Led & keypad #
-#                            \CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\Obj\util_ #
-#                            lcd.r51"                                          #
+#                            "D:\Texas Instruments\CC2530\CC2530 入門課程\Led  #
+#                            & keypad\CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\O #
+#                            bj\basic_rf.r51"                                  #
+#                            "D:\Texas Instruments\CC2530\CC2530 入門課程\Led  #
+#                            & keypad\CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\O #
+#                            bj\basic_rf_security.r51"                         #
+#                            "D:\Texas Instruments\CC2530\CC2530 入門課程\Led  #
+#                            & keypad\CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\O #
+#                            bj\hal_adc.r51"                                   #
+#                            "D:\Texas Instruments\CC2530\CC2530 入門課程\Led  #
+#                            & keypad\CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\O #
+#                            bj\hal_board.r51"                                 #
+#                            "D:\Texas Instruments\CC2530\CC2530 入門課程\Led  #
+#                            & keypad\CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\O #
+#                            bj\hal_button.r51"                                #
+#                            "D:\Texas Instruments\CC2530\CC2530 入門課程\Led  #
+#                            & keypad\CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\O #
+#                            bj\hal_buzzer.r51"                                #
+#                            "D:\Texas Instruments\CC2530\CC2530 入門課程\Led  #
+#                            & keypad\CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\O #
+#                            bj\hal_clock.r51"                                 #
+#                            "D:\Texas Instruments\CC2530\CC2530 入門課程\Led  #
+#                            & keypad\CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\O #
+#                            bj\hal_digio.r51"                                 #
+#                            "D:\Texas Instruments\CC2530\CC2530 入門課程\Led  #
+#                            & keypad\CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\O #
+#                            bj\hal_int.r51"                                   #
+#                            "D:\Texas Instruments\CC2530\CC2530 入門課程\Led  #
+#                            & keypad\CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\O #
+#                            bj\hal_keypad.r51"                                #
+#                            "D:\Texas Instruments\CC2530\CC2530 入門課程\Led  #
+#                            & keypad\CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\O #
+#                            bj\hal_lcd.r51"                                   #
+#                            "D:\Texas Instruments\CC2530\CC2530 入門課程\Led  #
+#                            & keypad\CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\O #
+#                            bj\hal_led.r51"                                   #
+#                            "D:\Texas Instruments\CC2530\CC2530 入門課程\Led  #
+#                            & keypad\CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\O #
+#                            bj\hal_mcu.r51"                                   #
+#                            "D:\Texas Instruments\CC2530\CC2530 入門課程\Led  #
+#                            & keypad\CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\O #
+#                            bj\hal_rf.r51"                                    #
+#                            "D:\Texas Instruments\CC2530\CC2530 入門課程\Led  #
+#                            & keypad\CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\O #
+#                            bj\hal_rf_security.r51"                           #
+#                            "D:\Texas Instruments\CC2530\CC2530 入門課程\Led  #
+#                            & keypad\CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\O #
+#                            bj\hal_rf_util.r51"                               #
+#                            "D:\Texas Instruments\CC2530\CC2530 入門課程\Led  #
+#                            & keypad\CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\O #
+#                            bj\hal_uart.r51"                                  #
+#                            "D:\Texas Instruments\CC2530\CC2530 入門課程\Led  #
+#                            & keypad\CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\O #
+#                            bj\keypad_lcd.r51"                                #
+#                            "D:\Texas Instruments\CC2530\CC2530 入門課程\Led  #
+#                            & keypad\CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\O #
+#                            bj\util.r51"                                      #
+#                            "D:\Texas Instruments\CC2530\CC2530 入門課程\Led  #
+#                            & keypad\CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\O #
+#                            bj\util_buffer.r51"                               #
+#                            "D:\Texas Instruments\CC2530\CC2530 入門課程\Led  #
+#                            & keypad\CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\O #
+#                            bj\util_lcd.r51"                                  #
 #                            -o                                                #
-#                            "D:\WorkSpace\CC2530\CC2530 入門課程\Led & keypad #
-#                            \CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\Exe\keypa #
-#                            d_lcd.d51"                                        #
+#                            "D:\Texas Instruments\CC2530\CC2530 入門課程\Led  #
+#                            & keypad\CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\E #
+#                            xe\keypad_lcd.d51"                                #
 #                            -l                                                #
-#                            "D:\WorkSpace\CC2530\CC2530 入門課程\Led & keypad #
-#                            \CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\List\keyp #
-#                            ad_lcd.map"                                       #
-#                            -xmsn -ID:\IAR\8051\CONFIG\ -f                    #
-#                            "D:\IAR\8051\config\devices\Texas Instruments\lnk #
+#                            "D:\Texas Instruments\CC2530\CC2530 入門課程\Led  #
+#                            & keypad\CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\L #
+#                            ist\keypad_lcd.map"                               #
+#                            -xmsn -IP:\IAR\8051\CONFIG\ -f                    #
+#                            "P:\IAR\8051\config\devices\Texas Instruments\lnk #
 #                            51ew_cc2530F256_banked.xcl"                       #
 #                            (-D_IDATA0_START=0x00 -D_IDATA0_END=0xFF          #
 #                            -D_PDATA0_START=0x1E00 -D_PDATA0_END=0x1EFF       #
@@ -174,11 +174,11 @@
 #                            -D_NR_OF_VIRTUAL_REGISTERS=8 -D?PBANK=0xA0        #
 #                            -e_medium_write=_formatted_write                  #
 #                            -e_medium_read=_formatted_read -rt                #
-#                            "-Ointel-extended=D:\WorkSpace\CC2530\CC2530 入門 #
-#                            課程\Led & keypad\CC2530_ex\mcu-kit1\ex_keypad_lc #
-#                            d\debug\Exe\keypad_lcd.hex"                       #
+#                            "-Ointel-extended=D:\Texas Instruments\CC2530\CC2 #
+#                            530 入門課程\Led & keypad\CC2530_ex\mcu-kit1\ex_k #
+#                            eypad_lcd\debug\Exe\keypad_lcd.hex"               #
 #                            -s __program_start                                #
-#                            D:\IAR\8051\LIB\CLIB\cl-pli-blxd-1e16x01.r51      #
+#                            P:\IAR\8051\LIB\CLIB\cl-pli-blxd-1e16x01.r51      #
 #                            -D_IDATA_STACK_SIZE=0x40                          #
 #                            -D_EXTENDED_STACK_START=0x00                      #
 #                            -D_EXTENDED_STACK_SIZE=0x00                       #
@@ -296,13 +296,13 @@ Absolute parts
            _NR_OF_BANKS            00000007 
     *************************************************************************
 
-  FILE NAME : D:\WorkSpace\CC2530\CC2530 入門課程\Led & keypad\CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\Obj\basic_rf.r51
+  FILE NAME : D:\Texas Instruments\CC2530\CC2530 入門課程\Led & keypad\CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\Obj\basic_rf.r51
     *************************************************************************
 
-  FILE NAME : D:\WorkSpace\CC2530\CC2530 入門課程\Led & keypad\CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\Obj\basic_rf_security.r51
+  FILE NAME : D:\Texas Instruments\CC2530\CC2530 入門課程\Led & keypad\CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\Obj\basic_rf_security.r51
     *************************************************************************
 
-  FILE NAME : D:\WorkSpace\CC2530\CC2530 入門課程\Led & keypad\CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\Obj\hal_adc.r51
+  FILE NAME : D:\Texas Instruments\CC2530\CC2530 入門課程\Led & keypad\CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\Obj\hal_adc.r51
   PROGRAM MODULE, NAME : hal_adc
 
   SEGMENTS IN THE MODULE
@@ -347,7 +347,7 @@ SFR_AN
 
     *************************************************************************
 
-  FILE NAME : D:\WorkSpace\CC2530\CC2530 入門課程\Led & keypad\CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\Obj\hal_board.r51
+  FILE NAME : D:\Texas Instruments\CC2530\CC2530 入門課程\Led & keypad\CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\Obj\hal_board.r51
   PROGRAM MODULE, NAME : hal_board
 
   SEGMENTS IN THE MODULE
@@ -355,7 +355,6 @@ SFR_AN
 SFR_AN
   Relative segment, address: DATA 00000080 - 00000080 (0x1 bytes), align: 0
   Segment part 1. ROOT.       Intra module refs:   T1_ISR (hal_buzzer)
-                                                   main (keypad_lcd)
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
            _A_P0                   00000080 
@@ -365,7 +364,7 @@ SFR_AN
     -------------------------------------------------------------------------
 SFR_AN
   Relative segment, address: DATA 00000090 - 00000090 (0x1 bytes), align: 0
-  Segment part 2. ROOT.       Intra module refs:   PortInit (keypad_lcd)
+  Segment part 2. ROOT.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
            _A_P1                   00000090 
@@ -385,22 +384,21 @@ SFR_AN
     -------------------------------------------------------------------------
 SFR_AN
   Relative segment, address: DATA 000000F3 - 000000F3 (0x1 bytes), align: 0
-  Segment part 4. ROOT.       Intra module refs:   PortInit (keypad_lcd)
+  Segment part 4. ROOT.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
            P0SEL                   000000F3 
     -------------------------------------------------------------------------
 SFR_AN
   Relative segment, address: DATA 000000F4 - 000000F4 (0x1 bytes), align: 0
-  Segment part 5. ROOT.       Intra module refs:   PortInit (keypad_lcd)
-                                                   T1Init (keypad_lcd)
+  Segment part 5. ROOT.       Intra module refs:   init_port (keypad_lcd)
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
            P1SEL                   000000F4 
     -------------------------------------------------------------------------
 SFR_AN
   Relative segment, address: DATA 000000F5 - 000000F5 (0x1 bytes), align: 0
-  Segment part 6. ROOT.       Intra module refs:   T1Init (keypad_lcd)
+  Segment part 6. ROOT.       Intra module refs:   init_port (keypad_lcd)
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
            P2SEL                   000000F5 
@@ -414,29 +412,28 @@ SFR_AN
     -------------------------------------------------------------------------
 SFR_AN
   Relative segment, address: DATA 000000FD - 000000FD (0x1 bytes), align: 0
-  Segment part 8. ROOT.       Intra module refs:   PortInit (keypad_lcd)
+  Segment part 8. ROOT.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
            P0DIR                   000000FD 
     -------------------------------------------------------------------------
 SFR_AN
   Relative segment, address: DATA 000000FE - 000000FE (0x1 bytes), align: 0
-  Segment part 9. ROOT.       Intra module refs:   PortInit (keypad_lcd)
-                                                   T1Init (keypad_lcd)
+  Segment part 9. ROOT.       Intra module refs:   init_port (keypad_lcd)
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
            P1DIR                   000000FE 
     -------------------------------------------------------------------------
 SFR_AN
   Relative segment, address: DATA 000000FF - 000000FF (0x1 bytes), align: 0
-  Segment part 10. ROOT.      Intra module refs:   T1Init (keypad_lcd)
+  Segment part 10. ROOT.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
            P2DIR                   000000FF 
 
     *************************************************************************
 
-  FILE NAME : D:\WorkSpace\CC2530\CC2530 入門課程\Led & keypad\CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\Obj\hal_button.r51
+  FILE NAME : D:\Texas Instruments\CC2530\CC2530 入門課程\Led & keypad\CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\Obj\hal_button.r51
   PROGRAM MODULE, NAME : hal_button
 
   SEGMENTS IN THE MODULE
@@ -444,7 +441,7 @@ SFR_AN
 
     *************************************************************************
 
-  FILE NAME : D:\WorkSpace\CC2530\CC2530 入門課程\Led & keypad\CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\Obj\hal_buzzer.r51
+  FILE NAME : D:\Texas Instruments\CC2530\CC2530 入門課程\Led & keypad\CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\Obj\hal_buzzer.r51
   PROGRAM MODULE, NAME : hal_buzzer
 
   SEGMENTS IN THE MODULE
@@ -461,14 +458,14 @@ SFR_AN
     -------------------------------------------------------------------------
 SFR_AN
   Relative segment, address: DATA 000000DA - 000000DA (0x1 bytes), align: 0
-  Segment part 3. ROOT.       Intra module refs:   T1Init (keypad_lcd)
+  Segment part 3. ROOT.       Intra module refs:   init_timer (keypad_lcd)
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
            T1CC0L                  000000DA 
     -------------------------------------------------------------------------
 SFR_AN
   Relative segment, address: DATA 000000DB - 000000DB (0x1 bytes), align: 0
-  Segment part 4. ROOT.       Intra module refs:   T1Init (keypad_lcd)
+  Segment part 4. ROOT.       Intra module refs:   init_timer (keypad_lcd)
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
            T1CC0H                  000000DB 
@@ -482,7 +479,7 @@ SFR_AN
     -------------------------------------------------------------------------
 SFR_AN
   Relative segment, address: DATA 000000E4 - 000000E4 (0x1 bytes), align: 0
-  Segment part 6. ROOT.       Intra module refs:   T1Init (keypad_lcd)
+  Segment part 6. ROOT.       Intra module refs:   init_timer (keypad_lcd)
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
            T1CTL                   000000E4 
@@ -495,11 +492,11 @@ SFR_AN
            T1CCTL0                 000000E5 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 000001FD - 00000200 (0x4 bytes), align: 0
+  Relative segment, address: CODE 000001F1 - 000001F4 (0x4 bytes), align: 0
   Segment part 23.            Intra module refs:   T1_ISR::??INTVEC 75
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           T1_ISR                  000001FD 
+           T1_ISR                  000001F1 
                interrupt function
                ISTACK = 00000000 ( 00000001 )
     -------------------------------------------------------------------------
@@ -512,7 +509,7 @@ INTVEC
 
     *************************************************************************
 
-  FILE NAME : D:\WorkSpace\CC2530\CC2530 入門課程\Led & keypad\CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\Obj\hal_clock.r51
+  FILE NAME : D:\Texas Instruments\CC2530\CC2530 入門課程\Led & keypad\CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\Obj\hal_clock.r51
   PROGRAM MODULE, NAME : hal_clock
 
   SEGMENTS IN THE MODULE
@@ -526,7 +523,7 @@ SFR_AN
     -------------------------------------------------------------------------
 SFR_AN
   Relative segment, address: DATA 0000009E - 0000009E (0x1 bytes), align: 0
-  Segment part 2. ROOT.       Intra module refs:   set_main_clock (keypad_lcd)
+  Segment part 2. ROOT.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
            CLKCONSTA               0000009E 
@@ -540,14 +537,14 @@ SFR_AN
     -------------------------------------------------------------------------
 SFR_AN
   Relative segment, address: DATA 000000C6 - 000000C6 (0x1 bytes), align: 0
-  Segment part 4. ROOT.       Intra module refs:   set_main_clock (keypad_lcd)
+  Segment part 4. ROOT.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
            CLKCONCMD               000000C6 
 
     *************************************************************************
 
-  FILE NAME : D:\WorkSpace\CC2530\CC2530 入門課程\Led & keypad\CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\Obj\hal_digio.r51
+  FILE NAME : D:\Texas Instruments\CC2530\CC2530 入門課程\Led & keypad\CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\Obj\hal_digio.r51
   PROGRAM MODULE, NAME : hal_digio
 
   SEGMENTS IN THE MODULE
@@ -662,56 +659,56 @@ XDATA_Z
            port2_isr_tbl           00000121 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00000201 - 00000254 (0x54 bytes), align: 0
+  Relative segment, address: CODE 000001F5 - 00000248 (0x54 bytes), align: 0
   Segment part 55.            Intra module refs:   port0_ISR::??INTVEC 107
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           port0_ISR               00000201 
+           port0_ISR               000001F5 
                interrupt function
                XSTACK = 00000000 ( 0000000F )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00000255 - 00000259 (0x5 bytes), align: 0
+  Relative segment, address: CODE 00000249 - 0000024D (0x5 bytes), align: 0
   Segment part 56.            Intra module refs:   port0_ISR
                                                    port1_ISR
                                                    port2_ISR
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine1            00000255 
+           ?Subroutine1            00000249 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 0000025A - 000002AF (0x56 bytes), align: 0
+  Relative segment, address: CODE 0000024E - 000002A3 (0x56 bytes), align: 0
   Segment part 57.            Intra module refs:   port1_ISR::??INTVEC 123
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           port1_ISR               0000025A 
+           port1_ISR               0000024E 
                interrupt function
                XSTACK = 00000000 ( 0000000F )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 000002B0 - 000002BA (0xb bytes), align: 0
+  Relative segment, address: CODE 000002A4 - 000002AE (0xb bytes), align: 0
   Segment part 58.            Intra module refs:   port0_ISR
                                                    port1_ISR
                                                    port2_ISR
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine4            000002B0 
+           ?Subroutine4            000002A4 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 000002BB - 000002C6 (0xc bytes), align: 0
+  Relative segment, address: CODE 000002AF - 000002BA (0xc bytes), align: 0
   Segment part 59.            Intra module refs:   port0_ISR
                                                    port1_ISR
                                                    port2_ISR
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine3            000002BB 
+           ?Subroutine3            000002AF 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 000002C7 - 0000031D (0x57 bytes), align: 0
+  Relative segment, address: CODE 000002BB - 00000311 (0x57 bytes), align: 0
   Segment part 60.            Intra module refs:   port2_ISR::??INTVEC 51
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           port2_ISR               000002C7 
+           port2_ISR               000002BB 
                interrupt function
                XSTACK = 00000000 ( 0000000F )
     -------------------------------------------------------------------------
@@ -741,7 +738,7 @@ INTVEC
 
     *************************************************************************
 
-  FILE NAME : D:\WorkSpace\CC2530\CC2530 入門課程\Led & keypad\CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\Obj\hal_int.r51
+  FILE NAME : D:\Texas Instruments\CC2530\CC2530 入門課程\Led & keypad\CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\Obj\hal_int.r51
   PROGRAM MODULE, NAME : hal_int
 
   SEGMENTS IN THE MODULE
@@ -749,7 +746,7 @@ INTVEC
 
     *************************************************************************
 
-  FILE NAME : D:\WorkSpace\CC2530\CC2530 入門課程\Led & keypad\CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\Obj\hal_keypad.r51
+  FILE NAME : D:\Texas Instruments\CC2530\CC2530 入門課程\Led & keypad\CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\Obj\hal_keypad.r51
   PROGRAM MODULE, NAME : hal_keypad
 
   SEGMENTS IN THE MODULE
@@ -757,7 +754,7 @@ INTVEC
 
     *************************************************************************
 
-  FILE NAME : D:\WorkSpace\CC2530\CC2530 入門課程\Led & keypad\CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\Obj\hal_lcd.r51
+  FILE NAME : D:\Texas Instruments\CC2530\CC2530 入門課程\Led & keypad\CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\Obj\hal_lcd.r51
   PROGRAM MODULE, NAME : hal_lcd
 
   SEGMENTS IN THE MODULE
@@ -765,7 +762,7 @@ INTVEC
 
     *************************************************************************
 
-  FILE NAME : D:\WorkSpace\CC2530\CC2530 入門課程\Led & keypad\CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\Obj\hal_led.r51
+  FILE NAME : D:\Texas Instruments\CC2530\CC2530 入門課程\Led & keypad\CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\Obj\hal_led.r51
   PROGRAM MODULE, NAME : hal_led
 
   SEGMENTS IN THE MODULE
@@ -773,7 +770,7 @@ INTVEC
 
     *************************************************************************
 
-  FILE NAME : D:\WorkSpace\CC2530\CC2530 入門課程\Led & keypad\CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\Obj\hal_mcu.r51
+  FILE NAME : D:\Texas Instruments\CC2530\CC2530 入門課程\Led & keypad\CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\Obj\hal_mcu.r51
   PROGRAM MODULE, NAME : hal_mcu
 
   SEGMENTS IN THE MODULE
@@ -787,7 +784,7 @@ SFR_AN
 
     *************************************************************************
 
-  FILE NAME : D:\WorkSpace\CC2530\CC2530 入門課程\Led & keypad\CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\Obj\hal_rf.r51
+  FILE NAME : D:\Texas Instruments\CC2530\CC2530 入門課程\Led & keypad\CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\Obj\hal_rf.r51
   PROGRAM MODULE, NAME : hal_rf
 
   SEGMENTS IN THE MODULE
@@ -835,11 +832,11 @@ XDATA_Z
            pfISR                   0000012B 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 0000031E - 00000355 (0x38 bytes), align: 0
+  Relative segment, address: CODE 00000312 - 00000349 (0x38 bytes), align: 0
   Segment part 71.            Intra module refs:   rfIsr::??INTVEC 131
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           rfIsr                   0000031E 
+           rfIsr                   00000312 
                interrupt function
                XSTACK = 00000000 ( 0000000E )
     -------------------------------------------------------------------------
@@ -852,7 +849,7 @@ INTVEC
 
     *************************************************************************
 
-  FILE NAME : D:\WorkSpace\CC2530\CC2530 入門課程\Led & keypad\CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\Obj\hal_rf_security.r51
+  FILE NAME : D:\Texas Instruments\CC2530\CC2530 入門課程\Led & keypad\CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\Obj\hal_rf_security.r51
   PROGRAM MODULE, NAME : hal_rf_security
 
   SEGMENTS IN THE MODULE
@@ -880,10 +877,10 @@ SFR_AN
 
     *************************************************************************
 
-  FILE NAME : D:\WorkSpace\CC2530\CC2530 入門課程\Led & keypad\CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\Obj\hal_rf_util.r51
+  FILE NAME : D:\Texas Instruments\CC2530\CC2530 入門課程\Led & keypad\CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\Obj\hal_rf_util.r51
     *************************************************************************
 
-  FILE NAME : D:\WorkSpace\CC2530\CC2530 入門課程\Led & keypad\CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\Obj\hal_uart.r51
+  FILE NAME : D:\Texas Instruments\CC2530\CC2530 入門課程\Led & keypad\CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\Obj\hal_uart.r51
   PROGRAM MODULE, NAME : hal_uart
 
   SEGMENTS IN THE MODULE
@@ -933,7 +930,7 @@ SFR_AN
     -------------------------------------------------------------------------
 SFR_AN
   Relative segment, address: DATA 000000F1 - 000000F1 (0x1 bytes), align: 0
-  Segment part 10. ROOT.      Intra module refs:   T1Init (keypad_lcd)
+  Segment part 10. ROOT.      Intra module refs:   init_port (keypad_lcd)
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
            PERCFG                  000000F1 
@@ -947,28 +944,28 @@ XDATA_Z
            uartCfg                 0000012D 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00000356 - 0000039C (0x47 bytes), align: 0
+  Relative segment, address: CODE 0000034A - 00000390 (0x47 bytes), align: 0
   Segment part 36.            Intra module refs:   halUart0RxIsr::??INTVEC 19
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           halUart0RxIsr           00000356 
+           halUart0RxIsr           0000034A 
                interrupt function
                ISTACK = 00000000 ( 00000007 )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 0000039D - 000003A4 (0x8 bytes), align: 0
+  Relative segment, address: CODE 00000391 - 00000398 (0x8 bytes), align: 0
   Segment part 37.            Intra module refs:   halUart0RxIsr
                                                    halUart0TxIsr
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine2            0000039D 
+           ?Subroutine2            00000391 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 000003A5 - 000003F6 (0x52 bytes), align: 0
+  Relative segment, address: CODE 00000399 - 000003EA (0x52 bytes), align: 0
   Segment part 38.            Intra module refs:   halUart0TxIsr::??INTVEC 59
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           halUart0TxIsr           000003A5 
+           halUart0TxIsr           00000399 
                interrupt function
                ISTACK = 00000000 ( 00000007 )
     -------------------------------------------------------------------------
@@ -990,109 +987,80 @@ INTVEC
 
     *************************************************************************
 
-  FILE NAME : D:\WorkSpace\CC2530\CC2530 入門課程\Led & keypad\CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\Obj\keypad_lcd.r51
+  FILE NAME : D:\Texas Instruments\CC2530\CC2530 入門課程\Led & keypad\CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\Obj\keypad_lcd.r51
   PROGRAM MODULE, NAME : keypad_lcd
 
   SEGMENTS IN THE MODULE
   ======================
 SFR_AN
   Relative segment, address: DATA 000000DE - 000000DE (0x1 bytes), align: 0
-  Segment part 7. ROOT.       Intra module refs:   main
+  Segment part 3. ROOT.       Intra module refs:   init_timer
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
            T1CC2L                  000000DE 
     -------------------------------------------------------------------------
 SFR_AN
   Relative segment, address: DATA 000000DF - 000000DF (0x1 bytes), align: 0
-  Segment part 8. ROOT.       Intra module refs:   main
+  Segment part 4. ROOT.       Intra module refs:   init_timer
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
            T1CC2H                  000000DF 
     -------------------------------------------------------------------------
 SFR_AN
   Relative segment, address: DATA 000000E7 - 000000E7 (0x1 bytes), align: 0
-  Segment part 10. ROOT.      Intra module refs:   T1Init
+  Segment part 6. ROOT.       Intra module refs:   init_timer
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
            T1CCTL2                 000000E7 
     -------------------------------------------------------------------------
 <BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 000003F7 - 0000042D (0x37 bytes), align: 0
-  Segment part 23.
+  Relative segment, address: CODE 000003EB - 000003F9 (0xf bytes), align: 0
+  Segment part 16.            Intra module refs:   init_port::?relay
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           main                    000003F7        ?call_main (?cmain)
+           init_port               000003EB 
+    -------------------------------------------------------------------------
+<BANKED_CODE> 1 (was BANKED_CODE)
+  Relative segment, address: CODE 000003FA - 0000040E (0x15 bytes), align: 0
+  Segment part 18.            Intra module refs:   init_timer::?relay
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           init_timer              000003FA 
+    -------------------------------------------------------------------------
+<BANKED_CODE> 1 (was BANKED_CODE)
+  Relative segment, address: CODE 0000040F - 00000417 (0x9 bytes), align: 0
+  Segment part 22.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           main                    0000040F        ?call_main (?cmain)
                calls direct
-    -------------------------------------------------------------------------
-<BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 0000042E - 00000440 (0x13 bytes), align: 0
-  Segment part 25.            Intra module refs:   Delay::?relay
-           ENTRY                   ADDRESS         REF BY
-           =====                   =======         ======
-           Delay                   0000042E 
-    -------------------------------------------------------------------------
-<BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 00000441 - 00000451 (0x11 bytes), align: 0
-  Segment part 27.            Intra module refs:   PortInit::?relay
-           ENTRY                   ADDRESS         REF BY
-           =====                   =======         ======
-           PortInit                00000441 
-    -------------------------------------------------------------------------
-<BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 00000452 - 0000046F (0x1e bytes), align: 0
-  Segment part 29.            Intra module refs:   T1Init::?relay
-           ENTRY                   ADDRESS         REF BY
-           =====                   =======         ======
-           T1Init                  00000452 
-    -------------------------------------------------------------------------
-<BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 00000470 - 00000481 (0x12 bytes), align: 0
-  Segment part 31.            Intra module refs:   set_main_clock::?relay
-           ENTRY                   ADDRESS         REF BY
-           =====                   =======         ======
-           set_main_clock          00000470 
     -------------------------------------------------------------------------
 BANK_RELAYS
   Relative segment, address: CODE 00000119 - 0000011E (0x6 bytes), align: 0
-  Segment part 26.            Intra module refs:   main
+  Segment part 17.            Intra module refs:   main
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           Delay::?relay           00000119 
+           init_port::?relay       00000119 
     -------------------------------------------------------------------------
 BANK_RELAYS
   Relative segment, address: CODE 0000011F - 00000124 (0x6 bytes), align: 0
-  Segment part 28.            Intra module refs:   main
+  Segment part 19.            Intra module refs:   main
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           PortInit::?relay        0000011F 
-    -------------------------------------------------------------------------
-BANK_RELAYS
-  Relative segment, address: CODE 00000125 - 0000012A (0x6 bytes), align: 0
-  Segment part 30.            Intra module refs:   main
-           ENTRY                   ADDRESS         REF BY
-           =====                   =======         ======
-           T1Init::?relay          00000125 
-    -------------------------------------------------------------------------
-BANK_RELAYS
-  Relative segment, address: CODE 0000012B - 00000130 (0x6 bytes), align: 0
-  Segment part 32.            Intra module refs:   main
-           ENTRY                   ADDRESS         REF BY
-           =====                   =======         ======
-           set_main_clock::?relay
-                                   0000012B 
+           init_timer::?relay      0000011F 
 
     *************************************************************************
 
-  FILE NAME : D:\WorkSpace\CC2530\CC2530 入門課程\Led & keypad\CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\Obj\util.r51
+  FILE NAME : D:\Texas Instruments\CC2530\CC2530 入門課程\Led & keypad\CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\Obj\util.r51
     *************************************************************************
 
-  FILE NAME : D:\WorkSpace\CC2530\CC2530 入門課程\Led & keypad\CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\Obj\util_buffer.r51
+  FILE NAME : D:\Texas Instruments\CC2530\CC2530 入門課程\Led & keypad\CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\Obj\util_buffer.r51
     *************************************************************************
 
-  FILE NAME : D:\WorkSpace\CC2530\CC2530 入門課程\Led & keypad\CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\Obj\util_lcd.r51
+  FILE NAME : D:\Texas Instruments\CC2530\CC2530 入門課程\Led & keypad\CC2530_ex\mcu-kit1\ex_keypad_lcd\debug\Obj\util_lcd.r51
     *************************************************************************
 
-  FILE NAME : D:\IAR\8051\LIB\CLIB\cl-pli-blxd-1e16x01.r51
+  FILE NAME : P:\IAR\8051\LIB\CLIB\cl-pli-blxd-1e16x01.r51
   LIBRARY MODULE, NAME : ?cexit
 
   SEGMENTS IN THE MODULE
@@ -1247,14 +1215,11 @@ CSTART
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
            ?BCALL_07               000000CC        ?call_main (?cmain)
-           ?BRET_07                000000E2        Delay (keypad_lcd)
-                                                   PortInit (keypad_lcd)
-                                                   T1Init (keypad_lcd)
-                                                   set_main_clock (keypad_lcd)
-           ?BDISPATCH_07           000000EF        Delay::?relay (keypad_lcd)
-                                                   PortInit::?relay (keypad_lcd)
-                                                   T1Init::?relay (keypad_lcd)
-                                                   set_main_clock::?relay (keypad_lcd)
+           ?BRET_07                000000E2        init_port (keypad_lcd)
+                                                   init_timer (keypad_lcd)
+                                                   main (keypad_lcd)
+           ?BDISPATCH_07           000000EF        init_port::?relay (keypad_lcd)
+                                                   init_timer::?relay (keypad_lcd)
 
     -------------------------------------------------------------------------
   LIBRARY MODULE, NAME : ?S_SHL
@@ -1262,23 +1227,23 @@ CSTART
   SEGMENTS IN THE MODULE
   ======================
 RCODE
-  Relative segment, address: CODE 00000131 - 00000133 (0x3 bytes), align: 0
+  Relative segment, address: CODE 00000125 - 00000127 (0x3 bytes), align: 0
   Segment part 0.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           ?S_SHL                  00000131        port0_ISR (hal_digio)
+           ?S_SHL                  00000125        port0_ISR (hal_digio)
                                                    port1_ISR (hal_digio)
                                                    port2_ISR (hal_digio)
     -------------------------------------------------------------------------
 RCODE
-  Relative segment, address: CODE 00000134 - 00000136 (0x3 bytes), align: 0
+  Relative segment, address: CODE 00000128 - 0000012A (0x3 bytes), align: 0
   Segment part 1.             Intra module refs:   Segment part 2
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           ?S_SHL_REW              00000134 
+           ?S_SHL_REW              00000128 
     -------------------------------------------------------------------------
 RCODE
-  Relative segment, address: CODE 00000137 - 00000143 (0xd bytes), align: 0
+  Relative segment, address: CODE 0000012B - 00000137 (0xd bytes), align: 0
   Segment part 2.             Intra module refs:   ?S_SHL
                                                    ?S_SHL_REW
 
@@ -1288,11 +1253,11 @@ RCODE
   SEGMENTS IN THE MODULE
   ======================
 RCODE
-  Relative segment, address: CODE 00000144 - 00000145 (0x2 bytes), align: 0
+  Relative segment, address: CODE 00000138 - 00000139 (0x2 bytes), align: 0
   Segment part 0.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           ?CALL_IND               00000144        port0_ISR (hal_digio)
+           ?CALL_IND               00000138        port0_ISR (hal_digio)
                                                    port1_ISR (hal_digio)
                                                    port2_ISR (hal_digio)
                                                    rfIsr (hal_rf)
@@ -1303,11 +1268,11 @@ RCODE
   SEGMENTS IN THE MODULE
   ======================
 RCODE
-  Relative segment, address: CODE 00000146 - 000001A4 (0x5f bytes), align: 0
+  Relative segment, address: CODE 0000013A - 00000198 (0x5f bytes), align: 0
   Segment part 1.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           ?INTERRUPT_ENTER_XSP    00000146        port0_ISR (hal_digio)
+           ?INTERRUPT_ENTER_XSP    0000013A        port0_ISR (hal_digio)
                                                    port1_ISR (hal_digio)
                                                    port2_ISR (hal_digio)
                                                    rfIsr (hal_rf)
@@ -1318,11 +1283,11 @@ RCODE
   SEGMENTS IN THE MODULE
   ======================
 RCODE
-  Relative segment, address: CODE 000001A5 - 000001FC (0x58 bytes), align: 0
+  Relative segment, address: CODE 00000199 - 000001F0 (0x58 bytes), align: 0
   Segment part 1.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           ?INTERRUPT_LEAVE_XSP    000001A5        ?Subroutine1 (hal_digio)
+           ?INTERRUPT_LEAVE_XSP    00000199        ?Subroutine1 (hal_digio)
                                                    rfIsr (hal_rf)
 
     -------------------------------------------------------------------------
@@ -1367,8 +1332,7 @@ hal_board
 hal_buzzer                4             2
   + shared               78             4
   + common
-hal_clock                               2
-  + shared                              2
+hal_clock                               4
 hal_digio               285             8     42
   + shared              126             3
   + common
@@ -1379,11 +1343,11 @@ hal_rf_security                         3
 hal_uart                161             6    262
   + shared               62             1
   + common
-keypad_lcd              163             3
+keypad_lcd               57             3
 N/A (command line)              16           256     64
 N/A (alignment)
-----------            -----     --     --    ---     --      -
-Total:                1 020     18     55    562     64      8
+----------              ---     --     --    ---     --      -
+Total:                  914     18     55    562     64      8
   + common              134
 
 
@@ -1398,13 +1362,13 @@ SEGMENT              SPACE    START ADDRESS   END ADDRESS     SIZE  TYPE  ALIGN
 =======              =====    =============   ===========     ====  ====  =====
 INTVEC               CODE          00000000 - 00000085          86   com    0
 CSTART               CODE          00000086 - 00000118          93   rel    0
-BANK_RELAYS          CODE          00000119 - 00000130          18   rel    0
-RCODE                CODE          00000131 - 000001FC          CC   rel    0
-DIFUNCT              CODE               000001FD                     dse    0
-CODE_C               CODE               000001FD                     dse    0
-CODE_N               CODE               000001FD                     dse    0
-NEAR_CODE            CODE          000001FD - 000003F6         1FA   rel    0
-<BANKED_CODE> 1      CODE          000003F7 - 00000481          8B   rel    0
+BANK_RELAYS          CODE          00000119 - 00000124           C   rel    0
+RCODE                CODE          00000125 - 000001F0          CC   rel    0
+DIFUNCT              CODE               000001F1                     dse    0
+CODE_C               CODE               000001F1                     dse    0
+CODE_N               CODE               000001F1                     dse    0
+NEAR_CODE            CODE          000001F1 - 000003EA         1FA   rel    0
+<BANKED_CODE> 1      CODE          000003EB - 00000417          2D   rel    0
 REGISTERS            DATA          00000000 - 00000007           8   rel    0
 VREG                 DATA          00000008 - 0000000F           8   rel    0
 PSP                  DATA               00000010                     dse    0
@@ -1446,7 +1410,7 @@ ISTACK               IDATA         000000C0 - 000000FF          40   rel    0
                 *                                      *
                 ****************************************
 
- 1 154 bytes of CODE  memory
+ 1 048 bytes of CODE  memory
     18 bytes of DATA  memory (+ 55 absolute )
    562 bytes of XDATA memory
     64 bytes of IDATA memory

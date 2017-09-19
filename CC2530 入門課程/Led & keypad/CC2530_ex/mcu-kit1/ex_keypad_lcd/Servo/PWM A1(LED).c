@@ -5,11 +5,11 @@
 void set_main_clock();
 void PortInit();
 void T1Init();
-
+void Delay(unsigned int t);
 
 void main()
 {
-uint8 i;
+	uint8 i;
 
 	//各工作週期陣列
     uint8 dutycycle[11]={0xF7,0xE1,0xC8,0xAF,0x96,0x7D,0x64,0x4B,0x32,0x19,0x0A};
@@ -55,7 +55,7 @@ void T1Init()
     PERCFG |= 0x40;             //備用位置2，说明信息
     P2SEL &= ~0x10;             //相對於Timer4，Timer1優先
     P2DIR |= 0xC0;              //定时器通道2-3具有第一優先順序
-    P1DIR |= 0x01;
+    P1DIR |= 0x01;				//P1_0為輸出
     
     //Timer模式设置
     T1CTL = 0x02;               //250KHZ不分頻，模模式
@@ -70,6 +70,7 @@ void T1Init()
 	
     //装Timer通道2比较值
     T1CC2H = 0x00;
+	
     //T1CC2L = 0xF7; 	//1%的正工作週期
     //T1CC2L = 0xE1; 	//10%的正工作週期
     //T1CC2L = 0xC8; 	//20%的正工作週期
@@ -80,9 +81,8 @@ void T1Init()
     //T1CC2L = 0x4B; 	//70%的正工作週期
     //T1CC2L = 0x32; 	//80%的正工作週期
     //T1CC2L = 0x19; 	//90%的正工作週期
-
-
     //T1CC2L = 0x0A; //99%的正工作週期
+	
     //T1CC2L = 0x01; //设置通道2比较寄存器初值
 }
 

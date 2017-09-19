@@ -1,122 +1,57 @@
-#include "ioCC2530.h"
+#include <ioCC2530.h>
 
-#define LED5 P1_0
-#define SW1 P0_3
-#define SW2 P0_4
-
-void set_main_clock();
-void PortInit();
-void T1Init();
-void Delay(unsigned int t);
-
-void main()
+/*使用P1_0口??出、外?端口，??出PWM波形*/
+void init_port(void)
 {
-	//int i;
-
-	//各工作週期陣列
-    //int dutycycle[11]={0xF7,0xE1,0xC8,0xAF,0x96,0x7D,0x64,0x4B,0x32,0x19,0x0A};
-	
-	PortInit();
-
-	set_main_clock();
-
-	T1Init();
-
-	while(1){
-		
-		if(SW1 == 0){
-			
-			Delay(100);
-		
-			while(SW1 == 0){
-			
-			
-				//Duty Cycle = 10%
-				T1CC2H = 0x00;
-				T1CC2L = 0xE1;
-			
-			}
-		}
-	
-		if(SW2 == 0){
-		
-			Delay(100);
-		
-			while(SW2 == 0){
-
-			
-				//Duty Cycle = 90%
-				T1CC2H = 0x00;
-				T1CC2L = 0x19;
-			}
-		}
-			
-	}
-	
-	
-	
+    P1DIR |= 0x01;    // p1_0 output
+    P1SEL |= 0x01;    // p1_0  peripheral
+    P2SEL &= 0xEE;    // Give priority to Timer 1
+    PERCFG |= 0x40; // set timer_1 I/O位置?2
+    return ;
 }
 
-void Delay(unsigned int t){
-	while(t--);
-}
+/*
+    ?基准值放入T1CC0 寄存器, ?被比?值放入T1CC2寄存器
+    ?T1CC2中的值与T1CC0中的值相等?，?T1CC2 ?置or清除
+*/
 
-void PortInit()
+void init_timer(void)
 {
-    P1SEL &= ~0x00;		//P1_0設置為通用I/O
-    P1DIR |= 0x01; 		//P1_0設置為輸出
-	P0SEL &= ~0x18;		//P0_3、4為通用I/O
-	P0DIR &= ~0x18;		//P0_3、4設置為輸入
-	
-	LED5 = 0;			//LED初始狀態
-}
-
-
-void T1Init()
-{
-    
-    //Timer通道?置
-    P1SEL |= 0x01;              //Timer1通道2映射至P1_0，功能選擇
-    PERCFG |= 0x40;             //備用位置2，?明信息
-    P2SEL &= ~0x10;             //相對於Timer4，Timer1優先
-    P2DIR |= 0xC0;              //定?器通道2-3具有第一優先順序
-    P1DIR |= 0x01;
-    
-    //Timer模式?置
-    T1CTL = 0x02;               //250KHZ不分頻，模模式
-    
-    //根據Table7-1，P1_0必須裝Timer1通道2進行比較
-	
-    T1CCTL2 = 0x1C;             //比較相等為1，計數器回0則清零
-	
-    //裝Timer1通道0初值
+    T1CC0L = 0xFA;   //PWM duty cycle  周期(LED閃爍週期)1KHz
     T1CC0H = 0x00;
-    T1CC0L = 0xFA;              //PWM信號週期1ms，頻率為1KHZ
-	
-    //Timer1通道2比值
-    //T1CC2H = 0x00;
-    //T1CC2L = 0xF7; 	//1%的正工作週期
-    //T1CC2L = 0xE1; 	//10%的正工作週期
-    //T1CC2L = 0xC8; 	//20%的正工作週期
-    //T1CC2L = 0xAF; 	//30%的正工作週期
-    //T1CC2L = 0x96; 	//40%的正工作週期
-    //T1CC2L = 0x7D; 	//50%的正工作週期
-    //T1CC2L = 0x64; 	//60%的正工作週期
-    //T1CC2L = 0x4B; 	//70%的正工作週期
-    //T1CC2L = 0x32; 	//80%的正工作週期
-    //T1CC2L = 0x19; 	//90%的正工作週期
-
-
-    //T1CC2L = 0x0A; //99%的正工作週期
-    //T1CC2L = 0x01; //?置通道2比?寄存器初值
+    
+    T1CC2L = 0x4B;  //     PWM signal period 占空比()
+    T1CC2H = 0x00;
+    
+    T1CCTL2 = 0x34;    // 等于T1CC0中的?值?候，?出高?平 1； 等于T1CC2中的?值?候，?出低?平 0  ，其?整?占空比就?50%了
+    T1CTL |= 0x0f; // divide with 128 and to do i up-down mode
+    return ;
 }
 
-void set_main_clock()
-{ 
-	CLKCONCMD |= 0X40;			//選擇16MHZ RCOSC為系統時鐘源
-	while(!(CLKCONSTA & 0X40)); //等待時鐘穩定
-	CLKCONCMD &=~0XF8;			//選擇32MHz為主時鐘
-	
-	CLKCONCMD |= 0x38;          //Timer標記輸出為250kHz
+void start_pwm(void) 
+{
+    init_port();
+    init_timer();
+//    IEN1 |=0x02;     //Timer 1 中?使能
+//    EA = 1;            //全局中?使能
+//    while(1) {;}
+    return ;
 }
 
+
+#if 0
+/*irq function*/
+#pragma vector=T1_VECTOR
+//__interrupt void T1_IRQ(void)
+volatile unsigned char count = 0;
+__interrupt void _irq_timer1(void)
+{
+    //TODO....
+}
+
+#endif /*_irq_timer1*/
+
+
+void main(){
+	start_pwm();
+}
