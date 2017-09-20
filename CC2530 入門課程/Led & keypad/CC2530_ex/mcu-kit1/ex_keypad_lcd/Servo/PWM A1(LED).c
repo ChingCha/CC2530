@@ -9,29 +9,24 @@ void Delay(unsigned int t);
 
 void main()
 {
-	uint8 i;
+
 
 	//各工作週期陣列
-    uint8 dutycycle[11]={0xF7,0xE1,0xC8,0xAF,0x96,0x7D,0x64,0x4B,0x32,0x19,0x0A};
+    //int dutycycle[11]={0xF7,0xE1,0xC8,0xAF,0x96,0x7D,0x64,0x4B,0x32,0x19,0x0A};
 	
 	PortInit();
 
 	set_main_clock();
 
 	T1Init();
+	
 
-	while(1){
+	//T1CC2H = 0x00;
 
-		for(i=0;i<11;i++){	
+	//T1CC2L = dutycycle[1];
 
-			T1CC2H = 0x00;
-
-			T1CC2L = dutycycle[i];
-
-			Delay(60000);
-
-		}
-	}
+	Delay(60000);
+		
 
 }
 
@@ -68,22 +63,24 @@ void T1Init()
     T1CC0H = 0x00;
     T1CC0L = 0xFA;              //PWM信號週期为1ms，頻率為1KHZ
 	
-    //装Timer通道2比较值
+	
+	//装Timer通道2比较值
     T1CC2H = 0x00;
 	
-    //T1CC2L = 0xF7; 	//1%的正工作週期
+    T1CC2L = 0xF7; 		//1%的正工作週期
     //T1CC2L = 0xE1; 	//10%的正工作週期
     //T1CC2L = 0xC8; 	//20%的正工作週期
     //T1CC2L = 0xAF; 	//30%的正工作週期
     //T1CC2L = 0x96; 	//40%的正工作週期
-    T1CC2L = 0x7D; 		//50%的正工作週期
+    //T1CC2L = 0xC4; 	//50%的正工作週期
     //T1CC2L = 0x64; 	//60%的正工作週期
     //T1CC2L = 0x4B; 	//70%的正工作週期
     //T1CC2L = 0x32; 	//80%的正工作週期
     //T1CC2L = 0x19; 	//90%的正工作週期
-    //T1CC2L = 0x0A; //99%的正工作週期
+    //T1CC2L = 0x0A; 	//99%的正工作週期
 	
-    //T1CC2L = 0x01; //设置通道2比较寄存器初值
+    //T1CC2L = 0x01; 	//设置通道2比较寄存器初值
+	
 }
 
 void set_main_clock()
