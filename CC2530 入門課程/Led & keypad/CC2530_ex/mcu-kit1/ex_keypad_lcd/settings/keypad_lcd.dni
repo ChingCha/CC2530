@@ -16,7 +16,7 @@ TriggerName=main
 LimitSize=0
 ByteLimit=50
 [DebugChecksum]
-Checksum=-2030109677
+Checksum=-913639335
 [InstructionProfiling]
 Enabled=_ 0
 [Log file]
