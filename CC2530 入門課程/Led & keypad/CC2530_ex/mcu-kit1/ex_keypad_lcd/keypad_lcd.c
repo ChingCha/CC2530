@@ -1,75 +1,62 @@
 #include "ioCC2530.h"
 
-#define PWM P1_0
-#define S1	P0_3
-#define S2	P0_4
-
-unsigned int dutytime=45536; //65536-45536就是責任週期
-unsigned int ton=10000; //高電位比例=50%
-unsigned int toff=10000; //低電位比例=50%
-unsigned int temp; //給計時器工作用
-
-void Init_Timer1();
-void InitPort();
+void init_port(void);
+void init_timer(void);
+void start_pwm(void);
 
 void main(){
-	
-	InitPort();
-	Init_Timer1();
-	
-	while(1)
-	{
-		if(S1==0)ton=2200;  //2.2ms 左轉 
-		if(S2==0)ton=1500;  //1.5ms 中間
-		toff=20000-ton;
-	}
-	
-	
-}
-
-
-void Init_Timer1(){
-	
-	EA = 0;			//總致能OFF
-	IEN1 |=0x02;	//Timer1中斷致能
-	temp=65536-dutytime; //設定中斷一次的時間(預設是dutytime)
-	T1CC2H = temp/256;
-    T1CC2L = temp%256;
-	T1CTL |= 0x0F;	//開啟計數器：128分頻、上數下數模式
-	EA = 1;
-}
-
-void InitPort(){
-	
-	PERCFG |= 0x40; 	// set timer_1 I/O位置?2
-	//P0_3、4設置為通用I/O & 輸入
-	P0SEL &= ~0x18;
-	P0DIR &= ~0x18;
-	//P1_0設置為通用I/O & 輸出
-	P1SEL &= ~0x01;		//P1_0設置為通用I/O
-    P1DIR |= 0x01; 		//P1_0設置為輸出
-	
+	init_port();
+	init_timer();
+	start_pwm();
 } 
 
 
-#pragma vector = T1_VECTOR		
-__interrupt void Timer1_Service(){
-	if(PWM==1)
-    {
-    T1CTL=0x00;
-    temp=65536-toff;
-    T1CC2H=temp/256;
-    T1CC2L=temp%256;
-    T1CTL=0x0F;
-    PWM=0;
-    }
-    else
-    {
-    T1CTL=0x00;
-    temp=65536-ton;
-    T1CC2H=temp/256;
-    T1CC2L=temp%256;
-    T1CTL=0x0F;
-    PWM=1;
-    }
+/*使用P1_0口??出、外?端口，??出PWM波形*/
+void init_port(void)
+{
+    P1DIR |= 0x01;    // p1_0 output
+    P1SEL |= 0x01;    // p1_0  peripheral
+    P2SEL &= 0xEE;    // Give priority to Timer 1
+    PERCFG |= 0x40; // set timer_1 I/O位置?2
+    return ;
 }
+
+/*
+    ?基准值放入T1CC0 寄存器, ?被比?值放入T1CC2寄存器
+    ?T1CC2中的值与T1CC0中的值相等?，?T1CC2 ?置or清除
+*/
+
+void init_timer(void)
+{
+    T1CC0L = 0x09;   //PWM duty cycle  周期
+    T1CC0H = 0xC4;
+    
+    T1CC2L = 0x04;  //     PWM signal period 占空比
+    T1CC2H = 0xE2;
+    
+    T1CCTL2 = 0x34;    // 等于T1CC0中的?值?候，?出高?平 1； 等于T1CC2中的?值?候，?出低?平 0  ，其?整?占空比就?50%了
+    T1CTL |= 0x0f; // divide with 128 and to do i up-down mode
+    return ;
+}
+
+void start_pwm(void) 
+{
+    init_port();
+    init_timer();
+//    IEN1 |=0x02;     //Timer 1 中?使能
+//    EA = 1;            //全局中?使能
+//    while(1) {;}
+    return ;
+}
+
+#if 0
+/*irq function*/
+#pragma vector=T1_VECTOR
+//__interrupt void T1_IRQ(void)
+volatile unsigned char count = 0;
+__interrupt void _irq_timer1(void)
+{
+    //TODO....
+}
+
+#endif /*_irq_timer1*/

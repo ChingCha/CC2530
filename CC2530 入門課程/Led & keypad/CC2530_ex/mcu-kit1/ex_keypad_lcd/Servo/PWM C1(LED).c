@@ -1,4 +1,15 @@
-#include <ioCC2530.h>
+#include "ioCC2530.h"
+
+void init_port(void);
+void init_timer(void);
+void start_pwm(void);
+
+void main(){
+	init_port();
+	init_timer();
+	start_pwm();
+} 
+
 
 /*使用P1_0口为输出、外设端口，来输出PWM波形*/
 void init_port(void)
