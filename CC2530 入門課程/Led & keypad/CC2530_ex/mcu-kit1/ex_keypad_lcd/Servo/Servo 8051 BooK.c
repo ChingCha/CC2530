@@ -93,19 +93,25 @@ void KeyScan(void){
 
 void InitTimer1(){
 	
-	EA = 1;				//致能總中斷
-	IEN1 |= 0x02;		//致能Timer1中斷
-	
-	T1CTL = 0x00;			//1分頻，停止運行
-	T1CTL = 0x0e;  			// 128KHz分頻，up-down mode(三角波)
-	
-	T1CCTL0 |= 0x04;		//開啟定時器1通道0的輸出比較模式
-	
 	T1CC0L = (256-100); 	//PWM duty cycle  周期
     T1CC0H = (256-100);
     
     T1CC2L = (65536-5000)/256;	//PWM signal period 占空比
     T1CC2H = (65536-5000)%256;
+	
+	T1CCTL0 |= 0x04;		//開啟定時器1通道0的輸出比較模式
+
+	
+	T1IE = 1;		//致能定時器1中斷，1秒定時
+	T1OVFIM = 1;	//致能定時器1溢出中斷，1秒定時
+	EA = 1;			//致能總中斷
+	
+	//T1CTL = 0x00;			//1分頻，停止運行
+	T1CTL = 0x0e;  			// 128KHz分頻，up-down mode(三角波)
+	
+	
+	
+	
     
 
 	IRCON &= ~0x02;		//為了先清除Timer1對應的中斷標誌位

@@ -25,7 +25,7 @@ void main()
 
 	//T1CC2L = dutycycle[1];
 
-	Delay(60000);
+	//Delay(60000);
 		
 
 }
@@ -36,22 +36,19 @@ void Delay(unsigned int t){
 
 void PortInit()
 {
-    P0SEL &= ~0x00;		//P1_0設置為通用I/O
-    P0DIR |= 0x01; 		//P1_0設置為輸出
-	LED5 = 0;			//LED初始狀態
+	//Timer通道设置
+    P1SEL |= 0x01;              //Timer1通道2映射至P1_0，功能選擇
+    PERCFG |= 0x40;             //備用位置2，说明信息
+    P2SEL &= ~0x10;             //相對於Timer4，Timer1優先
+    P2DIR |= 0xC0;              //定时器通道2-3具有第一優先順序
+    P1DIR |= 0x01;				//P1_0為輸出
 }
 
 
 void T1Init()
 {
     
-    //Timer通道设置
-    P1SEL |= 0x01;              //Timer1通道2映射至P1_0，功能選擇
-    PERCFG |= 0x40;             //備用位置2，说明信息
-    P2SEL &= ~0x10;             //相對於Timer4，Timer1優先
-    P2DIR |= 0xC0;              //定时器通道2-3具有第一優先順序
-    P1DIR |= 0x01;				//P1_0為輸出
-    
+	//T1CCTL0 |= 0x04;      		//<2>开启通道0的输出比较模式
     //Timer模式设置
     T1CTL = 0x02;               //250KHZ不分頻，模模式
     
@@ -60,14 +57,14 @@ void T1Init()
     T1CCTL2 = 0x1C;             //比較相等為1，計數器回0則清零
 	
     //裝Timer通道0初值
-    T1CC0H = 0x00;
-    T1CC0L = 0xFA;              //PWM信號週期为1ms，頻率為1KHZ
+    T1CC0H = 0x09;
+    T1CC0L = 0xC4;              //PWM信號週期为1ms，頻率為1KHZ
 	
 	
 	//装Timer通道2比较值
-    T1CC2H = 0x00;
+    T1CC2H = 0x04;
 	
-    T1CC2L = 0xF7; 		//1%的正工作週期
+    T1CC2L = 0xE2; 		//1%的正工作週期
     //T1CC2L = 0xE1; 	//10%的正工作週期
     //T1CC2L = 0xC8; 	//20%的正工作週期
     //T1CC2L = 0xAF; 	//30%的正工作週期

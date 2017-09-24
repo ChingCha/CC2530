@@ -1,0 +1,134 @@
+BL51 BANKED LINKER/LOCATER V6.05                                                        03/29/2010  22:19:02  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.05, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE mg995.obj TO mg995
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  mg995.obj (MG995)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_INIT)
+
+
+LINK MAP OF MODULE:  mg995 (MG995)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0008H     UNIT         ?DT?MG995
+            IDATA   0010H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     0008H                  *** GAP ***
+            CODE    000BH     0003H     ABSOLUTE     
+            CODE    000EH     008CH     UNIT         ?C_C51STARTUP
+            CODE    009AH     003AH     UNIT         ?PR?TIMER0_ISR?MG995
+            CODE    00D4H     002DH     UNIT         ?PR?MAIN?MG995
+            CODE    0101H     001DH     UNIT         ?PR?TIMER0_INITIALIZE?MG995
+            CODE    011EH     000DH     UNIT         ?C_INITSEG
+
+
+
+OVERLAY MAP OF MODULE:   mg995 (MG995)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?MG995
+  +--> ?C_INITSEG
+
+?PR?MAIN?MG995
+  +--> ?PR?TIMER0_INITIALIZE?MG995
+
+
+
+SYMBOL TABLE OF MODULE:  mg995 (MG995)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        MG995
+  C:0000H         SYMBOL        _ICE_DUMMY_
+BL51 BANKED LINKER/LOCATER V6.05                                                      03/29/2010  22:19:02  PAGE 2
+
+
+  C:009AH         PUBLIC        timer0_isr
+  B:00A8H.7       PUBLIC        EA
+  D:00A8H         PUBLIC        IE
+  B:0090H.0       PUBLIC        P1_0
+  B:00A0H.0       PUBLIC        P2_0
+  B:0090H.1       PUBLIC        P1_1
+  B:0090H.2       PUBLIC        P1_2
+  C:00D4H         PUBLIC        main
+  D:0008H         PUBLIC        toff
+  D:0089H         PUBLIC        TMOD
+  D:000AH         PUBLIC        temp
+  D:008CH         PUBLIC        TH0
+  D:008AH         PUBLIC        TL0
+  D:000CH         PUBLIC        ton
+  B:0088H.4       PUBLIC        TR0
+  C:0101H         PUBLIC        timer0_initialize
+  D:000EH         PUBLIC        dutytime
+  -------         PROC          TIMER0_INITIALIZE
+  C:0101H         LINE#         6
+  C:0101H         LINE#         7
+  C:0101H         LINE#         8
+  C:0103H         LINE#         9
+  C:0106H         LINE#         10
+  C:0109H         LINE#         11
+  C:0114H         LINE#         12
+  C:0116H         LINE#         13
+  C:0119H         LINE#         14
+  C:011BH         LINE#         15
+  C:011DH         LINE#         16
+  -------         ENDPROC       TIMER0_INITIALIZE
+  -------         PROC          TIMER0_ISR
+  C:009AH         LINE#         17
+  C:009EH         LINE#         19
+  C:00A1H         LINE#         20
+  C:00A1H         LINE#         21
+  C:00A3H         LINE#         22
+  C:00AEH         LINE#         23
+  C:00B0H         LINE#         24
+  C:00B3H         LINE#         25
+  C:00B5H         LINE#         26
+  C:00B7H         LINE#         27
+  C:00B9H         LINE#         29
+  C:00B9H         LINE#         30
+  C:00BBH         LINE#         31
+  C:00C6H         LINE#         32
+  C:00C8H         LINE#         33
+  C:00CBH         LINE#         34
+  C:00CDH         LINE#         35
+  C:00CFH         LINE#         36
+  C:00CFH         LINE#         37
+  -------         ENDPROC       TIMER0_ISR
+  -------         PROC          MAIN
+  C:00D4H         LINE#         38
+  C:00D4H         LINE#         39
+  C:00D4H         LINE#         40
+  C:00D7H         LINE#         42
+  C:00D7H         LINE#         43
+BL51 BANKED LINKER/LOCATER V6.05                                                      03/29/2010  22:19:02  PAGE 3
+
+
+  C:00D7H         LINE#         44
+  C:00E0H         LINE#         45
+  C:00E9H         LINE#         46
+  C:00F2H         LINE#         47
+  C:00FFH         LINE#         48
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        MG995
+
+Program Size: data=17.0 xdata=0 code=291
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

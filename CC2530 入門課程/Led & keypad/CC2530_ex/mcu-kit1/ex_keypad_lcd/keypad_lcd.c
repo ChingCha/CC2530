@@ -1,96 +1,75 @@
 #include "ioCC2530.h"
 
-#define LED5 P1_0
+#define PWM P1_0
+#define S1	P0_3
+#define S2	P0_4
 
-void set_main_clock();
-void PortInit();
-void T1Init();
-void Delay(unsigned int t);
+unsigned int dutytime=45536; //65536-45536就是責任週期
+unsigned int ton=10000; //高電位比例=50%
+unsigned int toff=10000; //低電位比例=50%
+unsigned int temp; //給計時器工作用
 
-void main()
-{
+void Init_Timer1();
+void InitPort();
 
-
-	//各工作週期陣列
-    //int dutycycle[11]={0xF7,0xE1,0xC8,0xAF,0x96,0x7D,0x64,0x4B,0x32,0x19,0x0A};
+void main(){
 	
-	PortInit();
-
-	set_main_clock();
-
-	T1Init();
+	InitPort();
+	Init_Timer1();
 	
-
-	//T1CC2H = 0x00;
-
-	//T1CC2L = dutycycle[1];
-
+	while(1)
+	{
+		if(S1==0)ton=2200;  //2.2ms 左轉 
+		if(S2==0)ton=1500;  //1.5ms 中間
+		toff=20000-ton;
+	}
 	
-		
-
-}
-
-void Delay(unsigned int t){
-	while(t--);
-}
-
-void PortInit()
-{
-    P0SEL &= ~0x00;		//P1_0設置為通用I/O
-    P0DIR |= 0x01; 		//P1_0設置為輸出
-	LED5 = 0;			//LED初始狀態
+	
 }
 
 
-void T1Init()
-{
-    
-    //Timer通道?置
-    P1SEL |= 0x01;              //Timer1通道2映射至P1_0，功能選擇
-    PERCFG |= 0x40;             //備用位置2，?明信息
-    P2SEL &= ~0x10;             //相對於Timer4，Timer1優先
-    P2DIR |= 0xC0;              //定?器通道2-3具有第一優先順序
-    P1DIR |= 0x01;				//P1_0為輸出
-    
-    //Timer模式?置
-    T1CTL = 0x02;               //250KHZ不分頻，模模式
-    
-    //根據Table7-1，P1_0必須裝Timer1通道2進行比較
+void Init_Timer1(){
 	
-    T1CCTL2 = 0x1C;             //比較相等為1，計數器回0則清零
-	
-    //裝Timer通道0初值
-    T1CC0H = 0x09;
-    T1CC0L = 0xC4;              //PWM信號週期?1ms，頻率為1KHZ
-	
-	
-	
-	
-	
-	//?Timer通道2比?值
-    T1CC2H = 0x04;
-    T1CC2L = 0xE2; 		//1%的正工作週期
-    //T1CC2L = 0xE1; 	//10%的正工作週期
-    //T1CC2L = 0xC8; 	//20%的正工作週期
-    //T1CC2L = 0xAF; 	//30%的正工作週期
-    //T1CC2L = 0x96; 	//40%的正工作週期
-    //T1CC2L = 0xC4; 	//50%的正工作週期
-    //T1CC2L = 0x64; 	//60%的正工作週期
-    //T1CC2L = 0x4B; 	//70%的正工作週期
-    //T1CC2L = 0x32; 	//80%的正工作週期
-    //T1CC2L = 0x19; 	//90%的正工作週期
-    //T1CC2L = 0x0A; 	//99%的正工作週期
-	
-    //T1CC2L = 0x01; 	//?置通道2比?寄存器初值
-	
+	EA = 0;			//總致能OFF
+	IEN1 |=0x02;	//Timer1中斷致能
+	temp=65536-dutytime; //設定中斷一次的時間(預設是dutytime)
+	T1CC2H = temp/256;
+    T1CC2L = temp%256;
+	T1CTL |= 0x0F;	//開啟計數器：128分頻、上數下數模式
+	EA = 1;
 }
 
-void set_main_clock()
-{ 
-	CLKCONCMD |= 0X40;			//選擇16MHZ RCOSC為系統時鐘源
-	while(!(CLKCONSTA & 0X40)); //等待時鐘穩定
-	CLKCONCMD &=~0XF8;			//選擇32MHz為主時鐘
+void InitPort(){
 	
-	CLKCONCMD |= 0x38;          //Timer標記輸出為250kHz
-}
+	PERCFG |= 0x40; 	// set timer_1 I/O位置?2
+	//P0_3、4設置為通用I/O & 輸入
+	P0SEL &= ~0x18;
+	P0DIR &= ~0x18;
+	//P1_0設置為通用I/O & 輸出
+	P1SEL &= ~0x01;		//P1_0設置為通用I/O
+    P1DIR |= 0x01; 		//P1_0設置為輸出
+	
+} 
 
+
+#pragma vector = T1_VECTOR		
+__interrupt void Timer1_Service(){
+	if(PWM==1)
+    {
+    T1CTL=0x00;
+    temp=65536-toff;
+    T1CC2H=temp/256;
+    T1CC2L=temp%256;
+    T1CTL=0x0F;
+    PWM=0;
+    }
+    else
+    {
+    T1CTL=0x00;
+    temp=65536-ton;
+    T1CC2H=temp/256;
+    T1CC2L=temp%256;
+    T1CTL=0x0F;
+    PWM=1;
+    }
+}
