@@ -60,16 +60,16 @@ void T1Init()
     T1CCTL2 = 0x1C;             //比較相等為1，計數器回0則清零
 	
     //裝Timer通道0初值
-    T1CC0H = 0x04;
-    T1CC0L = 0xE2;              //PWM信號週期?1ms，頻率為1KHZ
+    T1CC0H = 0x09;
+    T1CC0L = 0xC4;              //PWM信號週期?1ms，頻率為1KHZ
 	
 	
 	
 	
 	
 	//?Timer通道2比?值
-    T1CC2H = 0x01;
-    T1CC2L = 0x77; 		//1%的正工作週期
+    T1CC2H = 0x07;
+    T1CC2L = 0x3A; 		//1%的正工作週期
     //T1CC2L = 0xE1; 	//10%的正工作週期
     //T1CC2L = 0xC8; 	//20%的正工作週期
     //T1CC2L = 0xAF; 	//30%的正工作週期
