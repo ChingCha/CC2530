@@ -18,7 +18,7 @@ ActionState=1
 Enabled=0
 ShowSource=1
 [DebugChecksum]
-Checksum=-486626759
+Checksum=361429408
 [DisAssemblyWindow]
 NumStates=_ 1
 State 1=_ 1
@@ -49,6 +49,6 @@ Category=_ 0
 LoggingEnabled=_ 0
 LogFile=_ ""
 [Aliases]
-A0=_ "C:\Users\黃羿欣\Desktop\test\test1.c" "D:\Texas Instruments\CC2530\CC2530 入門課程\Led & keypad\CC2530_ex\mcu-kit1\ex_keypad_lcd\DC Motor\test\test1.c"
+A0=_ "C:\Users\黃羿欣\Desktop\xiz\專題(藥盒\cc2530_test\servo\servo.c" "D:\Texas Instruments\CC2530\CC2530 入門課程\Led & keypad\CC2530_ex\mcu-kit1\ex_keypad_lcd\Slow DC Motor\servo.c"
 Count=1
 SuppressDialog=0

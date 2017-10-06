@@ -97,6 +97,20 @@ void UR0SendString(unsigned char *str){
 void ExecuteTheOrder(){
 	
 	Flag = 0;	//清除接收指令標誌
+	
+	if(DataRecieveTime==1){
+		Buzzer = 1
+		if(Button==1){
+			Buzzer = 0
+			Running1()
+		}
+	else
+		Buzzer = 0
+		Running0()
+	}
+	
+	
+	
 	switch(DataRecieve){
 		
 		case 0x01:
