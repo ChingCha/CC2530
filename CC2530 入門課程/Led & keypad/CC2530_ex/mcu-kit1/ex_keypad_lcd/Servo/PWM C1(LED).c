@@ -5,8 +5,7 @@ void init_timer(void);
 void start_pwm(void);
 
 void main(){
-	init_port();
-	init_timer();
+	
 	start_pwm();
 } 
 
@@ -14,10 +13,11 @@ void main(){
 /*使用P1_0口为输出、外设端口，来输出PWM波形*/
 void init_port(void)
 {
-    P1DIR |= 0x01;    // p1_0 output
-    P1SEL |= 0x01;    // p1_0  peripheral
-    P2SEL &= 0xEE;    // Give priority to Timer 1
-    PERCFG |= 0x40; // set timer_1 I/O位置为2
+    P1SEL |= 0x01;              //Timer1通道2映射至P1_0，功能選擇
+    PERCFG |= 0x40;             //備用位置2，?明信息
+    P2SEL &= ~0x10;             //相對於Timer4，Timer1優先
+    P2DIR |= 0xC0;              //定?器通道2-3具有第一優先順序
+    P1DIR |= 0x01;				//P1_0為輸出
     return ;
 }
 
@@ -28,14 +28,23 @@ void init_port(void)
 
 void init_timer(void)
 {
-    T1CC0L = 0xff;   //PWM duty cycle  周期
-    T1CC0H = 0x7f;
+    T1CTL = 0x02;               //250KHZ不分頻，模模式
     
-    T1CC2L = 0x00;  //     PWM signal period 占空比
-    T1CC2H = 0x00;
-    
-    T1CCTL2 = 0x34;    // 等于T1CC0中的数值时候，输出高电平 1； 等于T1CC2中的数值时候，输出低电平 0  ，其实整个占空比就为50%了
-    T1CTL |= 0x0f; // divide with 128 and to do i up-down mode
+    //根據Table7-1，P1_0必須裝Timer1通道2進行比較
+	
+    T1CCTL2 = 0x1C;             //比較相等為1，計數器回0則清零
+	
+    //裝Timer通道0初值
+    T1CC0H = 0x09;
+    T1CC0L = 0xC4;              //PWM信號週期20ms
+	
+	
+	
+	
+	
+	//?Timer通道2比?值
+    T1CC2H = 0x01;
+    T1CC2L = 0x77; 		//1%的正工作週期
     return ;
 }
 

@@ -19,9 +19,11 @@ void main(){
 	
 	while(1)
 	{
-		if(S1==0)ton=2200;  //2.2ms 左轉 
-		if(S2==0)ton=1500;  //1.5ms 中間
-		toff=20000-ton;
+		if(S1==0)
+			ton=2200;  //2.2ms 左轉 
+		if(S2==0)
+			ton=1500;  //1.5ms 中間
+		//toff=20000-ton;
 	}
 	
 	
@@ -30,46 +32,45 @@ void main(){
 
 void Init_Timer1(){
 	
-	EA = 0;			//總致能OFF
-	IEN1 |=0x02;	//Timer1中斷致能
-	temp=65536-dutytime; //設定中斷一次的時間(預設是dutytime)
-	T1CC2H = temp/256;
-    T1CC2L = temp%256;
-	T1CTL |= 0x0F;	//開啟計數器：128分頻、上數下數模式
+	EA = 0;					//總致能OFF
+	IEN1 |=0x02;			//Timer1中斷致能
+	temp=65536-dutytime; 	//設定中斷一次的時間(預設是dutytime)
+	T1CC2H = temp/256;		//高八位
+    T1CC2L = temp%256;		//低八位
+	T1CTL |= 0x02;			//開啟計數器：250KHz不分頻，模模式
 	EA = 1;
 }
 
 void InitPort(){
 	
-	PERCFG |= 0x40; 	// set timer_1 I/O位置为2
-	//P0_3、4設置為通用I/O & 輸入
 	P0SEL &= ~0x18;
-	P0DIR &= ~0x18;
-	//P1_0設置為通用I/O & 輸出
-	P1SEL &= ~0x01;		//P1_0設置為通用I/O
-    P1DIR |= 0x01; 		//P1_0設置為輸出
+	P0DIR |= 0x18;
+	P1SEL |= 0x01;              //Timer1通道2映射至P1_0，功能選擇
+    PERCFG |= 0x40;             //備用位置2，?明信息
+    P2SEL &= ~0x10;             //相對於Timer4，Timer1優先
+    P2DIR |= 0xC0;              //定?器通道2-3具有第一優先順序
+    P1DIR |= 0x01;				//P1_0為輸出
 	
 } 
 
 
 #pragma vector = T1_VECTOR		
 __interrupt void Timer1_Service(){
-	if(PWM==1)
-    {
-    T1CTL=0x00;
-    temp=65536-toff;
-    TH0=temp/256;
-    TL0=temp%256;
-    T1CTL=0x0F;
-    PWM=0;
-    }
-    else
-    {
-    T1CTL=0x00;
-    temp=65536-ton;
-    TH0=temp/256;
-    TL0=temp%256;
-    T1CTL=0x0F;
-    PWM=1;
+	if(PWM==1){
+		
+		IEN1 |=0x00;	//關閉Timer1中斷
+		temp=65536-toff;
+		T1CC2H=temp/256;
+		T1CC2L=temp%256;
+		IEN1 |=0x02;	//開啟Timer1中斷
+		
+    }else{
+		
+		IEN1 |=0x00;	//關閉Timer1中斷
+		temp=65536-ton;
+		T1CC2H=temp/256;
+		T1CC2H=temp%256;
+		IEN1 |=0x02;	//開啟Timer1中斷
+		PWM=1;
     }
 }
