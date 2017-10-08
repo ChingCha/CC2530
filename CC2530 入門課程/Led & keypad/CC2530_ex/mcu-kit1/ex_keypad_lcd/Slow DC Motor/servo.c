@@ -58,7 +58,7 @@ void main()
    LED3 = 1 ;
    Delay( 60000 );
    Delay( 60000 );
-   Delay( 145000 );  //7.3v 145000 delay
+   Delay( 60000 );  //7.3v 145000 delay
    LED3 = 0 ;
  }
  /* ============= ==外部中斷初始化函數================== */ 
@@ -73,11 +73,11 @@ void main()
  #pragma vector = P1INT_VECTOR      // 外部中斷1的向量入口
 __interrupt void Int1_Sevice()
  {
-	T1STAT &= ~0x01;	//清除定時器1通道0中斷標誌
-	count++;			//累加變數
-
-	LED_Running1();
+	//T1STAT &= ~0x01;	//清除定時器1通道0中斷標誌
+	//count++;			//累加變數
 	PWM();
+	//LED_Running1();
+	
 	//LED_Running1();
 	/* 先清除引腳標誌位，再清除端口標誌位，否則會不斷進入中斷*/ 
 	P1IFG &= ~ 0x04 ;         //軟件清除P1_2引腳的標誌位
@@ -107,7 +107,7 @@ void PWM()
 	
 	//Timer通道2比較值
     T1CC2H = 0x04;
-    T1CC2L = 0xE2; 		//1%的正工作週期
+    T1CC2L = 0xE2; 				//10ms
 
 	
 }

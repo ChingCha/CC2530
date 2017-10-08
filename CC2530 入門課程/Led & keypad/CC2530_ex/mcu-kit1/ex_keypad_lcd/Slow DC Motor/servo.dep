@@ -7,34 +7,34 @@
     <name>Debug</name>
     <outputs>
       <file>$PROJ_DIR$\servo.c</file>
-      <file>$TOOLKIT_DIR$\lib\clib\cl-pli-blxd-1e16x01.r51</file>
       <file>$PROJ_DIR$\Debug\Exe\servo.d51</file>
-      <file>$TOOLKIT_DIR$\config\devices\Texas Instruments\lnk51ew_CC2530F256_banked.xcl</file>
-      <file>$PROJ_DIR$\Debug\Obj\servo.r51</file>
-      <file>$PROJ_DIR$\Debug\Obj\servo.pbi</file>
-      <file>$TOOLKIT_DIR$\inc\ioCC2530.h</file>
+      <file>$TOOLKIT_DIR$\lib\clib\cl-pli-blxd-1e16x01.r51</file>
       <file>$PROJ_DIR$\Debug\Obj\servo.pbd</file>
+      <file>$TOOLKIT_DIR$\inc\ioCC2530.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\servo.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\servo.r51</file>
+      <file>$TOOLKIT_DIR$\config\devices\Texas Instruments\lnk51ew_CC2530F256_banked.xcl</file>
     </outputs>
     <file>
       <name>$PROJ_DIR$\servo.c</name>
       <outputs>
         <tool>
-          <name>ICC8051</name>
-          <file> 4</file>
-        </tool>
-        <tool>
           <name>BICOMP</name>
           <file> 5</file>
+        </tool>
+        <tool>
+          <name>ICC8051</name>
+          <file> 6</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
-          <name>ICC8051</name>
-          <file> 6</file>
+          <name>BICOMP</name>
+          <file> 4</file>
         </tool>
         <tool>
-          <name>BICOMP</name>
-          <file> 6</file>
+          <name>ICC8051</name>
+          <file> 4</file>
         </tool>
       </inputs>
     </file>
@@ -43,7 +43,7 @@
       <inputs>
         <tool>
           <name>XLINK</name>
-          <file> 3 4 1</file>
+          <file> 7 6 2</file>
         </tool>
       </inputs>
     </file>
@@ -61,7 +61,7 @@
       <outputs>
         <tool>
           <name>XLINK</name>
-          <file> 2</file>
+          <file> 1</file>
         </tool>
       </outputs>
     </file>

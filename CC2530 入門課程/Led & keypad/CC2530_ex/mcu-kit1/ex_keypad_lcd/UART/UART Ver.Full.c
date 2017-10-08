@@ -21,7 +21,8 @@ void main()
   set_main_clock();
   Init_UART0();
   
-  UR0SendString("我是陳奕廷");
+  UR0SendString("ABC");
+  
   while(1)
   {
     if(Flag == 1)      //是否收到上位機指令?
@@ -63,6 +64,7 @@ void Init_Port(){
 	P1DIR |= 0x18;		//將P1_4、5 Port 設置為輸出
 	LED1 = 0;
 	LED2 = 0;
+	
 }
 
 
@@ -98,6 +100,7 @@ void ExecuteTheOrder(){
 	
 	Flag = 0;	//清除接收指令標誌
 	
+	/*
 	if(DataRecieveTime==1){
 		Buzzer = 1
 		if(Button==1){
@@ -108,6 +111,7 @@ void ExecuteTheOrder(){
 		Buzzer = 0
 		Running0()
 	}
+	*/
 	
 	
 	
