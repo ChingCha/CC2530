@@ -27,7 +27,7 @@ void main(void)
 
     
     utilPrintLogo("Keypad LCD Test");	//Print Logo and splash screen on LCD
-    halBuzzer(300);					 	//Turn Buzzer on.
+    halBuzzer(300);					 	//Turn Buzzer on.  
     while(halKeypadPushed()==0);		//This function detects(¬d©ú) if the keypad is being pushed.
     halLcdClear();						//Clear all lines on display
 
