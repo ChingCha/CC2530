@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Workspace>
+  <ConfigDictionary>
+    
+  <CurrentConfigs><Project>cc2530_returm1/Debug</Project></CurrentConfigs></ConfigDictionary>
+  <Desktop>
+    <Static>
+      <Workspace>
+        <ColumnWidths>
+          
+          
+          
+          
+        <Column0>220</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
+      </Workspace>
+      <Build>
+        
+        
+        
+        
+      <ColumnWidth0>20</ColumnWidth0><ColumnWidth1>558</ColumnWidth1><ColumnWidth2>148</ColumnWidth2><ColumnWidth3>37</ColumnWidth3></Build>
+      <TerminalIO/>
+    </Static>
+    <Windows>
+      
+      
+    <Wnd2>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-6462-9653</Identity>
+            <TabName>Workspace</TabName>
+            <Factory>Workspace</Factory>
+            <Session>
+              
+            <NodeDict><ExpandedNode>cc2530_returm1</ExpandedNode></NodeDict></Session>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd2><Wnd3>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-22460-11400</Identity>
+            <TabName>Build</TabName>
+            <Factory>Build</Factory>
+            <Session/>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd3></Windows>
+    <Editor>
+      
+      
+      
+      
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\UART_buzzer_servo_count.c</Filename><XPos>0</XPos><YPos>19</YPos><SelStart>654</SelStart><SelEnd>654</SelEnd></Tab><ActiveTab>0</ActiveTab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Positions>
+      
+      
+      
+      
+      
+    <Top><Row0><Sizes/></Row0><Row1><Sizes/></Row1><Row2><Sizes><Toolbar-00de7b88><key>debuggergui.enu1</key></Toolbar-00de7b88></Sizes></Row2></Top><Left><Row0><Sizes><Toolbar-00d4f100><key>iaridepm.enu1</key></Toolbar-00d4f100><Wnd2><Rect><Top>135</Top><Left>-2</Left><Bottom>664</Bottom><Right>294</Right><x>-2</x><y>135</y><xscreen>575</xscreen><yscreen>43</yscreen><sizeHorzCX>420937</sizeHorzCX><sizeHorzCY>59229</sizeHorzCY><sizeVertCX>216691</sizeVertCX><sizeVertCY>728650</sizeVertCY></Rect></Wnd2></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd3><Rect><Top>-2</Top><Left>-2</Left><Bottom>41</Bottom><Right>1368</Right><x>-2</x><y>-2</y><xscreen>1370</xscreen><yscreen>43</yscreen><sizeHorzCX>1002928</sizeHorzCX><sizeHorzCY>59229</sizeHorzCY><sizeVertCX>420937</sizeVertCX><sizeVertCY>59229</sizeVertCY></Rect></Wnd3></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+  </Desktop>
+</Workspace>
+
+
