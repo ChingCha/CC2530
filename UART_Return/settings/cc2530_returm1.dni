@@ -18,14 +18,10 @@ ActionState=1
 Enabled=0
 ShowSource=1
 [DebugChecksum]
-<<<<<<< HEAD
-Checksum=1012034005
-=======
-Checksum=244766378
->>>>>>> cc7f382e871fa69b945d5c881967f491f4fccdc0
+Checksum=-451654539
 [DisAssemblyWindow]
 NumStates=_ 1
-State 1=_ 0
+State 1=_ 1
 [InstructionProfiling]
 Enabled=_ 0
 [CodeCoverage]
@@ -53,6 +49,5 @@ Count=0
 Stop timers on halt=0
 Leave target running=1
 [Aliases]
-A0=_ "D:\Texas Instruments\CC2530\UART\Rasp_UART.c" "V:\Workspace\CC2530\UART\Rasp_UART.c"
-Count=1
+Count=0
 SuppressDialog=0
