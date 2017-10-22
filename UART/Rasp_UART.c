@@ -21,13 +21,23 @@ void main()
 	Init_Port();	
 	set_main_clock();
 	Init_UART0();
-        
-          while(1){
-            if(Flag == 1)      //是否收到上位機指令?
-            {
-              ExecuteTheOrder();    //解析並運行指令
-            }
-          }
+    
+   
+    UR0SendString("1\n");
+    
+    
+    
+ 
+    
+    
+    /*
+    while(1){
+        if(Flag == 1)      //是否收到上位機指令?
+        {
+            ExecuteTheOrder();    //解析並運行指令
+        }
+    }
+    */
         
 	/*
 	while(1){
@@ -127,12 +137,12 @@ void ExecuteTheOrder(){
 			UR0SendString("The LED1 is Open!");
 		break;
 		
-		case 0x02:
+		case 0x32:
 			LED1 = 0;
 			UR0SendString("The LED1 is Closed!");
 		break;
 		
-		case 0x32:
+		case 0x33:
 			LED2 = 1;
 			UR0SendString("The LED2 is Open!");
 		break;

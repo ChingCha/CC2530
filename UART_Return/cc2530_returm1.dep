@@ -8,33 +8,33 @@
     <outputs>
       <file>$PROJ_DIR$\UART_buzzer_servo_count.c</file>
       <file>$PROJ_DIR$\Debug\Exe\cc2530_returm1.d51</file>
-      <file>$TOOLKIT_DIR$\inc\ioCC2530.h</file>
       <file>$TOOLKIT_DIR$\lib\clib\cl-pli-blxd-1e16x01.r51</file>
-      <file>$PROJ_DIR$\Debug\Obj\UART_buzzer_servo_count.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\cc2530_returm1.pbd</file>
-      <file>$PROJ_DIR$\Debug\Obj\UART_buzzer_servo_count.r51</file>
       <file>$TOOLKIT_DIR$\config\devices\Texas Instruments\lnk51ew_CC2530F256_banked.xcl</file>
+      <file>$PROJ_DIR$\Debug\Obj\UART_buzzer_servo_count.r51</file>
+      <file>$PROJ_DIR$\Debug\Obj\cc2530_returm1.pbd</file>
+      <file>$PROJ_DIR$\Debug\Obj\UART_buzzer_servo_count.pbi</file>
+      <file>$TOOLKIT_DIR$\inc\ioCC2530.h</file>
     </outputs>
     <file>
       <name>$PROJ_DIR$\UART_buzzer_servo_count.c</name>
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 4</file>
+          <file> 6</file>
         </tool>
         <tool>
           <name>ICC8051</name>
-          <file> 6</file>
+          <file> 4</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 2</file>
+          <file> 7</file>
         </tool>
         <tool>
           <name>ICC8051</name>
-          <file> 2</file>
+          <file> 7</file>
         </tool>
       </inputs>
     </file>
@@ -43,7 +43,7 @@
       <inputs>
         <tool>
           <name>XLINK</name>
-          <file> 7 6 3</file>
+          <file> 3 4 2</file>
         </tool>
       </inputs>
     </file>
@@ -52,7 +52,7 @@
       <inputs>
         <tool>
           <name>BILINK</name>
-          <file> 4</file>
+          <file> 6</file>
         </tool>
       </inputs>
     </file>
