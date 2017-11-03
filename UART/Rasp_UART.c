@@ -30,14 +30,14 @@ void main()
  
     
     
-    /*
+    
     while(1){
         if(Flag == 1)      //是否收到上位機指令?
         {
             ExecuteTheOrder();    //解析並運行指令
         }
     }
-    */
+    
         
 	/*
 	while(1){
@@ -147,7 +147,7 @@ void ExecuteTheOrder(){
 			UR0SendString("The LED2 is Open!");
 		break;
 		
-		case 0x04:
+		case 0x34:
 			LED2 = 0;
 			UR0SendString("The LED2 is Closed!");
 		break;
