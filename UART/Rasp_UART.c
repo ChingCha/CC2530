@@ -21,6 +21,11 @@ void main()
 	Init_Port();	
 	set_main_clock();
 	Init_UART0();
+<<<<<<< HEAD
+    UR0SendString("1\n");
+	
+	/*	
+=======
     
    
     UR0SendString("1\n");
@@ -30,14 +35,27 @@ void main()
  
     
     
+<<<<<<< HEAD
     
+=======
+    /*
+>>>>>>> cc7f382e871fa69b945d5c881967f491f4fccdc0
+>>>>>>> d07c84b3e10fe8dbbd3e584870724a9d93b895bf
     while(1){
         if(Flag == 1)      //是否收到上位機指令?
         {
             ExecuteTheOrder();    //解析並運行指令
         }
     }
+<<<<<<< HEAD
     
+=======
+<<<<<<< HEAD
+	*/
+=======
+    */
+>>>>>>> cc7f382e871fa69b945d5c881967f491f4fccdc0
+>>>>>>> d07c84b3e10fe8dbbd3e584870724a9d93b895bf
         
 	/*
 	while(1){
