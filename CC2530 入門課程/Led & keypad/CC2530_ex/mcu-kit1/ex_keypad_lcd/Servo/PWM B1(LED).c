@@ -11,25 +11,17 @@ void Delay(unsigned int t);
 
 void main(void)  
 {  
-    int i;
+    //int i;
 
 	//各工作週期陣列
-    int dutycycle[11]={0xF7,0xE1,0xC8,0xAF,0x96,0x7D,0x64,0x4B,0x32,0x19,0x0A};
+    //int dutycycle[11]={0xF7,0xE1,0xC8,0xAF,0x96,0x7D,0x64,0x4B,0x32,0x19,0x0A};
 	
 	InitP01();					//初始化Port
 	set_main_clock();			//設置主時鐘
     InitT1();                	//Timer1初始化及PWM配置  
     while(1)  
     {  
-		for(i=0;i<11;i++){	
-
-			T1CC2H = 0x00;
-
-			T1CC2L = dutycycle[i];
-
-			Delay(60000);
-
-		}
+		
     }  
 }    
   

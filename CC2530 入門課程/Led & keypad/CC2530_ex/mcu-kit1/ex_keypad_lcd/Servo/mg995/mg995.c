@@ -3,6 +3,7 @@ unsigned int dutytime=45536; //65536-45536就是責任週期
 unsigned int ton=10000; //高電位比例=50%
 unsigned int toff=10000; //低電位比例=50%
 unsigned int temp; //給計時器工作用
+
 void timer0_initialize(void)  //初始化計時器0
 {
     EA=0; //關閉中斷功能(所有中斷副程式失效)
@@ -14,6 +15,7 @@ void timer0_initialize(void)  //初始化計時器0
     TR0=1; //啟動計時器
     EA=1; //開啟中斷功能(中斷副程式可以執行)
 }
+
 void timer0_isr(void) interrupt TF0_VECTOR using 1 //使用計時器中斷副程式產生PWM
 {
     if(P2_0==1)

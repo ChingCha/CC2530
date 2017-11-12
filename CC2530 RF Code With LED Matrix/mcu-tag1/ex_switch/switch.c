@@ -1,3 +1,10 @@
+//-------------------------------------------------------------------
+// Filename: switch.c
+// Description: 
+//-------------------------------------------------------------------
+//-------------------------------------------------------------------
+// INCLUDES
+//-------------------------------------------------------------------
 #include "hal_defs.h"
 #include "hal_mcu.h"
 #include "hal_board.h"
@@ -13,16 +20,15 @@
 // CONSTANTS
 //-------------------------------------------------------------------
 // Application parameters
-
-#define RF_CHANNEL                18      // 2.4 GHz RF channel
+ #define RF_CHANNEL                18      // 2.4 GHz RF channel
 
 // BasicRF address definitions
-#define PAN_ID                	0x1111		//PAN_ID
-#define AVM_ADDR           		0x2222		//B販賣機的RF位址(NwkAddr)
+#define PAN_ID                	0x1111
+#define BVM_ADDR           		0x2233		//B販賣機的RF位址
 #define VM_ONE_ADDR            	0x3333		//第一區VM Co-ordinator位址
 #define APP_PAYLOAD_LENGTH        127
-#define AVM_WATER     '1'					//Endpoint(1~240)
-#define AVM_MILK     '2'					//Endpoint(1~240)
+#define BVM_GREENTEA     '3'					//B販賣機飲品(水)的辨識碼
+#define BVM_BLACKTEA     '4'					//B販賣機飲品(牛奶)的辨識碼
 
 // Application states
 #define IDLE                      0
@@ -60,8 +66,8 @@
 static uint8 pTxData[APP_PAYLOAD_LENGTH];	//Tx資料的上限
 static basicRfCfg_t basicRfConfig;			//宣告RFConfig組態
 
-void A_water(int A_drinkw);
-void A_milk(int A_drinkm);	
+void B_greentea(int B_drinkg);		//B販賣機飲品(綠茶)的功能
+void B_blacktea(int B_drinkb);		//B販賣機飲品(紅茶)的功能
 
 //-------------------------------------------------------------------
 // @fn          main
@@ -81,11 +87,11 @@ int main()
 
     halLedSet(8);							//電源指示燈
 
-	int32 water = 9;						
-	int32 milk = 5;						
+	int32 greentea = 7;						//B販賣機飲品(綠茶)的數量
+	int32 blacktea = 3;						//B販賣機飲品(紅茶)的數量
 	
 	// RF初始化
-    basicRfConfig.myAddr = AVM_ADDR;
+    basicRfConfig.myAddr = BVM_ADDR;
     if (basicRfInit(&basicRfConfig) == FAILED){}
 
     basicRfReceiveOff();					//使RF接收端為常關，藉此省電
@@ -94,16 +100,16 @@ int main()
     {
         uint8 v = halButtonPushed();							//v等於按下BUTTON
 		if (v == HAL_BUTTON_2){									//若v接收到BUTTON_2的訊號
-            if(water > 0)										//若B販賣機飲品(綠茶)的數量大於0
-				water--;										//B販賣機飲品(綠茶)的數量扣1
-			halLcdDisplayWithVM(HAL_LCD_LINE_1,'G',water);	//顯示於LCD
-			A_water(water);										//將引數water傳至B_water函數中的參數A_drinkw
+            if(greentea > 0)										//若B販賣機飲品(綠茶)的數量大於0
+				greentea--;										//B販賣機飲品(綠茶)的數量扣1
+			halLcdDisplayWithVM(HAL_LCD_LINE_1,'G',greentea);	//顯示於LCD
+			B_greentea(greentea);										//將引數greentea傳至B_greentea函數中的參數B_drinkg
 		}
 		else if(v == HAL_BUTTON_1){
-			if(milk > 0)
-				milk--;
-			halLcdDisplayWithVM(HAL_LCD_LINE_2,'B',milk);
-			A_milk(milk);
+			if(blacktea > 0)
+				blacktea--;
+			halLcdDisplayWithVM(HAL_LCD_LINE_2,'B',blacktea);
+			B_blacktea(blacktea);
 		}
         halMcuWaitMs(100);    
     }
@@ -114,11 +120,11 @@ int main()
 // @函數定義區
 //-------------------------------------------------------------------
 
-void A_water(int A_drinkw){
+void B_greentea(int B_drinkg){
 	 
     do{
-		pTxData[0] = AVM_WATER;	//Tx陣列首個元素為AVM_water辨識碼
-		pTxData[1] = A_drinkw;	//Tx陣列第二個元素為架上飲料數量(A_drinkw)
+		pTxData[0] = BVM_GREENTEA;	//Tx陣列首個元素為AVM_greentea辨識碼
+		pTxData[1] = B_drinkg;	//Tx陣列第二個元素為架上飲料數量(B_drinkg)
 		
         //發送封包，封包內容為{接收目的地(VM Co-ordinator位址)、Tx資料、Tx資料上限}
 		basicRfSendPacket(VM_ONE_ADDR, pTxData, APP_PAYLOAD_LENGTH);
@@ -126,20 +132,20 @@ void A_water(int A_drinkw){
         halBuzzer(100);
         halMcuWaitMs(200);
         halLedToggle(7);
-	}while (A_drinkw<0);
+	}while (B_drinkg<0);
 }
 
-void A_milk(int A_drinkm){
+void B_blacktea(int B_drinkb){
 
 	
     do{
-		pTxData[0] = AVM_MILK;
-		pTxData[1] = A_drinkm;
+		pTxData[0] = BVM_BLACKTEA;
+		pTxData[1] = B_drinkb;
 		
 		basicRfSendPacket(VM_ONE_ADDR, pTxData, APP_PAYLOAD_LENGTH);
 
 		halBuzzer(300);
 		halMcuWaitMs(200);
         halLedToggle(7);
-	}while (A_drinkm<0);
+	}while (B_drinkb<0);
 }
