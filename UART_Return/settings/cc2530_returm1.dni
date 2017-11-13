@@ -18,7 +18,11 @@ ActionState=1
 Enabled=0
 ShowSource=1
 [DebugChecksum]
+<<<<<<< HEAD
 Checksum=1687017945
+=======
+Checksum=-1659849499
+>>>>>>> 990b0b4af104f1e4fdeffbb1f7111668c8e43c26
 [DisAssemblyWindow]
 NumStates=_ 1
 State 1=_ 1

@@ -7,6 +7,7 @@
     <name>Debug</name>
     <outputs>
       <file>$PROJ_DIR$\UART_buzzer_servo_count.c</file>
+<<<<<<< HEAD
       <file>$PROJ_DIR$\Debug\Obj\UART_buzzer_servo_count.r51</file>
       <file>$PROJ_DIR$\Debug\Exe\cc2530_returm1.d51</file>
       <file>$TOOLKIT_DIR$\inc\ioCC2530.h</file>
@@ -14,13 +15,22 @@
       <file>$PROJ_DIR$\Debug\Obj\cc2530_returm1.pbd</file>
       <file>$PROJ_DIR$\Debug\Obj\UART_buzzer_servo_count.pbi</file>
       <file>$TOOLKIT_DIR$\lib\clib\cl-pli-blxd-1e16x01.r51</file>
+=======
+      <file>$PROJ_DIR$\Debug\Obj\cc2530_returm1.pbd</file>
+      <file>$TOOLKIT_DIR$\lib\clib\cl-pli-blxd-1e16x01.r51</file>
+      <file>$TOOLKIT_DIR$\inc\ioCC2530.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\UART_buzzer_servo_count.r51</file>
+      <file>$PROJ_DIR$\Debug\Exe\cc2530_returm1.d51</file>
+      <file>$TOOLKIT_DIR$\config\devices\Texas Instruments\lnk51ew_CC2530F256_banked.xcl</file>
+      <file>$PROJ_DIR$\Debug\Obj\UART_buzzer_servo_count.pbi</file>
+>>>>>>> 990b0b4af104f1e4fdeffbb1f7111668c8e43c26
     </outputs>
     <file>
       <name>$PROJ_DIR$\UART_buzzer_servo_count.c</name>
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 6</file>
+          <file> 7</file>
         </tool>
         <tool>
           <name>ICC8051</name>
@@ -39,20 +49,25 @@
       </inputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\Debug\Exe\cc2530_returm1.d51</name>
+      <name>$PROJ_DIR$\Debug\Obj\cc2530_returm1.pbd</name>
       <inputs>
         <tool>
+<<<<<<< HEAD
           <name>XLINK</name>
           <file> 4 1 7</file>
+=======
+          <name>BILINK</name>
+          <file> 7</file>
+>>>>>>> 990b0b4af104f1e4fdeffbb1f7111668c8e43c26
         </tool>
       </inputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\Debug\Obj\cc2530_returm1.pbd</name>
+      <name>$PROJ_DIR$\Debug\Exe\cc2530_returm1.d51</name>
       <inputs>
         <tool>
-          <name>BILINK</name>
-          <file> 6</file>
+          <name>XLINK</name>
+          <file> 6 4 2</file>
         </tool>
       </inputs>
     </file>
@@ -61,7 +76,11 @@
       <outputs>
         <tool>
           <name>XLINK</name>
+<<<<<<< HEAD
           <file> 2</file>
+=======
+          <file> 5</file>
+>>>>>>> 990b0b4af104f1e4fdeffbb1f7111668c8e43c26
         </tool>
       </outputs>
     </file>

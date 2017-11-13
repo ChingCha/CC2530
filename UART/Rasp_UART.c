@@ -25,14 +25,42 @@ void main()
     UR0SendString("1\n");
     
    
+<<<<<<< HEAD
+=======
+    UR0SendString("1\n");
+    
+    
+    
+ 
+    
+    
+<<<<<<< HEAD
+    
+=======
+    /*
+>>>>>>> cc7f382e871fa69b945d5c881967f491f4fccdc0
+>>>>>>> d07c84b3e10fe8dbbd3e584870724a9d93b895bf
+>>>>>>> 990b0b4af104f1e4fdeffbb1f7111668c8e43c26
     while(1){
         if(Flag == 1)      //是否收到上位機指令?
         {
             ExecuteTheOrder();    //解析並運行指令
         }
     }
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+    
+=======
+<<<<<<< HEAD
+	*/
+=======
+    */
+>>>>>>> cc7f382e871fa69b945d5c881967f491f4fccdc0
+>>>>>>> d07c84b3e10fe8dbbd3e584870724a9d93b895bf
+>>>>>>> 990b0b4af104f1e4fdeffbb1f7111668c8e43c26
         
 	/*
 	while(1){
@@ -142,7 +170,7 @@ void ExecuteTheOrder(){
 			UR0SendString("The LED2 is Open!");
 		break;
 		
-		case 0x04:
+		case 0x34:
 			LED2 = 0;
 			UR0SendString("The LED2 is Closed!");
 		break;
