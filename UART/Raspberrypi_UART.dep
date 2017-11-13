@@ -6,60 +6,35 @@
   <configuration>
     <name>Debug</name>
     <outputs>
+      <file>$TOOLKIT_DIR$\lib\clib\cl-pli-blxd-1e16x01.r51</file>
       <file>$PROJ_DIR$\Rasp_UART.c</file>
       <file>$TOOLKIT_DIR$\inc\ioCC2530.h</file>
-      <file>$TOOLKIT_DIR$\lib\clib\cl-pli-blxd-1e16x01.r51</file>
-<<<<<<< HEAD
-      <file>$PROJ_DIR$\Debug\Exe\Raspberrypi_UART.d51</file>
-      <file>$PROJ_DIR$\Debug\Obj\Rasp_UART.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\Rasp_UART.r51</file>
       <file>$TOOLKIT_DIR$\config\devices\Texas Instruments\lnk51ew_CC2530F256_banked.xcl</file>
-=======
->>>>>>> cc7f382e871fa69b945d5c881967f491f4fccdc0
+      <file>$PROJ_DIR$\Debug\Obj\Rasp_UART.r51</file>
+      <file>$PROJ_DIR$\Debug\Obj\Rasp_UART.pbi</file>
+      <file>$PROJ_DIR$\Debug\Exe\Raspberrypi_UART.d51</file>
       <file>$PROJ_DIR$\Debug\Obj\Raspberrypi_UART.pbd</file>
-      <file>$TOOLKIT_DIR$\config\devices\Texas Instruments\lnk51ew_CC2530F256_banked.xcl</file>
-      <file>$PROJ_DIR$\Debug\Obj\Rasp_UART.r51</file>
-      <file>$PROJ_DIR$\Debug\Exe\Raspberrypi_UART.d51</file>
-      <file>$PROJ_DIR$\Debug\Obj\Rasp_UART.pbi</file>
     </outputs>
     <file>
       <name>$PROJ_DIR$\Rasp_UART.c</name>
       <outputs>
         <tool>
-          <name>BICOMP</name>
-<<<<<<< HEAD
+          <name>ICC8051</name>
           <file> 4</file>
-=======
-          <file> 7</file>
->>>>>>> cc7f382e871fa69b945d5c881967f491f4fccdc0
         </tool>
         <tool>
-          <name>ICC8051</name>
+          <name>BICOMP</name>
           <file> 5</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
-          <name>BICOMP</name>
-          <file> 1</file>
-        </tool>
-        <tool>
           <name>ICC8051</name>
-          <file> 1</file>
+          <file> 2</file>
         </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\Debug\Obj\Raspberrypi_UART.pbd</name>
-      <inputs>
         <tool>
-<<<<<<< HEAD
-          <name>XLINK</name>
-          <file> 6 5 2</file>
-=======
-          <name>BILINK</name>
-          <file> 7</file>
->>>>>>> cc7f382e871fa69b945d5c881967f491f4fccdc0
+          <name>BICOMP</name>
+          <file> 2</file>
         </tool>
       </inputs>
     </file>
@@ -67,13 +42,17 @@
       <name>$PROJ_DIR$\Debug\Exe\Raspberrypi_UART.d51</name>
       <inputs>
         <tool>
-<<<<<<< HEAD
-          <name>BILINK</name>
-          <file> 4</file>
-=======
           <name>XLINK</name>
-          <file> 4 5 2</file>
->>>>>>> cc7f382e871fa69b945d5c881967f491f4fccdc0
+          <file> 3 4 0</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Debug\Obj\Raspberrypi_UART.pbd</name>
+      <inputs>
+        <tool>
+          <name>BILINK</name>
+          <file> 5</file>
         </tool>
       </inputs>
     </file>
@@ -82,11 +61,7 @@
       <outputs>
         <tool>
           <name>XLINK</name>
-<<<<<<< HEAD
-          <file> 3</file>
-=======
           <file> 6</file>
->>>>>>> cc7f382e871fa69b945d5c881967f491f4fccdc0
         </tool>
       </outputs>
     </file>

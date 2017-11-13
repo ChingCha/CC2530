@@ -34,7 +34,7 @@ void main()
   T1Init();
   set_main_clock();
   Init_UART0();
-  UR0SendString("connection\n");
+  //UR0SendString("connection\n");
   
   while(1)
   {
@@ -108,8 +108,8 @@ void ExecuteTheOrder(){
 		
 		case 0x31:
 		overtime_five_min=0;
-		UR0SendString("buzzer_ON\n");
-                while(sw1==1 && overtime_five_min<140)
+		//UR0SendString("buzzer_ON\n");
+                while(sw1==1 && overtime_five_min<180)
 	        {
                    buzzer();
 		   InitT4();
@@ -120,14 +120,14 @@ void ExecuteTheOrder(){
                 if(sw1==0)
 		{
 		  servo1();
-		  UR0SendString("servo1\n");
+		  //UR0SendString("servo1\n");
 		}
 		break;
 		
 		case 0x32:
                 overtime_five_min=0;
-                UR0SendString("buzzer_ON\n");
-                while(sw1==1 && overtime_five_min<140)
+                //UR0SendString("buzzer_ON\n");
+                while(sw1==1 && overtime_five_min<180)
 	        {
                    buzzer();
 		   InitT4();
@@ -138,7 +138,7 @@ void ExecuteTheOrder(){
                 if(sw1==0)
 		{
 		  servo2();
-		  UR0SendString("servo2\n");
+		  //UR0SendString("servo2\n");
 		}    
 		break;
 	}
@@ -155,7 +155,7 @@ void PortInit()
 {
 	//Timer通道?置
     P1SEL |= 0x01;              //Timer1通道2映射至P1_0，功能選擇
-    PERCFG |= 0x40;             //備用位置2，?明信息
+    PERCFG |= 0x40;             //備用位置2
     P2SEL &= ~0x10;             //相對於Timer4，Timer1優先
     P2DIR |= 0xC0;              //定?器通道2-3具有第一優先順序
     P1DIR |= 0x01;				//P1_0為輸出
@@ -214,6 +214,7 @@ T4CTL &= ~0X03;    //自動重裝 00－>0xff   65200/256=254(次)
 T4CTL |=0X10; //   啟動
 EA = 1;     //開總中斷	
 }
+
 #pragma vector = T4_VECTOR     //定時器 T3
 __interrupt void T4_ISR(void)
 {
@@ -222,7 +223,7 @@ if(++countsecond>254)   //254 次中斷後LED取反，閃爍一輪（約為0.5秒時間）
 {
   countsecond = 0;   // 計數清零 
   overtime_five_min++;
-  if(overtime_five_min==140)
+  if(overtime_five_min==180)
   {
     UR0SendString("1\n");
   }
@@ -231,7 +232,7 @@ if(++countsecond>254)   //254 次中斷後LED取反，閃爍一輪（約為0.5秒時間）
  
 void servo1()
 { 
-        T1CC2H = 0x07;
+        T1CC2H = 0x03;
         T1CC2L = 0x3a;
         int i;
         for(i=0;i<23;i++)
@@ -244,7 +245,7 @@ void servo1()
 
 void servo2()
 { 
-        T1CC2H = 0x07;
+        T1CC2H = 0x0;
         T1CC2L = 0x3a;
         int i;
         for(i=0;i<44;i++)
