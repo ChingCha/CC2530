@@ -28,7 +28,7 @@ ActionState=1
 Enabled=0
 ShowSource=1
 [DebugChecksum]
-Checksum=-930594665
+Checksum=491359457
 [InstructionProfiling]
 Enabled=_ 0
 [Log file]
@@ -44,7 +44,7 @@ Count=0
 Stop timers on halt=0
 Leave target running=1
 [Aliases]
-A0=_ "C:\Users\spshih\Desktop\Eating\CC2530\CC2530\CC2530 RF Code With LED Matrix\components\common\hal_lcd.c" "V:\Workspace\CC2530\CC2530 RF Code With LED Matrix\components\common\hal_lcd.c"
+A0=_ "C:\Users\spshih\Desktop\Eating\CC2530\CC2530\CC2530 RF Code With LED Matrix\components\common\hal_lcd.c" ""
 A1=_ "C:\Users\spshih\Desktop\Eating\CC2530\CC2530\CC2530 RF Code With LED Matrix\mcu-tag1\ex_switch\switch.c" "V:\Workspace\CC2530\CC2530 RF Code With LED Matrix\mcu-tag1\ex_switch\switch.c"
 A2=_ "C:\Users\spshih\Desktop\Eating\CC2530\CC2530\CC2530 RF Code\components\basicrf\basic_rf.c" "C:\Users\user\Desktop\CC2530\CC2530 RF Code\components\basicrf\basic_rf.c"
 A3=_ "C:\Users\spshih\Desktop\Eating\CC2530\CC2530\CC2530 RF Code\mcu-tag1\ex_switch\switch.c" "C:\Users\user\Desktop\CC2530\CC2530 RF Code\mcu-tag1\ex_switch\switch.c"
@@ -56,5 +56,6 @@ A8=_ "C:\Users\user\Desktop\CC530\RF 原始Code\components\common\hal_rf.c" ""
 A9=_ "C:\Users\user\Desktop\CC530\RF 原始Code\components\targets\zigbee-mcu1\hal_board.c" ""
 A10=_ "C:\Users\user\Desktop\CC530\RF 原始Code\components\targets\zigbee-mcu1\hal_led.c" "C:\Users\user\Desktop\CC2530\CC2530 RF Code\components\targets\zigbee-mcu1\hal_led.c"
 A11=_ "C:\Users\user\Desktop\CC530\RF 原始Code\mcu-tag1\ex_switch\switch.c" "C:\Users\user\Desktop\CC2530\RF Code\mcu-tag1\ex_switch\switch.c"
-Count=12
+A12=_ "V:\Workspace\CC2530\CC2530 RF Code With LED Matrix\mcu-tag1\ex_switch\switch.c" "D:\Texas Instruments\CC2530\CC2530 RF Code With LED Matrix\mcu-tag1\ex_switch\switch.c"
+Count=13
 SuppressDialog=1

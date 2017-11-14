@@ -25,7 +25,7 @@
 // BasicRF address definitions
 #define PAN_ID                	0x1111
 #define BVM_ADDR           		0x2233		//B販賣機的RF位址
-#define VM_ONE_ADDR            	0x3333		//第一區VM Co-ordinator位址
+#define VM_ONE_ADDR            	0x3333		//第一區VM Cordinator位址
 #define APP_PAYLOAD_LENGTH        127
 #define BVM_GREENTEA     '3'					//B販賣機飲品(水)的辨識碼
 #define BVM_BLACKTEA     '4'					//B販賣機飲品(牛奶)的辨識碼
@@ -63,7 +63,8 @@
 //              appState - file scope variable. Holds application state
 // @return      none
 //-------------------------------------------------------------------
-static uint8 pTxData[APP_PAYLOAD_LENGTH];	//Tx資料的上限
+//static uint8 pTxData[APP_PAYLOAD_LENGTH];	//Tx資料的上限
+static uint8 pRxData[APP_PAYLOAD_LENGTH];
 static basicRfCfg_t basicRfConfig;			//宣告RFConfig組態
 
 void B_greentea(int B_drinkg);		//B販賣機飲品(綠茶)的功能
@@ -84,20 +85,71 @@ int main()
     #endif 
 
     halBoardInit();							//CC2530主板初始化
+	halLcdInit();							//LCD顯示初始化
 
-    halLedSet(8);							//電源指示燈
-
+	// 裝置已經通電的提醒
+    halLedSet(8);
+    halBuzzer(300);
+	/*
 	int32 greentea = 7;						//B販賣機飲品(綠茶)的數量
 	int32 blacktea = 3;						//B販賣機飲品(紅茶)的數量
+	*/
 	
-	// RF初始化
-    basicRfConfig.myAddr = BVM_ADDR;
+	// 初始化 VM_ONE_ADDR RF
+    basicRfConfig.myAddr = VM_ONE_ADDR;
     if (basicRfInit(&basicRfConfig) == FAILED){}
-
-    basicRfReceiveOff();					//使RF接收端為常關，藉此省電
+	
+	//使RF接收端為常開
+    basicRfReceiveOn();					
 	
 	while (1)
     {
+		
+		while (!basicRfPacketIsReady()){
+            halLedToggle(7);
+            halMcuWaitMs(10);
+        }
+		
+		while(basicRfReceive(pRxData, APP_PAYLOAD_LENGTH, NULL) > 0){
+			
+			switch(pRxData[0]){
+				/*
+				case '1':
+					A1_Recieve(pRxData[1]);
+					MAX7219_Write(DIGIT0,0x01);
+					if(pRxData[1]==0)
+						A1_Warning();
+					break;
+				case '2':
+					A2_Recieve(pRxData[1]);
+					MAX7219_Write(DIGIT0,0x02);
+					if(pRxData[1]==0)
+						A2_Warning();
+					break;
+				*/
+				case '3':
+					halLedSet(1);
+					/*
+					B1_Recieve(pRxData[1]);
+					MAX7219_Write(DIGIT1,0x01);
+					if(pRxData[1]==0)
+						B1_Warning();
+					*/
+					break;
+					
+				case '4':
+					halLedSet(2);
+					/*
+					B2_Recieve(pRxData[1]);
+					MAX7219_Write(DIGIT1,0x02);
+					if(pRxData[1]==0)
+						B2_Warning();
+					*/
+					break;
+			}
+		}
+		
+		/*
         uint8 v = halButtonPushed();							//v等於按下BUTTON
 		if (v == HAL_BUTTON_2){									//若v接收到BUTTON_2的訊號
             if(greentea > 0)										//若B販賣機飲品(綠茶)的數量大於0
@@ -111,7 +163,8 @@ int main()
 			halLcdDisplayWithVM(HAL_LCD_LINE_2,'B',blacktea);
 			B_blacktea(blacktea);
 		}
-        halMcuWaitMs(100);    
+        halMcuWaitMs(100);
+		*/
     }
 	return 0;
 }
@@ -119,7 +172,7 @@ int main()
 //-------------------------------------------------------------------
 // @函數定義區
 //-------------------------------------------------------------------
-
+/*
 void B_greentea(int B_drinkg){
 	 
     do{
@@ -149,3 +202,4 @@ void B_blacktea(int B_drinkb){
         halLedToggle(7);
 	}while (B_drinkb<0);
 }
+*/

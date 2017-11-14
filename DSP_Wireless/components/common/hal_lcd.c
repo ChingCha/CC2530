@@ -392,7 +392,7 @@ void halLcdDisplayCounters(uint8 line, int32 lValue, char lChar, int32 rValue, c
     pLcdLineBuffer[0] = lChar;
     pLcdLineBuffer[1] = '=';
     pCounter = convInt32ToText(lValue);
-    for (n = 2; n < 8; n++)
+    for (n = 2; n < 11; n++)
     {
         if (*pCounter)
         {
@@ -404,20 +404,9 @@ void halLcdDisplayCounters(uint8 line, int32 lValue, char lChar, int32 rValue, c
         }
     }
 	// Right Part
-    pLcdLineBuffer[8] = rChar;
-    pLcdLineBuffer[9] = '=';
-    pCounter = convInt32ToText(rValue);
-    for (n = 10; n < 16; n++)
-    {
-        if (*pCounter)
-        {
-            pLcdLineBuffer[n] = *(pCounter++);
-        }
-        else
-        {
-            pLcdLineBuffer[n] = ' ';
-        }
-    }
+    for(n = 11;n<=15;n++){
+		pLcdLineBuffer[n] = ' ';
+	}
     lcdWriteLine(line, pLcdLineBuffer);
 }
 
@@ -537,4 +526,38 @@ void halLcdDisplayWithVM(uint8 line,char lChar,int32 lValue)
 		pLcdLineBuffer[i] = ' ';
 	}
 	lcdWriteLine(line, pLcdLineBuffer);
+}
+
+
+/*
+2017_11_14:
+halLcdDisplayAddress:Test Print Integer_Adress
+
+
+*/
+
+void halLcdDisplayAddress(uint8 line, int32 Value, char Char)
+{
+    uint8 n;
+    char *pCounter;
+	
+    // Left part
+    pLcdLineBuffer[0] = Char;
+    pLcdLineBuffer[1] = '=';
+    pCounter = convInt32ToText(Value);
+    for (n = 2; n < 8; n++)
+    {
+        if (*pCounter)
+        {
+            pLcdLineBuffer[n] = *(pCounter++);
+        }
+        else
+        {
+            pLcdLineBuffer[n] = ' ';
+        }
+    }
+	for(n = 8;n<=15;n++){
+		pLcdLineBuffer[n] = ' ';
+	}
+    lcdWriteLine(line, pLcdLineBuffer);
 }
