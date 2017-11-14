@@ -1,3 +1,6 @@
+//C++ Compile
+#include <iostream>
+
 //CC2530模組(KIT板)標頭檔
 #include "hal_defs.h"
 #include "hal_board.h"
@@ -56,67 +59,12 @@ static basicRfCfg_t basicRfConfig;
 //主函數
 int main() 
 {
-    // Config basicRF
-    basicRfConfig.panId = PAN_ID;
-    basicRfConfig.channel = RF_CHANNEL;
-    basicRfConfig.ackRequest = TRUE;
-    #ifdef SECURITY_CCM
-        basicRfConfig.securityKey = key;
-    #endif 
-
-    // Initalise board peripherals & LED Matrix
-    halBoardInit();
-    halLcdInit();
-	MAX7219_Init();
-
-    // Indicate that device is powered
-    halLedSet(8);
-    halBuzzer(300);
+	int a = 5;
 	
-	// Initialize BasicRF
-    basicRfConfig.myAddr = VM_ONE_ADDR;
-    if (basicRfInit(&basicRfConfig) == FAILED){}
-
-    // Keep Receiver on
-    basicRfReceiveOn();
-	
-	while(1){
-
-		while (!basicRfPacketIsReady()){
-            halLedToggle(7);
-            halMcuWaitMs(10);
-        }
-		
-		while(basicRfReceive(pRxData, APP_PAYLOAD_LENGTH, NULL) > 0){
-			
-			switch(pRxData[0]){
-				case '1':
-					A1_Recieve(pRxData[1]);
-					MAX7219_Write(DIGIT0,0x01);
-					if(pRxData[1]==0)
-						A1_Warning();
-					break;
-				case '2':
-					A2_Recieve(pRxData[1]);
-					MAX7219_Write(DIGIT0,0x02);
-					if(pRxData[1]==0)
-						A2_Warning();
-					break;
-				case '3':
-					B1_Recieve(pRxData[1]);
-					MAX7219_Write(DIGIT1,0x01);
-					if(pRxData[1]==0)
-						B1_Warning();
-					break;
-				case '4':
-					B2_Recieve(pRxData[1]);
-					MAX7219_Write(DIGIT1,0x02);
-					if(pRxData[1]==0)
-						B2_Warning();
-					break;
-			}
-		}	
-	}
+	//halLcdWriteString(Line,LCD Text,Value)
+	halLcdWriteString(HAL_LCD_LINE_1,1,&a)
 	
 	return 0;
+	
+	
 }
