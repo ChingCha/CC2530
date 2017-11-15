@@ -2,7 +2,7 @@
 #                                                                              #
 #      IAR Universal Linker V5.0.2.5/W32                                       #
 #                                                                              #
-#           Link time     =  14/Nov/2017  22:03:44                             #
+#           Link time     =  16/Nov/2017  00:35:21                             #
 #           Target CPU    =  x51                                               #
 #           List file     =  "D:\Texas Instruments\CC2530\DSP_Wireless\mcu-tag #
 #                            1\ex_switch\debug\List\switch.map"                #
@@ -314,104 +314,104 @@ XDATA_Z
            rxMpdu                  0000010A 
     -------------------------------------------------------------------------
 <BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 000005DC - 000006B0 (0xd5 bytes), align: 0
+  Relative segment, address: CODE 000005E2 - 000006B6 (0xd5 bytes), align: 0
   Segment part 14.            Intra module refs:   basicRfRxFrmDoneIsr::?relay
            LOCAL                   ADDRESS         
            =====                   =======         
-           basicRfRxFrmDoneIsr     000005DC 
+           basicRfRxFrmDoneIsr     000005E2 
                calls direct, is indirectly called
                ISTACK = 00000000 ( 00000002 )
     -------------------------------------------------------------------------
 <BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 000006B1 - 000006BE (0xe bytes), align: 0
+  Relative segment, address: CODE 000006B7 - 000006C4 (0xe bytes), align: 0
   Segment part 16.            Intra module refs:   basicRfRxFrmDoneIsr
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine4            000006B1 
+           ?Subroutine4            000006B7 
     -------------------------------------------------------------------------
 <BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 000006BF - 000006C1 (0x3 bytes), align: 0
+  Relative segment, address: CODE 000006C5 - 000006C7 (0x3 bytes), align: 0
   Segment part 17.            Intra module refs:   basicRfReceive
                                                    basicRfRxFrmDoneIsr
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine2            000006BF 
+           ?Subroutine2            000006C5 
     -------------------------------------------------------------------------
 <BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 000006C2 - 000006C8 (0x7 bytes), align: 0
+  Relative segment, address: CODE 000006C8 - 000006CE (0x7 bytes), align: 0
   Segment part 18.            Intra module refs:   ?Subroutine2
                                                    basicRfReceive
     -------------------------------------------------------------------------
 <BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 000006C9 - 000006C9 (0x1 bytes), align: 0
+  Relative segment, address: CODE 000006CF - 000006CF (0x1 bytes), align: 0
   Segment part 19.            Intra module refs:   basicRfPacketIsReady
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine0            000006C9 
+           ?Subroutine0            000006CF 
     -------------------------------------------------------------------------
 <BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 000006CA - 000006D0 (0x7 bytes), align: 0
+  Relative segment, address: CODE 000006D0 - 000006D6 (0x7 bytes), align: 0
   Segment part 20.            Intra module refs:   ?Subroutine0
                                                    basicRfReceiveOn
                                                    basicRfRxFrmDoneIsr
     -------------------------------------------------------------------------
 <BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 000006D1 - 00000738 (0x68 bytes), align: 0
+  Relative segment, address: CODE 000006D7 - 0000073E (0x68 bytes), align: 0
   Segment part 21.            Intra module refs:   basicRfInit::?relay
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           basicRfInit             000006D1 
+           basicRfInit             000006D7 
                calls direct
                XSTACK = 00000000 ( 00000009 )
     -------------------------------------------------------------------------
 <BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 00000739 - 0000073C (0x4 bytes), align: 0
+  Relative segment, address: CODE 0000073F - 00000742 (0x4 bytes), align: 0
   Segment part 23.            Intra module refs:   basicRfInit
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine3            00000739 
+           ?Subroutine3            0000073F 
     -------------------------------------------------------------------------
 <BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 0000073D - 00000742 (0x6 bytes), align: 0
+  Relative segment, address: CODE 00000743 - 00000748 (0x6 bytes), align: 0
   Segment part 24.            Intra module refs:   ?Subroutine3
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine6            0000073D 
+           ?Subroutine6            00000743 
     -------------------------------------------------------------------------
 <BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 00000743 - 0000074A (0x8 bytes), align: 0
+  Relative segment, address: CODE 00000749 - 00000750 (0x8 bytes), align: 0
   Segment part 25.            Intra module refs:   ?Subroutine6
     -------------------------------------------------------------------------
 <BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 0000074B - 00000757 (0xd bytes), align: 0
+  Relative segment, address: CODE 00000751 - 0000075D (0xd bytes), align: 0
   Segment part 28.            Intra module refs:   basicRfInit
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine5            0000074B 
+           ?Subroutine5            00000751 
     -------------------------------------------------------------------------
 <BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 00000758 - 00000762 (0xb bytes), align: 0
+  Relative segment, address: CODE 0000075E - 00000768 (0xb bytes), align: 0
   Segment part 30.            Intra module refs:   basicRfPacketIsReady::?relay
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           basicRfPacketIsReady    00000758 
+           basicRfPacketIsReady    0000075E 
                ISTACK = 00000000 ( 00000002 )
     -------------------------------------------------------------------------
 <BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 00000763 - 000007F7 (0x95 bytes), align: 0
+  Relative segment, address: CODE 00000769 - 000007FD (0x95 bytes), align: 0
   Segment part 32.            Intra module refs:   basicRfReceive::?relay
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           basicRfReceive          00000763 
+           basicRfReceive          00000769 
                calls direct
                XSTACK = 00000000 ( 00000010 )
     -------------------------------------------------------------------------
 <BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 000007F8 - 00000807 (0x10 bytes), align: 0
+  Relative segment, address: CODE 000007FE - 0000080D (0x10 bytes), align: 0
   Segment part 36.            Intra module refs:   basicRfReceiveOn::?relay
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           basicRfReceiveOn        000007F8 
+           basicRfReceiveOn        000007FE 
                calls direct
                ISTACK = 00000000 ( 00000002 )
     -------------------------------------------------------------------------
@@ -489,6 +489,7 @@ SFR_AN
 SFR_AN
   Relative segment, address: DATA 00000090 - 00000090 (0x1 bytes), align: 0
   Segment part 2. ROOT.       Intra module refs:   halBoardInit
+                                                   halLedClear (hal_led)
                                                    halLedSet (hal_led)
                                                    halLedToggle (hal_led)
                                                    lcdControl (hal_lcd)
@@ -578,11 +579,11 @@ XDATA_Z
            pLedData                0000018A        ?Subroutine0 (hal_lcd)
     -------------------------------------------------------------------------
 <BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 00000A70 - 00000B11 (0xa2 bytes), align: 0
+  Relative segment, address: CODE 00000C57 - 00000CF8 (0xa2 bytes), align: 0
   Segment part 19.            Intra module refs:   halBoardInit::?relay
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           halBoardInit            00000A70 
+           halBoardInit            00000C57 
                calls direct
                ISTACK = 00000000 ( 00000002 )
     -------------------------------------------------------------------------
@@ -656,35 +657,35 @@ SFR_AN
            T1CCTL0                 000000E5 
     -------------------------------------------------------------------------
 <BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 00000C60 - 00000C99 (0x3a bytes), align: 0
+  Relative segment, address: CODE 00000D5C - 00000D95 (0x3a bytes), align: 0
   Segment part 14.            Intra module refs:   halBuzzerInit::?relay
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           halBuzzerInit           00000C60 
+           halBuzzerInit           00000D5C 
                XSTACK = 00000000 ( 00000010 )
     -------------------------------------------------------------------------
 <BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 00000C9A - 00000C9E (0x5 bytes), align: 0
+  Relative segment, address: CODE 00000D96 - 00000D9A (0x5 bytes), align: 0
   Segment part 16.            Intra module refs:   halBuzzerInit
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine0            00000C9A 
+           ?Subroutine0            00000D96 
     -------------------------------------------------------------------------
 <BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 00000C9F - 00000CBB (0x1d bytes), align: 0
+  Relative segment, address: CODE 00000D9B - 00000DB7 (0x1d bytes), align: 0
   Segment part 21.            Intra module refs:   halBuzzer::?relay
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           halBuzzer               00000C9F 
+           halBuzzer               00000D9B 
                calls direct
                ISTACK = 00000000 ( 00000002 )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 000004FF - 00000502 (0x4 bytes), align: 0
+  Relative segment, address: CODE 00000505 - 00000508 (0x4 bytes), align: 0
   Segment part 23.            Intra module refs:   T1_ISR::??INTVEC 75
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           T1_ISR                  000004FF 
+           T1_ISR                  00000505 
                interrupt function
                ISTACK = 00000000 ( 00000001 )
     -------------------------------------------------------------------------
@@ -745,11 +746,11 @@ SFR_AN
            CLKCONCMD               000000C6 
     -------------------------------------------------------------------------
 <BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 00000D42 - 00000D75 (0x34 bytes), align: 0
+  Relative segment, address: CODE 00000E3E - 00000E71 (0x34 bytes), align: 0
   Segment part 10.            Intra module refs:   clockSetMainSrc::?relay
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           clockSetMainSrc         00000D42 
+           clockSetMainSrc         00000E3E 
     -------------------------------------------------------------------------
 BANK_RELAYS
   Relative segment, address: CODE 00000182 - 00000187 (0x6 bytes), align: 0
@@ -781,18 +782,18 @@ SFR_AN
            IEN0                    000000A8 
     -------------------------------------------------------------------------
 <BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 00000D76 - 00000D7A (0x5 bytes), align: 0
+  Relative segment, address: CODE 00000E72 - 00000E76 (0x5 bytes), align: 0
   Segment part 7.             Intra module refs:   halIntOn::?relay
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           halIntOn                00000D76 
+           halIntOn                00000E72 
     -------------------------------------------------------------------------
 <BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 00000D7B - 00000D7F (0x5 bytes), align: 0
+  Relative segment, address: CODE 00000E77 - 00000E7B (0x5 bytes), align: 0
   Segment part 9.             Intra module refs:   halIntOff::?relay
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           halIntOff               00000D7B 
+           halIntOff               00000E77 
     -------------------------------------------------------------------------
 BANK_RELAYS
   Relative segment, address: CODE 00000188 - 0000018D (0x6 bytes), align: 0
@@ -821,116 +822,116 @@ BANK_RELAYS
   SEGMENTS IN THE MODULE
   ======================
 <BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 00000808 - 0000081A (0x13 bytes), align: 0
+  Relative segment, address: CODE 00000933 - 00000945 (0x13 bytes), align: 0
   Segment part 11.            Intra module refs:   halKeypadI2cStart::?relay
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           halKeypadI2cStart       00000808 
+           halKeypadI2cStart       00000933 
                calls direct
                XSTACK = 0000000A ( 00000000 )
                ISTACK = 00000000 ( 00000002 )
     -------------------------------------------------------------------------
 <BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 0000081B - 0000081C (0x2 bytes), align: 0
+  Relative segment, address: CODE 00000946 - 00000947 (0x2 bytes), align: 0
   Segment part 13.            Intra module refs:   halKeypadI2cAck
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine0            0000081B 
+           ?Subroutine0            00000946 
     -------------------------------------------------------------------------
 <BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 0000081D - 00000825 (0x9 bytes), align: 0
+  Relative segment, address: CODE 00000948 - 00000950 (0x9 bytes), align: 0
   Segment part 14.            Intra module refs:   ?Subroutine0
                                                    halKeypadI2cStart
     -------------------------------------------------------------------------
 <BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 00000826 - 0000082C (0x7 bytes), align: 0
+  Relative segment, address: CODE 00000951 - 00000957 (0x7 bytes), align: 0
   Segment part 15.            Intra module refs:   Segment part 14
                                                    halKeypadI2cStop
     -------------------------------------------------------------------------
 <BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 0000082D - 00000833 (0x7 bytes), align: 0
+  Relative segment, address: CODE 00000958 - 0000095E (0x7 bytes), align: 0
   Segment part 16.            Intra module refs:   Segment part 15
                                                    halKeypadInit
     -------------------------------------------------------------------------
 <BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 00000834 - 0000084D (0x1a bytes), align: 0
+  Relative segment, address: CODE 0000095F - 00000978 (0x1a bytes), align: 0
   Segment part 17.            Intra module refs:   halKeypadI2cStop::?relay
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           halKeypadI2cStop        00000834 
+           halKeypadI2cStop        0000095F 
                calls direct
                XSTACK = 0000000A ( 00000000 )
                ISTACK = 00000000 ( 00000002 )
     -------------------------------------------------------------------------
 <BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 0000084E - 00000855 (0x8 bytes), align: 0
+  Relative segment, address: CODE 00000979 - 00000980 (0x8 bytes), align: 0
   Segment part 19.            Intra module refs:   halKeypadI2cAck::?relay
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           halKeypadI2cAck         0000084E 
+           halKeypadI2cAck         00000979 
                calls direct
                XSTACK = 0000000A ( 00000000 )
                ISTACK = 00000000 ( 00000002 )
     -------------------------------------------------------------------------
 <BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 00000856 - 00000877 (0x22 bytes), align: 0
+  Relative segment, address: CODE 00000981 - 000009A2 (0x22 bytes), align: 0
   Segment part 23.            Intra module refs:   halKeypadI2cWrite::?relay
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           halKeypadI2cWrite       00000856 
+           halKeypadI2cWrite       00000981 
                calls direct
                XSTACK = 0000000A ( 00000009 )
     -------------------------------------------------------------------------
 <BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 00000878 - 0000087C (0x5 bytes), align: 0
+  Relative segment, address: CODE 000009A3 - 000009A7 (0x5 bytes), align: 0
   Segment part 26.            Intra module refs:   halKeypadI2cWrite
                                                    halKeypadWriteRegister
     -------------------------------------------------------------------------
 <BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 0000087D - 0000088D (0x11 bytes), align: 0
+  Relative segment, address: CODE 000009A8 - 000009B8 (0x11 bytes), align: 0
   Segment part 29.            Intra module refs:   halKeypadI2cWrite
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine5            0000087D 
+           ?Subroutine5            000009A8 
     -------------------------------------------------------------------------
 <BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 0000088E - 000008A3 (0x16 bytes), align: 0
+  Relative segment, address: CODE 000009B9 - 000009CE (0x16 bytes), align: 0
   Segment part 30.            Intra module refs:   halKeypadWriteRegister::?relay
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
            halKeypadWriteRegister
-                                   0000088E 
+                                   000009B9 
                calls direct
                XSTACK = 0000000A ( 00000009 )
     -------------------------------------------------------------------------
 <BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 000008A4 - 000008B6 (0x13 bytes), align: 0
+  Relative segment, address: CODE 000009CF - 000009E1 (0x13 bytes), align: 0
   Segment part 34.            Intra module refs:   halKeypadWriteRegister
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine3            000008A4 
+           ?Subroutine3            000009CF 
     -------------------------------------------------------------------------
 <BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 000008B7 - 000008BA (0x4 bytes), align: 0
+  Relative segment, address: CODE 000009E2 - 000009E5 (0x4 bytes), align: 0
   Segment part 38.            Intra module refs:   halKeypadWriteRegister
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine6            000008B7 
+           ?Subroutine6            000009E2 
     -------------------------------------------------------------------------
 <BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 000008BB - 000008C1 (0x7 bytes), align: 0
+  Relative segment, address: CODE 000009E6 - 000009EC (0x7 bytes), align: 0
   Segment part 39.            Intra module refs:   ?Subroutine3
                                                    ?Subroutine6
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine7            000008BB 
+           ?Subroutine7            000009E6 
     -------------------------------------------------------------------------
 <BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 000008C2 - 000008F9 (0x38 bytes), align: 0
+  Relative segment, address: CODE 000009ED - 00000A24 (0x38 bytes), align: 0
   Segment part 41.            Intra module refs:   halKeypadInit::?relay
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           halKeypadInit           000008C2 
+           halKeypadInit           000009ED 
                calls direct
                ISTACK = 00000000 ( 00000002 )
     -------------------------------------------------------------------------
@@ -989,78 +990,78 @@ BANK_RELAYS
   SEGMENTS IN THE MODULE
   ======================
 <BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 000008FA - 00000908 (0xf bytes), align: 0
+  Relative segment, address: CODE 00000A25 - 00000A33 (0xf bytes), align: 0
   Segment part 15.            Intra module refs:   lcdControl::?relay
            LOCAL                   ADDRESS         
            =====                   =======         
-           lcdControl              000008FA 
+           lcdControl              00000A25 
                calls direct
                XSTACK = 0000000A ( 00000009 )
     -------------------------------------------------------------------------
 <BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 00000909 - 00000917 (0xf bytes), align: 0
+  Relative segment, address: CODE 00000A34 - 00000A42 (0xf bytes), align: 0
   Segment part 17.            Intra module refs:   lcdWrite::?relay
            LOCAL                   ADDRESS         
            =====                   =======         
-           lcdWrite                00000909 
+           lcdWrite                00000A34 
                calls direct
                XSTACK = 00000009 ( 00000009 )
     -------------------------------------------------------------------------
 <BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 00000918 - 00000953 (0x3c bytes), align: 0
+  Relative segment, address: CODE 00000A43 - 00000A7E (0x3c bytes), align: 0
   Segment part 23.            Intra module refs:   halLcdInit::?relay
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           halLcdInit              00000918 
+           halLcdInit              00000A43 
                calls direct
                ISTACK = 00000000 ( 00000002 )
     -------------------------------------------------------------------------
 <BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 00000954 - 00000955 (0x2 bytes), align: 0
+  Relative segment, address: CODE 00000A7F - 00000A80 (0x2 bytes), align: 0
   Segment part 25.            Intra module refs:   halLcdInit
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine8            00000954 
+           ?Subroutine8            00000A7F 
     -------------------------------------------------------------------------
 <BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 00000956 - 00000959 (0x4 bytes), align: 0
+  Relative segment, address: CODE 00000A81 - 00000A84 (0x4 bytes), align: 0
   Segment part 26.            Intra module refs:   ?Subroutine8
                                                    halLcdInit
     -------------------------------------------------------------------------
 <BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 0000095A - 00000964 (0xb bytes), align: 0
+  Relative segment, address: CODE 00000A85 - 00000A8F (0xb bytes), align: 0
   Segment part 27.            Intra module refs:   halLcdInit
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine7            0000095A 
+           ?Subroutine7            00000A85 
     -------------------------------------------------------------------------
 <BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 00000965 - 0000096F (0xb bytes), align: 0
+  Relative segment, address: CODE 00000A90 - 00000A9A (0xb bytes), align: 0
   Segment part 28.            Intra module refs:   ?Subroutine7
                                                    Segment part 26
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine19           00000965 
+           ?Subroutine19           00000A90 
     -------------------------------------------------------------------------
 <BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 00000970 - 00000989 (0x1a bytes), align: 0
+  Relative segment, address: CODE 00000A9B - 00000AB4 (0x1a bytes), align: 0
   Segment part 31.            Intra module refs:   lcdControl
                                                    lcdWrite
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine0            00000970 
+           ?Subroutine0            00000A9B 
     -------------------------------------------------------------------------
 <BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 0000098A - 0000098E (0x5 bytes), align: 0
+  Relative segment, address: CODE 00000AB5 - 00000AB9 (0x5 bytes), align: 0
   Segment part 32.            Intra module refs:   ?Subroutine0
                                                    halLcdClear
     -------------------------------------------------------------------------
 <BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 0000098F - 000009B5 (0x27 bytes), align: 0
+  Relative segment, address: CODE 00000ABA - 00000AE0 (0x27 bytes), align: 0
   Segment part 33.            Intra module refs:   halLcdClear::?relay
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           halLcdClear             0000098F 
+           halLcdClear             00000ABA 
                calls direct
                XSTACK = 00000000 ( 00000009 )
     -------------------------------------------------------------------------
@@ -1103,32 +1104,47 @@ BANK_RELAYS
   SEGMENTS IN THE MODULE
   ======================
 <BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 00000B12 - 00000B4D (0x3c bytes), align: 0
+  Relative segment, address: CODE 00000AE1 - 00000B1C (0x3c bytes), align: 0
   Segment part 7.             Intra module refs:   halLedSet::?relay
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           halLedSet               00000B12 
+           halLedSet               00000AE1 
     -------------------------------------------------------------------------
 <BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 00000B4E - 00000B91 (0x44 bytes), align: 0
+  Relative segment, address: CODE 00000B1D - 00000B58 (0x3c bytes), align: 0
+  Segment part 9.             Intra module refs:   halLedClear::?relay
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           halLedClear             00000B1D 
+    -------------------------------------------------------------------------
+<BANKED_CODE> 1 (was BANKED_CODE)
+  Relative segment, address: CODE 00000B59 - 00000B9C (0x44 bytes), align: 0
   Segment part 11.            Intra module refs:   halLedToggle::?relay
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           halLedToggle            00000B4E 
+           halLedToggle            00000B59 
     -------------------------------------------------------------------------
 BANK_RELAYS
   Relative segment, address: CODE 000001D0 - 000001D5 (0x6 bytes), align: 0
   Segment part 8.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           halLedSet::?relay       000001D0        main (switch)
+           halLedSet::?relay       000001D0        ?Subroutine7 (switch)
+                                                   main (switch)
     -------------------------------------------------------------------------
 BANK_RELAYS
   Relative segment, address: CODE 000001D6 - 000001DB (0x6 bytes), align: 0
+  Segment part 10.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           halLedClear::?relay     000001D6        ?Subroutine8 (switch)
+    -------------------------------------------------------------------------
+BANK_RELAYS
+  Relative segment, address: CODE 000001DC - 000001E1 (0x6 bytes), align: 0
   Segment part 12.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           halLedToggle::?relay    000001D6        main (switch)
+           halLedToggle::?relay    000001DC        main (switch)
 
     *************************************************************************
 
@@ -1145,44 +1161,44 @@ SFR_AN
            WDCTL                   000000C9 
     -------------------------------------------------------------------------
 <BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 00000BFD - 00000C0C (0x10 bytes), align: 0
+  Relative segment, address: CODE 00000CF9 - 00000D08 (0x10 bytes), align: 0
   Segment part 9.             Intra module refs:   halMcuInit::?relay
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           halMcuInit              00000BFD 
+           halMcuInit              00000CF9 
                calls direct
                ISTACK = 00000000 ( 00000002 )
     -------------------------------------------------------------------------
 <BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 00000C0D - 00000C38 (0x2c bytes), align: 0
+  Relative segment, address: CODE 00000D09 - 00000D34 (0x2c bytes), align: 0
   Segment part 11.            Intra module refs:   halMcuWaitUs::?relay
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           halMcuWaitUs            00000C0D 
+           halMcuWaitUs            00000D09 
                XSTACK = 00000009 ( 00000000 )
     -------------------------------------------------------------------------
 <BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 00000C39 - 00000C5F (0x27 bytes), align: 0
+  Relative segment, address: CODE 00000D35 - 00000D5B (0x27 bytes), align: 0
   Segment part 13.            Intra module refs:   halMcuWaitMs::?relay
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           halMcuWaitMs            00000C39 
+           halMcuWaitMs            00000D35 
                calls direct
                XSTACK = 00000000 ( 00000009 )
     -------------------------------------------------------------------------
 BANK_RELAYS
-  Relative segment, address: CODE 000001DC - 000001E1 (0x6 bytes), align: 0
+  Relative segment, address: CODE 000001E2 - 000001E7 (0x6 bytes), align: 0
   Segment part 10.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           halMcuInit::?relay      000001DC        halBoardInit (hal_board)
+           halMcuInit::?relay      000001E2        halBoardInit (hal_board)
     -------------------------------------------------------------------------
 BANK_RELAYS
-  Relative segment, address: CODE 000001E2 - 000001E7 (0x6 bytes), align: 0
+  Relative segment, address: CODE 000001E8 - 000001ED (0x6 bytes), align: 0
   Segment part 12.            Intra module refs:   halMcuWaitMs
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           halMcuWaitUs::?relay    000001E2        ?Subroutine0 (hal_lcd)
+           halMcuWaitUs::?relay    000001E8        ?Subroutine0 (hal_lcd)
                                                    ?Subroutine5 (hal_keypad)
                                                    Segment part 14 (hal_keypad)
                                                    Segment part 15 (hal_keypad)
@@ -1190,12 +1206,14 @@ BANK_RELAYS
                                                    halKeypadI2cStop (hal_keypad)
     -------------------------------------------------------------------------
 BANK_RELAYS
-  Relative segment, address: CODE 000001E8 - 000001ED (0x6 bytes), align: 0
+  Relative segment, address: CODE 000001EE - 000001F3 (0x6 bytes), align: 0
   Segment part 14.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           halMcuWaitMs::?relay    000001E8        ?Subroutine19 (hal_lcd)
+           halMcuWaitMs::?relay    000001EE        ?Subroutine19 (hal_lcd)
                                                    ?Subroutine7 (hal_lcd)
+                                                   ?Subroutine7 (switch)
+                                                   ?Subroutine8 (switch)
                                                    halBuzzer (hal_buzzer)
                                                    main (switch)
 
@@ -1259,29 +1277,29 @@ XDATA_Z
            pfISR                   0000018B 
     -------------------------------------------------------------------------
 <BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 000009B6 - 000009DE (0x29 bytes), align: 0
+  Relative segment, address: CODE 00000B9D - 00000BC5 (0x29 bytes), align: 0
   Segment part 25.            Intra module refs:   halRfInit::?relay
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           halRfInit               000009B6 
+           halRfInit               00000B9D 
                calls direct
                ISTACK = 00000000 ( 00000002 )
     -------------------------------------------------------------------------
 <BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 000009DF - 000009E1 (0x3 bytes), align: 0
+  Relative segment, address: CODE 00000BC6 - 00000BC8 (0x3 bytes), align: 0
   Segment part 31.            Intra module refs:   halRfSetPanId
                                                    halRfSetShortAddr
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine0            000009DF 
+           ?Subroutine0            00000BC6 
     -------------------------------------------------------------------------
 <BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 000009E2 - 000009E2 (0x1 bytes), align: 0
+  Relative segment, address: CODE 00000BC9 - 00000BC9 (0x1 bytes), align: 0
   Segment part 32.            Intra module refs:   ?Subroutine0
                                                    halRfSetChannel
     -------------------------------------------------------------------------
 <BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 000009E3 - 000009E9 (0x7 bytes), align: 0
+  Relative segment, address: CODE 00000BCA - 00000BD0 (0x7 bytes), align: 0
   Segment part 33.            Intra module refs:   Segment part 32
                                                    halRfDisableRxInterrupt
                                                    halRfEnableRxInterrupt
@@ -1290,84 +1308,84 @@ XDATA_Z
                                                    halRfRxInterruptConfig
     -------------------------------------------------------------------------
 <BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 000009EA - 000009EE (0x5 bytes), align: 0
+  Relative segment, address: CODE 00000BD1 - 00000BD5 (0x5 bytes), align: 0
   Segment part 34.            Intra module refs:   halRfGetRssiOffset::?relay
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           halRfGetRssiOffset      000009EA 
+           halRfGetRssiOffset      00000BD1 
     -------------------------------------------------------------------------
 <BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 000009EF - 000009FE (0x10 bytes), align: 0
+  Relative segment, address: CODE 00000BD6 - 00000BE5 (0x10 bytes), align: 0
   Segment part 36.            Intra module refs:   halRfSetChannel::?relay
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           halRfSetChannel         000009EF 
+           halRfSetChannel         00000BD6 
                ISTACK = 00000000 ( 00000002 )
     -------------------------------------------------------------------------
 <BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 000009FF - 00000A08 (0xa bytes), align: 0
+  Relative segment, address: CODE 00000BE6 - 00000BEF (0xa bytes), align: 0
   Segment part 38.            Intra module refs:   halRfSetShortAddr::?relay
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           halRfSetShortAddr       000009FF 
+           halRfSetShortAddr       00000BE6 
                ISTACK = 00000000 ( 00000002 )
     -------------------------------------------------------------------------
 <BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 00000A09 - 00000A12 (0xa bytes), align: 0
+  Relative segment, address: CODE 00000BF0 - 00000BF9 (0xa bytes), align: 0
   Segment part 40.            Intra module refs:   halRfSetPanId::?relay
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           halRfSetPanId           00000A09 
+           halRfSetPanId           00000BF0 
                ISTACK = 00000000 ( 00000002 )
     -------------------------------------------------------------------------
 <BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 00000A13 - 00000A2B (0x19 bytes), align: 0
+  Relative segment, address: CODE 00000BFA - 00000C12 (0x19 bytes), align: 0
   Segment part 50.            Intra module refs:   halRfReadRxBuf::?relay
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           halRfReadRxBuf          00000A13 
+           halRfReadRxBuf          00000BFA 
                ISTACK = 00000000 ( 00000003 )
     -------------------------------------------------------------------------
 <BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 00000A2C - 00000A34 (0x9 bytes), align: 0
+  Relative segment, address: CODE 00000C13 - 00000C1B (0x9 bytes), align: 0
   Segment part 59.            Intra module refs:   halRfReceiveOn::?relay
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           halRfReceiveOn          00000A2C 
+           halRfReceiveOn          00000C13 
     -------------------------------------------------------------------------
 <BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 00000A35 - 00000A45 (0x11 bytes), align: 0
+  Relative segment, address: CODE 00000C1C - 00000C2C (0x11 bytes), align: 0
   Segment part 63.            Intra module refs:   halRfDisableRxInterrupt::?relay
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
            halRfDisableRxInterrupt
-                                   00000A35 
+                                   00000C1C 
                ISTACK = 00000000 ( 00000002 )
     -------------------------------------------------------------------------
 <BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 00000A46 - 00000A56 (0x11 bytes), align: 0
+  Relative segment, address: CODE 00000C2D - 00000C3D (0x11 bytes), align: 0
   Segment part 65.            Intra module refs:   halRfEnableRxInterrupt::?relay
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
            halRfEnableRxInterrupt
-                                   00000A46 
+                                   00000C2D 
                ISTACK = 00000000 ( 00000002 )
     -------------------------------------------------------------------------
 <BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 00000A57 - 00000A6F (0x19 bytes), align: 0
+  Relative segment, address: CODE 00000C3E - 00000C56 (0x19 bytes), align: 0
   Segment part 67.            Intra module refs:   halRfRxInterruptConfig::?relay
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
            halRfRxInterruptConfig
-                                   00000A57 
+                                   00000C3E 
                ISTACK = 00000000 ( 00000002 )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00000503 - 0000053A (0x38 bytes), align: 0
+  Relative segment, address: CODE 00000509 - 00000540 (0x38 bytes), align: 0
   Segment part 71.            Intra module refs:   rfIsr::??INTVEC 131
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           rfIsr                   00000503 
+           rfIsr                   00000509 
                interrupt function
                XSTACK = 00000000 ( 0000000E )
     -------------------------------------------------------------------------
@@ -1379,83 +1397,83 @@ INTVEC
            rfIsr::??INTVEC 131     00000083 
     -------------------------------------------------------------------------
 BANK_RELAYS
-  Relative segment, address: CODE 000001EE - 000001F3 (0x6 bytes), align: 0
+  Relative segment, address: CODE 000001F4 - 000001F9 (0x6 bytes), align: 0
   Segment part 26.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           halRfInit::?relay       000001EE        basicRfInit (basic_rf)
+           halRfInit::?relay       000001F4        basicRfInit (basic_rf)
     -------------------------------------------------------------------------
 BANK_RELAYS
-  Relative segment, address: CODE 000001F4 - 000001F9 (0x6 bytes), align: 0
+  Relative segment, address: CODE 000001FA - 000001FF (0x6 bytes), align: 0
   Segment part 35.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
            halRfGetRssiOffset::?relay
-                                   000001F4        basicRfReceive (basic_rf)
+                                   000001FA        basicRfReceive (basic_rf)
     -------------------------------------------------------------------------
 BANK_RELAYS
-  Relative segment, address: CODE 000001FA - 000001FF (0x6 bytes), align: 0
+  Relative segment, address: CODE 00000200 - 00000205 (0x6 bytes), align: 0
   Segment part 37.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
            halRfSetChannel::?relay
-                                   000001FA        basicRfInit (basic_rf)
-    -------------------------------------------------------------------------
-BANK_RELAYS
-  Relative segment, address: CODE 00000200 - 00000205 (0x6 bytes), align: 0
-  Segment part 39.
-           ENTRY                   ADDRESS         REF BY
-           =====                   =======         ======
-           halRfSetShortAddr::?relay
                                    00000200        basicRfInit (basic_rf)
     -------------------------------------------------------------------------
 BANK_RELAYS
   Relative segment, address: CODE 00000206 - 0000020B (0x6 bytes), align: 0
-  Segment part 41.
+  Segment part 39.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           halRfSetPanId::?relay   00000206        basicRfInit (basic_rf)
+           halRfSetShortAddr::?relay
+                                   00000206        basicRfInit (basic_rf)
     -------------------------------------------------------------------------
 BANK_RELAYS
   Relative segment, address: CODE 0000020C - 00000211 (0x6 bytes), align: 0
+  Segment part 41.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           halRfSetPanId::?relay   0000020C        basicRfInit (basic_rf)
+    -------------------------------------------------------------------------
+BANK_RELAYS
+  Relative segment, address: CODE 00000212 - 00000217 (0x6 bytes), align: 0
   Segment part 51.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
            halRfReadRxBuf::?relay
-                                   0000020C        ?Subroutine4 (basic_rf)
+                                   00000212        ?Subroutine4 (basic_rf)
                                                    basicRfRxFrmDoneIsr (basic_rf)
     -------------------------------------------------------------------------
 BANK_RELAYS
-  Relative segment, address: CODE 00000212 - 00000217 (0x6 bytes), align: 0
+  Relative segment, address: CODE 00000218 - 0000021D (0x6 bytes), align: 0
   Segment part 60.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
            halRfReceiveOn::?relay
-                                   00000212        basicRfReceiveOn (basic_rf)
+                                   00000218        basicRfReceiveOn (basic_rf)
     -------------------------------------------------------------------------
 BANK_RELAYS
-  Relative segment, address: CODE 00000218 - 0000021D (0x6 bytes), align: 0
+  Relative segment, address: CODE 0000021E - 00000223 (0x6 bytes), align: 0
   Segment part 64.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
            halRfDisableRxInterrupt::?relay
-                                   00000218        basicRfRxFrmDoneIsr (basic_rf)
-    -------------------------------------------------------------------------
-BANK_RELAYS
-  Relative segment, address: CODE 0000021E - 00000223 (0x6 bytes), align: 0
-  Segment part 66.            Intra module refs:   halRfInit
-           ENTRY                   ADDRESS         REF BY
-           =====                   =======         ======
-           halRfEnableRxInterrupt::?relay
                                    0000021E        basicRfRxFrmDoneIsr (basic_rf)
     -------------------------------------------------------------------------
 BANK_RELAYS
   Relative segment, address: CODE 00000224 - 00000229 (0x6 bytes), align: 0
+  Segment part 66.            Intra module refs:   halRfInit
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           halRfEnableRxInterrupt::?relay
+                                   00000224        basicRfRxFrmDoneIsr (basic_rf)
+    -------------------------------------------------------------------------
+BANK_RELAYS
+  Relative segment, address: CODE 0000022A - 0000022F (0x6 bytes), align: 0
   Segment part 68.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
            halRfRxInterruptConfig::?relay
-                                   00000224        basicRfInit (basic_rf)
+                                   0000022A        basicRfInit (basic_rf)
 
     *************************************************************************
 
@@ -1570,43 +1588,43 @@ XDATA_Z
            uartCfg                 0000018D 
     -------------------------------------------------------------------------
 <BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 00000D02 - 00000D3A (0x39 bytes), align: 0
+  Relative segment, address: CODE 00000DFE - 00000E36 (0x39 bytes), align: 0
   Segment part 21.            Intra module refs:   halUartInit::?relay
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           halUartInit             00000D02 
+           halUartInit             00000DFE 
                ISTACK = 00000000 ( 00000002 )
     -------------------------------------------------------------------------
 <BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 00000D3B - 00000D41 (0x7 bytes), align: 0
+  Relative segment, address: CODE 00000E37 - 00000E3D (0x7 bytes), align: 0
   Segment part 23.            Intra module refs:   halUartInit
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine0            00000D3B 
+           ?Subroutine0            00000E37 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 0000053B - 00000581 (0x47 bytes), align: 0
+  Relative segment, address: CODE 00000541 - 00000587 (0x47 bytes), align: 0
   Segment part 36.            Intra module refs:   halUart0RxIsr::??INTVEC 19
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           halUart0RxIsr           0000053B 
+           halUart0RxIsr           00000541 
                interrupt function
                ISTACK = 00000000 ( 00000007 )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00000582 - 00000589 (0x8 bytes), align: 0
+  Relative segment, address: CODE 00000588 - 0000058F (0x8 bytes), align: 0
   Segment part 37.            Intra module refs:   halUart0RxIsr
                                                    halUart0TxIsr
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine2            00000582 
+           ?Subroutine2            00000588 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 0000058A - 000005DB (0x52 bytes), align: 0
+  Relative segment, address: CODE 00000590 - 000005E1 (0x52 bytes), align: 0
   Segment part 38.            Intra module refs:   halUart0TxIsr::??INTVEC 59
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           halUart0TxIsr           0000058A 
+           halUart0TxIsr           00000590 
                interrupt function
                ISTACK = 00000000 ( 00000007 )
     -------------------------------------------------------------------------
@@ -1627,11 +1645,11 @@ INTVEC
                                    0000003B 
     -------------------------------------------------------------------------
 BANK_RELAYS
-  Relative segment, address: CODE 0000022A - 0000022F (0x6 bytes), align: 0
+  Relative segment, address: CODE 00000230 - 00000235 (0x6 bytes), align: 0
   Segment part 22.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           halUartInit::?relay     0000022A        halBoardInit (hal_board)
+           halUartInit::?relay     00000230        halBoardInit (hal_board)
 
     *************************************************************************
 
@@ -1655,12 +1673,81 @@ XDATA_Z
            basicRfConfig           00000312 
     -------------------------------------------------------------------------
 <BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 00000B92 - 00000BFC (0x6b bytes), align: 0
+  Relative segment, address: CODE 0000080E - 000008D7 (0xca bytes), align: 0
   Segment part 8.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           main                    00000B92        ?call_main (?cmain)
+           main                    0000080E        ?call_main (?cmain)
                calls direct
+    -------------------------------------------------------------------------
+<BANKED_CODE> 1 (was BANKED_CODE)
+  Relative segment, address: CODE 000008D8 - 000008DB (0x4 bytes), align: 0
+  Segment part 10.            Intra module refs:   main
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           ?Subroutine3            000008D8 
+    -------------------------------------------------------------------------
+<BANKED_CODE> 1 (was BANKED_CODE)
+  Relative segment, address: CODE 000008DC - 000008E6 (0xb bytes), align: 0
+  Segment part 11.            Intra module refs:   ?Subroutine3
+                                                   ?Subroutine4
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           ?Subroutine8            000008DC 
+    -------------------------------------------------------------------------
+<BANKED_CODE> 1 (was BANKED_CODE)
+  Relative segment, address: CODE 000008E7 - 000008EA (0x4 bytes), align: 0
+  Segment part 12.            Intra module refs:   main
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           ?Subroutine2            000008E7 
+    -------------------------------------------------------------------------
+<BANKED_CODE> 1 (was BANKED_CODE)
+  Relative segment, address: CODE 000008EB - 000008F5 (0xb bytes), align: 0
+  Segment part 13.            Intra module refs:   ?Subroutine2
+                                                   ?Subroutine4
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           ?Subroutine7            000008EB 
+    -------------------------------------------------------------------------
+<BANKED_CODE> 1 (was BANKED_CODE)
+  Relative segment, address: CODE 000008F6 - 00000901 (0xc bytes), align: 0
+  Segment part 14.            Intra module refs:   main
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           ?Subroutine1            000008F6 
+    -------------------------------------------------------------------------
+<BANKED_CODE> 1 (was BANKED_CODE)
+  Relative segment, address: CODE 00000902 - 0000090B (0xa bytes), align: 0
+  Segment part 15.            Intra module refs:   ?Subroutine1
+                                                   main
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           ?Subroutine6            00000902 
+    -------------------------------------------------------------------------
+<BANKED_CODE> 1 (was BANKED_CODE)
+  Relative segment, address: CODE 0000090C - 0000091D (0x12 bytes), align: 0
+  Segment part 16.            Intra module refs:   main
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           ?Subroutine0            0000090C 
+    -------------------------------------------------------------------------
+<BANKED_CODE> 1 (was BANKED_CODE)
+  Relative segment, address: CODE 0000091E - 00000926 (0x9 bytes), align: 0
+  Segment part 17.            Intra module refs:   ?Subroutine0
+                                                   ?Subroutine1
+                                                   main
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           ?Subroutine5            0000091E 
+    -------------------------------------------------------------------------
+<BANKED_CODE> 1 (was BANKED_CODE)
+  Relative segment, address: CODE 00000927 - 00000932 (0xc bytes), align: 0
+  Segment part 18.            Intra module refs:   ?Subroutine0
+                                                   ?Subroutine1
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           ?Subroutine4            00000927 
 
     *************************************************************************
 
@@ -1854,6 +1941,7 @@ CSTART
                                                    halIntOff (hal_int)
                                                    halIntOn (hal_int)
                                                    halLcdInit (hal_lcd)
+                                                   halLedClear (hal_led)
                                                    halLedSet (hal_led)
                                                    halLedToggle (hal_led)
                                                    halMcuInit (hal_mcu)
@@ -1879,6 +1967,7 @@ CSTART
                                                    halKeypadWriteRegister::?relay (hal_keypad)
                                                    halLcdClear::?relay (hal_lcd)
                                                    halLcdInit::?relay (hal_lcd)
+                                                   halLedClear::?relay (hal_led)
                                                    halLedSet::?relay (hal_led)
                                                    halLedToggle::?relay (hal_led)
                                                    halMcuInit::?relay (hal_mcu)
@@ -1905,11 +1994,11 @@ CSTART
   SEGMENTS IN THE MODULE
   ======================
 RCODE
-  Relative segment, address: CODE 00000236 - 000002A5 (0x70 bytes), align: 0
+  Relative segment, address: CODE 0000023C - 000002AB (0x70 bytes), align: 0
   Segment part 1.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           ?UL_DIV_MOD             00000236        ?L_DIV_MOD (?L_DIV_MOD)
+           ?UL_DIV_MOD             0000023C        ?L_DIV_MOD (?L_DIV_MOD)
 
     -------------------------------------------------------------------------
   LIBRARY MODULE, NAME : ?L_DIV_MOD
@@ -1917,11 +2006,11 @@ RCODE
   SEGMENTS IN THE MODULE
   ======================
 RCODE
-  Relative segment, address: CODE 000002A6 - 000002FC (0x57 bytes), align: 0
+  Relative segment, address: CODE 000002AC - 00000302 (0x57 bytes), align: 0
   Segment part 0.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           ?L_DIV_MOD              000002D0        halBuzzerInit (hal_buzzer)
+           ?L_DIV_MOD              000002D6        halBuzzerInit (hal_buzzer)
 
     -------------------------------------------------------------------------
   LIBRARY MODULE, NAME : ?L_NEG_R1
@@ -1929,11 +2018,11 @@ RCODE
   SEGMENTS IN THE MODULE
   ======================
 RCODE
-  Relative segment, address: CODE 000002FD - 0000030D (0x11 bytes), align: 0
+  Relative segment, address: CODE 00000303 - 00000313 (0x11 bytes), align: 0
   Segment part 1.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           ?L_NEG_R1               000002FD        ?L_DIV_MOD (?L_DIV_MOD)
+           ?L_NEG_R1               00000303        ?L_DIV_MOD (?L_DIV_MOD)
 
     -------------------------------------------------------------------------
   LIBRARY MODULE, NAME : ?L_NEG
@@ -1941,11 +2030,11 @@ RCODE
   SEGMENTS IN THE MODULE
   ======================
 RCODE
-  Relative segment, address: CODE 0000030E - 0000031E (0x11 bytes), align: 0
+  Relative segment, address: CODE 00000314 - 00000324 (0x11 bytes), align: 0
   Segment part 1.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           ?L_NEG                  0000030E        ?L_DIV_MOD (?L_DIV_MOD)
+           ?L_NEG                  00000314        ?L_DIV_MOD (?L_DIV_MOD)
 
     -------------------------------------------------------------------------
   LIBRARY MODULE, NAME : ?XLOAD_R2345
@@ -1953,11 +2042,11 @@ RCODE
   SEGMENTS IN THE MODULE
   ======================
 RCODE
-  Relative segment, address: CODE 0000031F - 0000032A (0xc bytes), align: 0
+  Relative segment, address: CODE 00000325 - 00000330 (0xc bytes), align: 0
   Segment part 0.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           ?XLOAD_R2345            0000031F        basicRfInit (basic_rf)
+           ?XLOAD_R2345            00000325        basicRfInit (basic_rf)
 
     -------------------------------------------------------------------------
   LIBRARY MODULE, NAME : ?XSTORE_R2345
@@ -1965,11 +2054,11 @@ RCODE
   SEGMENTS IN THE MODULE
   ======================
 RCODE
-  Relative segment, address: CODE 0000032B - 00000336 (0xc bytes), align: 0
+  Relative segment, address: CODE 00000331 - 0000033C (0xc bytes), align: 0
   Segment part 0.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           ?XSTORE_R2345           0000032B        basicRfInit (basic_rf)
+           ?XSTORE_R2345           00000331        basicRfInit (basic_rf)
 
     -------------------------------------------------------------------------
   LIBRARY MODULE, NAME : ?MOVE_LONG8_XDATA_IDATA
@@ -1977,12 +2066,12 @@ RCODE
   SEGMENTS IN THE MODULE
   ======================
 RCODE
-  Relative segment, address: CODE 00000337 - 00000343 (0xd bytes), align: 0
+  Relative segment, address: CODE 0000033D - 00000349 (0xd bytes), align: 0
   Segment part 0.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
            ?MOVE_LONG8_XDATA_IDATA
-                                   00000337        ?PUSH_XSTACK_I (?PUSH_XSTACK_I)
+                                   0000033D        ?PUSH_XSTACK_I (?PUSH_XSTACK_I)
 
     -------------------------------------------------------------------------
   LIBRARY MODULE, NAME : ?DEALLOC_XSTACK8
@@ -1990,11 +2079,11 @@ RCODE
   SEGMENTS IN THE MODULE
   ======================
 RCODE
-  Relative segment, address: CODE 00000344 - 0000035D (0x1a bytes), align: 0
+  Relative segment, address: CODE 0000034A - 00000363 (0x1a bytes), align: 0
   Segment part 0.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           ?DEALLOC_XSTACK8        00000344        basicRfReceive (basic_rf)
+           ?DEALLOC_XSTACK8        0000034A        basicRfReceive (basic_rf)
 
     -------------------------------------------------------------------------
   LIBRARY MODULE, NAME : ?ADD_XSTACK_DISP8
@@ -2002,11 +2091,11 @@ RCODE
   SEGMENTS IN THE MODULE
   ======================
 RCODE
-  Relative segment, address: CODE 0000035E - 00000378 (0x1b bytes), align: 0
+  Relative segment, address: CODE 00000364 - 0000037E (0x1b bytes), align: 0
   Segment part 1.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           ?ADD_XSTACK_DISP0_8     0000035E        ?PUSH_XSTACK_I (?PUSH_XSTACK_I)
+           ?ADD_XSTACK_DISP0_8     00000364        ?PUSH_XSTACK_I (?PUSH_XSTACK_I)
 
     -------------------------------------------------------------------------
   LIBRARY MODULE, NAME : ?XSTACK_DISP8
@@ -2014,11 +2103,11 @@ RCODE
   SEGMENTS IN THE MODULE
   ======================
 RCODE
-  Relative segment, address: CODE 00000379 - 00000382 (0xa bytes), align: 0
+  Relative segment, address: CODE 0000037F - 00000388 (0xa bytes), align: 0
   Segment part 1.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           ?XSTACK_DISP0_8         00000379        memcpy (?memcpy)
+           ?XSTACK_DISP0_8         0000037F        memcpy (?memcpy)
 
     -------------------------------------------------------------------------
   LIBRARY MODULE, NAME : ?CALL_IND
@@ -2026,11 +2115,11 @@ RCODE
   SEGMENTS IN THE MODULE
   ======================
 RCODE
-  Relative segment, address: CODE 00000383 - 00000384 (0x2 bytes), align: 0
+  Relative segment, address: CODE 00000389 - 0000038A (0x2 bytes), align: 0
   Segment part 0.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           ?CALL_IND               00000383        rfIsr (hal_rf)
+           ?CALL_IND               00000389        rfIsr (hal_rf)
 
     -------------------------------------------------------------------------
   LIBRARY MODULE, NAME : ?BANKED_ENTER_XDATA
@@ -2038,11 +2127,11 @@ RCODE
   SEGMENTS IN THE MODULE
   ======================
 RCODE
-  Relative segment, address: CODE 00000385 - 000003F0 (0x6c bytes), align: 0
+  Relative segment, address: CODE 0000038B - 000003F6 (0x6c bytes), align: 0
   Segment part 1.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           ?BANKED_ENTER_XDATA     00000385        basicRfInit (basic_rf)
+           ?BANKED_ENTER_XDATA     0000038B        basicRfInit (basic_rf)
                                                    basicRfReceive (basic_rf)
                                                    halBuzzerInit (hal_buzzer)
                                                    halKeypadI2cWrite (hal_keypad)
@@ -2059,11 +2148,11 @@ RCODE
   SEGMENTS IN THE MODULE
   ======================
 RCODE
-  Relative segment, address: CODE 000003F1 - 00000436 (0x46 bytes), align: 0
+  Relative segment, address: CODE 000003F7 - 0000043C (0x46 bytes), align: 0
   Segment part 1.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           ?BANKED_LEAVE_XDATA     000003F1        ?Subroutine0 (hal_buzzer)
+           ?BANKED_LEAVE_XDATA     000003F7        ?Subroutine0 (hal_buzzer)
                                                    Segment part 26 (hal_keypad)
                                                    Segment part 32 (hal_lcd)
                                                    basicRfInit (basic_rf)
@@ -2077,11 +2166,11 @@ RCODE
   SEGMENTS IN THE MODULE
   ======================
 RCODE
-  Relative segment, address: CODE 00000437 - 00000495 (0x5f bytes), align: 0
+  Relative segment, address: CODE 0000043D - 0000049B (0x5f bytes), align: 0
   Segment part 1.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           ?INTERRUPT_ENTER_XSP    00000437        rfIsr (hal_rf)
+           ?INTERRUPT_ENTER_XSP    0000043D        rfIsr (hal_rf)
 
     -------------------------------------------------------------------------
   LIBRARY MODULE, NAME : ?INTERRUPT_LEAVE_XSP
@@ -2089,11 +2178,11 @@ RCODE
   SEGMENTS IN THE MODULE
   ======================
 RCODE
-  Relative segment, address: CODE 00000496 - 000004ED (0x58 bytes), align: 0
+  Relative segment, address: CODE 0000049C - 000004F3 (0x58 bytes), align: 0
   Segment part 1.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           ?INTERRUPT_LEAVE_XSP    00000496        rfIsr (hal_rf)
+           ?INTERRUPT_LEAVE_XSP    0000049C        rfIsr (hal_rf)
 
     -------------------------------------------------------------------------
   LIBRARY MODULE, NAME : ?PUSH_XSTACK_I
@@ -2101,18 +2190,18 @@ RCODE
   SEGMENTS IN THE MODULE
   ======================
 RCODE
-  Relative segment, address: CODE 000004EE - 000004F1 (0x4 bytes), align: 0
+  Relative segment, address: CODE 000004F4 - 000004F7 (0x4 bytes), align: 0
   Segment part 2.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           ?PUSH_XSTACK_I_TWO      000004EE        basicRfReceive (basic_rf)
+           ?PUSH_XSTACK_I_TWO      000004F4        basicRfReceive (basic_rf)
     -------------------------------------------------------------------------
 RCODE
-  Relative segment, address: CODE 000004F2 - 000004FE (0xd bytes), align: 0
+  Relative segment, address: CODE 000004F8 - 00000504 (0xd bytes), align: 0
   Segment part 4.             Intra module refs:   ?PUSH_XSTACK_I_TWO
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           ?PUSH_XSTACK_I          000004F2 
+           ?PUSH_XSTACK_I          000004F8 
 
     -------------------------------------------------------------------------
   LIBRARY MODULE, NAME : ?memcpy
@@ -2120,20 +2209,20 @@ RCODE
   SEGMENTS IN THE MODULE
   ======================
 <BANKED_CODE> 1 (was BANKED_CODE)
-  Relative segment, address: CODE 00000CBC - 00000D01 (0x46 bytes), align: 0
+  Relative segment, address: CODE 00000DB8 - 00000DFD (0x46 bytes), align: 0
   Segment part 6.             Intra module refs:   memcpy::?relay
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           memcpy                  00000CBC 
+           memcpy                  00000DB8 
                XSTACK = 00000002 ( 0000000A )
                ISTACK = 00000000 ( 00000001 )
     -------------------------------------------------------------------------
 BANK_RELAYS
-  Relative segment, address: CODE 00000230 - 00000235 (0x6 bytes), align: 0
+  Relative segment, address: CODE 00000236 - 0000023B (0x6 bytes), align: 0
   Segment part 7.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           memcpy::?relay          00000230        basicRfReceive (basic_rf)
+           memcpy::?relay          00000236        basicRfReceive (basic_rf)
 
     -------------------------------------------------------------------------
   LIBRARY MODULE, NAME : ?low_level_init
@@ -2194,7 +2283,7 @@ hal_int                     22
   + shared                                 1
 hal_keypad                 278
 hal_lcd                    212
-hal_led                    140
+hal_led                    206
 hal_mcu                    117             1
 hal_rf                     302             5      2
   + shared                 134             1
@@ -2202,11 +2291,11 @@ hal_rf                     302             5      2
 hal_rf_security                            3
 hal_uart                   231             9    262
   + common                  62
-switch                     107                  133
+switch                     293                  133
 N/A (command line)                 16           256     64
 N/A (alignment)
 ----------               -----     --     --    ---     --      -
-Total:                   3 322     18     40    807     64      8
+Total:                   3 574     18     40    807     64      8
   + common                 134
 
 
@@ -2228,13 +2317,13 @@ PDATA_ID             CODE               00000142                     dse    0
 BIT_ID               CODE               00000142                     dse    0
 DATA_ID              CODE               00000142                     dse    0
 XDATA_ID             CODE          00000142 - 00000151          10   rel    0
-BANK_RELAYS          CODE          00000152 - 00000235          E4   rel    0
-RCODE                CODE          00000236 - 000004FE         2C9   rel    0
-CODE_C               CODE               000004FF                     dse    0
-DIFUNCT              CODE               000004FF                     dse    0
-CODE_N               CODE               000004FF                     dse    0
-NEAR_CODE            CODE          000004FF - 000005DB          DD   rel    0
-<BANKED_CODE> 1      CODE          000005DC - 00000D7F         7A4   rel    0
+BANK_RELAYS          CODE          00000152 - 0000023B          EA   rel    0
+RCODE                CODE          0000023C - 00000504         2C9   rel    0
+CODE_C               CODE               00000505                     dse    0
+DIFUNCT              CODE               00000505                     dse    0
+CODE_N               CODE               00000505                     dse    0
+NEAR_CODE            CODE          00000505 - 000005E1          DD   rel    0
+<BANKED_CODE> 1      CODE          000005E2 - 00000E7B         89A   rel    0
 REGISTERS            DATA          00000000 - 00000007           8   rel    0
 VREG                 DATA          00000008 - 0000000F           8   rel    0
 PSP                  DATA               00000010                     dse    0
@@ -2272,7 +2361,7 @@ ISTACK               IDATA         000000C0 - 000000FF          40   rel    0
                 *                                      *
                 ****************************************
 
- 3 456 bytes of CODE  memory
+ 3 708 bytes of CODE  memory
     18 bytes of DATA  memory (+ 40 absolute )
    807 bytes of XDATA memory
     64 bytes of IDATA memory
