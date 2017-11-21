@@ -2,12 +2,110 @@
 
 <Workspace>
   <ConfigDictionary>
-    
-  <CurrentConfigs><Project>M160/debug</Project></CurrentConfigs></ConfigDictionary>
+    <CurrentConfigs>
+      <Project>M160/debug</Project>
+    </CurrentConfigs>
+  </ConfigDictionary>
   <Desktop>
     <Static>
       <Workspace>
         <ColumnWidths>
+<<<<<<< HEAD
+          <Column0>149</Column0>
+          <Column1>27</Column1>
+          <Column2>27</Column2>
+          <Column3>27</Column3>
+        </ColumnWidths>
+      </Workspace>
+    </Static>
+    <Windows>
+      <Wnd0>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-14144-26829</Identity>
+            <TabName>Workspace</TabName>
+            <Factory>Workspace</Factory>
+            <Session>
+              <NodeDict>
+                <ExpandedNode>M160</ExpandedNode>
+                <ExpandedNode>M160/application</ExpandedNode>
+                <ExpandedNode>M160/basic rf</ExpandedNode>
+                <ExpandedNode>M160/common</ExpandedNode>
+              </NodeDict>
+            </Session>
+          </Tab>
+        </Tabs>
+        <SelectedTab>0</SelectedTab>
+      </Wnd0>
+    </Windows>
+    <Editor>
+      <Pane>
+        <Tab>
+          <Factory>TextEditor</Factory>
+          <Filename>$WS_DIR$\ex.c</Filename>
+          <XPos>0</XPos>
+          <YPos>42</YPos>
+          <SelStart>1310</SelStart>
+          <SelEnd>1310</SelEnd>
+        </Tab>
+        <ActiveTab>0</ActiveTab>
+      </Pane>
+      <ActivePane>0</ActivePane>
+      <Sizes>
+        <Pane>
+          <X>1000000</X>
+          <Y>1000000</Y>
+        </Pane>
+      </Sizes>
+      <SplitMode>1</SplitMode>
+    </Editor>
+    <Positions>
+      <Top>
+        <Row0>
+          <Sizes>
+            <Toolbar-00e124d8>
+              <key>iaridepm.enu1</key>
+            </Toolbar-00e124d8>
+          </Sizes>
+        </Row0>
+      </Top>
+      <Left>
+        <Row0>
+          <Sizes>
+            <Wnd0>
+              <Rect>
+                <Top>-2</Top>
+                <Left>-2</Left>
+                <Bottom>681</Bottom>
+                <Right>223</Right>
+                <x>-2</x>
+                <y>-2</y>
+                <xscreen>200</xscreen>
+                <yscreen>200</yscreen>
+                <sizeHorzCX>146413</sizeHorzCX>
+                <sizeHorzCY>275482</sizeHorzCY>
+                <sizeVertCX>164714</sizeVertCX>
+                <sizeVertCY>940771</sizeVertCY>
+              </Rect>
+            </Wnd0>
+          </Sizes>
+        </Row0>
+      </Left>
+      <Right>
+        <Row0>
+          <Sizes/>
+        </Row0>
+      </Right>
+      <Bottom>
+        <Row0>
+          <Sizes/>
+        </Row0>
+      </Bottom>
+      <Float>
+        <Sizes/>
+      </Float>
+    </Positions>
+=======
           
           
           
@@ -60,6 +158,10 @@
       
       
     <Top><Row0><Sizes><Toolbar-00c2d978><key>iaridepm.enu1</key></Toolbar-00c2d978></Sizes></Row0><Row1><Sizes/></Row1><Row2><Sizes/></Row2></Top><Left><Row0><Sizes><Wnd0><Rect><Top>-2</Top><Left>-2</Left><Bottom>758</Bottom><Right>211</Right><x>-2</x><y>-2</y><xscreen>98</xscreen><yscreen>197</yscreen><sizeHorzCX>51042</sizeHorzCX><sizeHorzCY>197395</sizeHorzCY><sizeVertCX>110938</sizeVertCX><sizeVertCY>761523</sizeVertCY></Rect></Wnd0></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd1><Rect><Top>-2</Top><Left>-2</Left><Bottom>195</Bottom><Right>1922</Right><x>-2</x><y>-2</y><xscreen>1924</xscreen><yscreen>197</yscreen><sizeHorzCX>1002083</sizeHorzCX><sizeHorzCY>197395</sizeHorzCY><sizeVertCX>51042</sizeVertCX><sizeVertCY>197395</sizeVertCY></Rect></Wnd1></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+<<<<<<< HEAD
+>>>>>>> c058d2293b4d4c866439e361f31c46df26ccacd6
+=======
+>>>>>>> c058d2293b4d4c866439e361f31c46df26ccacd6
   </Desktop>
 </Workspace>
 
