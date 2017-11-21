@@ -6,842 +6,131 @@
   <configuration>
     <name>debug</name>
     <outputs>
-<<<<<<< HEAD
-      <file>$PROJ_DIR$\ex.c</file>
-      <file>$PROJ_DIR$\..\..\components\common\hal_ledmatrix.h</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_lcd.pbi</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_button.pbi</file>
-=======
-<<<<<<< HEAD
-      <file>$PROJ_DIR$\..\..\components\common\hal_lcd.h</file>
-      <file>$PROJ_DIR$\debug\Obj\basic_rf_security.pbi</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_buzzer.pbi</file>
-      <file>$PROJ_DIR$\..\..\components\common\hal_mcu.h</file>
-      <file>$PROJ_DIR$\..\..\components\targets\zigbee-mcu1\hal_keypad.h</file>
-      <file>$PROJ_DIR$\..\..\components\targets\zigbee-mcu1\hal_lcd.h</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_int.r51</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_mcu.pbi</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_drink.r51</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_digio.r51</file>
-      <file>$PROJ_DIR$\debug\Obj\basic_rf.pbi</file>
-      <file>$PROJ_DIR$\..\..\components\common\hal_rf.h</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_uart.pbi</file>
-      <file>$PROJ_DIR$\debug\Obj\M160.pbi</file>
-      <file>$PROJ_DIR$\..\..\components\targets\mcu-kit1\hal_led.c</file>
-      <file>$PROJ_DIR$\..\..\components\basicrf\basic_rf.h</file>
-      <file>$PROJ_DIR$\..\..\components\targets\mcu-kit1\hal_uart.c</file>
-      <file>$PROJ_DIR$\..\..\components\utils\util_lcd.c</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_led.pbi</file>
-=======
-      <file>$PROJ_DIR$\..\..\components\common\hal_drink.h</file>
       <file>$PROJ_DIR$\..\..\components\common\hal_ledmatrix.h</file>
       <file>$PROJ_DIR$\ex.c</file>
-      <file>$PROJ_DIR$\debug\List\M160.map</file>
-      <file>$PROJ_DIR$\debug\Obj\util.r51</file>
->>>>>>> d8c919b6a308ab6d356ecbbf608e93a20585eaeb
-      <file>$PROJ_DIR$\debug\Obj\hal_buzzer.r51</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_led.pbi</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_button.pbi</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_lcd.pbi</file>
-<<<<<<< HEAD
->>>>>>> 990b0b4af104f1e4fdeffbb1f7111668c8e43c26
-      <file>$PROJ_DIR$\debug\Obj\util.r51</file>
-      <file>$PROJ_DIR$\..\..\components\utils\util_buffer.c</file>
-      <file>$PROJ_DIR$\debug\List\M160.map</file>
-<<<<<<< HEAD
-      <file>$PROJ_DIR$\debug\Obj\hal_buzzer.r51</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_led.pbi</file>
-      <file>$PROJ_DIR$\..\..\components\common\hal_drink.h</file>
-=======
-      <file>$PROJ_DIR$\..\..\components\utils\util.c</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_board.pbi</file>
-      <file>$PROJ_DIR$\..\..\components\basicrf\basic_rf.c</file>
-      <file>$PROJ_DIR$\..\..\components\common\hal_mcu.c</file>
-      <file>$PROJ_DIR$\..\..\components\common\hal_drink.h</file>
-      <file>$PROJ_DIR$\..\..\components\common\hal_rf.c</file>
-      <file>$PROJ_DIR$\..\..\components\targets\zigbee-mcu1\hal_board.c</file>
-      <file>$PROJ_DIR$\..\..\components\common\hal_rf_util.c</file>
-      <file>$PROJ_DIR$\..\..\components\basicrf\basic_rf_security.c</file>
-      <file>$PROJ_DIR$\..\..\components\targets\mcu-kit1\hal_buzzer.c</file>
-      <file>$PROJ_DIR$\..\..\components\module\M160.c</file>
-      <file>$PROJ_DIR$\..\..\components\common\hal_drink.c</file>
-      <file>$PROJ_DIR$\..\..\components\common\hal_rf_security.c</file>
-      <file>$PROJ_DIR$\..\..\components\targets\mcu-kit1\hal_keypad.c</file>
-      <file>$PROJ_DIR$\..\..\components\targets\zigbee-mcu1\hal_button.c</file>
-      <file>$PROJ_DIR$\..\..\components\common\hal_lcd.c</file>
-      <file>$PROJ_DIR$\ex.c</file>
-      <file>$PROJ_DIR$\..\..\components\common\hal_ledmatrix.h</file>
-      <file>$PROJ_DIR$\..\..\components\common\hal_adc.c</file>
-      <file>$PROJ_DIR$\..\..\components\common\hal_int.c</file>
-      <file>$PROJ_DIR$\..\..\components\common\hal_clock.c</file>
-      <file>$PROJ_DIR$\..\..\components\common\hal_digio.c</file>
-      <file>$PROJ_DIR$\..\..\components\common\hal_ledmatrix.c</file>
-      <file>$PROJ_DIR$\..\..\components\targets\zigbee-mcu1\hal_int.h</file>
-      <file>$PROJ_DIR$\..\..\components\targets\mcu-kit1\hal_board.h</file>
-=======
->>>>>>> 990b0b4af104f1e4fdeffbb1f7111668c8e43c26
-      <file>$PROJ_DIR$\..\..\components\module\M160.c</file>
-      <file>$PROJ_DIR$\..\..\components\basicrf\basic_rf.c</file>
-      <file>$PROJ_DIR$\..\..\components\basicrf\basic_rf_security.c</file>
-      <file>$PROJ_DIR$\..\..\components\common\hal_adc.c</file>
-      <file>$PROJ_DIR$\..\..\components\common\hal_clock.c</file>
-      <file>$PROJ_DIR$\..\..\components\common\hal_digio.c</file>
-      <file>$PROJ_DIR$\..\..\components\common\hal_drink.c</file>
-      <file>$PROJ_DIR$\..\..\components\common\hal_int.c</file>
-      <file>$PROJ_DIR$\..\..\components\common\hal_ledmatrix.c</file>
-      <file>$PROJ_DIR$\..\..\components\common\hal_mcu.c</file>
-      <file>$PROJ_DIR$\..\..\components\common\hal_rf.c</file>
-      <file>$PROJ_DIR$\..\..\components\common\hal_rf_security.c</file>
-      <file>$PROJ_DIR$\..\..\components\common\hal_rf_util.c</file>
-      <file>$PROJ_DIR$\..\..\components\targets\zigbee-mcu1\hal_board.c</file>
-      <file>$PROJ_DIR$\..\..\components\targets\zigbee-mcu1\hal_button.c</file>
-      <file>$PROJ_DIR$\..\..\components\targets\mcu-kit1\hal_buzzer.c</file>
-      <file>$PROJ_DIR$\..\..\components\targets\mcu-kit1\hal_keypad.c</file>
-      <file>$PROJ_DIR$\..\..\components\common\hal_lcd.c</file>
-      <file>$PROJ_DIR$\..\..\components\targets\mcu-kit1\hal_led.c</file>
-      <file>$PROJ_DIR$\..\..\components\targets\mcu-kit1\hal_uart.c</file>
-      <file>$PROJ_DIR$\..\..\components\utils\util.c</file>
-      <file>$PROJ_DIR$\..\..\components\utils\util_buffer.c</file>
-      <file>$PROJ_DIR$\..\..\components\utils\util_lcd.c</file>
-<<<<<<< HEAD
-      <file>$PROJ_DIR$\debug\Obj\M160.pbi</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_board.pbi</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_drink.r51</file>
-      <file>$PROJ_DIR$\..\..\components\targets\zigbee-mcu1\hal_keypad.h</file>
-      <file>$PROJ_DIR$\..\..\components\targets\zigbee-mcu1\hal_lcd.h</file>
-=======
-      <file>$PROJ_DIR$\..\..\components\utils\util_buffer.h</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_rf_util.r51</file>
-      <file>$PROJ_DIR$\..\..\components\common\hal_digio.h</file>
-      <file>$PROJ_DIR$\debug\Obj\util_lcd.r51</file>
-      <file>$PROJ_DIR$\..\..\components\common\hal_clock.h</file>
-      <file>$PROJ_DIR$\..\..\components\common\hal_int.h</file>
-      <file>$TOOLKIT_DIR$\inc\clib\string.h</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_int.pbi</file>
-      <file>$PROJ_DIR$\debug\Obj\util.pbi</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_led.r51</file>
-      <file>$PROJ_DIR$\..\..\components\common\hal_adc.h</file>
-      <file>$PROJ_DIR$\..\..\components\targets\zigbee-mcu1\hal_button.h</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_board.r51</file>
-      <file>$PROJ_DIR$\..\..\components\targets\mcu-kit1\hal_buzzer.h</file>
-      <file>$PROJ_DIR$\..\..\components\targets\zigbee-mcu1\hal_board.h</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_rf_util.pbi</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_clock.r51</file>
-      <file>$TOOLKIT_DIR$\inc\clib\sysmac.h</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_rf_security.r51</file>
-      <file>$PROJ_DIR$\..\..\components\targets\mcu-kit1\hal_uart.h</file>
-      <file>$PROJ_DIR$\..\..\components\targets\mcu-kit1\hal_keypad.h</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_adc.r51</file>
-      <file>$PROJ_DIR$\debug\Obj\util_lcd.pbi</file>
       <file>$PROJ_DIR$\debug\Obj\basic_rf.r51</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_keypad.pbi</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_ledmatrix.pbi</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_digio.pbi</file>
-      <file>$PROJ_DIR$\..\..\components\module\M160.h</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_ledmatrix.r51</file>
-      <file>$PROJ_DIR$\debug\Obj\M160.pbi</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_board.pbi</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_drink.r51</file>
->>>>>>> 990b0b4af104f1e4fdeffbb1f7111668c8e43c26
-      <file>$PROJ_DIR$\..\..\components\common\hal_rf.h</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_digio.r51</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_int.r51</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_uart.pbi</file>
-      <file>$PROJ_DIR$\..\..\components\targets\zigbee-mcu1\hal_keypad.h</file>
-      <file>$PROJ_DIR$\..\..\components\targets\zigbee-mcu1\hal_lcd.h</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_buzzer.pbi</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_mcu.pbi</file>
-      <file>$PROJ_DIR$\..\..\components\common\hal_lcd.h</file>
-      <file>$PROJ_DIR$\..\..\components\common\hal_mcu.h</file>
-      <file>$PROJ_DIR$\debug\Obj\basic_rf.pbi</file>
-      <file>$PROJ_DIR$\debug\Obj\basic_rf_security.pbi</file>
-      <file>$PROJ_DIR$\..\..\components\basicrf\basic_rf.h</file>
-      <file>$PROJ_DIR$\debug\Obj\ex.r51</file>
-      <file>$PROJ_DIR$\debug\Obj\util_buffer.pbi</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_rf_security.pbi</file>
->>>>>>> d8c919b6a308ab6d356ecbbf608e93a20585eaeb
-      <file>$PROJ_DIR$\..\..\components\utils\util.h</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_lcd.r51</file>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      <file>$PROJ_DIR$\debug\Obj\hal_mcu.r51</file>
-      <file>$PROJ_DIR$\debug\Exe\M160.hex</file>
-      <file>$PROJ_DIR$\..\..\components\common\hal_cc8051.h</file>
-      <file>$PROJ_DIR$\debug\Exe\M160.d51</file>
+      <file>$PROJ_DIR$\debug\Obj\hal_clock.r51</file>
       <file>$PROJ_DIR$\debug\Obj\basic_rf_security.r51</file>
-      <file>$PROJ_DIR$\debug\Obj\util_buffer.r51</file>
+      <file>$PROJ_DIR$\debug\Obj\hal_adc.r51</file>
+      <file>$PROJ_DIR$\debug\Obj\M160.r51</file>
+      <file>$PROJ_DIR$\debug\Obj\ex.r51</file>
+      <file>$PROJ_DIR$\..\..\components\common\hal_drink.h</file>
+      <file>$PROJ_DIR$\..\..\components\module\M160.c</file>
+      <file>$PROJ_DIR$\..\..\components\basicrf\basic_rf.c</file>
+      <file>$PROJ_DIR$\..\..\components\basicrf\basic_rf_security.c</file>
+      <file>$PROJ_DIR$\..\..\components\common\hal_adc.c</file>
+      <file>$PROJ_DIR$\..\..\components\common\hal_clock.c</file>
+      <file>$PROJ_DIR$\..\..\components\common\hal_digio.c</file>
+      <file>$PROJ_DIR$\..\..\components\common\hal_drink.c</file>
+      <file>$PROJ_DIR$\..\..\components\common\hal_int.c</file>
+      <file>$PROJ_DIR$\..\..\components\common\hal_ledmatrix.c</file>
+      <file>$PROJ_DIR$\..\..\components\common\hal_mcu.c</file>
+      <file>$PROJ_DIR$\..\..\components\common\hal_rf.c</file>
+      <file>$PROJ_DIR$\..\..\components\common\hal_rf_security.c</file>
+      <file>$PROJ_DIR$\..\..\components\common\hal_rf_util.c</file>
+      <file>$PROJ_DIR$\..\..\components\targets\zigbee-mcu1\hal_board.c</file>
+      <file>$PROJ_DIR$\..\..\components\targets\zigbee-mcu1\hal_button.c</file>
+      <file>$PROJ_DIR$\..\..\components\targets\mcu-kit1\hal_buzzer.c</file>
+      <file>$PROJ_DIR$\..\..\components\targets\mcu-kit1\hal_keypad.c</file>
+      <file>$PROJ_DIR$\..\..\components\common\hal_lcd.c</file>
+      <file>$PROJ_DIR$\..\..\components\targets\mcu-kit1\hal_led.c</file>
+      <file>$PROJ_DIR$\..\..\components\targets\mcu-kit1\hal_uart.c</file>
+      <file>$PROJ_DIR$\..\..\components\utils\util.c</file>
+      <file>$PROJ_DIR$\..\..\components\utils\util_buffer.c</file>
+      <file>$PROJ_DIR$\..\..\components\utils\util_lcd.c</file>
+      <file>$PROJ_DIR$\..\..\components\module\M160.h</file>
       <file>$PROJ_DIR$\..\..\components\targets\mcu-kit1\hal_led.h</file>
-      <file>$TOOLKIT_DIR$\inc\ioCC2530.h</file>
-      <file>$PROJ_DIR$\..\..\components\common\hal_rf_util.h</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_adc.pbi</file>
-      <file>$PROJ_DIR$\..\..\components\targets\zigbee-mcu1\hal_uart.h</file>
-=======
->>>>>>> 990b0b4af104f1e4fdeffbb1f7111668c8e43c26
-      <file>$PROJ_DIR$\..\..\components\common\hal_cc8051.h</file>
-      <file>$PROJ_DIR$\..\..\components\targets\zigbee-mcu1\hal_buzzer.h</file>
-      <file>$PROJ_DIR$\debug\Obj\util_buffer.r51</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_clock.pbi</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_rf.r51</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_keypad.r51</file>
-      <file>$TOOLKIT_DIR$\lib\clib\cl-pli-blxd-1e16x01.r51</file>
-      <file>$TOOLKIT_DIR$\config\devices\Texas Instruments\lnk51ew_cc2530F256_banked.xcl</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_button.r51</file>
-      <file>$TOOLKIT_DIR$\inc\ioCC2530.h</file>
-      <file>$PROJ_DIR$\..\..\components\common\hal_button.h</file>
-      <file>$PROJ_DIR$\debug\Obj\ex.pbi</file>
-      <file>$PROJ_DIR$\..\..\components\targets\mcu-kit1\hal_lcd.h</file>
-      <file>$PROJ_DIR$\debug\Exe\M160.d51</file>
-      <file>$PROJ_DIR$\debug\Obj\basic_rf_security.r51</file>
-      <file>$PROJ_DIR$\..\..\components\common\hal_rf_security.h</file>
-      <file>$PROJ_DIR$\..\..\components\common\hal_rf_util.h</file>
-      <file>$PROJ_DIR$\..\..\components\targets\zigbee-mcu1\hal_uart.h</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_adc.pbi</file>
-<<<<<<< HEAD
-      <file>$PROJ_DIR$\debug\Obj\M160.r51</file>
-      <file>$PROJ_DIR$\..\..\components\targets\zigbee-mcu1\hal_int.h</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_mcu.r51</file>
-      <file>$PROJ_DIR$\..\..\components\common\hal_defs.h</file>
-      <file>$PROJ_DIR$\debug\Exe\M160.hex</file>
-      <file>$PROJ_DIR$\..\..\components\targets\mcu-kit1\hal_board.h</file>
-=======
->>>>>>> d8c919b6a308ab6d356ecbbf608e93a20585eaeb
-      <file>$PROJ_DIR$\debug\Obj\M160.r51</file>
-      <file>$PROJ_DIR$\debug\Obj\ex.r51</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_rf.r51</file>
-      <file>$PROJ_DIR$\..\..\components\targets\mcu-kit1\hal_lcd.h</file>
-      <file>$PROJ_DIR$\..\..\components\common\hal_rf_security.h</file>
-      <file>$PROJ_DIR$\..\..\components\targets\zigbee-mcu1\hal_buzzer.h</file>
-      <file>$PROJ_DIR$\debug\Obj\M160.pbd</file>
-      <file>$PROJ_DIR$\debug\Obj\ex.pbi</file>
-      <file>$TOOLKIT_DIR$\lib\clib\cl-pli-blxd-1e16x01.r51</file>
-      <file>$PROJ_DIR$\..\..\components\common\hal_defs.h</file>
-<<<<<<< HEAD
-      <file>$PROJ_DIR$\debug\Obj\util_buffer.pbi</file>
-      <file>$TOOLKIT_DIR$\config\devices\Texas Instruments\lnk51ew_cc2530F256_banked.xcl</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_clock.pbi</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_keypad.r51</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_rf_security.pbi</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_button.r51</file>
-      <file>$PROJ_DIR$\..\..\components\common\hal_button.h</file>
-      <file>$PROJ_DIR$\..\..\components\common\hal_adc.h</file>
->>>>>>> 990b0b4af104f1e4fdeffbb1f7111668c8e43c26
-      <file>$PROJ_DIR$\debug\Obj\hal_drink.pbi</file>
-      <file>$PROJ_DIR$\..\..\components\targets\mcu-kit1\hal_uart.h</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_board.r51</file>
+      <file>$PROJ_DIR$\..\..\components\common\hal_lcd.h</file>
       <file>$PROJ_DIR$\..\..\components\common\hal_int.h</file>
-      <file>$PROJ_DIR$\..\..\components\targets\zigbee-mcu1\hal_button.h</file>
-      <file>$PROJ_DIR$\..\..\components\targets\mcu-kit1\hal_keypad.h</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_rf_util.r51</file>
-      <file>$PROJ_DIR$\..\..\components\common\hal_digio.h</file>
+      <file>$PROJ_DIR$\..\..\components\common\hal_mcu.h</file>
+      <file>$PROJ_DIR$\..\..\components\common\hal_rf.h</file>
+      <file>$PROJ_DIR$\..\..\components\targets\mcu-kit1\hal_buzzer.h</file>
+      <file>$PROJ_DIR$\..\..\components\basicrf\basic_rf.h</file>
+      <file>$PROJ_DIR$\..\..\components\common\hal_button.h</file>
+      <file>$PROJ_DIR$\..\..\components\utils\util.h</file>
+      <file>$TOOLKIT_DIR$\inc\clib\sysmac.h</file>
+      <file>$PROJ_DIR$\..\..\components\common\hal_adc.h</file>
+      <file>$PROJ_DIR$\..\..\components\common\hal_rf_util.h</file>
       <file>$PROJ_DIR$\..\..\components\common\hal_clock.h</file>
-<<<<<<< HEAD
-      <file>$PROJ_DIR$\..\..\components\common\hal_int.h</file>
-      <file>$TOOLKIT_DIR$\inc\clib\string.h</file>
-      <file>$PROJ_DIR$\..\..\components\targets\zigbee-mcu1\hal_button.h</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_int.pbi</file>
-      <file>$PROJ_DIR$\..\..\components\targets\mcu-kit1\hal_buzzer.h</file>
+      <file>$PROJ_DIR$\..\..\components\common\hal_digio.h</file>
+      <file>$PROJ_DIR$\..\..\components\targets\zigbee-mcu1\hal_lcd.h</file>
+      <file>$PROJ_DIR$\..\..\components\common\hal_rf_security.h</file>
       <file>$PROJ_DIR$\..\..\components\targets\zigbee-mcu1\hal_board.h</file>
-      <file>$PROJ_DIR$\debug\Obj\util.pbi</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_led.r51</file>
-      <file>$PROJ_DIR$\..\..\components\common\hal_adc.h</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_board.r51</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_rf_util.pbi</file>
-      <file>$PROJ_DIR$\..\..\components\targets\mcu-kit1\hal_keypad.h</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_clock.r51</file>
-      <file>$TOOLKIT_DIR$\inc\clib\sysmac.h</file>
-=======
-      <file>$PROJ_DIR$\..\..\components\targets\mcu-kit1\hal_buzzer.h</file>
-      <file>$PROJ_DIR$\..\..\components\utils\util_buffer.h</file>
->>>>>>> 990b0b4af104f1e4fdeffbb1f7111668c8e43c26
-      <file>$PROJ_DIR$\debug\Obj\hal_rf_security.r51</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_adc.r51</file>
-      <file>$TOOLKIT_DIR$\inc\clib\string.h</file>
-      <file>$PROJ_DIR$\debug\Obj\util.pbi</file>
-      <file>$PROJ_DIR$\debug\Obj\util_lcd.pbi</file>
-      <file>$PROJ_DIR$\debug\Obj\basic_rf.r51</file>
-      <file>$PROJ_DIR$\debug\Obj\util_lcd.r51</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_rf_util.pbi</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_int.pbi</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_clock.r51</file>
-      <file>$PROJ_DIR$\..\..\components\targets\zigbee-mcu1\hal_board.h</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_rf.pbi</file>
-      <file>$TOOLKIT_DIR$\inc\clib\sysmac.h</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_led.r51</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_uart.r51</file>
-      <file>$PROJ_DIR$\..\..\components\module\M160.h</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_ledmatrix.r51</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_digio.pbi</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_ledmatrix.pbi</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_keypad.pbi</file>
-=======
-      <file>$PROJ_DIR$\..\..\components\targets\zigbee-mcu1\hal_uart.h</file>
-      <file>$PROJ_DIR$\debug\Exe\M160.hex</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_drink.pbi</file>
+      <file>$PROJ_DIR$\..\..\components\targets\mcu-kit1\hal_lcd.h</file>
       <file>$PROJ_DIR$\..\..\components\targets\zigbee-mcu1\hal_int.h</file>
-      <file>$PROJ_DIR$\debug\Obj\hal_rf.pbi</file>
+      <file>$PROJ_DIR$\..\..\components\targets\zigbee-mcu1\hal_button.h</file>
+      <file>$PROJ_DIR$\..\..\components\targets\zigbee-mcu1\hal_keypad.h</file>
+      <file>$PROJ_DIR$\..\..\components\targets\zigbee-mcu1\hal_uart.h</file>
+      <file>$PROJ_DIR$\..\..\components\targets\zigbee-mcu1\hal_buzzer.h</file>
+      <file>$PROJ_DIR$\..\..\components\targets\mcu-kit1\hal_uart.h</file>
+      <file>$PROJ_DIR$\..\..\components\targets\mcu-kit1\hal_keypad.h</file>
+      <file>$PROJ_DIR$\..\..\components\utils\util_buffer.h</file>
+      <file>$PROJ_DIR$\debug\Obj\hal_digio.r51</file>
+      <file>$PROJ_DIR$\debug\Obj\hal_drink.r51</file>
+      <file>$PROJ_DIR$\debug\Obj\hal_int.r51</file>
+      <file>$PROJ_DIR$\debug\Obj\hal_ledmatrix.r51</file>
+      <file>$PROJ_DIR$\debug\Obj\hal_mcu.r51</file>
+      <file>$PROJ_DIR$\debug\Obj\hal_rf_security.r51</file>
+      <file>$PROJ_DIR$\debug\Obj\hal_rf_util.r51</file>
+      <file>$PROJ_DIR$\debug\Obj\hal_rf.r51</file>
+      <file>$PROJ_DIR$\debug\Obj\hal_board.r51</file>
+      <file>$PROJ_DIR$\debug\Obj\hal_button.r51</file>
+      <file>$PROJ_DIR$\debug\Obj\hal_buzzer.r51</file>
+      <file>$PROJ_DIR$\debug\Obj\hal_keypad.r51</file>
+      <file>$PROJ_DIR$\debug\Obj\hal_lcd.r51</file>
+      <file>$PROJ_DIR$\debug\Obj\hal_led.r51</file>
       <file>$PROJ_DIR$\debug\Obj\hal_uart.r51</file>
+      <file>$PROJ_DIR$\debug\Obj\util.r51</file>
+      <file>$PROJ_DIR$\debug\Obj\util_buffer.r51</file>
+      <file>$PROJ_DIR$\debug\Obj\util_lcd.r51</file>
+      <file>$PROJ_DIR$\debug\Obj\ex.pbi</file>
+      <file>$PROJ_DIR$\debug\Obj\M160.pbi</file>
+      <file>$PROJ_DIR$\debug\Obj\basic_rf.pbi</file>
+      <file>$PROJ_DIR$\debug\Obj\basic_rf_security.pbi</file>
+      <file>$PROJ_DIR$\debug\Obj\hal_adc.pbi</file>
+      <file>$PROJ_DIR$\debug\Obj\hal_clock.pbi</file>
+      <file>$PROJ_DIR$\debug\Obj\hal_digio.pbi</file>
+      <file>$PROJ_DIR$\debug\Obj\hal_drink.pbi</file>
+      <file>$PROJ_DIR$\debug\Obj\hal_int.pbi</file>
+      <file>$PROJ_DIR$\debug\Obj\hal_ledmatrix.pbi</file>
+      <file>$PROJ_DIR$\debug\Obj\hal_mcu.pbi</file>
+      <file>$PROJ_DIR$\debug\Obj\hal_rf.pbi</file>
+      <file>$PROJ_DIR$\debug\Obj\hal_rf_security.pbi</file>
+      <file>$PROJ_DIR$\debug\Obj\hal_rf_util.pbi</file>
+      <file>$PROJ_DIR$\debug\Obj\hal_board.pbi</file>
+      <file>$PROJ_DIR$\debug\Obj\hal_button.pbi</file>
+      <file>$PROJ_DIR$\debug\Obj\hal_buzzer.pbi</file>
+      <file>$PROJ_DIR$\debug\Obj\hal_keypad.pbi</file>
+      <file>$PROJ_DIR$\debug\Obj\hal_lcd.pbi</file>
+      <file>$PROJ_DIR$\debug\Obj\hal_led.pbi</file>
+      <file>$PROJ_DIR$\debug\Obj\hal_uart.pbi</file>
+      <file>$PROJ_DIR$\debug\Obj\util.pbi</file>
+      <file>$PROJ_DIR$\debug\Obj\util_buffer.pbi</file>
+      <file>$PROJ_DIR$\debug\Obj\util_lcd.pbi</file>
+      <file>$PROJ_DIR$\debug\Exe\M160.d51</file>
+      <file>$PROJ_DIR$\debug\Obj\M160.pbd</file>
+      <file>$PROJ_DIR$\..\..\components\common\hal_cc8051.h</file>
+      <file>$PROJ_DIR$\..\..\components\common\hal_defs.h</file>
+      <file>$TOOLKIT_DIR$\inc\ioCC2530.h</file>
+      <file>$TOOLKIT_DIR$\inc\clib\string.h</file>
       <file>$PROJ_DIR$\..\..\components\targets\mcu-kit1\hal_board.h</file>
->>>>>>> d8c919b6a308ab6d356ecbbf608e93a20585eaeb
     </outputs>
     <file>
-      <name>[ROOT_NODE]</name>
+      <name>$PROJ_DIR$\ex.c</name>
       <outputs>
         <tool>
-<<<<<<< HEAD
           <name>BICOMP</name>
-          <file> 66</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 48</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 77 64 79 52 43 88 44 92 37 47 65 1 8</file>
-=======
-          <name>XLINK</name>
-          <file> 55 24 53</file>
-        </tool>
-      </outputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\components\targets\mcu-kit1\hal_led.c</name>
-      <outputs>
-        <tool>
-<<<<<<< HEAD
-          <name>ICC8051</name>
-          <file> 105</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 18</file>
-=======
-          <name>BICOMP</name>
-          <file> 95</file>
->>>>>>> d8c919b6a308ab6d356ecbbf608e93a20585eaeb
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-<<<<<<< HEAD
-          <file> 72 59 54 3 49 58</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 72 59 54 3 49 58</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\components\targets\mcu-kit1\hal_uart.c</name>
-      <outputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 106</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 12</file>
-=======
           <file> 77</file>
->>>>>>> d8c919b6a308ab6d356ecbbf608e93a20585eaeb
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-<<<<<<< HEAD
-          <name>ICC8051</name>
-          <file> 72 59 49 82</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 72 59 49 82</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\components\utils\util_lcd.c</name>
-      <outputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 98</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 96</file>
-=======
-          <name>BICOMP</name>
-          <file> 104 93 111 81 72 37 73 45 64 76 94 1 0</file>
->>>>>>> d8c919b6a308ab6d356ecbbf608e93a20585eaeb
-        </tool>
-        <tool>
-<<<<<<< HEAD
-          <name>BICOMP</name>
-          <file> 72 59 3 49 0 11 86 90 50 94 104</file>
-=======
-          <name>ICC8051</name>
-          <file> 104 93 111 81 72 37 73 45 64 76 94 1 0</file>
->>>>>>> d8c919b6a308ab6d356ecbbf608e93a20585eaeb
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\components\utils\util_buffer.c</name>
-      <outputs>
-        <tool>
-<<<<<<< HEAD
-          <name>ICC8051</name>
-          <file> 57</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 73</file>
-=======
-          <name>BICOMP</name>
-          <file> 61</file>
         </tool>
         <tool>
           <name>ICC8051</name>
-          <file> 102</file>
->>>>>>> d8c919b6a308ab6d356ecbbf608e93a20585eaeb
->>>>>>> 990b0b4af104f1e4fdeffbb1f7111668c8e43c26
-        </tool>
-        <tool>
-<<<<<<< HEAD
-          <name>ICC8051</name>
-          <file> 77 64 79 52 43 88 44 92 37 47 65 1 8</file>
-=======
-          <name>BICOMP</name>
-<<<<<<< HEAD
-          <file> 72 59 91 49 84</file>
-=======
-          <file> 104 93 84 73 111 59</file>
->>>>>>> d8c919b6a308ab6d356ecbbf608e93a20585eaeb
->>>>>>> 990b0b4af104f1e4fdeffbb1f7111668c8e43c26
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\components\utils\util.c</name>
-      <outputs>
-        <tool>
-<<<<<<< HEAD
-          <name>BICOMP</name>
-          <file> 32</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 74</file>
-=======
-<<<<<<< HEAD
-          <name>ICC8051</name>
-          <file> 22</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 95</file>
-=======
-          <name>BICOMP</name>
-          <file> 74</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 55</file>
->>>>>>> d8c919b6a308ab6d356ecbbf608e93a20585eaeb
->>>>>>> 990b0b4af104f1e4fdeffbb1f7111668c8e43c26
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-<<<<<<< HEAD
-          <file> 77 64 55 44 79 110</file>
-=======
-<<<<<<< HEAD
-          <file> 72 59 50 11</file>
-=======
-          <file> 104 93 37 73 64 76 38 49</file>
->>>>>>> d8c919b6a308ab6d356ecbbf608e93a20585eaeb
->>>>>>> 990b0b4af104f1e4fdeffbb1f7111668c8e43c26
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\components\basicrf\basic_rf.c</name>
-      <outputs>
-        <tool>
-<<<<<<< HEAD
-          <name>BICOMP</name>
-          <file> 45</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 106</file>
-=======
-<<<<<<< HEAD
-          <name>ICC8051</name>
-          <file> 97</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 10</file>
-=======
-          <name>BICOMP</name>
-          <file> 75</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 98</file>
->>>>>>> d8c919b6a308ab6d356ecbbf608e93a20585eaeb
->>>>>>> 990b0b4af104f1e4fdeffbb1f7111668c8e43c26
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-<<<<<<< HEAD
-          <file> 77 64 88 44 37 47 89 101</file>
-=======
-          <file> 72 59 84 3 11 15 94 104</file>
->>>>>>> 990b0b4af104f1e4fdeffbb1f7111668c8e43c26
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\components\common\hal_mcu.c</name>
-      <outputs>
-        <tool>
-<<<<<<< HEAD
-          <name>BICOMP</name>
-          <file> 46</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 69</file>
-=======
-<<<<<<< HEAD
-          <name>ICC8051</name>
-          <file> 52</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
           <file> 7</file>
-=======
-          <name>BICOMP</name>
-          <file> 101</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 53</file>
->>>>>>> d8c919b6a308ab6d356ecbbf608e93a20585eaeb
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-<<<<<<< HEAD
-          <name>ICC8051</name>
-          <file> 72 59 89 3 49</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 72 59 89 3 49</file>
-=======
-          <name>BICOMP</name>
-          <file> 104 93 42</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 104 93 42</file>
->>>>>>> d8c919b6a308ab6d356ecbbf608e93a20585eaeb
->>>>>>> 990b0b4af104f1e4fdeffbb1f7111668c8e43c26
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\components\common\hal_rf.c</name>
-      <outputs>
-        <tool>
-<<<<<<< HEAD
-          <name>BICOMP</name>
-          <file> 73</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 104</file>
-=======
-<<<<<<< HEAD
-          <name>ICC8051</name>
-          <file> 65</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 103</file>
-=======
-          <name>BICOMP</name>
-          <file> 87</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 48</file>
->>>>>>> d8c919b6a308ab6d356ecbbf608e93a20585eaeb
->>>>>>> 990b0b4af104f1e4fdeffbb1f7111668c8e43c26
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-<<<<<<< HEAD
-          <name>BICOMP</name>
-          <file> 77 64 96</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 77 64 96</file>
-=======
-<<<<<<< HEAD
-          <name>ICC8051</name>
-          <file> 72 59 3 84 50 11</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 72 59 3 84 50 11</file>
-=======
-          <name>BICOMP</name>
-          <file> 104 93 36</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 104 93 36</file>
->>>>>>> d8c919b6a308ab6d356ecbbf608e93a20585eaeb
->>>>>>> 990b0b4af104f1e4fdeffbb1f7111668c8e43c26
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\components\targets\zigbee-mcu1\hal_board.c</name>
-      <outputs>
-        <tool>
-<<<<<<< HEAD
-          <name>BICOMP</name>
-          <file> 58</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 100</file>
-=======
-<<<<<<< HEAD
-          <name>ICC8051</name>
-          <file> 83</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 26</file>
-=======
-          <name>BICOMP</name>
-          <file> 58</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 65</file>
->>>>>>> d8c919b6a308ab6d356ecbbf608e93a20585eaeb
->>>>>>> 990b0b4af104f1e4fdeffbb1f7111668c8e43c26
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-<<<<<<< HEAD
-          <name>BICOMP</name>
-          <file> 77 64 87</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 77 64 87</file>
-=======
-<<<<<<< HEAD
-          <name>ICC8051</name>
-          <file> 72 59 54 3 88 48 102 5 4 62 68</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 72 59 54 3 88 48 102 5 4 62 68</file>
-=======
-          <name>BICOMP</name>
-          <file> 104 93 37 34</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 104 93 37 34</file>
->>>>>>> d8c919b6a308ab6d356ecbbf608e93a20585eaeb
->>>>>>> 990b0b4af104f1e4fdeffbb1f7111668c8e43c26
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\components\common\hal_rf_util.c</name>
-      <outputs>
-        <tool>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-          <name>ICC8051</name>
-          <file> 87</file>
-        </tool>
-        <tool>
->>>>>>> 990b0b4af104f1e4fdeffbb1f7111668c8e43c26
-          <name>BICOMP</name>
-          <file> 99</file>
-=======
-          <name>BICOMP</name>
-          <file> 107</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 63</file>
->>>>>>> d8c919b6a308ab6d356ecbbf608e93a20585eaeb
-        </tool>
-        <tool>
-<<<<<<< HEAD
-          <name>ICC8051</name>
-<<<<<<< HEAD
-          <file> 38</file>
-=======
-          <file> 72 59 3 60 11</file>
->>>>>>> 990b0b4af104f1e4fdeffbb1f7111668c8e43c26
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-<<<<<<< HEAD
-          <file> 77 64 88 85</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 77 64 88 85</file>
-=======
-          <file> 72 59 3 60 11</file>
-=======
-          <name>BICOMP</name>
-          <file> 104 93 84 73 111 72 80 0 38 49</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 104 93 84 73 111 72 80 0 38 49</file>
->>>>>>> d8c919b6a308ab6d356ecbbf608e93a20585eaeb
->>>>>>> 990b0b4af104f1e4fdeffbb1f7111668c8e43c26
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\components\basicrf\basic_rf_security.c</name>
-      <outputs>
-        <tool>
-<<<<<<< HEAD
-          <name>BICOMP</name>
-          <file> 80</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 34</file>
-=======
-<<<<<<< HEAD
-          <name>ICC8051</name>
-          <file> 56</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 1</file>
->>>>>>> 990b0b4af104f1e4fdeffbb1f7111668c8e43c26
-        </tool>
-      </outputs>
-=======
-          <name>BICOMP</name>
-          <file> 39</file>
-        </tool>
-        <tool>
-<<<<<<< HEAD
-          <name>BICOMP</name>
-          <file> 77 64 55 44 79 43 51 8 89 101</file>
-=======
-          <name>ICC8051</name>
-          <file> 66</file>
->>>>>>> 990b0b4af104f1e4fdeffbb1f7111668c8e43c26
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-<<<<<<< HEAD
-          <name>ICC8051</name>
-          <file> 77 64 55 44 79 43 51 8 89 101</file>
-=======
-          <name>BICOMP</name>
-          <file> 104 93 37</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 104 93 37</file>
->>>>>>> 990b0b4af104f1e4fdeffbb1f7111668c8e43c26
-        </tool>
-      </inputs>
->>>>>>> d8c919b6a308ab6d356ecbbf608e93a20585eaeb
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\components\targets\mcu-kit1\hal_buzzer.c</name>
-      <outputs>
-        <tool>
-<<<<<<< HEAD
-          <name>BICOMP</name>
-          <file> 91</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 39</file>
-=======
-<<<<<<< HEAD
-          <name>ICC8051</name>
-          <file> 19</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 2</file>
-=======
-          <name>BICOMP</name>
-          <file> 57</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 60</file>
->>>>>>> d8c919b6a308ab6d356ecbbf608e93a20585eaeb
->>>>>>> 990b0b4af104f1e4fdeffbb1f7111668c8e43c26
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-<<<<<<< HEAD
-          <name>BICOMP</name>
-          <file> 77 64 88</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 77 64 88</file>
-=======
-<<<<<<< HEAD
-          <name>ICC8051</name>
-          <file> 72 59 54 3 49 90</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 72 59 54 3 49 90</file>
-=======
-          <name>BICOMP</name>
-          <file> 93 1</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 93 1</file>
->>>>>>> d8c919b6a308ab6d356ecbbf608e93a20585eaeb
->>>>>>> 990b0b4af104f1e4fdeffbb1f7111668c8e43c26
+          <file> 104 105 107 33 34 35 36 38 37 39 40 0 8</file>
         </tool>
       </inputs>
     </file>
@@ -849,519 +138,69 @@
       <name>$PROJ_DIR$\..\..\components\module\M160.c</name>
       <outputs>
         <tool>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-          <name>ICC8051</name>
-          <file> 63</file>
-        </tool>
-        <tool>
->>>>>>> 990b0b4af104f1e4fdeffbb1f7111668c8e43c26
           <name>BICOMP</name>
-          <file> 13</file>
-=======
-          <name>BICOMP</name>
-          <file> 71</file>
+          <file> 78</file>
         </tool>
         <tool>
           <name>ICC8051</name>
-<<<<<<< HEAD
-          <file> 111</file>
-=======
-          <file> 103</file>
->>>>>>> d8c919b6a308ab6d356ecbbf608e93a20585eaeb
->>>>>>> 990b0b4af104f1e4fdeffbb1f7111668c8e43c26
+          <file> 6</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-<<<<<<< HEAD
-          <file> 64 1</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 64 1</file>
-=======
-<<<<<<< HEAD
-          <file> 72 59 54 3 49 107</file>
-=======
-          <file> 104 93 36 73 111</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 104 93 36 73 111</file>
->>>>>>> d8c919b6a308ab6d356ecbbf608e93a20585eaeb
->>>>>>> 990b0b4af104f1e4fdeffbb1f7111668c8e43c26
+          <file> 104 105 103 36 107 32</file>
         </tool>
       </inputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\..\components\common\hal_drink.c</name>
+      <name>$PROJ_DIR$\..\..\components\basicrf\basic_rf.c</name>
       <outputs>
         <tool>
-<<<<<<< HEAD
-          <name>BICOMP</name>
-          <file> 42</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 76</file>
-=======
-<<<<<<< HEAD
-          <name>ICC8051</name>
-          <file> 8</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 81</file>
-=======
-          <name>BICOMP</name>
-          <file> 109</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 88</file>
->>>>>>> d8c919b6a308ab6d356ecbbf608e93a20585eaeb
->>>>>>> 990b0b4af104f1e4fdeffbb1f7111668c8e43c26
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-<<<<<<< HEAD
-          <name>BICOMP</name>
-          <file> 77 64 87 44 79</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 77 64 87 44 79</file>
-=======
-<<<<<<< HEAD
-          <name>ICC8051</name>
-          <file> 72 59 54 3 49 0 50 29 94 104</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 72 59 54 3 49 0 50 29 94 104</file>
-=======
-          <name>BICOMP</name>
-          <file> 104 93 73 37 80 64</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 104 93 73 37 80 64</file>
->>>>>>> d8c919b6a308ab6d356ecbbf608e93a20585eaeb
->>>>>>> 990b0b4af104f1e4fdeffbb1f7111668c8e43c26
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\components\common\hal_rf_security.c</name>
-      <outputs>
-        <tool>
-<<<<<<< HEAD
-          <name>BICOMP</name>
-          <file> 81</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 59</file>
-=======
-<<<<<<< HEAD
-          <name>ICC8051</name>
-          <file> 92</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 77</file>
-=======
           <name>BICOMP</name>
           <file> 79</file>
         </tool>
         <tool>
           <name>ICC8051</name>
-          <file> 50</file>
->>>>>>> d8c919b6a308ab6d356ecbbf608e93a20585eaeb
->>>>>>> 990b0b4af104f1e4fdeffbb1f7111668c8e43c26
+          <file> 2</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
-<<<<<<< HEAD
           <name>BICOMP</name>
-          <file> 77 64 44 88 51 37</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 77 64 44 88 51 37</file>
-=======
-<<<<<<< HEAD
-          <name>ICC8051</name>
-          <file> 72 59 3 11 67 50 94 104</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 72 59 3 11 67 50 94 104</file>
-=======
-          <name>BICOMP</name>
-          <file> 104 93 73 64 99 80 38 49</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 104 93 73 64 99 80 38 49</file>
->>>>>>> d8c919b6a308ab6d356ecbbf608e93a20585eaeb
->>>>>>> 990b0b4af104f1e4fdeffbb1f7111668c8e43c26
+          <file> 104 105 35 36 37 39 106 42</file>
         </tool>
       </inputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\..\components\targets\mcu-kit1\hal_keypad.c</name>
+      <name>$PROJ_DIR$\..\..\components\basicrf\basic_rf_security.c</name>
       <outputs>
         <tool>
-<<<<<<< HEAD
           <name>BICOMP</name>
-          <file> 50</file>
+          <file> 80</file>
         </tool>
         <tool>
           <name>ICC8051</name>
-          <file> 102</file>
-=======
-<<<<<<< HEAD
-          <name>ICC8051</name>
-          <file> 76</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 111</file>
-=======
-          <name>BICOMP</name>
-          <file> 47</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 33</file>
->>>>>>> d8c919b6a308ab6d356ecbbf608e93a20585eaeb
->>>>>>> 990b0b4af104f1e4fdeffbb1f7111668c8e43c26
+          <file> 4</file>
         </tool>
       </outputs>
-      <inputs>
-        <tool>
-<<<<<<< HEAD
-          <name>BICOMP</name>
-          <file> 77 64 44 37 70 51 89 101</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 77 64 44 37 70 51 89 101</file>
-=======
-<<<<<<< HEAD
-          <name>ICC8051</name>
-          <file> 72 59 54 3 49 86 66 90</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 72 59 54 3 49 86 66 90</file>
-=======
-          <name>BICOMP</name>
-          <file> 104 93 73 100 64</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 104 93 73 100 64</file>
->>>>>>> d8c919b6a308ab6d356ecbbf608e93a20585eaeb
->>>>>>> 990b0b4af104f1e4fdeffbb1f7111668c8e43c26
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\components\targets\zigbee-mcu1\hal_button.c</name>
-      <outputs>
-        <tool>
-<<<<<<< HEAD
-          <name>BICOMP</name>
-          <file> 98</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 84</file>
-=======
-<<<<<<< HEAD
-          <name>ICC8051</name>
-          <file> 78</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 20</file>
-=======
-          <name>BICOMP</name>
-          <file> 62</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 44</file>
->>>>>>> d8c919b6a308ab6d356ecbbf608e93a20585eaeb
->>>>>>> 990b0b4af104f1e4fdeffbb1f7111668c8e43c26
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-<<<<<<< HEAD
-          <name>BICOMP</name>
-          <file> 77 64 44 71 37</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 77 64 44 71 37</file>
-=======
-<<<<<<< HEAD
-          <name>ICC8051</name>
-          <file> 72 59 54 3 102 85</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 72 59 54 3 102 85</file>
-=======
-          <name>BICOMP</name>
-          <file> 104 93 84 73 34 108 46 69 68 105 85</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 104 93 84 73 34 108 46 69 68 105 85</file>
->>>>>>> d8c919b6a308ab6d356ecbbf608e93a20585eaeb
->>>>>>> 990b0b4af104f1e4fdeffbb1f7111668c8e43c26
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\components\common\hal_lcd.c</name>
-      <outputs>
-        <tool>
-<<<<<<< HEAD
-          <name>BICOMP</name>
-          <file> 33</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 97</file>
-=======
-<<<<<<< HEAD
-          <name>ICC8051</name>
-          <file> 51</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 21</file>
-=======
-          <name>BICOMP</name>
-          <file> 7</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 92</file>
->>>>>>> d8c919b6a308ab6d356ecbbf608e93a20585eaeb
->>>>>>> 990b0b4af104f1e4fdeffbb1f7111668c8e43c26
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-<<<<<<< HEAD
-          <name>BICOMP</name>
-          <file> 77 64 55 44 85 75 93 36 35 72 56</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 77 64 55 44 85 75 93 36 35 72 56</file>
-=======
-<<<<<<< HEAD
-          <name>ICC8051</name>
-          <file> 72 59 54 3 49 0 50 94 104</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 72 59 54 3 49 0 50 94 104</file>
-=======
-          <name>BICOMP</name>
-          <file> 104 93 84 73 46 43</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 104 93 84 73 46 43</file>
->>>>>>> d8c919b6a308ab6d356ecbbf608e93a20585eaeb
->>>>>>> 990b0b4af104f1e4fdeffbb1f7111668c8e43c26
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\ex.c</name>
-      <outputs>
-        <tool>
-<<<<<<< HEAD
-          <name>BICOMP</name>
-          <file> 3</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 63</file>
-=======
-<<<<<<< HEAD
-          <name>ICC8051</name>
-          <file> 64</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 70</file>
-=======
-          <name>BICOMP</name>
-          <file> 70</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 5</file>
->>>>>>> d8c919b6a308ab6d356ecbbf608e93a20585eaeb
->>>>>>> 990b0b4af104f1e4fdeffbb1f7111668c8e43c26
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-<<<<<<< HEAD
-          <name>BICOMP</name>
-          <file> 77 64 55 44 93 90</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 77 64 55 44 93 90</file>
-=======
-<<<<<<< HEAD
-          <name>ICC8051</name>
-          <file> 72 59 49 58 0 84 3 90 11 15 79 42 29</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 72 59 49 58 0 84 3 90 11 15 79 42 29</file>
-=======
-          <name>BICOMP</name>
-          <file> 104 93 84 73 111 45</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 104 93 84 73 111 45</file>
->>>>>>> d8c919b6a308ab6d356ecbbf608e93a20585eaeb
->>>>>>> 990b0b4af104f1e4fdeffbb1f7111668c8e43c26
-        </tool>
-      </inputs>
     </file>
     <file>
       <name>$PROJ_DIR$\..\..\components\common\hal_adc.c</name>
       <outputs>
         <tool>
-<<<<<<< HEAD
           <name>BICOMP</name>
-          <file> 41</file>
+          <file> 81</file>
         </tool>
         <tool>
           <name>ICC8051</name>
-          <file> 6</file>
-=======
-<<<<<<< HEAD
-          <name>ICC8051</name>
-          <file> 93</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 61</file>
-=======
-          <name>BICOMP</name>
-          <file> 56</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 89</file>
->>>>>>> d8c919b6a308ab6d356ecbbf608e93a20585eaeb
->>>>>>> 990b0b4af104f1e4fdeffbb1f7111668c8e43c26
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-<<<<<<< HEAD
-          <name>BICOMP</name>
-          <file> 77 64 55 44 79 92</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 77 64 55 44 79 92</file>
-=======
-<<<<<<< HEAD
-          <name>ICC8051</name>
-          <file> 72 59 80</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 72 59 80</file>
-=======
-          <name>BICOMP</name>
-          <file> 104 93 84 73 111 52 96 45</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 104 93 84 73 111 52 96 45</file>
->>>>>>> d8c919b6a308ab6d356ecbbf608e93a20585eaeb
->>>>>>> 990b0b4af104f1e4fdeffbb1f7111668c8e43c26
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\components\common\hal_int.c</name>
-      <outputs>
-        <tool>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-          <name>ICC8051</name>
-          <file> 6</file>
-        </tool>
-        <tool>
->>>>>>> 990b0b4af104f1e4fdeffbb1f7111668c8e43c26
-          <name>BICOMP</name>
-          <file> 100</file>
-=======
-          <name>BICOMP</name>
-          <file> 8</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 83</file>
->>>>>>> d8c919b6a308ab6d356ecbbf608e93a20585eaeb
-        </tool>
-        <tool>
-<<<<<<< HEAD
-          <name>ICC8051</name>
-<<<<<<< HEAD
-          <file> 60</file>
-=======
-          <file> 72 59 84</file>
->>>>>>> 990b0b4af104f1e4fdeffbb1f7111668c8e43c26
+          <file> 5</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-<<<<<<< HEAD
-          <file> 77 64 55 44 79 99 67 92</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 77 64 55 44 79 99 67 92</file>
-=======
-          <file> 72 59 84</file>
-=======
-          <name>BICOMP</name>
-          <file> 104 93 84 73 111 72 80 38 49</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 104 93 84 73 111 72 80 38 49</file>
->>>>>>> d8c919b6a308ab6d356ecbbf608e93a20585eaeb
->>>>>>> 990b0b4af104f1e4fdeffbb1f7111668c8e43c26
+          <file> 104 105 43</file>
         </tool>
       </inputs>
     </file>
@@ -1369,58 +208,18 @@
       <name>$PROJ_DIR$\..\..\components\common\hal_clock.c</name>
       <outputs>
         <tool>
-<<<<<<< HEAD
           <name>BICOMP</name>
-          <file> 2</file>
+          <file> 82</file>
         </tool>
         <tool>
           <name>ICC8051</name>
-          <file> 54</file>
-=======
-<<<<<<< HEAD
-          <name>ICC8051</name>
-          <file> 101</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 75</file>
-=======
-          <name>BICOMP</name>
-          <file> 6</file>
->>>>>>> 990b0b4af104f1e4fdeffbb1f7111668c8e43c26
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 41</file>
->>>>>>> d8c919b6a308ab6d356ecbbf608e93a20585eaeb
+          <file> 3</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
-<<<<<<< HEAD
           <name>BICOMP</name>
-          <file> 77 64 55 44 79 43 51 89 101</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 77 64 55 44 79 43 51 89 101</file>
-=======
-<<<<<<< HEAD
-          <name>ICC8051</name>
-          <file> 72 59 89</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 72 59 89</file>
-=======
-          <name>BICOMP</name>
-          <file> 104 93 84 73 111 81</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 104 93 84 73 111 81</file>
->>>>>>> d8c919b6a308ab6d356ecbbf608e93a20585eaeb
->>>>>>> 990b0b4af104f1e4fdeffbb1f7111668c8e43c26
+          <file> 104 105 45</file>
         </tool>
       </inputs>
     </file>
@@ -1428,58 +227,56 @@
       <name>$PROJ_DIR$\..\..\components\common\hal_digio.c</name>
       <outputs>
         <tool>
-<<<<<<< HEAD
           <name>BICOMP</name>
-          <file> 7</file>
+          <file> 83</file>
         </tool>
         <tool>
           <name>ICC8051</name>
-          <file> 95</file>
-=======
-<<<<<<< HEAD
-          <name>ICC8051</name>
-          <file> 9</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 109</file>
-=======
-          <name>BICOMP</name>
-          <file> 67</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 110</file>
->>>>>>> d8c919b6a308ab6d356ecbbf608e93a20585eaeb
->>>>>>> 990b0b4af104f1e4fdeffbb1f7111668c8e43c26
+          <file> 59</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
-<<<<<<< HEAD
           <name>BICOMP</name>
-          <file> 77 64 55 44 79 52</file>
+          <file> 104 105 35 46</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\components\common\hal_drink.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 84</file>
         </tool>
         <tool>
           <name>ICC8051</name>
-          <file> 77 64 55 44 79 52</file>
-=======
-<<<<<<< HEAD
-          <name>ICC8051</name>
-          <file> 72 59 84 88</file>
+          <file> 60</file>
         </tool>
+      </outputs>
+      <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 72 59 84 88</file>
-=======
+          <file> 104 105 103 36 107 34 41 8 106 42</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\components\common\hal_int.c</name>
+      <outputs>
+        <tool>
           <name>BICOMP</name>
-          <file> 104 93 111 51</file>
+          <file> 85</file>
         </tool>
         <tool>
           <name>ICC8051</name>
-          <file> 104 93 111 51</file>
->>>>>>> d8c919b6a308ab6d356ecbbf608e93a20585eaeb
->>>>>>> 990b0b4af104f1e4fdeffbb1f7111668c8e43c26
+          <file> 61</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 104 105 35</file>
         </tool>
       </inputs>
     </file>
@@ -1487,203 +284,284 @@
       <name>$PROJ_DIR$\..\..\components\common\hal_ledmatrix.c</name>
       <outputs>
         <tool>
-<<<<<<< HEAD
           <name>BICOMP</name>
-          <file> 40</file>
+          <file> 86</file>
         </tool>
         <tool>
           <name>ICC8051</name>
-          <file> 82</file>
-=======
-<<<<<<< HEAD
-          <name>ICC8051</name>
-          <file> 108</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 110</file>
-=======
-          <name>BICOMP</name>
-          <file> 40</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 4</file>
->>>>>>> d8c919b6a308ab6d356ecbbf608e93a20585eaeb
->>>>>>> 990b0b4af104f1e4fdeffbb1f7111668c8e43c26
+          <file> 62</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
-<<<<<<< HEAD
           <name>BICOMP</name>
-          <file> 77 64 79 103</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 77 64 79 103</file>
-=======
-          <name>ICC8051</name>
-          <file> 59 42</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-<<<<<<< HEAD
-          <file> 59 42</file>
-=======
-          <file> 104 93 80 64</file>
->>>>>>> d8c919b6a308ab6d356ecbbf608e93a20585eaeb
->>>>>>> 990b0b4af104f1e4fdeffbb1f7111668c8e43c26
+          <file> 105 0</file>
         </tool>
       </inputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\debug\Exe\M160.d51</name>
+      <name>$PROJ_DIR$\..\..\components\common\hal_mcu.c</name>
       <outputs>
         <tool>
-<<<<<<< HEAD
+          <name>BICOMP</name>
+          <file> 87</file>
+        </tool>
+        <tool>
+          <name>ICC8051</name>
+          <file> 63</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 104 105 45 36 107</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\components\common\hal_rf.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 88</file>
+        </tool>
+        <tool>
+          <name>ICC8051</name>
+          <file> 66</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 104 105 36 35 41 37</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\components\common\hal_rf_security.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 89</file>
+        </tool>
+        <tool>
+          <name>ICC8051</name>
+          <file> 64</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 104 105 36 37 48 41 106 42</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\components\common\hal_rf_util.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 90</file>
+        </tool>
+        <tool>
+          <name>ICC8051</name>
+          <file> 65</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 104 105 36 44 37</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\components\targets\zigbee-mcu1\hal_board.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 91</file>
+        </tool>
+        <tool>
+          <name>ICC8051</name>
+          <file> 67</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 104 105 103 36 46 51 49 47 53 54 55</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\components\targets\zigbee-mcu1\hal_button.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 92</file>
+        </tool>
+        <tool>
+          <name>ICC8051</name>
+          <file> 68</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 104 105 103 36 49 52</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\components\targets\mcu-kit1\hal_buzzer.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 93</file>
+        </tool>
+        <tool>
+          <name>ICC8051</name>
+          <file> 69</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 104 105 103 36 107 38</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\components\targets\mcu-kit1\hal_keypad.c</name>
+      <outputs>
+        <tool>
           <name>BICOMP</name>
           <file> 94</file>
         </tool>
         <tool>
           <name>ICC8051</name>
-          <file> 4</file>
-=======
-<<<<<<< HEAD
-          <name>XLINK</name>
-          <file> 24 53</file>
-=======
-          <name>BICOMP</name>
-          <file> 78</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 86</file>
->>>>>>> d8c919b6a308ab6d356ecbbf608e93a20585eaeb
->>>>>>> 990b0b4af104f1e4fdeffbb1f7111668c8e43c26
+          <file> 70</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
-<<<<<<< HEAD
-          <name>XLINK</name>
-          <file> 74 63 97 56 64 93 83 78 19 101 9 8 6 76 51 105 108 52 65 92 87 106 22 57 98 71</file>
-=======
           <name>BICOMP</name>
-<<<<<<< HEAD
-          <file> 77 64 51 37</file>
-=======
-          <file> 104 93 32 111 37</file>
->>>>>>> d8c919b6a308ab6d356ecbbf608e93a20585eaeb
->>>>>>> 990b0b4af104f1e4fdeffbb1f7111668c8e43c26
+          <file> 104 105 103 36 107 57 50 38</file>
         </tool>
       </inputs>
     </file>
     <file>
-<<<<<<< HEAD
-=======
+      <name>$PROJ_DIR$\..\..\components\common\hal_lcd.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 95</file>
+        </tool>
+        <tool>
+          <name>ICC8051</name>
+          <file> 71</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 104 105 103 36 107 34 41 106 42</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\components\targets\mcu-kit1\hal_led.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 96</file>
+        </tool>
+        <tool>
+          <name>ICC8051</name>
+          <file> 72</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 104 105 103 36 107 33</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\components\targets\mcu-kit1\hal_uart.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 97</file>
+        </tool>
+        <tool>
+          <name>ICC8051</name>
+          <file> 73</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 104 105 107 56</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\components\utils\util.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 98</file>
+        </tool>
+        <tool>
+          <name>ICC8051</name>
+          <file> 74</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 104 105 41 37</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\components\utils\util_buffer.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 99</file>
+        </tool>
+        <tool>
+          <name>ICC8051</name>
+          <file> 75</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 104 105 58 107 35</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
       <name>$PROJ_DIR$\..\..\components\utils\util_lcd.c</name>
       <outputs>
         <tool>
           <name>BICOMP</name>
-<<<<<<< HEAD
-          <file> 49</file>
+          <file> 100</file>
         </tool>
         <tool>
           <name>ICC8051</name>
-          <file> 57</file>
-=======
-          <file> 54</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 35</file>
->>>>>>> 990b0b4af104f1e4fdeffbb1f7111668c8e43c26
+          <file> 76</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-<<<<<<< HEAD
-          <file> 77 64 83 79 88</file>
-=======
-          <file> 104 93 73 111 72 64 52 45 80 38 49</file>
->>>>>>> 990b0b4af104f1e4fdeffbb1f7111668c8e43c26
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>[ROOT_NODE]</name>
-      <outputs>
-        <tool>
-<<<<<<< HEAD
-          <name>BICOMP</name>
-          <file> 105</file>
-        </tool>
-        <tool>
-          <name>ICC8051</name>
-          <file> 86</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 77 64 44 79 43 37 99 92 51 89 101</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\debug\Obj\M160.pbd</name>
-      <inputs>
-        <tool>
-          <name>BILINK</name>
-          <file> 32 45 46 66 73 33 3 41 58 109 80 91 107 2 7 108 42 81 50 98 40 94 49 105</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\debug\Exe\M160.d51</name>
-      <outputs>
-        <tool>
-          <name>XLINK</name>
-          <file> 5 78</file>
-=======
-          <name>XLINK</name>
-          <file> 97 3 106</file>
-        </tool>
-      </outputs>
-    </file>
-    <file>
->>>>>>> d8c919b6a308ab6d356ecbbf608e93a20585eaeb
-      <name>$PROJ_DIR$\debug\Obj\M160.pbd</name>
-      <inputs>
-        <tool>
-          <name>BILINK</name>
-<<<<<<< HEAD
-          <file> 13 10 1 70 61 26 20 2 75 109 81 100 111 21 18 110 7 103 77 99 12 95 73 96</file>
-=======
-          <file> 61 74 75 95 101 62 7 70 87 58 107 39 56 8 6 57 71 109 79 47 67 40 78 54</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\debug\Exe\M160.d51</name>
-      <outputs>
-        <tool>
-          <name>XLINK</name>
-          <file> 3 106</file>
->>>>>>> 990b0b4af104f1e4fdeffbb1f7111668c8e43c26
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>XLINK</name>
-<<<<<<< HEAD
-          <file> 62 74 106 69 48 104 97 63 6 100 38 34 39 60 54 95 111 76 59 102 84 82 4 57 86 61</file>
-=======
-          <file> 91 102 55 98 77 53 44 92 5 48 65 63 66 89 83 41 60 103 88 50 33 110 4 86 35 90</file>
->>>>>>> d8c919b6a308ab6d356ecbbf608e93a20585eaeb
->>>>>>> 990b0b4af104f1e4fdeffbb1f7111668c8e43c26
+          <file> 104 105 36 107 34 37 57 38 41 106 42</file>
         </tool>
       </inputs>
     </file>
@@ -1692,10 +570,23 @@
       <outputs>
         <tool>
           <name>XLINK</name>
-          <file> 68 5 78</file>
+          <file> 101</file>
         </tool>
       </outputs>
     </file>
+    <file>
+      <name>$PROJ_DIR$\debug\Obj\M160.pbd</name>
+      <inputs>
+        <tool>
+          <name>BILINK</name>
+          <file> 78 79 80 77 81 91 92 93 82 83 84 85 94 95 96 86 87 88 89 90 97 98 99 100</file>
+        </tool>
+      </inputs>
+    </file>
+    <forcedrebuild>
+      <name>[MULTI_TOOL]</name>
+      <tool>XLINK</tool>
+    </forcedrebuild>
   </configuration>
 </project>
 

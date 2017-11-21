@@ -31,3 +31,4 @@ void halLcdDisplayUint16(uint8 line, uint8 col, uint8 radix, uint16 value);
 void halLcdDisplayUint8(uint8 line, uint8 col, uint8 radix, uint8 value);
 void halLcdDisplayItem(uint8 line, int32 lValue, char lChar, int32 rValue, char rChar);
 void halLcdDisplayWithVM(uint8 line,char lChar,int32 lValue);
+void halLcdDisplayAddress(uint8 line, int32 lValue, char lChar);

@@ -24,11 +24,14 @@
 
 // BasicRF address definitions
 #define PAN_ID                	0x1111
-#define BVM_ADDR           		0x2233		//B販賣機的RF位址
-#define VM_ONE_ADDR            	0x3333		//第一區VM Co-ordinator位址
+#define B_ZONE           		0x2233		//Slave-B位址
+#define ONE_AREA            	0x3333		//第一區Master位址
 #define APP_PAYLOAD_LENGTH        127
-#define BVM_GREENTEA     '3'					//B販賣機飲品(水)的辨識碼
-#define BVM_BLACKTEA     '4'					//B販賣機飲品(牛奶)的辨識碼
+#define B_ZONE_1				'1'	//Slave-B節目1的辨識碼
+#define B_ZONE_2				'2'	//Slave-B節目2的辨識碼
+#define B_ZONE_3     			'3'	//Slave-B節目3的辨識碼
+#define B_ZONE_4     			'4'	//Slave-B節目4的辨識碼
+#define B_ZONE_5				'5'	//Slave-B節目5的辨識碼
 
 // Application states
 #define IDLE                      0
@@ -63,11 +66,14 @@
 //              appState - file scope variable. Holds application state
 // @return      none
 //-------------------------------------------------------------------
-static uint8 pTxData[APP_PAYLOAD_LENGTH];	//Tx資料的上限
+//static uint8 pTxData[APP_PAYLOAD_LENGTH];	//Tx資料的上限
+static uint8 pRxData[APP_PAYLOAD_LENGTH];
 static basicRfCfg_t basicRfConfig;			//宣告RFConfig組態
 
+/*
 void B_greentea(int B_drinkg);		//B販賣機飲品(綠茶)的功能
 void B_blacktea(int B_drinkb);		//B販賣機飲品(紅茶)的功能
+*/
 
 //-------------------------------------------------------------------
 // @fn          main
@@ -84,34 +90,92 @@ int main()
     #endif 
 
     halBoardInit();							//CC2530主板初始化
+	halLcdInit();							//LCD顯示初始化
 
-    halLedSet(8);							//電源指示燈
-
+	// 裝置已經通電的提醒
+    halLedSet(8);
+    halBuzzer(300);
+	/*
 	int32 greentea = 7;						//B販賣機飲品(綠茶)的數量
 	int32 blacktea = 3;						//B販賣機飲品(紅茶)的數量
+	*/
 	
-	// RF初始化
-    basicRfConfig.myAddr = BVM_ADDR;
+	// 初始化 ONE_AREA RF
+    basicRfConfig.myAddr = ONE_AREA;
     if (basicRfInit(&basicRfConfig) == FAILED){}
-
-    basicRfReceiveOff();					//使RF接收端為常關，藉此省電
+	
+	//使RF接收端為常開
+    basicRfReceiveOn();					
 	
 	while (1)
     {
-        uint8 v = halButtonPushed();							//v等於按下BUTTON
-		if (v == HAL_BUTTON_2){									//若v接收到BUTTON_2的訊號
-            if(greentea > 0)										//若B販賣機飲品(綠茶)的數量大於0
-				greentea--;										//B販賣機飲品(綠茶)的數量扣1
-			halLcdDisplayWithVM(HAL_LCD_LINE_1,'G',greentea);	//顯示於LCD
-			B_greentea(greentea);										//將引數greentea傳至B_greentea函數中的參數B_drinkg
+		
+		while (!basicRfPacketIsReady()){
+            halLedToggle(7);
+            halMcuWaitMs(10);
+        }
+		
+		while(basicRfReceive(pRxData, APP_PAYLOAD_LENGTH, NULL) > 0){
+			
+			switch(pRxData[0]){
+				
+				case '1':
+					for(int i = 0;i <7;i++){
+					halLedSet(i);
+					halMcuWaitMs(100);
+					halLedClear(i);
+					halMcuWaitMs(100);
+					}
+					break;
+				case '2':
+					for(int i = 7;i >= 1;i--){
+						halLedSet(i);
+						halMcuWaitMs(100);
+						halLedClear(i);
+						halMcuWaitMs(100);
+					}
+					break;
+				case '3':
+					for(int i = 0;i <4;i++){
+						halLedSet(i);
+						halMcuWaitMs(100);
+						halLedClear(i);
+						halMcuWaitMs(100);
+					}
+					break;
+					
+				case '4':
+					for(int i = 4;i >= 1;i--){
+						halLedSet(i);
+						halMcuWaitMs(100);
+						halLedClear(i);
+						halMcuWaitMs(100);
+					}
+					break;
+					
+				case '5':
+					for(int i = 0;i <7;i++){
+						halLedSet(i);
+						halMcuWaitMs(100);
+						halLedClear(i);
+						halMcuWaitMs(100);
+					}
+					for(int i = 7;i >= 1;i--){
+						halLedSet(i);
+						halMcuWaitMs(100);
+						halLedClear(i);
+						halMcuWaitMs(100);
+					}
+					break;
+				
+				case '6':
+					halLedSet(1);
+					halMcuWaitMs(100);
+					halLedClear(1);
+					halMcuWaitMs(100);
+					break;
+			}
 		}
-		else if(v == HAL_BUTTON_1){
-			if(blacktea > 0)
-				blacktea--;
-			halLcdDisplayWithVM(HAL_LCD_LINE_2,'B',blacktea);
-			B_blacktea(blacktea);
-		}
-        halMcuWaitMs(100);    
     }
 	return 0;
 }
@@ -119,7 +183,7 @@ int main()
 //-------------------------------------------------------------------
 // @函數定義區
 //-------------------------------------------------------------------
-
+/*
 void B_greentea(int B_drinkg){
 	 
     do{
@@ -127,7 +191,7 @@ void B_greentea(int B_drinkg){
 		pTxData[1] = B_drinkg;	//Tx陣列第二個元素為架上飲料數量(B_drinkg)
 		
         //發送封包，封包內容為{接收目的地(VM Co-ordinator位址)、Tx資料、Tx資料上限}
-		basicRfSendPacket(VM_ONE_ADDR, pTxData, APP_PAYLOAD_LENGTH);
+		basicRfSendPacket(ONE_AREA, pTxData, APP_PAYLOAD_LENGTH);
         
         halBuzzer(100);
         halMcuWaitMs(200);
@@ -142,10 +206,11 @@ void B_blacktea(int B_drinkb){
 		pTxData[0] = BVM_BLACKTEA;
 		pTxData[1] = B_drinkb;
 		
-		basicRfSendPacket(VM_ONE_ADDR, pTxData, APP_PAYLOAD_LENGTH);
+		basicRfSendPacket(ONE_AREA, pTxData, APP_PAYLOAD_LENGTH);
 
 		halBuzzer(300);
 		halMcuWaitMs(200);
         halLedToggle(7);
 	}while (B_drinkb<0);
 }
+*/
