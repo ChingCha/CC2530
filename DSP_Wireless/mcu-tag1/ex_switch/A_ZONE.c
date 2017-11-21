@@ -75,7 +75,7 @@ void B_greentea(int B_drinkg);		//B販賣機飲品(綠茶)的功能
 void B_blacktea(int B_drinkb);		//B販賣機飲品(紅茶)的功能
 */
 
-//-------------------------------------------------------------------
+//--------------------------- ----------------------------------------
 // @fn          main
 // @brief       This is the main entry of the "portion" application.
 // @return      none

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Workspace>
+  <ConfigDictionary>
+    
+  <CurrentConfigs><Project>M140_rfsend/debug</Project></CurrentConfigs></ConfigDictionary>
+  <Desktop>
+    <Static>
+      <Workspace>
+        <ColumnWidths>
+          
+          
+          
+          
+        <Column0>142</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
+      </Workspace>
+      <Build>
+        
+        
+        
+        
+      <ColumnWidth0>20</ColumnWidth0><ColumnWidth1>774</ColumnWidth1><ColumnWidth2>206</ColumnWidth2><ColumnWidth3>51</ColumnWidth3></Build>
+      <Find-in-Files>
+        
+        
+        
+      <ColumnWidth0>476</ColumnWidth0><ColumnWidth1>53</ColumnWidth1><ColumnWidth2>642</ColumnWidth2></Find-in-Files>
+    <TerminalIO/></Static>
+    <Windows>
+      
+      
+    <Wnd2>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-27224-5603</Identity>
+            <TabName>Workspace</TabName>
+            <Factory>Workspace</Factory>
+            <Session>
+              
+            <NodeDict><ExpandedNode>M140_rfsend</ExpandedNode><ExpandedNode>M140_rfsend/application</ExpandedNode><ExpandedNode>M140_rfsend/targets</ExpandedNode></NodeDict></Session>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd2><Wnd3>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-30508-13319</Identity>
+            <TabName>Build</TabName>
+            <Factory>Build</Factory>
+            <Session/>
+          </Tab>
+          <Tab>
+            <Identity>TabID-18777-13744</Identity>
+            <TabName>Find in Files</TabName>
+            <Factory>Find-in-Files</Factory>
+            <Session/>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd3></Windows>
+    <Editor>
+      
+      
+      
+      
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>X:\prj\KIT\CC2530_ex\components\module\M140.c</Filename><XPos>0</XPos><YPos>20</YPos><SelStart>945</SelStart><SelEnd>945</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>X:\prj\KIT\CC2530_ex\components\targets\mcu-tag1\hal_board.h</Filename><XPos>0</XPos><YPos>131</YPos><SelStart>7944</SelStart><SelEnd>7944</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>X:\prj\KIT\CC2530_ex\mcu-tag1\ex_M140_rfsend\ex.c</Filename><XPos>0</XPos><YPos>13</YPos><SelStart>781</SelStart><SelEnd>781</SelEnd></Tab><ActiveTab>2</ActiveTab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Positions>
+      
+      
+      
+      
+      
+    <Top><Row0><Sizes><Toolbar-00e4c1d8><key>iaridepm.enu1</key></Toolbar-00e4c1d8></Sizes></Row0><Row1><Sizes/></Row1></Top><Left><Row0><Sizes><Wnd2><Rect><Top>-2</Top><Left>-2</Left><Bottom>385</Bottom><Right>233</Right><x>-2</x><y>-2</y><xscreen>152</xscreen><yscreen>179</yscreen><sizeHorzCX>182692</sizeHorzCX><sizeHorzCY>256447</sizeHorzCY><sizeVertCX>282452</sizeVertCX><sizeVertCY>554441</sizeVertCY></Rect></Wnd2></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd3><Rect><Top>-2</Top><Left>-2</Left><Bottom>268</Bottom><Right>834</Right><x>-2</x><y>-2</y><xscreen>836</xscreen><yscreen>270</yscreen><sizeHorzCX>1004808</sizeHorzCX><sizeHorzCY>386819</sizeHorzCY><sizeVertCX>182692</sizeVertCX><sizeVertCY>256447</sizeVertCY></Rect></Wnd3></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+  </Desktop>
+</Workspace>
+
+

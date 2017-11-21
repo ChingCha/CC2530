@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Project>
+  <Desktop>
+    <Static>
+      <Debug-Log/>
+      <Build>
+        <ColumnWidth0>20</ColumnWidth0>
+        <ColumnWidth1>648</ColumnWidth1>
+        <ColumnWidth2>172</ColumnWidth2>
+        <ColumnWidth3>43</ColumnWidth3>
+      </Build>
+      <Workspace>
+        <ColumnWidths>
+          
+          
+          
+          
+        <Column0>201</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
+      </Workspace>
+      <Disassembly>
+        
+        
+      <PreferedWindows><Position>2</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows/></PreferedWindows><MixedMode>1</MixedMode><CodeCovShow>0</CodeCovShow></Disassembly>
+      <Find-in-Files>
+        <ColumnWidth0>315</ColumnWidth0>
+        <ColumnWidth1>45</ColumnWidth1>
+        <ColumnWidth2>540</ColumnWidth2>
+      </Find-in-Files>
+    <Watch><Format><struct_types/><watch_formats/></Format><Column0>100</Column0><Column1>100</Column1><Column2>100</Column2><Column3>100</Column3></Watch></Static>
+    <Windows>
+      
+      
+      
+    <Wnd3>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-20804-25253</Identity>
+            <TabName>Debug Log</TabName>
+            <Factory>Debug-Log</Factory>
+            <Session/>
+          </Tab>
+          <Tab>
+            <Identity>TabID-20282-25262</Identity>
+            <TabName>Build</TabName>
+            <Factory>Build</Factory>
+            <Session/>
+          </Tab>
+          <Tab>
+            <Identity>TabID-7171-26941</Identity>
+            <TabName>Find in Files</TabName>
+            <Factory>Find-in-Files</Factory>
+            <Session/>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd3><Wnd4>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-31553-25256</Identity>
+            <TabName>Workspace</TabName>
+            <Factory>Workspace</Factory>
+            <Session>
+              
+            <NodeDict><ExpandedNode>M310</ExpandedNode></NodeDict></Session>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd4><Wnd5><Tabs><Tab><Identity>TabID-3396-31548</Identity><TabName>Watch</TabName><Factory>Watch</Factory><Session><Expressions><Expression><Expression>udi</Expression></Expression></Expressions><TabId>0</TabId><Column0>100</Column0><Column1>100</Column1><Column2>100</Column2><Column3>100</Column3></Session></Tab></Tabs><SelectedTab>0</SelectedTab></Wnd5></Windows>
+    <Editor>
+      
+      
+      
+      
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>D:\&#x7A0B;&#x5F0F;&#x958B;&#x767C;&#x5099;&#x4eFD;\2010 _ March Month\20100312\CC2530_ex\CC2530_ex_v3\CC2530_ex_v3\CC2530_ex\mcu-kit1\ex_M310\ex.c</Filename><XPos>0</XPos><YPos>37</YPos><SelStart>1349</SelStart><SelEnd>1349</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>D:\&#x7A0B;&#x5F0F;&#x958B;&#x767C;&#x5099;&#x4eFD;\2010 _ March Month\20100312\CC2530_ex\CC2530_ex_v3\CC2530_ex_v3\CC2530_ex\components\module\M310.c</Filename><XPos>0</XPos><YPos>18</YPos><SelStart>962</SelStart><SelEnd>962</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>D:\&#x7A0B;&#x5F0F;&#x958B;&#x767C;&#x5099;&#x4eFD;\2010 _ March Month\20100312\CC2530_ex\CC2530_ex_v3\CC2530_ex_v3\CC2530_ex\components\module\M310.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>556</SelStart><SelEnd>566</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>D:\&#x7A0B;&#x5F0F;&#x958B;&#x767C;&#x5099;&#x4eFD;\2010 _ March Month\20100312\CC2530_ex\CC2530_ex_v3\CC2530_ex_v3\CC2530_ex\components\common\hal_cc8051.h</Filename><XPos>0</XPos><YPos>35</YPos><SelStart>3013</SelStart><SelEnd>3028</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>D:\&#x7A0B;&#x5F0F;&#x958B;&#x767C;&#x5099;&#x4eFD;\2010 _ March Month\20100312\CC2530_ex\CC2530_ex_v3\CC2530_ex_v3\CC2530_ex\components\common\hal_mcu.c</Filename><XPos>0</XPos><YPos>23</YPos><SelStart>1382</SelStart><SelEnd>1382</SelEnd></Tab><ActiveTab>4</ActiveTab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Positions>
+      
+      
+      
+      
+      
+    <Top><Row0><Sizes><Toolbar-01388a38><key>iaridepm.enu1</key></Toolbar-01388a38></Sizes></Row0><Row1><Sizes><Toolbar-0b487100><key>debuggergui.enu1</key></Toolbar-0b487100></Sizes></Row1></Top><Left><Row0><Sizes><Wnd4><Rect><Top>-2</Top><Left>-2</Left><Bottom>469</Bottom><Right>275</Right><x>-2</x><y>-2</y><xscreen>277</xscreen><yscreen>184</yscreen><sizeHorzCX>216406</sizeHorzCX><sizeHorzCY>255556</sizeHorzCY><sizeVertCX>216406</sizeVertCX><sizeVertCY>654167</sizeVertCY></Rect></Wnd4></Sizes></Row0></Left><Right><Row0><Sizes><Wnd5><Rect><Top>-2</Top><Left>-2</Left><Bottom>469</Bottom><Right>424</Right><x>-2</x><y>-2</y><xscreen>200</xscreen><yscreen>200</yscreen><sizeHorzCX>156250</sizeHorzCX><sizeHorzCY>277778</sizeHorzCY><sizeVertCX>332813</sizeVertCX><sizeVertCY>654167</sizeVertCY></Rect></Wnd5></Sizes></Row0></Right><Bottom><Row0><Sizes><Wnd3><Rect><Top>-2</Top><Left>-2</Left><Bottom>182</Bottom><Right>1282</Right><x>-2</x><y>-2</y><xscreen>1284</xscreen><yscreen>184</yscreen><sizeHorzCX>1003125</sizeHorzCX><sizeHorzCY>255556</sizeHorzCY><sizeVertCX>216406</sizeVertCX><sizeVertCY>255556</sizeVertCY></Rect></Wnd3></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+  </Desktop>
+</Project>
+
+

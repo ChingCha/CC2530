@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Workspace>
+  <ConfigDictionary>
+    
+  <CurrentConfigs><Project>M250/debug</Project></CurrentConfigs></ConfigDictionary>
+  <Desktop>
+    <Static>
+      <Workspace>
+        <ColumnWidths>
+          
+          
+          
+          
+        <Column0>236</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
+      </Workspace>
+      <Build>
+        
+        
+        
+        
+      <ColumnWidth0>20</ColumnWidth0><ColumnWidth1>904</ColumnWidth1><ColumnWidth2>241</ColumnWidth2><ColumnWidth3>60</ColumnWidth3></Build>
+    <TerminalIO/></Static>
+    <Windows>
+      
+      
+    <Wnd0>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-11810-26126</Identity>
+            <TabName>Workspace</TabName>
+            <Factory>Workspace</Factory>
+            <Session>
+              
+            <NodeDict><ExpandedNode>M250</ExpandedNode><ExpandedNode>M250/application</ExpandedNode><ExpandedNode>M250/targets</ExpandedNode></NodeDict></Session>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd0><Wnd1>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-14152-27720</Identity>
+            <TabName>Build</TabName>
+            <Factory>Build</Factory>
+            <Session/>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd1></Windows>
+    <Editor>
+      
+      
+      
+      
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>D:\&#x7A0B;&#x5F0F;&#x958B;&#x767C;&#x5099;&#x4eFD;\2010 _ March Month\20100312\CC2530_ex\CC2530_ex_v3\CC2530_ex_v3\CC2530_ex\mcu-kit1\ex_M250\ex.c</Filename><XPos>0</XPos><YPos>16</YPos><SelStart>807</SelStart><SelEnd>807</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>D:\&#x7A0B;&#x5F0F;&#x958B;&#x767C;&#x5099;&#x4eFD;\2010 _ March Month\20100312\CC2530_ex\CC2530_ex_v3\CC2530_ex_v3\CC2530_ex\components\common\hal_mcu.c</Filename><XPos>0</XPos><YPos>40</YPos><SelStart>1642</SelStart><SelEnd>1642</SelEnd></Tab><ActiveTab>1</ActiveTab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Positions>
+      
+      
+      
+      
+      
+    <Top><Row0><Sizes><Toolbar-01388a38><key>iaridepm.enu1</key></Toolbar-01388a38></Sizes></Row0><Row1><Sizes/></Row1></Top><Left><Row0><Sizes><Wnd0><Rect><Top>-2</Top><Left>-2</Left><Bottom>521</Bottom><Right>310</Right><x>-2</x><y>-2</y><xscreen>203</xscreen><yscreen>156</yscreen><sizeHorzCX>158594</sizeHorzCX><sizeHorzCY>216667</sizeHorzCY><sizeVertCX>243750</sizeVertCX><sizeVertCY>726389</sizeVertCY></Rect></Wnd0></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd1><Rect><Top>-2</Top><Left>-2</Left><Bottom>154</Bottom><Right>1282</Right><x>-2</x><y>-2</y><xscreen>1284</xscreen><yscreen>156</yscreen><sizeHorzCX>1003125</sizeHorzCX><sizeHorzCY>216667</sizeHorzCY><sizeVertCX>158594</sizeVertCX><sizeVertCY>216667</sizeVertCY></Rect></Wnd1></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+  </Desktop>
+</Workspace>
+
+

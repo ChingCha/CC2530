@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Project>
+  <Desktop>
+    <Static>
+      <Debug-Log/>
+      <Build>
+        
+        
+        
+        
+      <ColumnWidth0>20</ColumnWidth0><ColumnWidth1>904</ColumnWidth1><ColumnWidth2>241</ColumnWidth2><ColumnWidth3>60</ColumnWidth3></Build>
+      <Workspace>
+        <ColumnWidths>
+          
+          
+          
+          
+        <Column0>143</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
+      </Workspace>
+      <Disassembly>
+        
+        
+      <MixedMode>1</MixedMode><CodeCovShow>0</CodeCovShow></Disassembly>
+    <Find-in-Files><ColumnWidth0>315</ColumnWidth0><ColumnWidth1>45</ColumnWidth1><ColumnWidth2>540</ColumnWidth2></Find-in-Files></Static>
+    <Windows>
+      
+      
+      
+    <Wnd0>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-8841-30685</Identity>
+            <TabName>Debug Log</TabName>
+            <Factory>Debug-Log</Factory>
+            <Session/>
+          </Tab>
+          <Tab>
+            <Identity>TabID-8318-30695</Identity>
+            <TabName>Build</TabName>
+            <Factory>Build</Factory>
+            <Session/>
+          </Tab>
+        <Tab><Identity>TabID-26261-19829</Identity><TabName>Find in Files</TabName><Factory>Find-in-Files</Factory><Session/></Tab></Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd0><Wnd1>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-19589-30688</Identity>
+            <TabName>Workspace</TabName>
+            <Factory>Workspace</Factory>
+            <Session>
+              
+            <NodeDict><ExpandedNode>M150</ExpandedNode><ExpandedNode>M150/targets</ExpandedNode></NodeDict></Session>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd1><Wnd2>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-30338-30692</Identity>
+            <TabName>Disassembly</TabName>
+            <Factory>Disassembly</Factory>
+            <Session/>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd2></Windows>
+    <Editor>
+      
+      
+      
+      
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>X:\prj\KIT\CC2530_ex\components\module\M150.c</Filename><XPos>1</XPos><YPos>15</YPos><SelStart>1138</SelStart><SelEnd>1138</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>X:\prj\KIT\CC2530_ex\components\module\M150.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>X:\prj\KIT\CC2530_ex\mcu-kit1\ex_M150\ex.c</Filename><XPos>0</XPos><YPos>36</YPos><SelStart>1103</SelStart><SelEnd>1103</SelEnd></Tab><ActiveTab>2</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>X:\prj\KIT\CC2530_ex\components\targets\mcu-kit1\hal_lcd.c</Filename><XPos>0</XPos><YPos>402</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>X:\prj\KIT\CC2530_ex\components\targets\mcu-kit1\hal_keypad.c</Filename><XPos>0</XPos><YPos>195</YPos><SelStart>5128</SelStart><SelEnd>5195</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>X:\prj\KIT\CC2530_ex\components\common\hal_adc.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>766</SelStart><SelEnd>780</SelEnd></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Positions>
+      
+      
+      
+      
+      
+    <Top><Row0><Sizes><Toolbar-01b3c1d8><key>iaridepm.enu1</key></Toolbar-01b3c1d8></Sizes></Row0><Row1><Sizes><Toolbar-028a8038><key>debuggergui.enu1</key></Toolbar-028a8038></Sizes></Row1></Top><Left><Row0><Sizes><Wnd1><Rect><Top>-2</Top><Left>-2</Left><Bottom>545</Bottom><Right>217</Right><x>-2</x><y>-2</y><xscreen>146</xscreen><yscreen>170</yscreen><sizeHorzCX>158180</sizeHorzCX><sizeHorzCY>217391</sizeHorzCY><sizeVertCX>237270</sizeVertCX><sizeVertCY>699488</sizeVertCY></Rect></Wnd1></Sizes></Row0></Left><Right><Row0><Sizes><Wnd2><Rect><Top>-2</Top><Left>-2</Left><Bottom>545</Bottom><Right>144</Right><x>-2</x><y>-2</y><xscreen>146</xscreen><yscreen>170</yscreen><sizeHorzCX>158180</sizeHorzCX><sizeHorzCY>217391</sizeHorzCY><sizeVertCX>158180</sizeVertCX><sizeVertCY>699488</sizeVertCY></Rect></Wnd2></Sizes></Row0></Right><Bottom><Row0><Sizes><Wnd0><Rect><Top>-2</Top><Left>-2</Left><Bottom>168</Bottom><Right>925</Right><x>-2</x><y>-2</y><xscreen>927</xscreen><yscreen>170</yscreen><sizeHorzCX>1004334</sizeHorzCX><sizeHorzCY>217391</sizeHorzCY><sizeVertCX>158180</sizeVertCX><sizeVertCY>217391</sizeVertCY></Rect></Wnd0></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+  </Desktop>
+</Project>
+
+

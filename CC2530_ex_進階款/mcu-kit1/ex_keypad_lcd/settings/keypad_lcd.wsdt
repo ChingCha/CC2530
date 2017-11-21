@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Workspace>
+  <ConfigDictionary>
+    
+  <CurrentConfigs><Project>keypad_lcd/debug</Project></CurrentConfigs></ConfigDictionary>
+  <Desktop>
+    <Static>
+      <Workspace>
+        <ColumnWidths>
+          
+          
+          
+          
+        <Column0>195</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
+      </Workspace>
+      <Build>
+        
+        
+        
+        
+      <ColumnWidth0>20</ColumnWidth0><ColumnWidth1>591</ColumnWidth1><ColumnWidth2>157</ColumnWidth2><ColumnWidth3>39</ColumnWidth3></Build>
+      <TerminalIO/>
+    </Static>
+    <Windows>
+      
+      
+    <Wnd2>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-16781-9387</Identity>
+            <TabName>Workspace</TabName>
+            <Factory>Workspace</Factory>
+            <Session>
+              
+            <NodeDict><ExpandedNode>keypad_lcd</ExpandedNode><ExpandedNode>keypad_lcd/application</ExpandedNode><ExpandedNode>keypad_lcd/basic rf</ExpandedNode><ExpandedNode>keypad_lcd/targets</ExpandedNode></NodeDict></Session>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd2><Wnd3>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-11616-9894</Identity>
+            <TabName>Build</TabName>
+            <Factory>Build</Factory>
+            <Session/>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd3></Windows>
+    <Editor>
+      
+      
+      
+      
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>D:\R.D Dept\&#x7A0B;&#x5F0F;&#x958B;&#x767C;\TI CC2530 example\CC2530_ex_v5\CC2530_ex\mcu-kit1\ex_keypad_lcd\keypad_lcd.c</Filename><XPos>0</XPos><YPos>37</YPos><SelStart>1053</SelStart><SelEnd>1056</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>D:\R.D Dept\&#x7A0B;&#x5F0F;&#x958B;&#x767C;\TI CC2530 example\CC2530_ex_v5\CC2530_ex\components\targets\mcu-kit1\hal_uart.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>917</SelStart><SelEnd>929</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>D:\R.D Dept\&#x7A0B;&#x5F0F;&#x958B;&#x767C;\TI CC2530 example\CC2530_ex_v5\CC2530_ex\components\targets\mcu-kit2\hal_lcd.h</Filename><XPos>0</XPos><YPos>9</YPos><SelStart>990</SelStart><SelEnd>990</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>D:\R.D Dept\&#x7A0B;&#x5F0F;&#x958B;&#x767C;\TI CC2530 example\CC2530_ex_v5\CC2530_ex\components\targets\mcu-kit1\hal_lcd.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>D:\R.D Dept\&#x7A0B;&#x5F0F;&#x958B;&#x767C;\TI CC2530 example\CC2530_ex_v5\CC2530_ex\components\targets\mcu-kit1\hal_board.h</Filename><XPos>0</XPos><YPos>18</YPos><SelStart>1164</SelStart><SelEnd>1164</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>D:\R.D Dept\&#x7A0B;&#x5F0F;&#x958B;&#x767C;\TI CC2530 example\CC2530_ex_v5\CC2530_ex\components\common\hal_rf_security.c</Filename><XPos>0</XPos><YPos>40</YPos><SelStart>1791</SelStart><SelEnd>1791</SelEnd></Tab><ActiveTab>5</ActiveTab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Positions>
+      
+      
+      
+      
+      
+    <Top><Row0><Sizes><Toolbar-014a82c0><key>iaridepm.enu1</key></Toolbar-014a82c0></Sizes></Row0></Top><Left><Row0><Sizes><Wnd2><Rect><Top>-2</Top><Left>-2</Left><Bottom>480</Bottom><Right>286</Right><x>-2</x><y>-2</y><xscreen>357</xscreen><yscreen>92</yscreen><sizeHorzCX>278906</sizeHorzCX><sizeHorzCY>127778</sizeHorzCY><sizeVertCX>225000</sizeVertCX><sizeVertCY>669444</sizeVertCY></Rect></Wnd2></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd3><Rect><Top>-2</Top><Left>-2</Left><Bottom>195</Bottom><Right>1282</Right><x>-2</x><y>-2</y><xscreen>1284</xscreen><yscreen>197</yscreen><sizeHorzCX>1003125</sizeHorzCX><sizeHorzCY>273611</sizeHorzCY><sizeVertCX>278906</sizeVertCX><sizeVertCY>127778</sizeVertCY></Rect></Wnd3></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+  </Desktop>
+</Workspace>
+
+

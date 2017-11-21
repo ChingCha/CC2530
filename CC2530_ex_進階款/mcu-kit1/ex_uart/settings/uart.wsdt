@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Workspace>
+  <ConfigDictionary>
+    
+  <CurrentConfigs><Project>uart/debug</Project></CurrentConfigs></ConfigDictionary>
+  <Desktop>
+    <Static>
+      <Workspace>
+        <ColumnWidths>
+          
+          
+          
+          
+        <Column0>275</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
+      </Workspace>
+      <Build>
+        
+        
+        
+        
+      <ColumnWidth0>20</ColumnWidth0><ColumnWidth1>591</ColumnWidth1><ColumnWidth2>157</ColumnWidth2><ColumnWidth3>39</ColumnWidth3></Build>
+      <TerminalIO/>
+    </Static>
+    <Windows>
+      
+      
+    <Wnd0>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-17158-11837</Identity>
+            <TabName>Workspace</TabName>
+            <Factory>Workspace</Factory>
+            <Session>
+              
+            <NodeDict><ExpandedNode>uart</ExpandedNode><ExpandedNode>uart/targets</ExpandedNode></NodeDict></Session>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd0><Wnd1>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-25878-12287</Identity>
+            <TabName>Build</TabName>
+            <Factory>Build</Factory>
+            <Session/>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd1></Windows>
+    <Editor>
+      
+      
+      
+      
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>D:\R.D Dept\&#x7A0B;&#x5F0F;&#x958B;&#x767C;\TI CC2530 example\CC2530_ex_v5\CC2530_ex\mcu-kit1\ex_uart\uart.c</Filename><XPos>0</XPos><YPos>21</YPos><SelStart>829</SelStart><SelEnd>829</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>D:\R.D Dept\&#x7A0B;&#x5F0F;&#x958B;&#x767C;\TI CC2530 example\CC2530_ex_v5\CC2530_ex\components\targets\mcu-kit1\hal_uart.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>484</SelStart><SelEnd>495</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>D:\R.D Dept\&#x7A0B;&#x5F0F;&#x958B;&#x767C;\TI CC2530 example\CC2530_ex_v5\CC2530_ex\components\targets\mcu-kit1\hal_uart.c</Filename><XPos>0</XPos><YPos>79</YPos><SelStart>2938</SelStart><SelEnd>2938</SelEnd></Tab><ActiveTab>2</ActiveTab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Positions>
+      
+      
+      
+      
+      
+    <Top><Row0><Sizes><Toolbar-013b87d0><key>iaridepm.enu1</key></Toolbar-013b87d0></Sizes></Row0></Top><Left><Row0><Sizes><Wnd0><Rect><Top>-2</Top><Left>-2</Left><Bottom>526</Bottom><Right>349</Right><x>-2</x><y>-2</y><xscreen>303</xscreen><yscreen>151</yscreen><sizeHorzCX>236719</sizeHorzCX><sizeHorzCY>209722</sizeHorzCY><sizeVertCX>274219</sizeVertCX><sizeVertCY>733333</sizeVertCY></Rect></Wnd0></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd1><Rect><Top>-2</Top><Left>-2</Left><Bottom>149</Bottom><Right>1282</Right><x>-2</x><y>-2</y><xscreen>1284</xscreen><yscreen>151</yscreen><sizeHorzCX>1003125</sizeHorzCX><sizeHorzCY>209722</sizeHorzCY><sizeVertCX>236719</sizeVertCX><sizeVertCY>209722</sizeVertCY></Rect></Wnd1></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+  </Desktop>
+</Workspace>
+
+

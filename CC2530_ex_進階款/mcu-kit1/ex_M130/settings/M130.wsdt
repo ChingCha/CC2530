@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Workspace>
+  <ConfigDictionary>
+    
+  <CurrentConfigs><Project>M130/debug</Project></CurrentConfigs></ConfigDictionary>
+  <Desktop>
+    <Static>
+      <Workspace>
+        <ColumnWidths>
+          
+          
+          
+          
+        <Column0>228</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
+      </Workspace>
+      <Build>
+        
+        
+        
+        
+      <ColumnWidth0>20</ColumnWidth0><ColumnWidth1>904</ColumnWidth1><ColumnWidth2>241</ColumnWidth2><ColumnWidth3>60</ColumnWidth3></Build>
+      <TerminalIO/>
+    <Debug-Log/></Static>
+    <Windows>
+      
+      
+    <Wnd0>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-11116-1167</Identity>
+            <TabName>Workspace</TabName>
+            <Factory>Workspace</Factory>
+            <Session>
+              
+            <NodeDict><ExpandedNode>M130</ExpandedNode><ExpandedNode>M130/application</ExpandedNode><ExpandedNode>M130/basic rf</ExpandedNode><ExpandedNode>M130/targets</ExpandedNode></NodeDict></Session>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd0><Wnd1>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-3169-2340</Identity>
+            <TabName>Build</TabName>
+            <Factory>Build</Factory>
+            <Session/>
+          </Tab>
+        <Tab><Identity>TabID-14785-9951</Identity><TabName>Debug Log</TabName><Factory>Debug-Log</Factory><Session/></Tab></Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd1></Windows>
+    <Editor>
+      
+      
+      
+      
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>D:\R.D Dept\&#x7A0B;&#x5F0F;&#x958B;&#x767C;\TI CC2530 example\CC2530_ex_v5\CC2530_ex\components\basicrf\basic_rf.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>368</SelStart><SelEnd>369</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>D:\R.D Dept\&#x7A0B;&#x5F0F;&#x958B;&#x767C;\TI CC2530 example\CC2530_ex_v5\CC2530_ex\components\module\M130.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>309</SelStart><SelEnd>309</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>D:\R.D Dept\&#x7A0B;&#x5F0F;&#x958B;&#x767C;\TI CC2530 example\CC2530_ex_v5\CC2530_ex\components\targets\mcu-kit1\hal_board.h</Filename><XPos>0</XPos><YPos>45</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>D:\R.D Dept\&#x7A0B;&#x5F0F;&#x958B;&#x767C;\TI CC2530 example\CC2530_ex_v5\CC2530_ex\components\targets\mcu-kit1\hal_buzzer.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>405</SelStart><SelEnd>418</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>D:\R.D Dept\&#x7A0B;&#x5F0F;&#x958B;&#x767C;\TI CC2530 example\CC2530_ex_v5\CC2530_ex\components\targets\mcu-kit1\hal_buzzer.c</Filename><XPos>0</XPos><YPos>21</YPos><SelStart>1084</SelStart><SelEnd>1084</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>D:\R.D Dept\&#x7A0B;&#x5F0F;&#x958B;&#x767C;\TI CC2530 example\CC2530_ex_v5\CC2530_ex\components\targets\mcu-kit1\hal_board.c</Filename><XPos>0</XPos><YPos>21</YPos><SelStart>1614</SelStart><SelEnd>1614</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>C:\Documents and Settings\Darren\&#x684C;&#x9762;\ZIGBEE &#x6559;&#x5B78;&#x6A21;&#x7D44;_&#x51FA;&#x8CA8;&#x5149;&#x789F;\ZIGBEE Example\CC2530_ex\components\targets\mcu-kit1\hal_board.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>C:\Documents and Settings\Darren\&#x684C;&#x9762;\ZIGBEE &#x6559;&#x5B78;&#x6A21;&#x7D44;_&#x51FA;&#x8CA8;&#x5149;&#x789F;\ZIGBEE Example\CC2530_ex\components\targets\mcu-kit1\hal_board.h</Filename><XPos>0</XPos><YPos>51</YPos><SelStart>1979</SelStart><SelEnd>2000</SelEnd></Tab><ActiveTab>7</ActiveTab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Positions>
+      
+      
+      
+      
+      
+    <Top><Row0><Sizes><Toolbar-013b88f0><key>iaridepm.enu1</key></Toolbar-013b88f0></Sizes></Row0></Top><Left><Row0><Sizes><Wnd0><Rect><Top>-2</Top><Left>-2</Left><Bottom>520</Bottom><Right>319</Right><x>-2</x><y>-2</y><xscreen>202</xscreen><yscreen>157</yscreen><sizeHorzCX>157813</sizeHorzCX><sizeHorzCY>218056</sizeHorzCY><sizeVertCX>250781</sizeVertCX><sizeVertCY>725000</sizeVertCY></Rect></Wnd0></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd1><Rect><Top>-2</Top><Left>-2</Left><Bottom>155</Bottom><Right>1282</Right><x>-2</x><y>-2</y><xscreen>1284</xscreen><yscreen>157</yscreen><sizeHorzCX>1003125</sizeHorzCX><sizeHorzCY>218056</sizeHorzCY><sizeVertCX>157813</sizeVertCX><sizeVertCY>218056</sizeVertCY></Rect></Wnd1></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+  </Desktop>
+</Workspace>
+
+
