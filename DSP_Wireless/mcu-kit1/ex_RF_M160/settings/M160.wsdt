@@ -158,6 +158,9 @@
       
       
     <Top><Row0><Sizes><Toolbar-00c2d978><key>iaridepm.enu1</key></Toolbar-00c2d978></Sizes></Row0><Row1><Sizes/></Row1><Row2><Sizes/></Row2></Top><Left><Row0><Sizes><Wnd0><Rect><Top>-2</Top><Left>-2</Left><Bottom>758</Bottom><Right>211</Right><x>-2</x><y>-2</y><xscreen>98</xscreen><yscreen>197</yscreen><sizeHorzCX>51042</sizeHorzCX><sizeHorzCY>197395</sizeHorzCY><sizeVertCX>110938</sizeVertCX><sizeVertCY>761523</sizeVertCY></Rect></Wnd0></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd1><Rect><Top>-2</Top><Left>-2</Left><Bottom>195</Bottom><Right>1922</Right><x>-2</x><y>-2</y><xscreen>1924</xscreen><yscreen>197</yscreen><sizeHorzCX>1002083</sizeHorzCX><sizeHorzCY>197395</sizeHorzCY><sizeVertCX>51042</sizeVertCX><sizeVertCY>197395</sizeVertCY></Rect></Wnd1></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+<<<<<<< HEAD
+>>>>>>> c058d2293b4d4c866439e361f31c46df26ccacd6
+=======
 >>>>>>> c058d2293b4d4c866439e361f31c46df26ccacd6
   </Desktop>
 </Workspace>
