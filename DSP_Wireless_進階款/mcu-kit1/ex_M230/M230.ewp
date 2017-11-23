@@ -765,7 +765,7 @@
         </option>
         <option>
           <name>XclFile</name>
-          <state>C:\Program Files (x86)\IAR Systems\Embedded Workbench 6.0\8051\config\devices\Texas Instruments\lnk51ew_cc2530F256_banked.xcl</state>
+          <state>P:\IAR\8051\config\devices\Texas Instruments\lnk51ew_cc2530F256_banked.xcl</state>
         </option>
         <option>
           <name>XclFileSlave</name>
@@ -1044,6 +1044,9 @@
       <name>$PROJ_DIR$\ex.c</name>
     </file>
     <file>
+      <name>$PROJ_DIR$\..\..\components\common\hal_ledmatrix.h</name>
+    </file>
+    <file>
       <name>$PROJ_DIR$\..\..\components\module\M230.c</name>
     </file>
     <file>
@@ -1071,55 +1074,28 @@
       <name>$PROJ_DIR$\..\..\components\common\hal_adc.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\..\components\common\hal_adc.h</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\components\common\hal_cc8051.h</name>
-    </file>
-    <file>
       <name>$PROJ_DIR$\..\..\components\common\hal_clock.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\components\common\hal_clock.h</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\components\common\hal_defs.h</name>
     </file>
     <file>
       <name>$PROJ_DIR$\..\..\components\common\hal_digio.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\..\components\common\hal_digio.h</name>
-    </file>
-    <file>
       <name>$PROJ_DIR$\..\..\components\common\hal_int.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\..\components\common\hal_int.h</name>
+      <name>$PROJ_DIR$\..\..\components\common\hal_ledmatrix.c</name>
     </file>
     <file>
       <name>$PROJ_DIR$\..\..\components\common\hal_mcu.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\..\components\common\hal_mcu.h</name>
-    </file>
-    <file>
       <name>$PROJ_DIR$\..\..\components\common\hal_rf.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\components\common\hal_rf.h</name>
     </file>
     <file>
       <name>$PROJ_DIR$\..\..\components\common\hal_rf_security.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\..\components\common\hal_rf_security.h</name>
-    </file>
-    <file>
       <name>$PROJ_DIR$\..\..\components\common\hal_rf_util.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\components\common\hal_rf_util.h</name>
     </file>
   </group>
   <group>

@@ -96,7 +96,7 @@ int main()
     // 初始化擴充板、LCD、點矩陣
     halBoardInit();
     halLcdInit();
-	//MAX7219_Init();
+	MAX7219_Init();
 
     // 裝置已經通電的提醒
     halLedSet(8);
