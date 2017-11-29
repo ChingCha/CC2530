@@ -13,7 +13,7 @@
 #include "hal_board.h"
 #include "hal_lcd.h"
 #include "hal_keypad.h"
-#include "hal_uart.h"
+//#include "hal_uart.h"
 #include "hal_buzzer.h"
 #include "hal_led.h"
 #include "hal_rf.h"
@@ -21,60 +21,14 @@
 #include "util_lcd.h"
 #include "basic_rf.h"
 #include "M230.h"
-//自定義標頭檔
-#include "hal_ledmatrix.h"
-#include "hal_drink.h"
 
-// Application parameters
-#define RF_CHANNEL                18      // 2.4 GHz RF channel
-
-// BasicRF address definitions
-#define PAN_ID                	0x1111
-
-	// A Vending Machine
-	#define A_ZONE           		0x2222
-	
-	#define A_ZONE_1         		'1'
-	#define A_ZONE_2         		'2'
-	#define A_ZONE_3         		'3'
-	#define A_ZONE_4         		'4'
-	#define A_ZONE_5         		'5'
-	
-	#define B_ZONE           		0x2233	//Slave-B位址
-	
-	#define B_ZONE_1				'1'	//Slave-B節目1的辨識碼
-	#define B_ZONE_2				'2'	//Slave-B節目2的辨識碼
-	#define B_ZONE_3     			'3'	//Slave-B節目3的辨識碼
-	#define B_ZONE_4     			'4'	//Slave-B節目4的辨識碼
-	#define B_ZONE_5				'5'	//Slave-B節目5的辨識碼
-	#define B_ZONE_ALARM			'6'
-	
-#define ONE_AREA            	0x3333	//第一區Master位址
-#define APP_PAYLOAD_LENGTH        127
-
-
-// Application states
-#define IDLE                      0
-#define SEND_CMD                  1
-
-// Device
-#define Button P0_4
 #define LED1 P1_3
 #define LED2 P1_4
 
-#ifdef SECURITY_CCM
-    // Security key
-    static uint8 key[] = 
-    {
-        0xc0, 0xc1, 0xc2, 0xc3, 0xc4, 0xc5, 0xc6, 0xc7, 0xc8, 0xc9, 0xca, 0xcb, 0xcc, 0xcd, 0xce, 0xcf, 
-    };
-#endif
-
+/*
 unsigned char DataRecieve;		//讀取緩衝區資料的變數
 unsigned char Flag = 0;			//接收指令標誌的變數
 
-static uint8 pTxData[APP_PAYLOAD_LENGTH];	//Tx資料的上限
-static basicRfCfg_t basicRfConfig;
 
 void Init_Port();						//LED Port 初始化函數
 void Init_UART0();						//序列埠0的初始化函數
@@ -82,20 +36,24 @@ void set_main_clock();					//設置主時鐘
 void ExecuteTheOrder();					//執行上位機指令
 void UR0SendByte(unsigned char data);	//UR0發送字元函數
 void UR0SendString(unsigned char *str);	//UR0發送字串函數
-
+*/
 
 void main(void)
 {
-	// RF初始化
-    basicRfConfig.panId = PAN_ID;
-    basicRfConfig.channel = RF_CHANNEL;
-    basicRfConfig.ackRequest = TRUE;
-    #ifdef SECURITY_CCM
-        basicRfConfig.securityKey = key;
-    #endif 
 	
-    uint8 key;
-
+	uint8 key;
+	
+	
+	/*
+	// UART初始化
+	Init_Port();	
+	set_main_clock();
+	Init_UART0();
+	*/
+	
+	// 初始化擴充板、LCD、點矩陣
+    halBoardInit();
+    
     // Indicate that device is powered
     halLedSet(8);
 	
@@ -103,17 +61,17 @@ void main(void)
     utilPrintLogo("** M230 Test  **");
     halMcuWaitMs(300);
     halBuzzer(300);
-    while (halKeypadPushed() == 0);
+    while (halKeypadPushed() == 0)
+		;
     utilMenuSelect(NULL);
 	
-	// 初始化擴充板、LCD、點矩陣
-    halBoardInit();
-    halLcdInit();
-	MAX7219_Init();
+	//測試字串
+	//UR0SendString("1\n");
 	
 	
     while (TRUE)
     {
+		
 		//M230初始動作
         halLcdClear();
         halBuzzer(300);
@@ -123,20 +81,16 @@ void main(void)
         key = M230_ReadEEPROM(0);
         halLcdWriteChar(HAL_LCD_LINE_2, 14, key);
 		
-		//UART初始化
-		Init_Port();	
-		set_main_clock();
-		Init_UART0();
-		
-		//測試字串
-		UR0SendString("1\n");
-		
         while (TRUE)
         {
+			/*
 			if(Flag == 1)      //是否收到上位機指令?
 			{
 				ExecuteTheOrder();    //解析並運行指令
 			}
+			*/
+			
+			
             key = halKeypadPushed();
             halMcuWaitMs(100);
             if (key > 0)
@@ -155,6 +109,7 @@ void main(void)
     }
 }
 
+/*
 void UR0SendByte(unsigned char data){
 	
 	U0DBUF = data;			//將要發送的1字節數據寫入U0DBUF
@@ -189,7 +144,7 @@ void Init_UART0(){
 	P0SEL = 0x0C;	//將P0_2、3 Port 設置成外設功能
 	P2DIR &= ~0x3F;	//P0外設優先級USART0最高
 	
-	U0BAUD = 216;	//16MHz的系統時鐘產生9600BPS鮑率
+	U0BAUD = 216;	//16MHz的系統時鐘產生115200BPS鮑率
 	U0GCR = 12;
 	
 	U0UCR |= 0x80;	//禁止流控，8bit數據，清除緩衝器
@@ -248,5 +203,5 @@ void set_main_clock()
 	while(!(CLKCONSTA & 0X40)); //等待時鐘穩定
 	CLKCONCMD &=~0XF8;			//選擇32MHz為主時鐘
 }
-
+*/
 
