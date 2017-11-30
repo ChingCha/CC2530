@@ -19,7 +19,7 @@ void Delay(unsigned int t);				//延遲函數
 void main()
 {
 	Init_Port();	
-	set_main_clock();
+	//set_main_clock();
 	Init_UART0();
 
     UR0SendString("1\n");
@@ -29,6 +29,10 @@ void main()
     while(1){
         if(Flag == 1)      //是否收到上位機指令?
         {
+			//LED1 = 1;
+			//Delay(60000);
+			LED1 = 0;
+			Delay(60000);
             ExecuteTheOrder();    //解析並運行指令
         }
     }
@@ -81,7 +85,10 @@ void Init_Port(){
 //數據接收中斷服務函數
 #pragma vector = URX0_VECTOR		
 __interrupt void UR0_Recieve_Service(){
-	
+	LED1 = 1;
+	Delay(60000);
+	LED1 = 0;
+	Delay(60000);
 	URX0IF = 0;				//清除RX接收中斷標誌
 	DataRecieve = U0DBUF;	//將數據從接收緩衝區讀出
 	Flag = 1;				//設置接收指令標誌

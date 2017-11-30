@@ -35,8 +35,7 @@ void main(void)
     utilPrintLogo("** M230 Test  **");
     halMcuWaitMs(300);
     halBuzzer(300);
-    while (halKeypadPushed() == 0)
-        ;
+    while (halKeypadPushed() == 0);
     utilMenuSelect(NULL);
     while (TRUE)
     {

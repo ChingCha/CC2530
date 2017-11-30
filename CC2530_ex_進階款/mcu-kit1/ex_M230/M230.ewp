@@ -1046,9 +1046,6 @@
     <file>
       <name>$PROJ_DIR$\..\..\components\module\M230.c</name>
     </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\components\module\M230.h</name>
-    </file>
   </group>
   <group>
     <name>basic rf</name>

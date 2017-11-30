@@ -5,15 +5,14 @@
 //-------------------------------------------------------------------
 // INCLUDES
 //-------------------------------------------------------------------
-#include "ioCC2530.h"
 #include "hal_defs.h"
-#include "hal_cc8051.h"
+//#include "hal_cc8051.h"
 #include "hal_int.h"
 #include "hal_mcu.h"
 #include "hal_board.h"
 #include "hal_lcd.h"
 #include "hal_keypad.h"
-//#include "hal_uart.h"
+#include "hal_uart.h"
 #include "hal_buzzer.h"
 #include "hal_led.h"
 #include "hal_rf.h"
@@ -25,7 +24,7 @@
 #define LED1 P1_3
 #define LED2 P1_4
 
-/*
+
 unsigned char DataRecieve;		//讀取緩衝區資料的變數
 unsigned char Flag = 0;			//接收指令標誌的變數
 
@@ -36,20 +35,20 @@ void set_main_clock();					//設置主時鐘
 void ExecuteTheOrder();					//執行上位機指令
 void UR0SendByte(unsigned char data);	//UR0發送字元函數
 void UR0SendString(unsigned char *str);	//UR0發送字串函數
-*/
+//void Delay(unsigned int t);
 
 void main(void)
 {
 	
-	uint8 key;
-	
-	
-	/*
 	// UART初始化
 	Init_Port();	
-	set_main_clock();
+	//set_main_clock();
 	Init_UART0();
-	*/
+	
+	//測試字串
+	UR0SendString("1\n");
+	
+	uint8 key;
 	
 	// 初始化擴充板、LCD、點矩陣
     halBoardInit();
@@ -61,18 +60,22 @@ void main(void)
     utilPrintLogo("** M230 Test  **");
     halMcuWaitMs(300);
     halBuzzer(300);
-    while (halKeypadPushed() == 0)
-		;
+    while (halKeypadPushed() == 0);
     utilMenuSelect(NULL);
 	
-	//測試字串
-	//UR0SendString("1\n");
 	
 	
-    while (TRUE)
-    {
+    while (1){
 		
-		//M230初始動作
+		if(Flag == 1)      //是否收到上位機指令?
+		{
+			LED1 = 0;
+			halMcuWaitMs(100);
+			ExecuteTheOrder();    //解析並運行指令
+		}
+		
+		
+		//M230初始化
         halLcdClear();
         halBuzzer(300);
         M230_Init();
@@ -81,18 +84,20 @@ void main(void)
         key = M230_ReadEEPROM(0);
         halLcdWriteChar(HAL_LCD_LINE_2, 14, key);
 		
-        while (TRUE)
+		
+		//M230動作
+        while (1)
         {
-			/*
-			if(Flag == 1)      //是否收到上位機指令?
-			{
-				ExecuteTheOrder();    //解析並運行指令
-			}
-			*/
+			LED1 = 1;
+			halMcuWaitMs(100);
+			LED1 = 0;
+			halMcuWaitMs(100);
 			
 			
-            key = halKeypadPushed();
+			
+			key = halKeypadPushed();
             halMcuWaitMs(100);
+			
             if (key > 0)
             {
                 if (key == '*')
@@ -106,10 +111,61 @@ void main(void)
                 halLcdWriteChar(HAL_LCD_LINE_2, 14, key);
             }
         }
+		
     }
 }
 
-/*
+
+void Init_UART0(){
+	
+	//對應的引腳為外設功能
+
+	PERCFG = 0x00;	//串口0的引腳映射到位置1，即P0_2、3
+	P0SEL = 0x0C;	//將P0_2、3 Port 設置成外設功能
+	P2DIR &= ~0x3F;	//P0外設優先級USART0最高
+	
+	U0BAUD = 216;	//16MHz的系統時鐘產生9600BPS鮑率
+	U0GCR = 12;
+	
+	U0UCR |= 0x80;	//禁止流控，8bit數據，清除緩衝器
+	U0CSR |= 0x80;	//選擇UART模式(7)，致能接收器(6)
+	
+	UTX0IF = 0;		//清除TX發送中斷標誌
+	
+	//UART2.c外加
+	
+	U0CSR |=0X40;			//致能UART0 接收
+	IEN0 |=0X04;			//致能UART0 接收中斷
+	EA=1;					//開啟總中斷
+
+}
+
+
+void Init_Port(){
+	
+	P1SEL &= ~0x18;		//將P1_4、5設置為通用I/O
+	P1DIR |= 0x18;		//將P1_4、5 Port 設置為輸出
+	LED1 = 0;
+	LED2 = 0;
+	
+}
+
+
+//數據接收中斷服務函數
+#pragma vector = URX0_VECTOR		
+__interrupt void UR0_Recieve_Service(){
+	
+	LED2 = 1;
+	halMcuWaitMs(100);
+	LED2 = 0;
+	halMcuWaitMs(100);
+	
+	URX0IF = 0;				//清除RX接收中斷標誌
+	DataRecieve = U0DBUF;	//將數據從接收緩衝區讀出
+	Flag = 1;				//設置接收指令標誌
+}
+
+
 void UR0SendByte(unsigned char data){
 	
 	U0DBUF = data;			//將要發送的1字節數據寫入U0DBUF
@@ -127,47 +183,6 @@ void UR0SendString(unsigned char *str){
 	
 }
 
-void Init_Port(){
-	
-	P1SEL &= ~0x18;		//將P1_4、5設置為通用I/O
-	P1DIR |= 0x18;		//將P1_4、5 Port 設置為輸出
-	LED1 = 0;
-	LED2 = 0;
-	
-}
-
-void Init_UART0(){
-	
-	//對應的引腳為外設功能
-
-	PERCFG = 0x00;	//串口0的引腳映射到位置1，即P0_2、3
-	P0SEL = 0x0C;	//將P0_2、3 Port 設置成外設功能
-	P2DIR &= ~0x3F;	//P0外設優先級USART0最高
-	
-	U0BAUD = 216;	//16MHz的系統時鐘產生115200BPS鮑率
-	U0GCR = 12;
-	
-	U0UCR |= 0x80;	//禁止流控，8bit數據，清除緩衝器
-	U0CSR |= 0x80;	//選擇UART模式(7)，致能接收器(6)
-	
-	UTX0IF = 0;		//清除TX發送中斷標誌
-	
-	//UART2.c外加
-	
-	U0CSR |=0X40;			//致能UART0 接收
-	IEN0 |=0X04;			//致能UART0 接收中斷
-	EA=1;					//開啟總中斷
-
-}
-
-//數據接收中斷服務函數
-#pragma vector = URX0_VECTOR		
-__interrupt void UR0_Recieve_Service(){
-	
-	URX0IF = 0;				//清除RX接收中斷標誌
-	DataRecieve = U0DBUF;	//將數據從接收緩衝區讀出
-	Flag = 1;				//設置接收指令標誌
-}
 
 void ExecuteTheOrder(){
 	
@@ -203,5 +218,5 @@ void set_main_clock()
 	while(!(CLKCONSTA & 0X40)); //等待時鐘穩定
 	CLKCONCMD &=~0XF8;			//選擇32MHz為主時鐘
 }
-*/
+
 
