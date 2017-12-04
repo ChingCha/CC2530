@@ -27,7 +27,7 @@
 //          1: Button is being pushed
 //          0: Button is not being pushed
 //-------------------------------------------------------------------
-uint8 halButtonPushed(void)
+extern uint8 halButtonPushed(void)
 {
     uint8 v = HAL_BUTTON_NONE;
 

@@ -1,222 +1,144 @@
-//-------------------------------------------------------------------
-// Filename: ex.c
-// Description: 串列記憶體(I2C)範例
-//-------------------------------------------------------------------
-//-------------------------------------------------------------------
-// INCLUDES
-//-------------------------------------------------------------------
+//LED_Matrix
 #include "hal_defs.h"
-//#include "hal_cc8051.h"
-#include "hal_int.h"
 #include "hal_mcu.h"
 #include "hal_board.h"
+#include "hal_led.h"
 #include "hal_lcd.h"
+#include "hal_int.h"
+#include "hal_button.h"
+#include "hal_buzzer.h"
+#include "hal_rf.h"
+#include "basic_rf.h"
+
+//M230.h
+#include "hal_cc8051.h"
 #include "hal_keypad.h"
 #include "hal_uart.h"
-#include "hal_buzzer.h"
-#include "hal_led.h"
-#include "hal_rf.h"
 #include "util.h"
-#include "util_lcd.h"
-#include "basic_rf.h"
 #include "M230.h"
+#define RF_CHANNEL                18      // 2.4 GHz RF channel
 
-#define LED1 P1_3
-#define LED2 P1_4
+// BasicRF address definitions
+#define PAN_ID                	0x1111
+#define BVM_ADDR           		0x2233		//B販賣機的RF位址
+#define VM_ONE_ADDR            	0x3333		//第一區VM Co-ordinator位址
+#define APP_PAYLOAD_LENGTH        127
+#define BVM_GREENTEA     '3'					//B販賣機飲品(水)的辨識碼
+#define BVM_BLACKTEA     '4'					//B販賣機飲品(牛奶)的辨識碼
+
+// Application states
+#define IDLE                      0
+#define SEND_CMD                  1
 
 
-unsigned char DataRecieve;		//讀取緩衝區資料的變數
-unsigned char Flag = 0;			//接收指令標誌的變數
+//-------------------------------------------------------------------
+//LOCAL FUNCTIONS
+//-------------------------------------------------------------------
+
+//-------------------------------------------------------------------
+// LOCAL VARIABLES
+//-------------------------------------------------------------------
+
+#ifdef SECURITY_CCM
+    // Security key
+    static uint8 key[] = 
+    {
+        0xc0, 0xc1, 0xc2, 0xc3, 0xc4, 0xc5, 0xc6, 0xc7, 0xc8, 0xc9, 0xca, 0xcb, 0xcc, 0xcd, 0xce, 0xcf, 
+    };
+#endif
 
 
-void Init_Port();						//LED Port 初始化函數
-void Init_UART0();						//序列埠0的初始化函數
-void set_main_clock();					//設置主時鐘
-void ExecuteTheOrder();					//執行上位機指令
-void UR0SendByte(unsigned char data);	//UR0發送字元函數
-void UR0SendString(unsigned char *str);	//UR0發送字串函數
-//void Delay(unsigned int t);
+//-------------------------------------------------------------------
+// @			先行宣告函數區
+// @fn          Drink of A vendingmachine
+// @brief       Application code for switch application. Puts MCU in
+//              endless loop to wait for commands from switch.
+// @param       basicRfConfig - file scope variable. Basic RF configuration data
+//              pTxData - file scope variable. Pointer to buffer for TX
+//              payload
+//              appState - file scope variable. Holds application state
+// @return      none
+//-------------------------------------------------------------------
+static uint8 pTxData[APP_PAYLOAD_LENGTH];	//Tx資料的上限
+static basicRfCfg_t basicRfConfig;			//宣告RFConfig組態
 
-void main(void)
+void B_greentea(int B_drinkg);		//B販賣機飲品(綠茶)的功能
+void B_blacktea(int B_drinkb);		//B販賣機飲品(紅茶)的功能
+
+int main()
 {
+	basicRfConfig.panId = PAN_ID;			//指定RF ID
+    basicRfConfig.channel = RF_CHANNEL;		//指定RF Channel
+    basicRfConfig.ackRequest = TRUE;		//封包傳遞會有ACK回應
+    #ifdef SECURITY_CCM
+        basicRfConfig.securityKey = key;	//封包傳遞安全機制
+    #endif 
+
+    halBoardInit();							//CC2530主板初始化
+
+    halLedSet(8);							//電源指示燈
+
+	int32 greentea = 7;						//B販賣機飲品(綠茶)的數量
+	int32 blacktea = 3;						//B販賣機飲品(紅茶)的數量
 	
-	// UART初始化
-	Init_Port();	
-	//set_main_clock();
-	Init_UART0();
+	// RF初始化
+    basicRfConfig.myAddr = BVM_ADDR;
+    if (basicRfInit(&basicRfConfig) == FAILED){}
+
+    basicRfReceiveOff();					//使RF接收端為常關，藉此省電
 	
-	//測試字串
-	UR0SendString("1\n");
-	
-	uint8 key;
-	
-	// 初始化擴充板、LCD、點矩陣
-    halBoardInit();
-    
-    // Indicate that device is powered
-    halLedSet(8);
-	
-    // Print Logo and splash screen on LCD
-    utilPrintLogo("** M230 Test  **");
-    halMcuWaitMs(300);
-    halBuzzer(300);
-    while (halKeypadPushed() == 0);
-    utilMenuSelect(NULL);
-	
-	
-	
-    while (1){
-		
-		if(Flag == 1)      //是否收到上位機指令?
-		{
-			LED1 = 0;
-			halMcuWaitMs(100);
-			ExecuteTheOrder();    //解析並運行指令
+	while (1)
+    {
+        uint8 v = halButtonPushed();							//v等於按下BUTTON
+		if (v == HAL_BUTTON_2){									//若v接收到BUTTON_2的訊號
+            if(greentea > 0)										//若B販賣機飲品(綠茶)的數量大於0
+				greentea--;										//B販賣機飲品(綠茶)的數量扣1
+			halLcdDisplayWithVM(HAL_LCD_LINE_1,'G',greentea);	//顯示於LCD
+			B_greentea(greentea);										//將引數greentea傳至B_greentea函數中的參數B_drinkg
 		}
-		
-		
-		//M230初始化
-        halLcdClear();
-        halBuzzer(300);
-        M230_Init();
-        halLcdWriteLine(HAL_LCD_LINE_1, "** M230 Test  **");
-        halLcdWriteLine(HAL_LCD_LINE_2, "Write:   Read:  ");
-        key = M230_ReadEEPROM(0);
-        halLcdWriteChar(HAL_LCD_LINE_2, 14, key);
-		
-		
-		//M230動作
-        while (1)
-        {
-			LED1 = 1;
-			halMcuWaitMs(100);
-			LED1 = 0;
-			halMcuWaitMs(100);
-			
-			
-			
-			key = halKeypadPushed();
-            halMcuWaitMs(100);
-			
-            if (key > 0)
-            {
-                if (key == '*')
-                {
-                    break;
-                }
-                M230_WriteEEPROM(0, key); //WriteEEPROM(addr, data)
-                halLcdWriteChar(HAL_LCD_LINE_2, 6, key);
-
-                key = M230_ReadEEPROM(0); //ReadEEPROM(addr)
-                halLcdWriteChar(HAL_LCD_LINE_2, 14, key);
-            }
-        }
-		
+		else if(v == HAL_BUTTON_1){
+			if(blacktea > 0)
+				blacktea--;
+			halLcdDisplayWithVM(HAL_LCD_LINE_2,'B',blacktea);
+			B_blacktea(blacktea);
+		}
+        halMcuWaitMs(100);    
     }
+	return 0;
 }
 
+//-------------------------------------------------------------------
+// @函數定義區
+//-------------------------------------------------------------------
 
-void Init_UART0(){
-	
-	//對應的引腳為外設功能
-
-	PERCFG = 0x00;	//串口0的引腳映射到位置1，即P0_2、3
-	P0SEL = 0x0C;	//將P0_2、3 Port 設置成外設功能
-	P2DIR &= ~0x3F;	//P0外設優先級USART0最高
-	
-	U0BAUD = 216;	//16MHz的系統時鐘產生9600BPS鮑率
-	U0GCR = 12;
-	
-	U0UCR |= 0x80;	//禁止流控，8bit數據，清除緩衝器
-	U0CSR |= 0x80;	//選擇UART模式(7)，致能接收器(6)
-	
-	UTX0IF = 0;		//清除TX發送中斷標誌
-	
-	//UART2.c外加
-	
-	U0CSR |=0X40;			//致能UART0 接收
-	IEN0 |=0X04;			//致能UART0 接收中斷
-	EA=1;					//開啟總中斷
-
-}
-
-
-void Init_Port(){
-	
-	P1SEL &= ~0x18;		//將P1_4、5設置為通用I/O
-	P1DIR |= 0x18;		//將P1_4、5 Port 設置為輸出
-	LED1 = 0;
-	LED2 = 0;
-	
-}
-
-
-//數據接收中斷服務函數
-#pragma vector = URX0_VECTOR		
-__interrupt void UR0_Recieve_Service(){
-	
-	LED2 = 1;
-	halMcuWaitMs(100);
-	LED2 = 0;
-	halMcuWaitMs(100);
-	
-	URX0IF = 0;				//清除RX接收中斷標誌
-	DataRecieve = U0DBUF;	//將數據從接收緩衝區讀出
-	Flag = 1;				//設置接收指令標誌
-}
-
-
-void UR0SendByte(unsigned char data){
-	
-	U0DBUF = data;			//將要發送的1字節數據寫入U0DBUF
-	while(!UTX0IF);			//等待TX中斷標誌，即數據發送完成
-	UTX0IF = 0;				//等待TX中斷標誌，準備下一次發送
-	
-}
-
-
-void UR0SendString(unsigned char *str){
-	
-	while(*str != '\0'){	//發送一個字串
-		UR0SendByte(*str++);//逐一發送字串的字元
-	}
-	
-}
-
-
-void ExecuteTheOrder(){
-	
-	Flag = 0;	//清除接收指令標誌
-	
-	switch(DataRecieve){
+void B_greentea(int B_drinkg){
+	 
+    do{
+		pTxData[0] = BVM_GREENTEA;	//Tx陣列首個元素為AVM_greentea辨識碼
+		pTxData[1] = B_drinkg;	//Tx陣列第二個元素為架上飲料數量(B_drinkg)
 		
-		case 0x31:
-			LED1 = 1;
-			UR0SendString("The LED1 is Open!");
-		break;
-		
-		case 0x32:
-			LED1 = 0;
-			UR0SendString("The LED1 is Closed!");
-		break;
-		
-		case 0x33:
-			LED2 = 1;
-			UR0SendString("The LED2 is Open!");
-		break;
-		
-		case 0x34:
-			LED2 = 0;
-			UR0SendString("The LED2 is Closed!");
-		break;
-	}
+        //發送封包，封包內容為{接收目的地(VM Co-ordinator位址)、Tx資料、Tx資料上限}
+		basicRfSendPacket(VM_ONE_ADDR, pTxData, APP_PAYLOAD_LENGTH);
+        
+        halBuzzer(100);
+        halMcuWaitMs(200);
+        halLedToggle(7);
+	}while (B_drinkg<0);
 }
 
-void set_main_clock()
-{ 
-	CLKCONCMD |= 0X40;			//選擇16MHZ RCOSC為系統時鐘源
-	while(!(CLKCONSTA & 0X40)); //等待時鐘穩定
-	CLKCONCMD &=~0XF8;			//選擇32MHz為主時鐘
+void B_blacktea(int B_drinkb){
+
+	
+    do{
+		pTxData[0] = BVM_BLACKTEA;
+		pTxData[1] = B_drinkb;
+		
+		basicRfSendPacket(VM_ONE_ADDR, pTxData, APP_PAYLOAD_LENGTH);
+
+		halBuzzer(300);
+		halMcuWaitMs(200);
+        halLedToggle(7);
+	}while (B_drinkb<0);
 }
 
 

@@ -1,0 +1,61 @@
+[CodeCoverage]
+Enabled=_ 0
+[Interrupts]
+Enabled=1
+[MemoryMap]
+Enabled=0
+Base=0
+UseAuto=0
+TypeViolation=1
+UnspecRange=1
+ActionState=1
+[TraceHelper]
+Enabled=0
+ShowSource=1
+[DisAssemblyWindow]
+NumStates=_ 1
+State 1=_ 1
+[Profiling]
+Enabled=0
+[StackPlugin]
+Enabled=1
+OverflowWarningsEnabled=1
+WarningThreshold=90
+SpWarningsEnabled=1
+WarnHow=0
+UseTrigger=1
+TriggerName=main
+LimitSize=0
+ByteLimit=50
+[DebugChecksum]
+Checksum=469753559
+[InstructionProfiling]
+Enabled=_ 0
+[Log file]
+LoggingEnabled=_ 0
+LogFile=_ ""
+Category=_ 0
+[TermIOLog]
+LoggingEnabled=_ 0
+LogFile=_ ""
+[Breakpoints]
+Count=0
+[ChipconEmu]
+Stop timers on halt=0
+Leave target running=1
+[Aliases]
+A0=_ "C:\Users\spshih\Desktop\Eating\CC2530\CC2530\CC2530 RF Code With LED Matrix\components\common\hal_rf.c" "V:\Workspace\CC2530\CC2530 RF Code With LED Matrix\components\common\hal_rf.c"
+A1=_ "C:\Users\spshih\Desktop\Eating\CC2530\CC2530\CC2530 RF Code With LED Matrix\components\targets\zigbee-mcu1\hal_board.c" ""
+A2=_ "C:\Users\spshih\Desktop\Eating\CC2530\CC2530\CC2530 RF Code\components\targets\zigbee-mcu1\hal_board.c" "C:\Users\user\Desktop\CC2530\CC2530 RF Code\components\targets\zigbee-mcu1\hal_board.c"
+A3=_ "C:\Users\spshih\Desktop\Eating\CC2530\CC2530\CC2530 RF Code\components\utils\util.c" "C:\Users\user\Desktop\CC2530\CC2530 RF Code\components\utils\util.c"
+A4=_ "C:\Users\spshih\Desktop\Eating\CC2530\CC2530\CC2530 RF Code\mcu-kit1\ex_RF_M160\ex.c" "C:\Users\user\Desktop\CC2530\CC2530 RF Code\mcu-kit1\ex_RF_M160\ex.c"
+A5=_ "C:\Users\user\Desktop\CC2530\CC2530 RF Code With LED Matrix\mcu-kit1\ex_RF_M160\ex.c" "V:\Workspace\CC2530\CC2530 RF Code With LED Matrix\mcu-kit1\ex_RF_M160\ex.c"
+A6=_ "C:\Users\user\Desktop\CC2530\CC2530 RF Code\components\common\hal_mcu.c" "C:\Users\spshih\Desktop\Eating\CC2530\CC2530\CC2530 RF Code With LED Matrix\components\common\hal_mcu.c"
+A7=_ "C:\Users\user\Desktop\CC2530\CC2530 RF Code\components\common\hal_rf.c" "C:\Users\spshih\Desktop\Eating\CC2530\CC2530\CC2530 RF Code\components\common\hal_rf.c"
+A8=_ "C:\Users\user\Desktop\CC2530\CC2530 RF Code\components\targets\mcu-kit1\hal_keypad.c" ""
+A9=_ "C:\Users\user\Desktop\CC2530\CC2530 RF Code\components\targets\mcu-kit1\hal_led.c" "C:\Users\spshih\Desktop\Eating\CC2530\CC2530\CC2530 RF Code\components\targets\mcu-kit1\hal_led.c"
+A10=_ "C:\Users\user\Desktop\CC2530\CC2530 RF Code\components\utils\util.c" "C:\Users\spshih\Desktop\Eating\CC2530\CC2530\CC2530 RF Code\components\utils\util.c"
+A11=_ "C:\Users\user\Desktop\CC530\原始Code\RF 原始Code\components\common\hal_rf.c" "C:\Users\user\Desktop\CC2530\CC2530 RF Code\components\common\hal_rf.c"
+A12=_ "C:\Users\user\Desktop\CC530\原始Code\RF 原始Code\mcu-kit1\ex_RF_M160\ex.c" ""
+Count=13
+SuppressDialog=1

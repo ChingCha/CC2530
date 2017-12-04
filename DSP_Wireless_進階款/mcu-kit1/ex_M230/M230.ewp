@@ -1053,13 +1053,7 @@
       <name>$PROJ_DIR$\..\..\components\basicrf\basic_rf.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\..\components\basicrf\basic_rf.h</name>
-    </file>
-    <file>
       <name>$PROJ_DIR$\..\..\components\basicrf\basic_rf_security.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\components\basicrf\basic_rf_security.h</name>
     </file>
   </group>
   <group>
@@ -1074,7 +1068,13 @@
       <name>$PROJ_DIR$\..\..\components\common\hal_digio.c</name>
     </file>
     <file>
+      <name>$PROJ_DIR$\..\..\components\common\hal_drink.c</name>
+    </file>
+    <file>
       <name>$PROJ_DIR$\..\..\components\common\hal_int.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\components\common\hal_lcd.c</name>
     </file>
     <file>
       <name>$PROJ_DIR$\..\..\components\common\hal_ledmatrix.c</name>
@@ -1098,37 +1098,19 @@
       <name>$PROJ_DIR$\..\..\components\targets\mcu-kit1\hal_board.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\..\components\targets\mcu-kit1\hal_board.h</name>
+      <name>$PROJ_DIR$\..\..\components\targets\zigbee-mcu1\hal_button.c</name>
     </file>
     <file>
       <name>$PROJ_DIR$\..\..\components\targets\mcu-kit1\hal_buzzer.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\..\components\targets\mcu-kit1\hal_buzzer.h</name>
-    </file>
-    <file>
       <name>$PROJ_DIR$\..\..\components\targets\mcu-kit1\hal_keypad.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\components\targets\mcu-kit1\hal_keypad.h</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\components\targets\mcu-kit1\hal_lcd.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\components\targets\mcu-kit1\hal_lcd.h</name>
     </file>
     <file>
       <name>$PROJ_DIR$\..\..\components\targets\mcu-kit1\hal_led.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\..\components\targets\mcu-kit1\hal_led.h</name>
-    </file>
-    <file>
       <name>$PROJ_DIR$\..\..\components\targets\mcu-kit1\hal_uart.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\components\targets\mcu-kit1\hal_uart.h</name>
     </file>
   </group>
   <group>

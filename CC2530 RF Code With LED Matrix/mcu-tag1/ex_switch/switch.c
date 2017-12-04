@@ -5,6 +5,7 @@
 //-------------------------------------------------------------------
 // INCLUDES
 //-------------------------------------------------------------------
+//LED_Matrix
 #include "hal_defs.h"
 #include "hal_mcu.h"
 #include "hal_board.h"
@@ -16,11 +17,18 @@
 #include "hal_rf.h"
 #include "basic_rf.h"
 
+//M230.h
+#include "hal_cc8051.h"
+#include "hal_keypad.h"
+#include "hal_uart.h"
+#include "util.h"
+#include "M230.h"
+
 //-------------------------------------------------------------------
 // CONSTANTS
 //-------------------------------------------------------------------
 // Application parameters
- #define RF_CHANNEL                18      // 2.4 GHz RF channel
+#define RF_CHANNEL                18      // 2.4 GHz RF channel
 
 // BasicRF address definitions
 #define PAN_ID                	0x1111
