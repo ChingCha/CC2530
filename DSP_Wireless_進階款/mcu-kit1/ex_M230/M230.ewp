@@ -765,7 +765,7 @@
         </option>
         <option>
           <name>XclFile</name>
-          <state>P:\IAR\8051\config\devices\Texas Instruments\lnk51ew_cc2530F256_banked.xcl</state>
+          <state>C:\Program Files (x86)\IAR Systems\Embedded Workbench 6.0 Evaluation\8051\config\devices\Texas Instruments\lnk51ew_cc2530b.xcl</state>
         </option>
         <option>
           <name>XclFileSlave</name>
@@ -1041,10 +1041,7 @@
   <group>
     <name>application</name>
     <file>
-      <name>$PROJ_DIR$\ex.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\components\module\M230.c</name>
+      <name>$PROJ_DIR$\system.c</name>
     </file>
   </group>
   <group>
