@@ -55,7 +55,7 @@ void Init_UART0(){
 	//對應的引腳為外設功能
 
 	PERCFG = 0x00;	//串口0的引腳映射到位置1，即P0_2、3
-        PERCFG |= 0x40;
+    PERCFG |= 0x40;
 	P0SEL = 0x0C;	//將P0_2、3 Port 設置成外設功能
 	P2DIR &= ~0x3F;	//P0外設優先級USART0最高
 	
@@ -112,6 +112,7 @@ void ExecuteTheOrder(){
                 while(sw1==1 && overtime_five_min<180)
 	        {
                    buzzer();
+				   Flag = 0;
 		   InitT4();
                 }
                 T4CTL &=~ 0x08 ;
@@ -121,11 +122,11 @@ void ExecuteTheOrder(){
                 if(sw1==0)
 		{
 		  servo1();
-<<<<<<< HEAD
+
 		  //UR0SendString("servo1\n");
-=======
+
           UR0SendString("1\n");
->>>>>>> 990b0b4af104f1e4fdeffbb1f7111668c8e43c26
+
 		}
 		break;
 		
@@ -237,11 +238,11 @@ if(++countsecond>254)   //254 次中斷後LED取反，閃爍一輪（約為0.5秒時間）
  
 void servo1()
 { 
-<<<<<<< HEAD
+
         T1CC2H = 0x03;
-=======
+
         T1CC2H = 0x05;
->>>>>>> 990b0b4af104f1e4fdeffbb1f7111668c8e43c26
+
         T1CC2L = 0x3a;
         int i;
         for(i=0;i<23;i++)
@@ -254,11 +255,11 @@ void servo1()
 
 void servo2()
 { 
-<<<<<<< HEAD
+
         T1CC2H = 0x0;
-=======
+
         T1CC2H = 0x05;
->>>>>>> 990b0b4af104f1e4fdeffbb1f7111668c8e43c26
+
         T1CC2L = 0x3a;
         int i;
         for(i=0;i<44;i++)

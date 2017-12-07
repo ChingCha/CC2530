@@ -19,55 +19,31 @@ void Delay(unsigned int t);				//延遲函數
 void main()
 {
 	Init_Port();	
-	set_main_clock();
+	//set_main_clock();
 	Init_UART0();
 
     UR0SendString("1\n");
-    
    
-<<<<<<< HEAD
-=======
-    UR0SendString("1\n");
     
     
-    
- 
-    
-    
-<<<<<<< HEAD
-    
-=======
-    /*
->>>>>>> cc7f382e871fa69b945d5c881967f491f4fccdc0
->>>>>>> d07c84b3e10fe8dbbd3e584870724a9d93b895bf
->>>>>>> 990b0b4af104f1e4fdeffbb1f7111668c8e43c26
     while(1){
         if(Flag == 1)      //是否收到上位機指令?
         {
+			//LED1 = 1;
+			//Delay(60000);
+			LED1 = 0;
+			Delay(60000);
             ExecuteTheOrder();    //解析並運行指令
         }
     }
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-    
-=======
-<<<<<<< HEAD
-	*/
-=======
-    */
->>>>>>> cc7f382e871fa69b945d5c881967f491f4fccdc0
->>>>>>> d07c84b3e10fe8dbbd3e584870724a9d93b895bf
->>>>>>> 990b0b4af104f1e4fdeffbb1f7111668c8e43c26
+	
         
 	/*
 	while(1){
 		UR0SendByte('A');
 		Delay(60000);
 	}
-        */
+    */
 
 }
 
@@ -109,7 +85,10 @@ void Init_Port(){
 //數據接收中斷服務函數
 #pragma vector = URX0_VECTOR		
 __interrupt void UR0_Recieve_Service(){
-	
+	LED1 = 1;
+	Delay(60000);
+	LED1 = 0;
+	Delay(60000);
 	URX0IF = 0;				//清除RX接收中斷標誌
 	DataRecieve = U0DBUF;	//將數據從接收緩衝區讀出
 	Flag = 1;				//設置接收指令標誌

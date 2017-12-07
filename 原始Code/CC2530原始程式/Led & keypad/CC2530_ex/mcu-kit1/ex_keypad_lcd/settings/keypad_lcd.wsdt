@@ -25,7 +25,7 @@
     <Windows>
       
       
-    <Wnd0>
+    <Wnd2>
         <Tabs>
           <Tab>
             <Identity>TabID-16781-9387</Identity>
@@ -33,11 +33,11 @@
             <Factory>Workspace</Factory>
             <Session>
               
-            <NodeDict><ExpandedNode>keypad_lcd</ExpandedNode><ExpandedNode>keypad_lcd/application</ExpandedNode></NodeDict></Session>
+            <NodeDict><ExpandedNode>keypad_lcd</ExpandedNode><ExpandedNode>keypad_lcd/application</ExpandedNode><ExpandedNode>keypad_lcd/application/keypad_lcd.c</ExpandedNode></NodeDict></Session>
           </Tab>
         </Tabs>
         
-      <SelectedTab>0</SelectedTab></Wnd0><Wnd1>
+      <SelectedTab>0</SelectedTab></Wnd2><Wnd3>
         <Tabs>
           <Tab>
             <Identity>TabID-11616-9894</Identity>
@@ -47,20 +47,20 @@
           </Tab>
         </Tabs>
         
-      <SelectedTab>0</SelectedTab></Wnd1></Windows>
+      <SelectedTab>0</SelectedTab></Wnd3></Windows>
     <Editor>
       
       
       
       
-    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\keypad_lcd.c</Filename><XPos>0</XPos><YPos>3</YPos><SelStart>477</SelStart><SelEnd>487</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\components\targets\mcu-kit1\hal_board.h</Filename><XPos>0</XPos><YPos>33</YPos><SelStart>1328</SelStart><SelEnd>1328</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\components\targets\mcu-kit1\hal_buzzer.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>441</SelStart><SelEnd>441</SelEnd></Tab><ActiveTab>2</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\components\targets\mcu-kit1\hal_led.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>377</SelStart><SelEnd>386</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\components\targets\mcu-kit1\hal_led.c</Filename><XPos>0</XPos><YPos>3</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\keypad_lcd.c</Filename><XPos>0</XPos><YPos>60</YPos><SelStart>697</SelStart><SelEnd>697</SelEnd></Tab><ActiveTab>0</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\components\targets\mcu-kit1\hal_board.h</Filename><XPos>0</XPos><YPos>33</YPos><SelStart>1328</SelStart><SelEnd>1328</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\components\targets\mcu-kit1\hal_buzzer.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>441</SelStart><SelEnd>441</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\components\targets\mcu-kit1\hal_led.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>377</SelStart><SelEnd>386</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\components\targets\mcu-kit1\hal_led.c</Filename><XPos>0</XPos><YPos>3</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
     <Positions>
       
       
       
       
       
-    <Top><Row0><Sizes><Toolbar-012bdab8><key>iaridepm.enu1</key></Toolbar-012bdab8></Sizes></Row0></Top><Left><Row0><Sizes><Wnd0><Rect><Top>-2</Top><Left>-2</Left><Bottom>683</Bottom><Right>283</Right><x>-2</x><y>-2</y><xscreen>535</xscreen><yscreen>127</yscreen><sizeHorzCX>278646</sizeHorzCX><sizeHorzCY>127255</sizeHorzCY><sizeVertCX>148438</sizeVertCX><sizeVertCY>686373</sizeVertCY></Rect></Wnd0></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd1><Rect><Top>-2</Top><Left>-2</Left><Bottom>270</Bottom><Right>1922</Right><x>-2</x><y>-2</y><xscreen>1924</xscreen><yscreen>272</yscreen><sizeHorzCX>1002083</sizeHorzCX><sizeHorzCY>272545</sizeHorzCY><sizeVertCX>278646</sizeVertCX><sizeVertCY>127255</sizeVertCY></Rect></Wnd1></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+    <Top><Row0><Sizes><Toolbar-011fdaf0><key>iaridepm.enu1</key></Toolbar-011fdaf0></Sizes></Row0></Top><Left><Row0><Sizes><Wnd2><Rect><Top>-2</Top><Left>-2</Left><Bottom>683</Bottom><Right>283</Right><x>-2</x><y>-2</y><xscreen>535</xscreen><yscreen>127</yscreen><sizeHorzCX>278646</sizeHorzCX><sizeHorzCY>127255</sizeHorzCY><sizeVertCX>148438</sizeVertCX><sizeVertCY>686373</sizeVertCY></Rect></Wnd2></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd3><Rect><Top>-2</Top><Left>-2</Left><Bottom>270</Bottom><Right>1922</Right><x>-2</x><y>-2</y><xscreen>1924</xscreen><yscreen>272</yscreen><sizeHorzCX>1002083</sizeHorzCX><sizeHorzCY>272545</sizeHorzCY><sizeVertCX>278646</sizeVertCX><sizeVertCY>127255</sizeVertCY></Rect></Wnd3></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
   </Desktop>
 </Workspace>
 

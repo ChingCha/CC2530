@@ -2,72 +2,87 @@
 #                                                                              #
 #      IAR Universal Linker V5.0.2.5/W32                                       #
 #                                                                              #
-#           Link time     =  02/Nov/2017  13:12:26                             #
+#           Link time     =  05/Dec/2017  00:00:36                             #
 #           Target CPU    =  x51                                               #
-#           List file     =  "V:\Workspace\CC2530\CC2530 RF Code With LED Matr #
-#                            ix\mcu-tag1\ex_switch\debug\List\switch.map"      #
-#           Output file 1 =  "V:\Workspace\CC2530\CC2530 RF Code With LED Matr #
-#                            ix\mcu-tag1\ex_switch\debug\Exe\switch.hex"       #
+#           List file     =  "D:\Texas Instruments\CC2530\CC2530 RF Code With  #
+#                            LED Matrix\mcu-tag1\ex_switch\debug\List\switch.m #
+#                            ap"                                               #
+#           Output file 1 =  "D:\Texas Instruments\CC2530\CC2530 RF Code With  #
+#                            LED Matrix\mcu-tag1\ex_switch\debug\Exe\switch.he #
+#                            x"                                                #
 #                            Format: intel-extended                            #
-#           Output file 2 =  "V:\Workspace\CC2530\CC2530 RF Code With LED Matr #
-#                            ix\mcu-tag1\ex_switch\debug\Exe\switch.d51"       #
+#           Output file 2 =  "D:\Texas Instruments\CC2530\CC2530 RF Code With  #
+#                            LED Matrix\mcu-tag1\ex_switch\debug\Exe\switch.d5 #
+#                            1"                                                #
 #                            Format: debug                                     #
 #                            UBROF version 10.0.3                              #
 #                            Using library modules for C-SPY (-rt)             #
-#           Command line  =  "-IC:\Program Files (x86)\IAR Systems\Embedded Wo #
-#                            rkbench 6.0\8051\CONFIG\"                         #
-#                            -D_NR_OF_BANKS=0x07 -D_CODEBANK_END=0xFFFF        #
-#                            -D_CODEBANK_START=0x8000 -D?CBANK_MASK=0x07       #
-#                            -D?CBANK=0x9F                                     #
-#                            "V:\Workspace\CC2530\CC2530 RF Code With LED Matr #
-#                            ix\mcu-tag1\ex_switch\debug\Obj\basic_rf.r51"     #
-#                            "V:\Workspace\CC2530\CC2530 RF Code With LED Matr #
-#                            ix\mcu-tag1\ex_switch\debug\Obj\basic_rf_security #
+#           Command line  =  -IP:\IAR\8051\CONFIG\ -D_NR_OF_BANKS=0x07         #
+#                            -D_CODEBANK_END=0xFFFF -D_CODEBANK_START=0x8000   #
+#                            -D?CBANK_MASK=0x07 -D?CBANK=0x9F                  #
+#                            "D:\Texas Instruments\CC2530\CC2530 RF Code With  #
+#                            LED Matrix\mcu-tag1\ex_switch\debug\Obj\M230.r51" #
+#                            "D:\Texas Instruments\CC2530\CC2530 RF Code With  #
+#                            LED Matrix\mcu-tag1\ex_switch\debug\Obj\basic_rf. #
+#                            r51"                                              #
+#                            "D:\Texas Instruments\CC2530\CC2530 RF Code With  #
+#                            LED Matrix\mcu-tag1\ex_switch\debug\Obj\basic_rf_ #
+#                            security.r51"                                     #
+#                            "D:\Texas Instruments\CC2530\CC2530 RF Code With  #
+#                            LED Matrix\mcu-tag1\ex_switch\debug\Obj\hal_board #
 #                            .r51"                                             #
-#                            "V:\Workspace\CC2530\CC2530 RF Code With LED Matr #
-#                            ix\mcu-tag1\ex_switch\debug\Obj\hal_board.r51"    #
-#                            "V:\Workspace\CC2530\CC2530 RF Code With LED Matr #
-#                            ix\mcu-tag1\ex_switch\debug\Obj\hal_button.r51"   #
-#                            "V:\Workspace\CC2530\CC2530 RF Code With LED Matr #
-#                            ix\mcu-tag1\ex_switch\debug\Obj\hal_buzzer.r51"   #
-#                            "V:\Workspace\CC2530\CC2530 RF Code With LED Matr #
-#                            ix\mcu-tag1\ex_switch\debug\Obj\hal_clock.r51"    #
-#                            "V:\Workspace\CC2530\CC2530 RF Code With LED Matr #
-#                            ix\mcu-tag1\ex_switch\debug\Obj\hal_int.r51"      #
-#                            "V:\Workspace\CC2530\CC2530 RF Code With LED Matr #
-#                            ix\mcu-tag1\ex_switch\debug\Obj\hal_keypad.r51"   #
-#                            "V:\Workspace\CC2530\CC2530 RF Code With LED Matr #
-#                            ix\mcu-tag1\ex_switch\debug\Obj\hal_lcd.r51"      #
-#                            "V:\Workspace\CC2530\CC2530 RF Code With LED Matr #
-#                            ix\mcu-tag1\ex_switch\debug\Obj\hal_led.r51"      #
-#                            "V:\Workspace\CC2530\CC2530 RF Code With LED Matr #
-#                            ix\mcu-tag1\ex_switch\debug\Obj\hal_mcu.r51"      #
-#                            "V:\Workspace\CC2530\CC2530 RF Code With LED Matr #
-#                            ix\mcu-tag1\ex_switch\debug\Obj\hal_rf.r51"       #
-#                            "V:\Workspace\CC2530\CC2530 RF Code With LED Matr #
-#                            ix\mcu-tag1\ex_switch\debug\Obj\hal_rf_security.r #
+#                            "D:\Texas Instruments\CC2530\CC2530 RF Code With  #
+#                            LED Matrix\mcu-tag1\ex_switch\debug\Obj\hal_butto #
+#                            n.r51"                                            #
+#                            "D:\Texas Instruments\CC2530\CC2530 RF Code With  #
+#                            LED Matrix\mcu-tag1\ex_switch\debug\Obj\hal_buzze #
+#                            r.r51"                                            #
+#                            "D:\Texas Instruments\CC2530\CC2530 RF Code With  #
+#                            LED Matrix\mcu-tag1\ex_switch\debug\Obj\hal_clock #
+#                            .r51"                                             #
+#                            "D:\Texas Instruments\CC2530\CC2530 RF Code With  #
+#                            LED Matrix\mcu-tag1\ex_switch\debug\Obj\hal_int.r #
 #                            51"                                               #
-#                            "V:\Workspace\CC2530\CC2530 RF Code With LED Matr #
-#                            ix\mcu-tag1\ex_switch\debug\Obj\hal_uart.r51"     #
-#                            "V:\Workspace\CC2530\CC2530 RF Code With LED Matr #
-#                            ix\mcu-tag1\ex_switch\debug\Obj\switch.r51"       #
-#                            "V:\Workspace\CC2530\CC2530 RF Code With LED Matr #
-#                            ix\mcu-tag1\ex_switch\debug\Obj\util.r51"         #
-#                            "V:\Workspace\CC2530\CC2530 RF Code With LED Matr #
-#                            ix\mcu-tag1\ex_switch\debug\Obj\util_buffer.r51"  #
+#                            "D:\Texas Instruments\CC2530\CC2530 RF Code With  #
+#                            LED Matrix\mcu-tag1\ex_switch\debug\Obj\hal_keypa #
+#                            d.r51"                                            #
+#                            "D:\Texas Instruments\CC2530\CC2530 RF Code With  #
+#                            LED Matrix\mcu-tag1\ex_switch\debug\Obj\hal_lcd.r #
+#                            51"                                               #
+#                            "D:\Texas Instruments\CC2530\CC2530 RF Code With  #
+#                            LED Matrix\mcu-tag1\ex_switch\debug\Obj\hal_led.r #
+#                            51"                                               #
+#                            "D:\Texas Instruments\CC2530\CC2530 RF Code With  #
+#                            LED Matrix\mcu-tag1\ex_switch\debug\Obj\hal_mcu.r #
+#                            51"                                               #
+#                            "D:\Texas Instruments\CC2530\CC2530 RF Code With  #
+#                            LED Matrix\mcu-tag1\ex_switch\debug\Obj\hal_rf.r5 #
+#                            1"                                                #
+#                            "D:\Texas Instruments\CC2530\CC2530 RF Code With  #
+#                            LED Matrix\mcu-tag1\ex_switch\debug\Obj\hal_rf_se #
+#                            curity.r51"                                       #
+#                            "D:\Texas Instruments\CC2530\CC2530 RF Code With  #
+#                            LED Matrix\mcu-tag1\ex_switch\debug\Obj\hal_uart. #
+#                            r51"                                              #
+#                            "D:\Texas Instruments\CC2530\CC2530 RF Code With  #
+#                            LED Matrix\mcu-tag1\ex_switch\debug\Obj\switch.r5 #
+#                            1"                                                #
+#                            "D:\Texas Instruments\CC2530\CC2530 RF Code With  #
+#                            LED Matrix\mcu-tag1\ex_switch\debug\Obj\util.r51" #
+#                            "D:\Texas Instruments\CC2530\CC2530 RF Code With  #
+#                            LED Matrix\mcu-tag1\ex_switch\debug\Obj\util_buff #
+#                            er.r51"                                           #
 #                            -o                                                #
-#                            "V:\Workspace\CC2530\CC2530 RF Code With LED Matr #
-#                            ix\mcu-tag1\ex_switch\debug\Exe\switch.d51"       #
+#                            "D:\Texas Instruments\CC2530\CC2530 RF Code With  #
+#                            LED Matrix\mcu-tag1\ex_switch\debug\Exe\switch.d5 #
+#                            1"                                                #
 #                            -l                                                #
-#                            "V:\Workspace\CC2530\CC2530 RF Code With LED Matr #
-#                            ix\mcu-tag1\ex_switch\debug\List\switch.map"      #
-#                            -xmsn                                             #
-#                            "-IC:\Program Files (x86)\IAR Systems\Embedded Wo #
-#                            rkbench 6.0\8051\CONFIG\"                         #
-#                            -f                                                #
-#                            "C:\Program Files (x86)\IAR Systems\Embedded Work #
-#                            bench 6.0\8051\config\devices\Texas Instruments\l #
-#                            nk51ew_cc2530F256_banked.xcl"                     #
+#                            "D:\Texas Instruments\CC2530\CC2530 RF Code With  #
+#                            LED Matrix\mcu-tag1\ex_switch\debug\List\switch.m #
+#                            ap"                                               #
+#                            -xmsn -IP:\IAR\8051\CONFIG\ -f                    #
+#                            "P:\IAR\8051\config\devices\Texas Instruments\lnk #
+#                            51ew_cc2530F256_banked.xcl"                       #
 #                            (-D_IDATA0_START=0x00 -D_IDATA0_END=0xFF          #
 #                            -D_PDATA0_START=0x1E00 -D_PDATA0_END=0x1EFF       #
 #                            -D_IXDATA0_START=0x0001 -D_IXDATA0_END=0x1EFF     #
@@ -148,12 +163,11 @@
 #                            -D_NR_OF_VIRTUAL_REGISTERS=8 -D?PBANK=0xA0        #
 #                            -e_medium_write=_formatted_write                  #
 #                            -e_medium_read=_formatted_read -rt                #
-#                            "-Ointel-extended=V:\Workspace\CC2530\CC2530 RF C #
-#                            ode With LED Matrix\mcu-tag1\ex_switch\debug\Exe\ #
-#                            switch.hex"                                       #
+#                            "-Ointel-extended=D:\Texas Instruments\CC2530\CC2 #
+#                            530 RF Code With LED Matrix\mcu-tag1\ex_switch\de #
+#                            bug\Exe\switch.hex"                               #
 #                            -s __program_start                                #
-#                            "C:\Program Files (x86)\IAR Systems\Embedded Work #
-#                            bench 6.0\8051\LIB\CLIB\cl-pli-blxd-1e16x01.r51"  #
+#                            P:\IAR\8051\LIB\CLIB\cl-pli-blxd-1e16x01.r51      #
 #                            -D_IDATA_STACK_SIZE=0x40                          #
 #                            -D_EXTENDED_STACK_START=0x00                      #
 #                            -D_EXTENDED_STACK_SIZE=0x00                       #
@@ -273,7 +287,60 @@ Absolute parts
            _NR_OF_BANKS            00000007 
     *************************************************************************
 
-  FILE NAME : V:\Workspace\CC2530\CC2530 RF Code With LED Matrix\mcu-tag1\ex_switch\debug\Obj\basic_rf.r51
+  FILE NAME : D:\Texas Instruments\CC2530\CC2530 RF Code With LED Matrix\mcu-tag1\ex_switch\debug\Obj\M230.r51
+  PROGRAM MODULE, NAME : M230
+
+  SEGMENTS IN THE MODULE
+  ======================
+SFR_AN
+  Relative segment, address: DATA 00000080 - 00000080 (0x1 bytes), align: 0
+  Segment part 1. ROOT.       Intra module refs:   T1_ISR (hal_buzzer)
+                                                   halBoardInit (hal_board)
+                                                   halBuzzer (hal_buzzer)
+                                                   lcdControl (hal_lcd)
+                                                   lcdWrite (hal_lcd)
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           _A_P0                   00000080 
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           P0                      00000080 
+    -------------------------------------------------------------------------
+SFR_AN
+  Relative segment, address: DATA 0000008F - 0000008F (0x1 bytes), align: 0
+  Segment part 2. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           P0INP                   0000008F 
+    -------------------------------------------------------------------------
+SFR_AN
+  Relative segment, address: DATA 000000F3 - 000000F3 (0x1 bytes), align: 0
+  Segment part 3. ROOT.       Intra module refs:   halBoardInit (hal_board)
+                                                   halUartInit (hal_uart)
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           P0SEL                   000000F3 
+    -------------------------------------------------------------------------
+SFR_AN
+  Relative segment, address: DATA 000000F7 - 000000F7 (0x1 bytes), align: 0
+  Segment part 4. ROOT.       Intra module refs:   halBoardInit (hal_board)
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           P2INP                   000000F7 
+    -------------------------------------------------------------------------
+SFR_AN
+  Relative segment, address: DATA 000000FD - 000000FD (0x1 bytes), align: 0
+  Segment part 5. ROOT.       Intra module refs:   halBoardInit (hal_board)
+                                                   halLcdInit (hal_lcd)
+                                                   lcdControl (hal_lcd)
+                                                   lcdWrite (hal_lcd)
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           P0DIR                   000000FD 
+
+    *************************************************************************
+
+  FILE NAME : D:\Texas Instruments\CC2530\CC2530 RF Code With LED Matrix\mcu-tag1\ex_switch\debug\Obj\basic_rf.r51
   PROGRAM MODULE, NAME : basic_rf
 
   SEGMENTS IN THE MODULE
@@ -466,28 +533,14 @@ BANK_RELAYS
 
     *************************************************************************
 
-  FILE NAME : V:\Workspace\CC2530\CC2530 RF Code With LED Matrix\mcu-tag1\ex_switch\debug\Obj\basic_rf_security.r51
+  FILE NAME : D:\Texas Instruments\CC2530\CC2530 RF Code With LED Matrix\mcu-tag1\ex_switch\debug\Obj\basic_rf_security.r51
     *************************************************************************
 
-  FILE NAME : V:\Workspace\CC2530\CC2530 RF Code With LED Matrix\mcu-tag1\ex_switch\debug\Obj\hal_board.r51
+  FILE NAME : D:\Texas Instruments\CC2530\CC2530 RF Code With LED Matrix\mcu-tag1\ex_switch\debug\Obj\hal_board.r51
   PROGRAM MODULE, NAME : hal_board
 
   SEGMENTS IN THE MODULE
   ======================
-SFR_AN
-  Relative segment, address: DATA 00000080 - 00000080 (0x1 bytes), align: 0
-  Segment part 1. ROOT.       Intra module refs:   T1_ISR (hal_buzzer)
-                                                   halBoardInit
-                                                   halBuzzer (hal_buzzer)
-                                                   lcdControl (hal_lcd)
-                                                   lcdWrite (hal_lcd)
-           ENTRY                   ADDRESS         REF BY
-           =====                   =======         ======
-           _A_P0                   00000080 
-           LOCAL                   ADDRESS         
-           =====                   =======         
-           P0                      00000080 
-    -------------------------------------------------------------------------
 SFR_AN
   Relative segment, address: DATA 00000090 - 00000090 (0x1 bytes), align: 0
   Segment part 2. ROOT.       Intra module refs:   halBoardInit
@@ -521,14 +574,6 @@ SFR_AN
            P2                      000000A0 
     -------------------------------------------------------------------------
 SFR_AN
-  Relative segment, address: DATA 000000F3 - 000000F3 (0x1 bytes), align: 0
-  Segment part 4. ROOT.       Intra module refs:   halBoardInit
-                                                   halUartInit (hal_uart)
-           ENTRY                   ADDRESS         REF BY
-           =====                   =======         ======
-           P0SEL                   000000F3 
-    -------------------------------------------------------------------------
-SFR_AN
   Relative segment, address: DATA 000000F4 - 000000F4 (0x1 bytes), align: 0
   Segment part 5. ROOT.       Intra module refs:   halBoardInit
            ENTRY                   ADDRESS         REF BY
@@ -541,23 +586,6 @@ SFR_AN
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
            P2SEL                   000000F5 
-    -------------------------------------------------------------------------
-SFR_AN
-  Relative segment, address: DATA 000000F7 - 000000F7 (0x1 bytes), align: 0
-  Segment part 7. ROOT.       Intra module refs:   halBoardInit
-           ENTRY                   ADDRESS         REF BY
-           =====                   =======         ======
-           P2INP                   000000F7 
-    -------------------------------------------------------------------------
-SFR_AN
-  Relative segment, address: DATA 000000FD - 000000FD (0x1 bytes), align: 0
-  Segment part 8. ROOT.       Intra module refs:   halBoardInit
-                                                   halLcdInit (hal_lcd)
-                                                   lcdControl (hal_lcd)
-                                                   lcdWrite (hal_lcd)
-           ENTRY                   ADDRESS         REF BY
-           =====                   =======         ======
-           P0DIR                   000000FD 
     -------------------------------------------------------------------------
 SFR_AN
   Relative segment, address: DATA 000000FE - 000000FE (0x1 bytes), align: 0
@@ -598,7 +626,7 @@ BANK_RELAYS
 
     *************************************************************************
 
-  FILE NAME : V:\Workspace\CC2530\CC2530 RF Code With LED Matrix\mcu-tag1\ex_switch\debug\Obj\hal_button.r51
+  FILE NAME : D:\Texas Instruments\CC2530\CC2530 RF Code With LED Matrix\mcu-tag1\ex_switch\debug\Obj\hal_button.r51
   PROGRAM MODULE, NAME : hal_button
 
   SEGMENTS IN THE MODULE
@@ -620,7 +648,7 @@ BANK_RELAYS
 
     *************************************************************************
 
-  FILE NAME : V:\Workspace\CC2530\CC2530 RF Code With LED Matrix\mcu-tag1\ex_switch\debug\Obj\hal_buzzer.r51
+  FILE NAME : D:\Texas Instruments\CC2530\CC2530 RF Code With LED Matrix\mcu-tag1\ex_switch\debug\Obj\hal_buzzer.r51
   PROGRAM MODULE, NAME : hal_buzzer
 
   SEGMENTS IN THE MODULE
@@ -728,7 +756,7 @@ BANK_RELAYS
 
     *************************************************************************
 
-  FILE NAME : V:\Workspace\CC2530\CC2530 RF Code With LED Matrix\mcu-tag1\ex_switch\debug\Obj\hal_clock.r51
+  FILE NAME : D:\Texas Instruments\CC2530\CC2530 RF Code With LED Matrix\mcu-tag1\ex_switch\debug\Obj\hal_clock.r51
   PROGRAM MODULE, NAME : hal_clock
 
   SEGMENTS IN THE MODULE
@@ -778,7 +806,7 @@ BANK_RELAYS
 
     *************************************************************************
 
-  FILE NAME : V:\Workspace\CC2530\CC2530 RF Code With LED Matrix\mcu-tag1\ex_switch\debug\Obj\hal_int.r51
+  FILE NAME : D:\Texas Instruments\CC2530\CC2530 RF Code With LED Matrix\mcu-tag1\ex_switch\debug\Obj\hal_int.r51
   PROGRAM MODULE, NAME : hal_int
 
   SEGMENTS IN THE MODULE
@@ -830,7 +858,7 @@ BANK_RELAYS
 
     *************************************************************************
 
-  FILE NAME : V:\Workspace\CC2530\CC2530 RF Code With LED Matrix\mcu-tag1\ex_switch\debug\Obj\hal_keypad.r51
+  FILE NAME : D:\Texas Instruments\CC2530\CC2530 RF Code With LED Matrix\mcu-tag1\ex_switch\debug\Obj\hal_keypad.r51
   PROGRAM MODULE, NAME : hal_keypad
 
   SEGMENTS IN THE MODULE
@@ -998,7 +1026,7 @@ BANK_RELAYS
 
     *************************************************************************
 
-  FILE NAME : V:\Workspace\CC2530\CC2530 RF Code With LED Matrix\mcu-tag1\ex_switch\debug\Obj\hal_lcd.r51
+  FILE NAME : D:\Texas Instruments\CC2530\CC2530 RF Code With LED Matrix\mcu-tag1\ex_switch\debug\Obj\hal_lcd.r51
   PROGRAM MODULE, NAME : hal_lcd
 
   SEGMENTS IN THE MODULE
@@ -1189,7 +1217,7 @@ BANK_RELAYS
 
     *************************************************************************
 
-  FILE NAME : V:\Workspace\CC2530\CC2530 RF Code With LED Matrix\mcu-tag1\ex_switch\debug\Obj\hal_led.r51
+  FILE NAME : D:\Texas Instruments\CC2530\CC2530 RF Code With LED Matrix\mcu-tag1\ex_switch\debug\Obj\hal_led.r51
   PROGRAM MODULE, NAME : hal_led
 
   SEGMENTS IN THE MODULE
@@ -1224,7 +1252,7 @@ BANK_RELAYS
 
     *************************************************************************
 
-  FILE NAME : V:\Workspace\CC2530\CC2530 RF Code With LED Matrix\mcu-tag1\ex_switch\debug\Obj\hal_mcu.r51
+  FILE NAME : D:\Texas Instruments\CC2530\CC2530 RF Code With LED Matrix\mcu-tag1\ex_switch\debug\Obj\hal_mcu.r51
   PROGRAM MODULE, NAME : hal_mcu
 
   SEGMENTS IN THE MODULE
@@ -1295,7 +1323,7 @@ BANK_RELAYS
 
     *************************************************************************
 
-  FILE NAME : V:\Workspace\CC2530\CC2530 RF Code With LED Matrix\mcu-tag1\ex_switch\debug\Obj\hal_rf.r51
+  FILE NAME : D:\Texas Instruments\CC2530\CC2530 RF Code With LED Matrix\mcu-tag1\ex_switch\debug\Obj\hal_rf.r51
   PROGRAM MODULE, NAME : hal_rf
 
   SEGMENTS IN THE MODULE
@@ -1630,7 +1658,7 @@ BANK_RELAYS
 
     *************************************************************************
 
-  FILE NAME : V:\Workspace\CC2530\CC2530 RF Code With LED Matrix\mcu-tag1\ex_switch\debug\Obj\hal_rf_security.r51
+  FILE NAME : D:\Texas Instruments\CC2530\CC2530 RF Code With LED Matrix\mcu-tag1\ex_switch\debug\Obj\hal_rf_security.r51
   PROGRAM MODULE, NAME : hal_rf_security
 
   SEGMENTS IN THE MODULE
@@ -1658,7 +1686,7 @@ SFR_AN
 
     *************************************************************************
 
-  FILE NAME : V:\Workspace\CC2530\CC2530 RF Code With LED Matrix\mcu-tag1\ex_switch\debug\Obj\hal_uart.r51
+  FILE NAME : D:\Texas Instruments\CC2530\CC2530 RF Code With LED Matrix\mcu-tag1\ex_switch\debug\Obj\hal_uart.r51
   PROGRAM MODULE, NAME : hal_uart
 
   SEGMENTS IN THE MODULE
@@ -1806,7 +1834,7 @@ BANK_RELAYS
 
     *************************************************************************
 
-  FILE NAME : V:\Workspace\CC2530\CC2530 RF Code With LED Matrix\mcu-tag1\ex_switch\debug\Obj\switch.r51
+  FILE NAME : D:\Texas Instruments\CC2530\CC2530 RF Code With LED Matrix\mcu-tag1\ex_switch\debug\Obj\switch.r51
   PROGRAM MODULE, NAME : switch
 
   SEGMENTS IN THE MODULE
@@ -1928,7 +1956,7 @@ BANK_RELAYS
 
     *************************************************************************
 
-  FILE NAME : V:\Workspace\CC2530\CC2530 RF Code With LED Matrix\mcu-tag1\ex_switch\debug\Obj\util.r51
+  FILE NAME : D:\Texas Instruments\CC2530\CC2530 RF Code With LED Matrix\mcu-tag1\ex_switch\debug\Obj\util.r51
   PROGRAM MODULE, NAME : util
 
   SEGMENTS IN THE MODULE
@@ -1978,10 +2006,10 @@ XDATA_I
 
     *************************************************************************
 
-  FILE NAME : V:\Workspace\CC2530\CC2530 RF Code With LED Matrix\mcu-tag1\ex_switch\debug\Obj\util_buffer.r51
+  FILE NAME : D:\Texas Instruments\CC2530\CC2530 RF Code With LED Matrix\mcu-tag1\ex_switch\debug\Obj\util_buffer.r51
     *************************************************************************
 
-  FILE NAME : C:\Program Files (x86)\IAR Systems\Embedded Workbench 6.0\8051\LIB\CLIB\cl-pli-blxd-1e16x01.r51
+  FILE NAME : P:\IAR\8051\LIB\CLIB\cl-pli-blxd-1e16x01.r51
   LIBRARY MODULE, NAME : ?cexit
 
   SEGMENTS IN THE MODULE
@@ -2644,11 +2672,13 @@ Module                    CODE      DATA      XDATA  IDATA    BIT
 ?low_level_init              3
 CSTARTUP                    18
   + common                   3
+M230                                       1
+  + shared                                 4
 VIRTUAL_REGISTERS                   2                           8
 basic_rf                   679                  264
   + shared                                        4
 hal_board                  168             2      1
-  + shared                                 8
+  + shared                                 4
 hal_button                  52
 hal_buzzer                 108             6
   + common                  78
@@ -2671,7 +2701,7 @@ util                       294                   16
 N/A (command line)                 16           256     64
 N/A (alignment)
 ----------               -----     --     --    ---     --      -
-Total:                   4 435     18     40    970     64      8
+Total:                   4 435     18     41    970     64      8
   + common                 134
 
 
@@ -2686,18 +2716,18 @@ SEGMENT              SPACE    START ADDRESS   END ADDRESS     SIZE  TYPE  ALIGN
 =======              =====    =============   ===========     ====  ====  =====
 INTVEC               CODE          00000000 - 00000085          86   com    0
 CSTART               CODE          00000086 - 00000141          BC   rel    0
-IXDATA_ID            CODE               00000142                     dse    0
-IDATA_ID             CODE               00000142                     dse    0
 BDATA_ID             CODE               00000142                     dse    0
-PDATA_ID             CODE               00000142                     dse    0
 BIT_ID               CODE               00000142                     dse    0
 DATA_ID              CODE               00000142                     dse    0
+IDATA_ID             CODE               00000142                     dse    0
+IXDATA_ID            CODE               00000142                     dse    0
+PDATA_ID             CODE               00000142                     dse    0
 XDATA_ID             CODE          00000142 - 00000165          24   rel    0
 BANK_RELAYS          CODE          00000166 - 00000279         114   rel    0
 RCODE                CODE          0000027A - 00000625         3AC   rel    0
+CODE_N               CODE               00000626                     dse    0
 CODE_C               CODE               00000626                     dse    0
 DIFUNCT              CODE               00000626                     dse    0
-CODE_N               CODE               00000626                     dse    0
 NEAR_CODE            CODE          00000626 - 00000702          DD   rel    0
 <BANKED_CODE> 1      CODE          00000703 - 000011D8         AD6   rel    0
 REGISTERS            DATA          00000000 - 00000007           8   rel    0
@@ -2707,7 +2737,7 @@ XSP                  DATA          00000010 - 00000011           2   rel    0
 BREG                 BIT        00000020.0  -  00000020.7        8   rel    0
 SFR_AN               DATA          00000080 - 00000080           1   rel    0
                      DATA          00000086 - 00000086           1 
-                     DATA          00000090 - 00000091           2 
+                     DATA          0000008F - 00000091           3 
                      DATA          00000095 - 00000095           1 
                      DATA          0000009A - 0000009B           2 
                      DATA          0000009D - 0000009E           2 
@@ -2738,7 +2768,7 @@ ISTACK               IDATA         000000C0 - 000000FF          40   rel    0
                 ****************************************
 
  4 569 bytes of CODE  memory
-    18 bytes of DATA  memory (+ 40 absolute )
+    18 bytes of DATA  memory (+ 41 absolute )
    970 bytes of XDATA memory
     64 bytes of IDATA memory
      8 bits  of BIT   memory
