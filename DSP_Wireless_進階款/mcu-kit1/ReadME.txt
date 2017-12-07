@@ -1,4 +1,4 @@
-ex_M230:system.c
+#ex_M230:system.c
 
 	ver0.1
           -完成Mode1(循環模式)
