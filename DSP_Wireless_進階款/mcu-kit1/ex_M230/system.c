@@ -17,19 +17,18 @@
 #include "util_lcd.h"
 uint8 ProgramROM[8];
 uint8 ProgramText;
+uint8 ProgramOrder[4];
 uint8 key;
+uint8 KeyCount;
 void LcdWrite(void);
 void Program(uint8 a);
 void Mode(uint8 b);
 //-------------------------------------------------------------------
 void main(void)
 {   
-    halBoardInit();
+	halBoardInit();
     halBuzzer(300);
-    halLcdWriteString(HAL_LCD_LINE_1,0,"Press 1 or 2 Mode");
-    //------------------------------------------------------------------------------
-    while(halKeypadPushed()==0);
-    halLcdClear();
+    halLcdWriteString(HAL_LCD_LINE_1,0,"Press 1or2 Mode");
     //------------------------------------------------------------------------------
     while (TRUE)
     {
@@ -54,6 +53,7 @@ void main(void)
 }
 void LcdWrite(void)
 {
+     halLcdClear();
      halLcdWriteString(HAL_LCD_LINE_1,0,"Mode");
      halLcdWriteChar(HAL_LCD_LINE_1, 4, key);
      halLcdWriteString(HAL_LCD_LINE_1,5,",Program");
@@ -62,22 +62,67 @@ void Mode(uint8 a) //Mode1循環,Mode2輸入節目後依照輸入順序循環
 {
     switch(a)
     {
-      case 1:
-        while(1)
-        {
-			for(int i = 0;i < 4;i++)
+		case 1:
+			while(1)
 			{
-				Program(i+1);
-				for(int j = 0;j < 8;j++)
+				for(int i = 0;i < 4;i++)
 				{
-					HAL_LED_PORT(ProgramROM[j]);
-					halMcuWaitMs(250);
+					Program(i+1);
+					for(int j = 0;j < 8;j++)
+					{
+						halLedSetPort(ProgramROM[j]);
+						halMcuWaitMs(250);
+					}
+					halBuzzer(200);
+					halLedSetPort(0x00);
+					halMcuWaitMs(300);
 				}
-				halBuzzer(100);
-				HAL_LED_PORT(0x00);
+			}
+		case 2:
+		    KeyCount = 0;
+			halLcdWriteString(HAL_LCD_LINE_2,0,"Input:");
+			halMcuWaitMs(300);
+			while(KeyCount < 4)
+			{
+				key = halKeypadPushed();
+				if (key > 0)
+				{
+					if (key == '1')
+					{
+						ProgramOrder[KeyCount] = 1;
+					}
+					if (key == '2')
+					{
+						ProgramOrder[KeyCount] = 2;
+					}
+					if (key == '3')
+					{
+						ProgramOrder[KeyCount] = 3;
+					}
+					if (key == '4')
+					{					
+						ProgramOrder[KeyCount] = 4;
+					}
+					halLcdWriteChar(HAL_LCD_LINE_2,6+KeyCount,key);
+					KeyCount++;
+				}
 				halMcuWaitMs(300);
 			}
-        }
+			while(1)
+			{
+				for(int i = 0;i < 4;i++)
+				{
+					Program(ProgramOrder[i]);
+					for(int j = 0;j < 8;j++)
+					{
+						halLedSetPort(ProgramROM[j]);
+						halMcuWaitMs(250);
+					}
+					halBuzzer(200);
+					halLedSetPort(0x00);
+					halMcuWaitMs(300);
+				}
+			}			
     }
 }
 void Program(uint8 b)

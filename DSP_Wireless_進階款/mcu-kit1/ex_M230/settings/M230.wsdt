@@ -10,7 +10,7 @@
     <Static>
       <Workspace>
         <ColumnWidths>
-          <Column0>124</Column0>
+          <Column0>107</Column0>
           <Column1>27</Column1>
           <Column2>27</Column2>
           <Column3>27</Column3>
@@ -22,43 +22,91 @@
         <ColumnWidth2>308</ColumnWidth2>
         <ColumnWidth3>77</ColumnWidth3>
       </Build>
+      <TerminalIO/>
     </Static>
     <Windows>
-      <Wnd0>
+      <Wnd2>
         <Tabs>
           <Tab>
-            <Identity>TabID-22645-25718</Identity>
+            <Identity>TabID-27247-4122</Identity>
             <TabName>Workspace</TabName>
             <Factory>Workspace</Factory>
             <Session>
               <NodeDict>
                 <ExpandedNode>M230</ExpandedNode>
                 <ExpandedNode>M230/application</ExpandedNode>
+                <ExpandedNode>M230/application/system.c</ExpandedNode>
+                <ExpandedNode>M230/targets</ExpandedNode>
+                <ExpandedNode>M230/targets/hal_led.c</ExpandedNode>
               </NodeDict>
             </Session>
           </Tab>
         </Tabs>
         <SelectedTab>0</SelectedTab>
-      </Wnd0>
-      <Wnd1>
+      </Wnd2>
+      <Wnd3>
         <Tabs>
           <Tab>
-            <Identity>TabID-20324-25966</Identity>
+            <Identity>TabID-26495-4340</Identity>
             <TabName>Build</TabName>
             <Factory>Build</Factory>
             <Session/>
           </Tab>
         </Tabs>
         <SelectedTab>0</SelectedTab>
-      </Wnd1>
+      </Wnd3>
     </Windows>
     <Editor>
       <Pane>
         <Tab>
           <Factory>TextEditor</Factory>
-          <Filename>$WS_DIR$\..\..\..\..\..\..\..\..\Program Files (x86)\IAR Systems\Embedded Workbench 6.0 Evaluation\8051\doc\infocenter\index.ENU.html</Filename>
+          <Filename>$WS_DIR$\system.c</Filename>
+          <XPos>0</XPos>
+          <YPos>81</YPos>
+          <SelStart>2388</SelStart>
+          <SelEnd>2388</SelEnd>
         </Tab>
         <ActiveTab>0</ActiveTab>
+        <Tab>
+          <Factory>TextEditor</Factory>
+          <Filename>$WS_DIR$\..\..\..\..\..\..\..\..\Program Files (x86)\IAR Systems\Embedded Workbench 6.0 Evaluation\8051\inc\ioCC2530.h</Filename>
+          <XPos>0</XPos>
+          <YPos>672</YPos>
+          <SelStart>0</SelStart>
+          <SelEnd>0</SelEnd>
+        </Tab>
+        <Tab>
+          <Factory>TextEditor</Factory>
+          <Filename>$WS_DIR$\..\..\components\targets\mcu-kit1\hal_led.c</Filename>
+          <XPos>0</XPos>
+          <YPos>117</YPos>
+          <SelStart>3306</SelStart>
+          <SelEnd>3319</SelEnd>
+        </Tab>
+        <Tab>
+          <Factory>TextEditor</Factory>
+          <Filename>$WS_DIR$\..\..\components\targets\mcu-kit1\hal_board.h</Filename>
+          <XPos>0</XPos>
+          <YPos>138</YPos>
+          <SelStart>0</SelStart>
+          <SelEnd>0</SelEnd>
+        </Tab>
+        <Tab>
+          <Factory>TextEditor</Factory>
+          <Filename>$WS_DIR$\..\..\components\targets\mcu-kit1\hal_led.h</Filename>
+          <XPos>0</XPos>
+          <YPos>0</YPos>
+          <SelStart>0</SelStart>
+          <SelEnd>0</SelEnd>
+        </Tab>
+        <Tab>
+          <Factory>TextEditor</Factory>
+          <Filename>$WS_DIR$\..\..\components\common\hal_mcu.h</Filename>
+          <XPos>0</XPos>
+          <YPos>0</YPos>
+          <SelStart>0</SelStart>
+          <SelEnd>0</SelEnd>
+        </Tab>
       </Pane>
       <ActivePane>0</ActivePane>
       <Sizes>
@@ -73,16 +121,22 @@
       <Top>
         <Row0>
           <Sizes>
-            <Toolbar-046723b0>
+            <Toolbar-052023b0>
               <key>iaridepm.enu1</key>
-            </Toolbar-046723b0>
+            </Toolbar-052023b0>
           </Sizes>
         </Row0>
+        <Row1>
+          <Sizes/>
+        </Row1>
+        <Row2>
+          <Sizes/>
+        </Row2>
       </Top>
       <Left>
         <Row0>
           <Sizes>
-            <Wnd0>
+            <Wnd2>
               <Rect>
                 <Top>-2</Top>
                 <Left>-2</Left>
@@ -97,7 +151,7 @@
                 <sizeVertCX>125000</sizeVertCX>
                 <sizeVertCY>705018</sizeVertCY>
               </Rect>
-            </Wnd0>
+            </Wnd2>
           </Sizes>
         </Row0>
       </Left>
@@ -109,7 +163,7 @@
       <Bottom>
         <Row0>
           <Sizes>
-            <Wnd1>
+            <Wnd3>
               <Rect>
                 <Top>-2</Top>
                 <Left>-2</Left>
@@ -124,7 +178,7 @@
                 <sizeVertCX>125000</sizeVertCX>
                 <sizeVertCY>244798</sizeVertCY>
               </Rect>
-            </Wnd1>
+            </Wnd3>
           </Sizes>
         </Row0>
       </Bottom>

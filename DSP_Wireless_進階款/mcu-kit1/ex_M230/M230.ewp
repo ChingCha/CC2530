@@ -1041,12 +1041,6 @@
   <group>
     <name>application</name>
     <file>
-      <name>$PROJ_DIR$\ex.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\components\module\M230.c</name>
-    </file>
-    <file>
       <name>$PROJ_DIR$\system.c</name>
     </file>
   </group>
