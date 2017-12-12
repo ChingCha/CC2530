@@ -15,20 +15,29 @@
 #include "hal_uart.h"
 #include "util.h"
 #include "util_lcd.h"
+#include "hal_timer_32k.h"
+#include <string.h>
+#define LINE1                           0x00
+#define LINE2                           0x40
+#define SET_DISPLAY_LINE(line)          lcdControl(0x80 | (line))
 uint8 ProgramROM[8];
 uint8 ProgramText;
 uint8 ProgramOrder[4];
 uint8 key;
 uint8 KeyCount;
+uint16 ProgramDelay;
 void LcdWrite(void);
 void Program(uint8 a);
 void Mode(uint8 b);
+uint8 ReadKeyInt(void);
 //-------------------------------------------------------------------
 void main(void)
 {   
 	halBoardInit();
     halBuzzer(300);
+	ProgramDelay = 300;
     halLcdWriteString(HAL_LCD_LINE_1,0,"Press 1or2 Mode");
+    halLcdWriteString(HAL_LCD_LINE_2,0,"Press3 set delay");
     //------------------------------------------------------------------------------
     while (TRUE)
     {
@@ -46,7 +55,12 @@ void main(void)
                halBuzzer(250);
                LcdWrite();
                Mode(2);
-            }              
+            }
+            if (key == '3')
+            {
+               halBuzzer(250);
+               Mode(3);
+            }   			
         }
         halMcuWaitMs(300);      
     }
@@ -75,7 +89,7 @@ void Mode(uint8 a) //Mode1循環,Mode2輸入節目後依照輸入順序循環
 					}
 					halBuzzer(200);
 					halLedSetPort(0x00);
-					halMcuWaitMs(300);
+					halMcuWaitMs(ProgramDelay);
 				}
 			}
 		case 2:
@@ -120,10 +134,45 @@ void Mode(uint8 a) //Mode1循環,Mode2輸入節目後依照輸入順序循環
 					}
 					halBuzzer(200);
 					halLedSetPort(0x00);
-					halMcuWaitMs(300);
+					halMcuWaitMs(ProgramDelay);
 				}
-			}			
+			}
+		case 3:
+		    KeyCount = 0;
+			uint8 ProgramDelayI[4];
+			halLcdWriteString(HAL_LCD_LINE_1,0,"Input Delay:   ");
+			halLcdWriteString(HAL_LCD_LINE_2,0,"0000 ms         ");
+			while(KeyCount<4)
+			{
+			    halMcuWaitMs(300);
+				if(ReadKeyInt() >= 0 && ReadKeyInt() < 10)
+				{
+					ProgramDelayI[KeyCount] = ReadKeyInt();
+					char *pValue = convInt32ToText(ProgramDelayI[KeyCount]);
+					halLcdWriteString(HAL_LCD_LINE_2,KeyCount,pValue);
+					//halLcdDisplayUint8(HAL_LCD_LINE_2,KeyCount,HAL_LCD_RADIX_DEC,ProgramDelayI[KeyCount]);
+					KeyCount++;
+				}				
+			}
+			ProgramDelay = ProgramDelayI[0] * 1000 + ProgramDelayI[1] * 100 + ProgramDelayI[2] *10 + ProgramDelayI[3];
+			halLcdWriteString(HAL_LCD_LINE_1,0,"Press 1or2 Mode");
+            break;
     }
+}
+uint8 ReadKeyInt(void)
+{
+	key = halKeypadPushed();
+	if(key == '1') return 1;
+	else if(key == '2') return 2;
+	else if(key == '3') return 3;
+	else if(key == '4') return 4;
+	else if(key == '5') return 5;
+	else if(key == '6') return 6;
+	else if(key == '7') return 7;
+	else if(key == '8') return 8;
+	else if(key == '9') return 9;
+	else if(key == '0') return 0;
+	else return 11;
 }
 void Program(uint8 b)
 {
