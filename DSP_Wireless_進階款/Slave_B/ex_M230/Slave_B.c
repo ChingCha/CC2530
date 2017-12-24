@@ -14,11 +14,6 @@
 //C_Compiler
 #include <string.h>
 
-//Local_Define
-#define LINE1                           0x00
-#define LINE2                           0x40
-#define SET_DISPLAY_LINE(line)          lcdControl(0x80 | (line))
-
 // Application parameters
 #define RF_CHANNEL                18      // 2.4 GHz RF channel
 
@@ -81,100 +76,83 @@ void main(void){
 	ProgramDelay = 300;
     halLcdWriteString(HAL_LCD_LINE_1,0,"I.O.L_System:S_B");
     
-    while (TRUE){
-		
-        while (!basicRfPacketIsReady()){
+    while (TRUE)
+	{		
+        while (!basicRfPacketIsReady())
+		{
             halLedToggle(7);
             halMcuWaitMs(10);
-        }
-		
-		while(basicRfReceive(pRxData, APP_PAYLOAD_LENGTH, NULL) > 0){
-			
-			switch(pRxData[0]){
-				
-				case 0x0001:
-					
+        }		
+		while(basicRfReceive(pRxData, APP_PAYLOAD_LENGTH, NULL) > 0)
+		{	
+			switch(pRxData[0])
+			{				
+				case 0x0001:					
 					halBuzzer(250);
 					//LcdWrite();
 					halLcdClear();
 					halLcdWriteString(HAL_LCD_LINE_1,0,"Mode");
 					halLcdWriteChar(HAL_LCD_LINE_1, 4, '1');
 					halLcdWriteString(HAL_LCD_LINE_1,5,",Program");
-					
-					
-					while(basicRfReceive(pRxData, APP_PAYLOAD_LENGTH, NULL) > 0){
-						
-						if(pRxData[0] != 0x0001){
-							
+					while(basicRfReceive(pRxData, APP_PAYLOAD_LENGTH, NULL) > 0)
+					{						
+						if(pRxData[0] != 0x0001)
+						{							
 							halLcdWriteString(HAL_LCD_LINE_2,10,"Break");
 							halMcuWaitMs(3000);
-							break;
-			
-						}else if(pRxData[0] == 0x0001){
-		
+							break;			
+						}
+						else if(pRxData[0] == 0x0001)
+						{		
 							Mode(1);
 						}
-					}
-				
-				break;
-				
-				case 0x0002:
-				
+					}				
+					break;				
+				case 0x0002:				
 					halBuzzer(250);
 					//LcdWrite();
 					halLcdClear();
 					halLcdWriteString(HAL_LCD_LINE_1,0,"Mode");
 					halLcdWriteChar(HAL_LCD_LINE_1, 4, '2');
-					halLcdWriteString(HAL_LCD_LINE_1,5,",Program");
-					
+					halLcdWriteString(HAL_LCD_LINE_1,5,",Program");					
 					KeyCount = 0;
 					halLcdWriteString(HAL_LCD_LINE_2,0,"Input:");
-					halMcuWaitMs(300);
-						
+					halMcuWaitMs(300);						
 					Client(); 
 					
-					while(basicRfReceive(pRxData, APP_PAYLOAD_LENGTH, NULL) > 0){
-						
-						if(pRxData[0] != 0x0002){
-							
+					while(basicRfReceive(pRxData, APP_PAYLOAD_LENGTH, NULL) > 0)
+					{						
+						if(pRxData[0] != 0x0002)
+						{							
 							halLcdWriteString(HAL_LCD_LINE_2,10,"Break");
 							halMcuWaitMs(3000);
-							break;
-								
-						}else if(pRxData[0] == 0x0002){
-								
+							break;								
+						}
+						else if(pRxData[0] == 0x0002)
+						{								
 							Mode(2);	
 						}
-					}
-				
-				break;
-				
-				case 0x0003:
-		
+					}				
+					break;				
+				case 0x0003:		
 					KeyCount = 0;
 					halLcdWriteString(HAL_LCD_LINE_1,0,"Input Delay:   ");
-					halLcdWriteString(HAL_LCD_LINE_2,0,"0000 ms         ");
-		
-					while(basicRfReceive(pRxData, APP_PAYLOAD_LENGTH, NULL) > 0){
-						
-						if(pRxData[0] != 0x0003){
-							
+					halLcdWriteString(HAL_LCD_LINE_2,0,"0000 ms         ");		
+					while(basicRfReceive(pRxData, APP_PAYLOAD_LENGTH, NULL) > 0)
+					{						
+						if(pRxData[0] != 0x0003)
+						{							
 							halLcdWriteString(HAL_LCD_LINE_2,10,"Break");
 							halMcuWaitMs(3000);
-							break;
-							
-						}else if(pRxData[0] == 0x0003){
-						
-							Mode(3);
-						
+							break;							
 						}
-						
+						else if(pRxData[0] == 0x0003)
+						{						
+							Mode(3);						
+						}						
 					}
-
-				break;
-				
+					break;				
 				default:
-				
 					halLcdWriteString(HAL_LCD_LINE_1,0,"Nothing");
 			}
 		}   
@@ -188,11 +166,11 @@ void LcdWrite(void){
      halLcdWriteString(HAL_LCD_LINE_1,5,",Program");
 }
 
-void Mode(uint8 a){
+void Mode(uint8 a)
+{
     switch(a)
     {
 		case 1:
-
 			for(int i = 0;i < 4;i++)
 			{
 				Program(i+1);
@@ -204,12 +182,9 @@ void Mode(uint8 a){
 				halBuzzer(200);
 				halLedSetPort(0x00);
 				halMcuWaitMs(ProgramDelay);
-			}
-			
-		break;
-		
-		case 2:
-		    
+			}			
+			break;		
+		case 2:		    
 			for(int i = 0;i < 4;i++)
 			{
 				Program(ProgramOrder[i]);
@@ -221,18 +196,15 @@ void Mode(uint8 a){
 				halBuzzer(200);
 				halLedSetPort(0x00);
 				halMcuWaitMs(ProgramDelay);
-			}
-		
-		break;
-		
-		case 3:
-		
-			//uint8 ProgramDelayI[4];
-		
-			while(KeyCount<4){
-				
+			}		
+			break;		
+		case 3:		
+			//uint8 ProgramDelayI[4];		
+			while(KeyCount<4)
+			{				
 			    halMcuWaitMs(300);
-				if(ReadKeyInt() >= 0 && ReadKeyInt() < 10){
+				if(ReadKeyInt() >= 0 && ReadKeyInt() < 10)
+				{
 					ProgramDelayI[KeyCount] = ReadKeyInt();
 					//char *pValue = convInt32ToText(ProgramDelayI[KeyCount]);
 					//halLcdWriteString(HAL_LCD_LINE_2,KeyCount,pValue);
@@ -242,16 +214,15 @@ void Mode(uint8 a){
 			}
 			ProgramDelay = ProgramDelayI[0] * 1000 + ProgramDelayI[1] * 100 + ProgramDelayI[2] *10 + ProgramDelayI[3];
 			halLcdWriteString(HAL_LCD_LINE_1,0,"Set_time_Sucess!");
-			halLcdDisplayUint16(HAL_LCD_LINE_2,0,HAL_LCD_RADIX_DEC,ProgramDelay);
-		
-		break;
-		
+			halLcdDisplayUint16(HAL_LCD_LINE_2,0,HAL_LCD_RADIX_DEC,ProgramDelay);		
+			break;		
     }
 }
 
-void Program(uint8 b){
-    
-	switch(b){
+void Program(uint8 b)
+{   
+	switch(b)
+	{
 		case 1:
 			ProgramText = '1';
 			halLcdWriteChar(HAL_LCD_LINE_1, 13, ProgramText);
@@ -303,22 +274,17 @@ void Program(uint8 b){
     }	
 }
 
-void Client(void){
-	
+void Client(void)
+{	
 	while(KeyCount < 4){
 		
 		char key = halKeypadPushed();
-		if (key > 0){
-			if (key == '1'){
-				ProgramOrder[KeyCount] = 1;
-			}if (key == '2'){
-				ProgramOrder[KeyCount] = 2;
-			}if (key == '3'){
-				ProgramOrder[KeyCount] = 3;
-			}if (key == '4'){					
-				ProgramOrder[KeyCount] = 4;
-			}
-			
+		if (key > 0)
+		{
+			if (key == '1') ProgramOrder[KeyCount] = 1;
+			if (key == '2') ProgramOrder[KeyCount] = 2;
+			if (key == '3') ProgramOrder[KeyCount] = 3;
+			if (key == '4') ProgramOrder[KeyCount] = 4;	
 			halLcdWriteChar(HAL_LCD_LINE_2,6+KeyCount,key);
 			KeyCount++;
 		}

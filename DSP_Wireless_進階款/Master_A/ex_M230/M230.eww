@@ -2,10 +2,7 @@
 
 <workspace>
   <project>
-    <path>$WS_DIR$\..\..\..\..\..\..\Downloads\CC2530-DSP_Wireless\CC2530-DSP_Wireless\DSP_Wireless_&#x9032;&#x968e;&#x6B3e;\Master_A\ex_M230\M230.ewp</path>
-  </project>
-  <project>
-    <path>$WS_DIR$\M230.ewp</path>
+    <path>$WS_DIR$\..\..\Slave_A\ex_M230\M230.ewp</path>
   </project>
   <batchBuild/>
 </workspace>
