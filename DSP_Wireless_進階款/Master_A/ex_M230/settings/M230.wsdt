@@ -4,7 +4,10 @@
   <ConfigDictionary>
     <CurrentConfigs>
       <Project>M230/debug</Project>
+      <Project>M230/debug</Project>
     </CurrentConfigs>
+    <CurrentProj>M230</CurrentProj>
+    <OverviewSelected>0</OverviewSelected>
   </ConfigDictionary>
   <Desktop>
     <Static>
@@ -25,10 +28,10 @@
       <TerminalIO/>
     </Static>
     <Windows>
-      <Wnd0>
+      <Wnd2>
         <Tabs>
           <Tab>
-            <Identity>TabID-21390-24579</Identity>
+            <Identity>TabID-14082-3965</Identity>
             <TabName>Workspace</TabName>
             <Factory>Workspace</Factory>
             <Session>
@@ -40,34 +43,30 @@
           </Tab>
         </Tabs>
         <SelectedTab>0</SelectedTab>
-      </Wnd0>
-      <Wnd1>
+      </Wnd2>
+      <Wnd3>
         <Tabs>
           <Tab>
-            <Identity>TabID-17208-24658</Identity>
+            <Identity>TabID-18055-5937</Identity>
             <TabName>Build</TabName>
             <Factory>Build</Factory>
             <Session/>
           </Tab>
         </Tabs>
         <SelectedTab>0</SelectedTab>
-      </Wnd1>
+      </Wnd3>
     </Windows>
     <Editor>
       <Pane>
         <Tab>
           <Factory>TextEditor</Factory>
-          <Filename>$WS_DIR$\..\..\..\..\..\..\..\..\Program Files (x86)\IAR Systems\Embedded Workbench 6.0 Evaluation\8051\doc\infocenter\index.ENU.html</Filename>
-        </Tab>
-        <Tab>
-          <Factory>TextEditor</Factory>
           <Filename>$WS_DIR$\Master_A.c</Filename>
           <XPos>0</XPos>
-          <YPos>347</YPos>
-          <SelStart>2314</SelStart>
-          <SelEnd>2314</SelEnd>
+          <YPos>77</YPos>
+          <SelStart>2348</SelStart>
+          <SelEnd>2348</SelEnd>
         </Tab>
-        <ActiveTab>1</ActiveTab>
+        <ActiveTab>0</ActiveTab>
       </Pane>
       <ActivePane>0</ActivePane>
       <Sizes>
@@ -82,9 +81,9 @@
       <Top>
         <Row0>
           <Sizes>
-            <Toolbar-07291a20>
+            <Toolbar-07df1a20>
               <key>iaridepm.enu1</key>
-            </Toolbar-07291a20>
+            </Toolbar-07df1a20>
           </Sizes>
         </Row0>
         <Row1>
@@ -97,7 +96,7 @@
       <Left>
         <Row0>
           <Sizes>
-            <Wnd0>
+            <Wnd2>
               <Rect>
                 <Top>-2</Top>
                 <Left>-2</Left>
@@ -112,7 +111,7 @@
                 <sizeVertCX>125000</sizeVertCX>
                 <sizeVertCY>705018</sizeVertCY>
               </Rect>
-            </Wnd0>
+            </Wnd2>
           </Sizes>
         </Row0>
       </Left>
@@ -124,7 +123,7 @@
       <Bottom>
         <Row0>
           <Sizes>
-            <Wnd1>
+            <Wnd3>
               <Rect>
                 <Top>-2</Top>
                 <Left>-2</Left>
@@ -139,7 +138,7 @@
                 <sizeVertCX>125000</sizeVertCX>
                 <sizeVertCY>244798</sizeVertCY>
               </Rect>
-            </Wnd1>
+            </Wnd3>
           </Sizes>
         </Row0>
       </Bottom>
