@@ -10,6 +10,7 @@
 #include "hal_rf.h"
 #include "basic_rf.h"
 #include "hal_keypad.h"
+//#include "Program.h"
 
 //C_Compiler
 #include <string.h>
@@ -24,7 +25,7 @@
 
 // BasicRF address definitions
 #define PAN_ID                	0x1111
-#define A_ZONE           		0x2222		//Slave-A位址
+#define A_ZONE           		0x2222
 #define APP_PAYLOAD_LENGTH        255
 
 // Application states
@@ -40,61 +41,45 @@
 #endif
 
 static uint8 pRxData[APP_PAYLOAD_LENGTH];
-static basicRfCfg_t basicRfConfig;			//宣告RFConfig組態
+static basicRfCfg_t basicRfConfig;
 
-uint8 ProgramROM[8];
-uint8 ProgramText;
 uint8 key;
 uint16 ProgramDelay;
-
 void Program(uint8 b);
 void Mode(uint8 a);
-
-void main(void){   
-
-	uint8 rssi;
-
-	basicRfConfig.panId = PAN_ID;			//指定RF ID
-    basicRfConfig.channel = RF_CHANNEL;		//指定RF Channel
-    basicRfConfig.ackRequest = TRUE;		//封包傳遞會有ACK回應
+uint8 ProgramTextI;
+uint8 ProgramROMI[8];
+void main(void)
+{   
+	//uint8 rssi;
+	basicRfConfig.panId = PAN_ID;
+    basicRfConfig.channel = RF_CHANNEL;
+    basicRfConfig.ackRequest = TRUE;
     #ifdef SECURITY_CCM
-        basicRfConfig.securityKey = key;	//封包傳遞安全機制
+        basicRfConfig.securityKey = key;
     #endif 
-
-	//初始化板子
-	halBoardInit();
+	halBoardInit();	
 	
-	//已通電提示
 	halLedSet(8);
-    halBuzzer(300);
-	
+    halBuzzer(300);	
 	basicRfConfig.myAddr = A_ZONE;
-    if (basicRfInit(&basicRfConfig) == FAILED){}
-	
-	//使RF接收端為常開
-    basicRfReceiveOn();		
-	
+    if (basicRfInit(&basicRfConfig) == FAILED){}	
+
+    basicRfReceiveOn();			
 	ProgramDelay = 300;
-    halLcdWriteString(HAL_LCD_LINE_1,0,"I.O.L_System:S_A");
-    
-    while (TRUE){
-		
-        while (!basicRfPacketIsReady()){
+    halLcdWriteString(HAL_LCD_LINE_1,0,"I.O.L_System:S_A");   
+    while (TRUE)
+	{		
+        while (!basicRfPacketIsReady())
+		{
             halLedToggle(7);
             halMcuWaitMs(10);
-        }
-		
-		
-		//將RSSI參數塞到API_basicRfReceive()，進行被動式擴充
-		
-		//實際複製到緩衝區的字節數
-		while(basicRfReceive(pRxData, APP_PAYLOAD_LENGTH, NULL) > 0){
-						
-			//將RSSI參數塞到switch(pRxData[0])，進行主動式擴充
-			switch(pRxData[0]){
-				
-				case 0x0001:
-				
+        }				
+		while(basicRfReceive(pRxData, APP_PAYLOAD_LENGTH, NULL) > 0)
+		{						
+			switch(pRxData[0])
+			{				
+				case 0x0001:				
 					/*
 					rssi = basicRfGetRssi();
 					halBuzzer(250);
@@ -105,31 +90,24 @@ void main(void){
 					halLcdWriteString(HAL_LCD_LINE_1,5,",Program");
 					halLcdDisplayUint8(HAL_LCD_LINE_2,10,HAL_LCD_RADIX_DEC,rssi);
 					halMcuWaitMs(100);
-					*/					
-					
-					halLcdClear();
-					
-					while( basicRfReceive(pRxData, APP_PAYLOAD_LENGTH, NULL) > 0){
-						
-						if(pRxData[0] != 0x0001){
-							
+					*/										
+					halLcdClear();					
+					while( basicRfReceive(pRxData, APP_PAYLOAD_LENGTH, NULL) > 0)
+					{						
+						if(pRxData[0] != 0x0001)
+						{							
 							halLcdWriteString(HAL_LCD_LINE_2,10,"Break");
 							halMcuWaitMs(3000);
-							break;
-			
-						}else if(pRxData[0] == 0x0001){
-							
-							//Mode()以無線封包代替
+							break;			
+						}
+						else if(pRxData[0] == 0x0001)
+						{							
 							Mode(pRxData[1]);
 						}
-					}
-				
-				break;
-				
-				case 0x0002:
-				
-					/*
-					rssi = basicRfGetRssi();
+					}				
+					break;				
+				case 0x0002:				
+/*					rssi = basicRfGetRssi();
 					halBuzzer(250);
 					//LcdWrite();
 					halLcdClear();
@@ -144,163 +122,145 @@ void main(void){
 					halMcuWaitMs(300);
 						
 					Client();
-					*/
-					
-					halLcdClear();
-					
-					while( basicRfReceive(pRxData, APP_PAYLOAD_LENGTH, NULL) > 0){
-						
-						if(pRxData[0] != 0x0002){
-							
+*/					
+					halLcdClear();					
+					while( basicRfReceive(pRxData, APP_PAYLOAD_LENGTH, NULL) > 0)
+					{						
+						if(pRxData[0] != 0x0002)
+						{							
 							halLcdWriteString(HAL_LCD_LINE_2,10,"Break");
 							halMcuWaitMs(3000);
-							break;
-								
-						}else if(pRxData[0] == 0x0002){
-								
-							Mode(pRxData[5]);	
+							break;								
 						}
-					}
-				
-				break;
-				
-				case 3:
-					
-					/*
-					rssi = basicRfGetRssi();
+						else if(pRxData[0] == 0x0002)
+						{								
+							Mode(pRxData[1]);	
+						}
+					}				
+					break;				
+				case 3:					
+/*					rssi = basicRfGetRssi();
 					KeyCount = 0;
 					halLcdWriteString(HAL_LCD_LINE_1,0,"Input Delay:   ");
 					halLcdWriteString(HAL_LCD_LINE_2,0,"0000 ms         ");
 					halLcdDisplayUint8(HAL_LCD_LINE_2,10,HAL_LCD_RADIX_DEC,rssi);
 					halMcuWaitMs(100);
-					*/
-		
-					halLcdClear();
-		
-					while(basicRfReceive(pRxData, APP_PAYLOAD_LENGTH, NULL) > 0){
-						
-						if(pRxData[0] != 0x0003){
-							
+*/		
+					halLcdClear();		
+					while(basicRfReceive(pRxData, APP_PAYLOAD_LENGTH, NULL) > 0)
+					{						
+						if(pRxData[0] != 0x0003)
+						{							
 							halLcdWriteString(HAL_LCD_LINE_2,10,"Break");
 							halMcuWaitMs(3000);
-							break;
-							
-						}else if(pRxData[0] == 0x0003){
-						
-							Mode(pRxData[2]);
-						
+							break;							
 						}
-						
+						else if(pRxData[0] == 0x0003)
+						{						
+							Mode(pRxData[1]);						
+						}						
 					}
-
-				break;
-				
+					break;				
 				default:
-				
 					halLcdWriteString(HAL_LCD_LINE_1,0,"Nothing");
 			}
 		}   
     }
 }
 
-void Mode(uint8 a){
+void Mode(uint8 a)
+{
     switch(a)
     {
 		case 1:
-
-			for(int i = 0;i < 4;i++)
+			for(uint8 i = 0;i < 4;i++)
 			{
 				Program(i+1);
-				for(int j = 0;j < 8;j++)
+				//READProgram(i);
+				for(uint8 j = 0;j < 8;j++)
 				{
-					halLedSetPort(ProgramROM[j]);
+					halLedSetPort(ProgramROMI[j]);
+					//LedProgram(j);
 					halMcuWaitMs(250);
 				}
 				halBuzzer(200);
 				halLedSetPort(0x00);
 				halMcuWaitMs(ProgramDelay);
-			}
-			
-		break;
-		
-		case 2:
-		    
-			for(int i = 0;i < 4;i++)
+			}			
+			break;		
+		case 2:		    
+			for(int i = 0;i < 8;i++)
 			{
-				Program(pRxData[i+1]);
+				//READProgram(pRxData[i+2]);
 				for(int j = 0;j < 8;j++)
 				{
-					halLedSetPort(ProgramROM[j]);
+					//LedProgram(j);
 					halMcuWaitMs(250);
 				}
 				halBuzzer(200);
 				halLedSetPort(0x00);
 				halMcuWaitMs(ProgramDelay);
-			}
-		
-		break;
-		
-		case 3:
-		
-			ProgramDelay = pRxData[1] * 1000;
+			}		
+			break;		
+		case 3:		
+			ProgramDelay = pRxData[2] * 1000 + pRxData[3] * 100 + pRxData[4] * 10 + pRxData[5];
 			halLcdWriteString(HAL_LCD_LINE_1,0,"Delay_Time");
-			halLcdDisplayUint16(HAL_LCD_LINE_2,0,HAL_LCD_RADIX_DEC,ProgramDelay);
-		
-		break;
-		
+			halLcdDisplayUint16(HAL_LCD_LINE_2,0,HAL_LCD_RADIX_DEC,ProgramDelay);		
+			break;		
     }
 }
 
-void Program(uint8 b){
-    
-	switch(b){
+void Program(uint8 b)
+{   
+	switch(b)
+	{
 		case 1:
-			ProgramText = '1';
-			halLcdWriteChar(HAL_LCD_LINE_2, 0, ProgramText);
-			ProgramROM[0] = 0x81;
-			ProgramROM[1] = 0x42;
-			ProgramROM[2] = 0x24;
-			ProgramROM[3] = 0x18;
-			ProgramROM[4] = 0x3C;
-			ProgramROM[5] = 0x7E;
-			ProgramROM[6] = 0xFF;
-			ProgramROM[7] = 0x00;
+			ProgramTextI = '1';
+			halLcdWriteChar(HAL_LCD_LINE_2, 0, ProgramTextI);
+			ProgramROMI[0] = 0x81;
+			ProgramROMI[1] = 0x42;
+			ProgramROMI[2] = 0x24;
+			ProgramROMI[3] = 0x18;
+			ProgramROMI[4] = 0x3C;
+			ProgramROMI[5] = 0x7E;
+			ProgramROMI[6] = 0xFF;
+			ProgramROMI[7] = 0x00;
 			break;
 		case 2:
-			ProgramText = '2';
-			halLcdWriteChar(HAL_LCD_LINE_2, 0, ProgramText);
-			ProgramROM[0] = 0x01;
-			ProgramROM[1] = 0x02;
-			ProgramROM[2] = 0x04;
-			ProgramROM[3] = 0x08;
-			ProgramROM[4] = 0x10;
-			ProgramROM[5] = 0x20;
-			ProgramROM[6] = 0x40;
-			ProgramROM[7] = 0x80;
+			ProgramTextI = '2';
+			halLcdWriteChar(HAL_LCD_LINE_2, 0, ProgramTextI);
+			ProgramROMI[0] = 0x01;
+			ProgramROMI[1] = 0x02;
+			ProgramROMI[2] = 0x04;
+			ProgramROMI[3] = 0x08;
+			ProgramROMI[4] = 0x10;
+			ProgramROMI[5] = 0x20;
+			ProgramROMI[6] = 0x40;
+			ProgramROMI[7] = 0x80;
 			break;
 		case 3:
-			ProgramText = '3';
-			halLcdWriteChar(HAL_LCD_LINE_2, 0, ProgramText);
-			ProgramROM[0] = 0x01;
-			ProgramROM[1] = 0x03;
-			ProgramROM[2] = 0x07;
-			ProgramROM[3] = 0x0F;
-			ProgramROM[4] = 0x1F;
-			ProgramROM[5] = 0x3F;
-			ProgramROM[6] = 0x7F;
-			ProgramROM[7] = 0xFF;
+			ProgramTextI = '3';
+			halLcdWriteChar(HAL_LCD_LINE_2, 0, ProgramTextI);
+			ProgramROMI[0] = 0x01;
+			ProgramROMI[1] = 0x03;
+			ProgramROMI[2] = 0x07;
+			ProgramROMI[3] = 0x0F;
+			ProgramROMI[4] = 0x1F;
+			ProgramROMI[5] = 0x3F;
+			ProgramROMI[6] = 0x7F;
+			ProgramROMI[7] = 0xFF;
 			break;
 		case 4:
-			ProgramText = '4';
-			halLcdWriteChar(HAL_LCD_LINE_2, 0, ProgramText);
-			ProgramROM[0] = 0x11;
-			ProgramROM[1] = 0x00;
-			ProgramROM[2] = 0x33;
-			ProgramROM[3] = 0x00;
-			ProgramROM[4] = 0x77;
-			ProgramROM[5] = 0x00;
-			ProgramROM[6] = 0xFF;
-			ProgramROM[7] = 0x00;
+			ProgramTextI = '4';
+			halLcdWriteChar(HAL_LCD_LINE_2, 0, ProgramTextI);
+			ProgramROMI[0] = 0x11;
+			ProgramROMI[1] = 0x00;
+			ProgramROMI[2] = 0x33;
+			ProgramROMI[3] = 0x00;
+			ProgramROMI[4] = 0x77;
+			ProgramROMI[5] = 0x00;
+			ProgramROMI[6] = 0xFF;
+			ProgramROMI[7] = 0x00;
 			break;
     }	
 }

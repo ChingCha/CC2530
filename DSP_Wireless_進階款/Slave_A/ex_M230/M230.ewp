@@ -1041,7 +1041,16 @@
   <group>
     <name>application</name>
     <file>
+      <name>$PROJ_DIR$\..\..\components\targets\mcu-kit2\hal_lcd.h</name>
+    </file>
+    <file>
       <name>$PROJ_DIR$\..\..\components\module\M230.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Program.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Program.h</name>
     </file>
     <file>
       <name>$PROJ_DIR$\Slave_A.c</name>
@@ -1074,9 +1083,6 @@
       <name>$PROJ_DIR$\..\..\components\common\hal_int.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\..\components\common\hal_lcd.c</name>
-    </file>
-    <file>
       <name>$PROJ_DIR$\..\..\components\common\hal_ledmatrix.c</name>
     </file>
     <file>
@@ -1105,6 +1111,9 @@
     </file>
     <file>
       <name>$PROJ_DIR$\..\..\components\targets\mcu-kit1\hal_keypad.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\components\targets\mcu-kit2\hal_lcd.c</name>
     </file>
     <file>
       <name>$PROJ_DIR$\..\..\components\targets\mcu-kit1\hal_led.c</name>

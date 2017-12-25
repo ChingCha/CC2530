@@ -75,19 +75,18 @@ uint8 KeyCount;
 uint16 ProgramDelay;
 uint16 ProgramA[8];
 uint8 ShowMode[3];
-uint8 Reading;
+
 //system.c Function
 void Program(uint8 a);
-void Client_Program_Order(void);
+void Client_Program_Order(uint8 zone);
 void Client_Program_Time(void);
 uint8 ReadKeyInt(void);
-void CommandZone(uint8 zone,uint8 rom);
+void CommandZone(uint8 zone);
 uint8 CommandAction(uint8 zone);
-//void ShowZoneMode(void);
 void ReadEEPRom(void);
 void halLcdWriteIntToChar(uint8 lcd_line,uint8 lcd_col,uint8 lcd_text);
 void ShowZoneMode(void);
-
+void EEPROMAction(uint8 zone,uint8 mode, uint8 delay);
 //ㄧ计
 void main(void) 
 {
@@ -123,20 +122,42 @@ void main(void)
     basicRfReceiveOff();
 
 	halLcdWriteString(HAL_LCD_LINE_1,0,"I.O.L_System:M_A");
-	halLcdWriteString(HAL_LCD_LINE_2,0,"Target : ABC___");
+	halLcdWriteString(HAL_LCD_LINE_2,0,"Target:ABC___");
 	
 	ShowMode[0] = 0;
 	ShowMode[1] = 0;
 	ShowMode[2] = 0;
+<<<<<<< HEAD
 	Reading = 0;
 	//ReadEEPRom();
+=======
+	uint8 i = 0;
+	while(1)
+	{		
+		key = halKeypadPushed();
+		if(key == 'A' || key == 'B' || key == 'C') 
+		{
+			CommandZone(key);
+			break;
+		}
+		if(i == 10)
+		{
+			halLcdWriteString(HAL_LCD_LINE_2,13,"ROM");
+			ReadEEPRom();
+			break;
+		}
+		halLcdWriteIntToChar(HAL_LCD_LINE_2,14,i);
+		halMcuWaitMs(1000);
+		i++;
+	}
+>>>>>>> 2c311b7f99cc2a50654639acaf46cb96148c4023
 	while(1)
 	{
 		key = halKeypadPushed();
-		if(key == 'A' || key == 'B' || key == 'C') CommandZone(key,0);
+		if(key == 'A' || key == 'B' || key == 'C') CommandZone(key);
+		if(key == '0') ShowZoneMode();
 		halMcuWaitMs(300); 
 	}
-	
 }
 /***************************
 Client_Program_Order()
@@ -144,7 +165,7 @@ Client_Program_Order()
 2.程璹8竊ヘ抖
 3.ЧΘ肚
 ****************************/
-void Client_Program_Order(void)
+void Client_Program_Order(uint8 zone)
 {	
 	KeyCount = 0;
 	uint8 ProgramXY[2];
@@ -169,6 +190,8 @@ void Client_Program_Order(void)
 		}
 		ProgramA[ProgramZ] = ProgramXY[0] * 10 + ProgramXY[1];
 		pTxData[ProgramZ+1] = ProgramA[ProgramZ];
+		uint8 k = (zone +1) * 10 + (ProgramZ - 1);
+		M230_WriteEEPROM(k, pTxData[ProgramZ+1]);
 		halLcdWriteString(HAL_LCD_LINE_2,3,"Press * or #");
 		key = halKeypadPushed();
 		if(key == '#')
@@ -216,7 +239,16 @@ void Client_Program_Time(void)
 		}				
 	}
     halBuzzer(100);	
-	ProgramDelay = (ProgramDelayI[0] * 1000) + (ProgramDelayI[1] * 100) + (ProgramDelayI[2] * 10) + ProgramDelayI[3];	
+	ProgramDelay = (ProgramDelayI[0] * 1000) + (ProgramDelayI[1] * 100) + (ProgramDelayI[2] * 10) + ProgramDelayI[3];
+	uint8 i = 40;
+	while(i < 61)
+	{
+		M230_WriteEEPROM(i,ProgramDelayI[0] * 1000);
+		M230_WriteEEPROM(i + 1,ProgramDelayI[1] * 100);
+		M230_WriteEEPROM(i + 2,ProgramDelayI[2] * 10);
+		M230_WriteEEPROM(i + 3,ProgramDelayI[3]);
+		i += 10;
+	}
 }
 /********************
 ReadKeyInt()
@@ -245,7 +277,7 @@ CommandZone(uint8 zone)
 4.盢戈ㄖ癳
 5.箇凝篈
 *************************/
-void CommandZone(uint8 zone,uint8 rom)
+void CommandZone(uint8 zone)
 {
 	halBuzzer(100);
 	halLcdClear();
@@ -254,25 +286,22 @@ void CommandZone(uint8 zone,uint8 rom)
 	{
 		case 'A':			
 			halLcdWriteString(HAL_LCD_LINE_1,0,"Send_Zone : S_A ");
-			if(rom != 0) pTxData[1] = CommandAction(rom);
-			if(rom == 0) pTxData[1] = CommandAction(1);
-			ShowMode[0] = pTxData[1];
+			pTxData[1] = CommandAction(1);
+			if(pTxData[1] != 3) ShowMode[0] = pTxData[1];
 			M230_WriteEEPROM(0, pTxData[1]);
 			basicRfSendPacket(A_ZONE,pTxData,APP_PAYLOAD_LENGTH);
 			break;
 		case 'B':
 			halLcdWriteString(HAL_LCD_LINE_1,0,"Send_Zone : S_B ");
-			if(rom != 0) pTxData[1] = CommandAction(rom);
-			if(rom == 0) pTxData[1] = CommandAction(2);
-			ShowMode[1] = pTxData[1];
+			pTxData[1] = CommandAction(2);
+			if(pTxData[1] != 3) ShowMode[1] = pTxData[1];
 			M230_WriteEEPROM(1, pTxData[1]);
 			basicRfSendPacket(B_ZONE,pTxData,APP_PAYLOAD_LENGTH);
 			break;
 		case 'C':
 			halLcdWriteString(HAL_LCD_LINE_1,0,"Send_Zone : S_C ");
-			if(rom != 0) pTxData[1] = CommandAction(rom);
-			if(rom == 0) pTxData[1] = CommandAction(3);
-			ShowMode[2] = pTxData[1];
+			pTxData[1] = CommandAction(3);
+			if(pTxData[1] != 3) ShowMode[2] = pTxData[1];
 			M230_WriteEEPROM(2, pTxData[1]);
 			basicRfSendPacket(C_ZONE,pTxData,APP_PAYLOAD_LENGTH);
 			break;
@@ -315,7 +344,7 @@ uint8 CommandAction(uint8 zone)
 			return 1;
 			break;			
 		case 2:
-			Client_Program_Order();
+			Client_Program_Order(zone);
 			if(zone == 1) pTxData[0] = A_ZONE_2;
 			else if(zone == 2) pTxData[0] = B_ZONE_2;
 			else if(zone == 3) pTxData[0] = C_ZONE_2;
@@ -348,6 +377,7 @@ void ShowZoneMode(void)
 	halLcdWriteIntToChar(HAL_LCD_LINE_2,14,ShowMode[2]);
 }
 	/**************************************************
+<<<<<<< HEAD
 	M230	竚		
 			0			S_A		家Α魁1 or 2
 			1			S_B		""
@@ -358,14 +388,85 @@ void ShowZoneMode(void)
 			40~44       S_A     ┑筐计魁
 			50~54       S_B     ""
 			60~64       S_C     ""
+=======
+M230	竚	
+		0			S_A_Mode 1 or 2
+		1			S_B_Mode 1 or 2
+		2			S_C_Mode 1 or 2
+		10~17	S_A_Mode2 Program1~8
+		20~27	S_B_Mode2 Program1~8
+		30~37	S_C_Mode2 Program1~8
+		40~43	S_A_Delay 4计ちΘ4单だ(uint8 255パ皚ち4单だêиよΑ参4单だ)
+		50~53	S_B_Delay 4计ちΘ4单だ
+		60~63	S_C_Delay 4计ちΘ4单だ
+>>>>>>> 2c311b7f99cc2a50654639acaf46cb96148c4023
 	**************************************************/
 void ReadEEPRom(void)
 {
 	uint8 ReadMode[3];
-	ReadMode[0] = M230_ReadEEPROM(0);
-	if(ReadMode[0] == 1) CommandZone('A',1);
-	ReadMode[1] = M230_ReadEEPROM(1);
-	if(ReadMode[1] == 1) CommandZone('B',1);
-	ReadMode[2] = M230_ReadEEPROM(2);
-	if(ReadMode[2] == 1) CommandZone('C',1);
+	uint8 ReadDelayI[3][4];
+	uint8 ReadDelay[3];
+	for(uint8 i = 0;i < 3;i++)
+	{
+		ReadMode[i] = M230_ReadEEPROM(i);
+		for(uint8 j = 0;j < 4;j++)
+		{
+			uint8 k = (i + 4) * 10 + j;
+			ReadDelayI[i][j] =  M230_ReadEEPROM(k);
+		}
+		if(ReadMode[i] != 0)
+		{
+			ReadDelay[i] = ReadDelayI[i][0] * 1000 + ReadDelayI[i][1] * 100 + ReadDelayI[i][2] * 10 + ReadDelayI[i][3];
+			EEPROMAction(i,ReadMode[i],ReadDelay[i]);
+		}
+	}
+}
+
+void EEPROMAction(uint8 zone,uint8 mode, uint8 delay)
+{
+	switch(mode)
+	{
+		case 1:
+			pTxData[1] = 1;
+			switch(zone) 
+			{
+				case 1:
+					pTxData[0] = A_ZONE_1;
+					basicRfSendPacket(A_ZONE,pTxData,APP_PAYLOAD_LENGTH);
+					ShowMode[0] = 1;
+				case 2:
+					pTxData[0] = B_ZONE_1;
+					basicRfSendPacket(B_ZONE,pTxData,APP_PAYLOAD_LENGTH);
+					ShowMode[1] = 1;
+				case 3:
+					pTxData[0] = C_ZONE_1;
+					basicRfSendPacket(C_ZONE,pTxData,APP_PAYLOAD_LENGTH);
+					ShowMode[2] = 1;
+			}
+		case 2:
+			pTxData[1] = 2;
+			for(uint8 i = 0;i < 3;i ++)
+			{
+				for(uint8 j = 0; j < 8;j++)
+				{
+					uint8 k = (i + 1) * 10 + j;
+					pTxData[j + 2] = M230_ReadEEPROM(k);
+				}
+			}
+			switch(zone) 
+			{
+				case 1:
+					pTxData[0] = A_ZONE_2;
+					basicRfSendPacket(A_ZONE,pTxData,APP_PAYLOAD_LENGTH);
+					ShowMode[0] = 2;
+				case 2:
+					pTxData[0] = B_ZONE_2;
+					basicRfSendPacket(B_ZONE,pTxData,APP_PAYLOAD_LENGTH);
+					ShowMode[1] = 2;
+				case 3:
+					pTxData[0] = C_ZONE_2;
+					basicRfSendPacket(C_ZONE,pTxData,APP_PAYLOAD_LENGTH);
+					ShowMode[2] = 2;
+			}
+	}
 }
