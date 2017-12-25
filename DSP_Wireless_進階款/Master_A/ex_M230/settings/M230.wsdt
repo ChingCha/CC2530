@@ -2,242 +2,65 @@
 
 <Workspace>
   <ConfigDictionary>
-    <CurrentConfigs>
-      <Project>M230/debug</Project>
-    </CurrentConfigs>
-  </ConfigDictionary>
+    
+  <CurrentConfigs><Project>M230/debug</Project></CurrentConfigs></ConfigDictionary>
   <Desktop>
     <Static>
       <Workspace>
         <ColumnWidths>
-          <Column0>124</Column0>
-          <Column1>27</Column1>
-          <Column2>27</Column2>
-          <Column3>27</Column3>
-        </ColumnWidths>
+          
+          
+          
+          
+        <Column0>124</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
       </Workspace>
       <Build>
-        <ColumnWidth0>20</ColumnWidth0>
-        <ColumnWidth1>1395</ColumnWidth1>
-        <ColumnWidth2>372</ColumnWidth2>
-        <ColumnWidth3>93</ColumnWidth3>
-      </Build>
+        
+        
+        
+        
+      <ColumnWidth0>20</ColumnWidth0><ColumnWidth1>1155</ColumnWidth1><ColumnWidth2>308</ColumnWidth2><ColumnWidth3>77</ColumnWidth3></Build>
       <TerminalIO/>
     </Static>
     <Windows>
-      <Wnd0>
+      
+      
+    <Wnd2>
         <Tabs>
           <Tab>
-<<<<<<< HEAD
-            <Identity>TabID-18141-18686</Identity>
-=======
-<<<<<<< HEAD
-            <Identity>TabID-19390-7520</Identity>
-=======
-            <Identity>TabID-22761-10966</Identity>
->>>>>>> 2c311b7f99cc2a50654639acaf46cb96148c4023
->>>>>>> 58dc336be595aa5dcea8d33e926ee6c52a642521
+            <Identity>TabID-21390-24579</Identity>
             <TabName>Workspace</TabName>
             <Factory>Workspace</Factory>
             <Session>
-              <NodeDict>
-                <ExpandedNode>M230</ExpandedNode>
-                <ExpandedNode>M230/application</ExpandedNode>
-              </NodeDict>
-            </Session>
+              
+            <NodeDict><ExpandedNode>M230</ExpandedNode><ExpandedNode>M230/application</ExpandedNode></NodeDict></Session>
           </Tab>
         </Tabs>
-        <SelectedTab>0</SelectedTab>
-      </Wnd0>
-      <Wnd1>
+        
+      <SelectedTab>0</SelectedTab></Wnd2><Wnd3>
         <Tabs>
           <Tab>
-<<<<<<< HEAD
-            <Identity>TabID-24477-18977</Identity>
-=======
-<<<<<<< HEAD
-            <Identity>TabID-3414-7614</Identity>
-=======
-            <Identity>TabID-19625-11025</Identity>
->>>>>>> 2c311b7f99cc2a50654639acaf46cb96148c4023
->>>>>>> 58dc336be595aa5dcea8d33e926ee6c52a642521
+            <Identity>TabID-17208-24658</Identity>
             <TabName>Build</TabName>
             <Factory>Build</Factory>
             <Session/>
           </Tab>
         </Tabs>
-        <SelectedTab>0</SelectedTab>
-      </Wnd1>
-    </Windows>
+        
+      <SelectedTab>0</SelectedTab></Wnd3></Windows>
     <Editor>
-      <Pane>
-        <Tab>
-          <Factory>TextEditor</Factory>
-<<<<<<< HEAD
-          <Filename>$WS_DIR$\..\..\..\..\..\..\..\..\Program Files (x86)\IAR Systems\Embedded Workbench 6.0\8051\doc\infocenter\index.ENU.html</Filename>
-=======
-          <Filename>$WS_DIR$\..\..\Slave_A\ex_M230\Slave_A.c</Filename>
-          <XPos>0</XPos>
-          <YPos>38</YPos>
-          <SelStart>1240</SelStart>
-          <SelEnd>1240</SelEnd>
-        </Tab>
-        <Tab>
-          <Factory>TextEditor</Factory>
-          <Filename>$WS_DIR$\..\..\Slave_A\ex_M230\Program.c</Filename>
-          <XPos>0</XPos>
-          <YPos>0</YPos>
-<<<<<<< HEAD
-          <SelStart>454</SelStart>
-          <SelEnd>454</SelEnd>
-=======
-          <SelStart>27877</SelStart>
-          <SelEnd>27877</SelEnd>
->>>>>>> 2c311b7f99cc2a50654639acaf46cb96148c4023
->>>>>>> 58dc336be595aa5dcea8d33e926ee6c52a642521
-        </Tab>
-        <ActiveTab>1</ActiveTab>
-        <Tab>
-          <Factory>TextEditor</Factory>
-          <Filename>$WS_DIR$\..\..\components\common\hal_defs.h</Filename>
-          <XPos>0</XPos>
-          <YPos>0</YPos>
-<<<<<<< HEAD
-          <SelStart>115</SelStart>
-          <SelEnd>115</SelEnd>
-        </Tab>
-        <Tab>
-          <Factory>TextEditor</Factory>
-          <Filename>$WS_DIR$\..\..\components\common\hal_lcd.h</Filename>
-          <XPos>0</XPos>
-          <YPos>0</YPos>
-          <SelStart>781</SelStart>
-          <SelEnd>781</SelEnd>
-        </Tab>
-        <ActiveTab>2</ActiveTab>
-=======
-          <SelStart>68</SelStart>
-          <SelEnd>68</SelEnd>
-        </Tab>
-<<<<<<< HEAD
-        <Tab>
-          <Factory>TextEditor</Factory>
-          <Filename>$WS_DIR$\..\..\components\targets\mcu-kit1\hal_board.h</Filename>
-          <XPos>0</XPos>
-          <YPos>36</YPos>
-          <SelStart>0</SelStart>
-          <SelEnd>0</SelEnd>
-        </Tab>
-=======
->>>>>>> 2c311b7f99cc2a50654639acaf46cb96148c4023
->>>>>>> 58dc336be595aa5dcea8d33e926ee6c52a642521
-      </Pane>
-      <ActivePane>0</ActivePane>
-      <Sizes>
-        <Pane>
-          <X>1000000</X>
-          <Y>1000000</Y>
-        </Pane>
-      </Sizes>
-      <SplitMode>1</SplitMode>
-    </Editor>
+      
+      
+      
+      
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\..\..\..\..\..\Program Files (x86)\IAR Systems\Embedded Workbench 6.0 Evaluation\8051\doc\infocenter\index.ENU.html</Filename></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Master_A.c</Filename><XPos>0</XPos><YPos>77</YPos><SelStart>2348</SelStart><SelEnd>2348</SelEnd></Tab><ActiveTab>1</ActiveTab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
     <Positions>
-      <Top>
-        <Row0>
-          <Sizes>
-<<<<<<< HEAD
-            <Toolbar-07461a20>
-              <key>iaridepm.enu1</key>
-            </Toolbar-07461a20>
-=======
-<<<<<<< HEAD
-            <Toolbar-0015dfe0>
-              <key>iaridepm.enu1</key>
-            </Toolbar-0015dfe0>
-=======
-            <Toolbar-077c1a20>
-              <key>iaridepm.enu1</key>
-            </Toolbar-077c1a20>
->>>>>>> 2c311b7f99cc2a50654639acaf46cb96148c4023
->>>>>>> 58dc336be595aa5dcea8d33e926ee6c52a642521
-          </Sizes>
-        </Row0>
-        <Row1>
-          <Sizes/>
-        </Row1>
-        <Row2>
-          <Sizes/>
-        </Row2>
-      </Top>
-      <Left>
-        <Row0>
-          <Sizes>
-            <Wnd0>
-              <Rect>
-                <Top>-2</Top>
-                <Left>-2</Left>
-<<<<<<< HEAD
-                <Bottom>755</Bottom>
-                <Right>198</Right>
-=======
-                <Bottom>574</Bottom>
-<<<<<<< HEAD
-                <Right>198</Right>
-=======
-                <Right>354</Right>
->>>>>>> 2c311b7f99cc2a50654639acaf46cb96148c4023
->>>>>>> 58dc336be595aa5dcea8d33e926ee6c52a642521
-                <x>-2</x>
-                <y>-2</y>
-                <xscreen>200</xscreen>
-                <yscreen>200</yscreen>
-<<<<<<< HEAD
-                <sizeHorzCX>104167</sizeHorzCX>
-                <sizeHorzCY>200401</sizeHorzCY>
-                <sizeVertCX>104167</sizeVertCX>
-                <sizeVertCY>758517</sizeVertCY>
-=======
-                <sizeHorzCX>125000</sizeHorzCX>
-                <sizeHorzCY>244798</sizeHorzCY>
-                <sizeVertCX>125000</sizeVertCX>
-                <sizeVertCY>705018</sizeVertCY>
->>>>>>> 2c311b7f99cc2a50654639acaf46cb96148c4023
-              </Rect>
-            </Wnd0>
-          </Sizes>
-        </Row0>
-      </Left>
-      <Right>
-        <Row0>
-          <Sizes/>
-        </Row0>
-      </Right>
-      <Bottom>
-        <Row0>
-          <Sizes>
-            <Wnd1>
-              <Rect>
-                <Top>-2</Top>
-                <Left>-2</Left>
-                <Bottom>198</Bottom>
-                <Right>1922</Right>
-                <x>-2</x>
-                <y>-2</y>
-                <xscreen>1924</xscreen>
-                <yscreen>200</yscreen>
-                <sizeHorzCX>1002083</sizeHorzCX>
-                <sizeHorzCY>200401</sizeHorzCY>
-                <sizeVertCX>104167</sizeVertCX>
-                <sizeVertCY>200401</sizeVertCY>
-              </Rect>
-            </Wnd1>
-          </Sizes>
-        </Row0>
-      </Bottom>
-      <Float>
-        <Sizes/>
-      </Float>
-    </Positions>
+      
+      
+      
+      
+      
+    <Top><Row0><Sizes><Toolbar-06fa1a98><key>iaridepm.enu1</key></Toolbar-06fa1a98></Sizes></Row0><Row1><Sizes/></Row1><Row2><Sizes/></Row2><Row3><Sizes><Toolbar-07074b68><key>debuggergui.enu1</key></Toolbar-07074b68></Sizes></Row3></Top><Left><Row0><Sizes><Wnd2><Rect><Top>-2</Top><Left>-2</Left><Bottom>574</Bottom><Right>198</Right><x>-2</x><y>-2</y><xscreen>200</xscreen><yscreen>200</yscreen><sizeHorzCX>125000</sizeHorzCX><sizeHorzCY>244798</sizeHorzCY><sizeVertCX>125000</sizeVertCX><sizeVertCY>705018</sizeVertCY></Rect></Wnd2></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd3><Rect><Top>-2</Top><Left>-2</Left><Bottom>198</Bottom><Right>1602</Right><x>-2</x><y>-2</y><xscreen>1604</xscreen><yscreen>200</yscreen><sizeHorzCX>1002500</sizeHorzCX><sizeHorzCY>244798</sizeHorzCY><sizeVertCX>125000</sizeVertCX><sizeVertCY>244798</sizeVertCY></Rect></Wnd3></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
   </Desktop>
 </Workspace>
 

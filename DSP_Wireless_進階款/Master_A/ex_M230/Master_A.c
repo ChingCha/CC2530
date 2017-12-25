@@ -75,7 +75,6 @@ uint8 KeyCount;
 uint16 ProgramDelay;
 uint16 ProgramA[8];
 uint8 ShowMode[3];
-
 //system.c Function
 void Program(uint8 a);
 void Client_Program_Order(uint8 zone);
@@ -221,6 +220,7 @@ Client_Program_Time()
 void Client_Program_Time(void)
 {		
 	halLcdWriteString(HAL_LCD_LINE_2,0,"____ms Delay    ");
+	KeyCount = 0;
 	while(KeyCount<4)
 	{		
 		halMcuWaitMs(300);
@@ -233,7 +233,11 @@ void Client_Program_Time(void)
 			KeyCount++;
 		}				
 	}
-    halBuzzer(100);	
+    halBuzzer(100);
+	pTxData[2] = ProgramDelayI[0];
+	pTxData[3] = ProgramDelayI[1];
+	pTxData[4] = ProgramDelayI[2];
+	pTxData[5] = ProgramDelayI[3];
 	ProgramDelay = (ProgramDelayI[0] * 1000) + (ProgramDelayI[1] * 100) + (ProgramDelayI[2] * 10) + ProgramDelayI[3];
 	uint8 i = 40;
 	while(i < 61)

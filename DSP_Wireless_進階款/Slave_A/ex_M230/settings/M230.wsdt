@@ -10,7 +10,7 @@
     <Static>
       <Workspace>
         <ColumnWidths>
-          <Column0>168</Column0>
+          <Column0>124</Column0>
           <Column1>27</Column1>
           <Column2>27</Column2>
           <Column3>27</Column3>
@@ -28,15 +28,13 @@
       <Wnd2>
         <Tabs>
           <Tab>
-            <Identity>TabID-16597-7993</Identity>
+            <Identity>TabID-10661-27610</Identity>
             <TabName>Workspace</TabName>
             <Factory>Workspace</Factory>
             <Session>
               <NodeDict>
                 <ExpandedNode>M230</ExpandedNode>
                 <ExpandedNode>M230/application</ExpandedNode>
-                <ExpandedNode>M230/application/Slave_A.c</ExpandedNode>
-                <ExpandedNode>M230/application/Slave_B.c</ExpandedNode>
               </NodeDict>
             </Session>
           </Tab>
@@ -46,7 +44,7 @@
       <Wnd3>
         <Tabs>
           <Tab>
-            <Identity>TabID-8755-8140</Identity>
+            <Identity>TabID-18754-29096</Identity>
             <TabName>Build</TabName>
             <Factory>Build</Factory>
             <Session/>
@@ -59,13 +57,17 @@
       <Pane>
         <Tab>
           <Factory>TextEditor</Factory>
+          <Filename>$WS_DIR$\..\..\..\..\..\..\..\..\Program Files (x86)\IAR Systems\Embedded Workbench 6.0 Evaluation\8051\doc\infocenter\index.ENU.html</Filename>
+        </Tab>
+        <Tab>
+          <Factory>TextEditor</Factory>
           <Filename>$WS_DIR$\Slave_A.c</Filename>
           <XPos>0</XPos>
-          <YPos>197</YPos>
-          <SelStart>1194</SelStart>
-          <SelEnd>1194</SelEnd>
+          <YPos>37</YPos>
+          <SelStart>1337</SelStart>
+          <SelEnd>1337</SelEnd>
         </Tab>
-        <ActiveTab>0</ActiveTab>
+        <ActiveTab>1</ActiveTab>
       </Pane>
       <ActivePane>0</ActivePane>
       <Sizes>
@@ -80,9 +82,9 @@
       <Top>
         <Row0>
           <Sizes>
-            <Toolbar-06a41a20>
+            <Toolbar-070d1a20>
               <key>iaridepm.enu1</key>
-            </Toolbar-06a41a20>
+            </Toolbar-070d1a20>
           </Sizes>
         </Row0>
         <Row1>
@@ -91,13 +93,6 @@
         <Row2>
           <Sizes/>
         </Row2>
-        <Row3>
-          <Sizes>
-            <Toolbar-19737d08>
-              <key>debuggergui.enu1</key>
-            </Toolbar-19737d08>
-          </Sizes>
-        </Row3>
       </Top>
       <Left>
         <Row0>
@@ -107,14 +102,14 @@
                 <Top>-2</Top>
                 <Left>-2</Left>
                 <Bottom>574</Bottom>
-                <Right>242</Right>
+                <Right>198</Right>
                 <x>-2</x>
                 <y>-2</y>
                 <xscreen>200</xscreen>
                 <yscreen>200</yscreen>
                 <sizeHorzCX>125000</sizeHorzCX>
                 <sizeHorzCY>244798</sizeHorzCY>
-                <sizeVertCX>152500</sizeVertCX>
+                <sizeVertCX>125000</sizeVertCX>
                 <sizeVertCY>705018</sizeVertCY>
               </Rect>
             </Wnd2>
