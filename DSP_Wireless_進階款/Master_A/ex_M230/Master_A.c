@@ -127,10 +127,6 @@ void main(void)
 	ShowMode[0] = 0;
 	ShowMode[1] = 0;
 	ShowMode[2] = 0;
-<<<<<<< HEAD
-	Reading = 0;
-	//ReadEEPRom();
-=======
 	uint8 i = 0;
 	while(1)
 	{		
@@ -150,7 +146,6 @@ void main(void)
 		halMcuWaitMs(1000);
 		i++;
 	}
->>>>>>> 2c311b7f99cc2a50654639acaf46cb96148c4023
 	while(1)
 	{
 		key = halKeypadPushed();
@@ -318,7 +313,7 @@ void CommandZone(uint8 zone)
 	halMcuWaitMs(1000);
 	ShowZoneMode();
 }
-/****************************
+/*****************************
 CommandAction(uint8 zone)
 1.耞块家Α1~3
 2.砞﹚跋办?
@@ -377,18 +372,6 @@ void ShowZoneMode(void)
 	halLcdWriteIntToChar(HAL_LCD_LINE_2,14,ShowMode[2]);
 }
 	/**************************************************
-<<<<<<< HEAD
-	M230	竚		
-			0			S_A		家Α魁1 or 2
-			1			S_B		""
-			2			S_C		""
-			10~18     	S_A     MODE2竊ヘ魁
-			20~28   	S_B     ""
-			30~38   	S_C     ""
-			40~44       S_A     ┑筐计魁
-			50~54       S_B     ""
-			60~64       S_C     ""
-=======
 M230	竚	
 		0			S_A_Mode 1 or 2
 		1			S_B_Mode 1 or 2
@@ -399,7 +382,6 @@ M230	竚	
 		40~43	S_A_Delay 4计ちΘ4单だ(uint8 255パ皚ち4单だêиよΑ参4单だ)
 		50~53	S_B_Delay 4计ちΘ4单だ
 		60~63	S_C_Delay 4计ちΘ4单だ
->>>>>>> 2c311b7f99cc2a50654639acaf46cb96148c4023
 	**************************************************/
 void ReadEEPRom(void)
 {
