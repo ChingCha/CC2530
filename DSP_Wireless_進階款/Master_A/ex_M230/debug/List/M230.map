@@ -2,7 +2,7 @@
 #                                                                              #
 #      IAR Universal Linker V5.0.2.5/W32                                       #
 #                                                                              #
-#           Link time     =  24/Dec/2017  23:09:56                             #
+#           Link time     =  25/Dec/2017  22:08:24                             #
 #           Target CPU    =  x51                                               #
 #           List file     =  C:\Users\´^§Ó»¨\Documents\GitHub\CC2530\DSP_Wirel #
 #                            ess_¶i¶¥´Ú\Master_A\ex_M230\debug\List\M230.map   #
@@ -95,83 +95,60 @@
 #                            -f                                                #
 #                            "C:\Program Files (x86)\IAR Systems\Embedded Work #
 #                            bench 6.0 Evaluation\8051\config\devices\Texas In #
-#                            struments\lnk51ew_cc2530b.xcl"                    #
-#                            (-D_IDATA_END=0xFF -D_PDATA_START=0x1E00          #
-#                            -D_PDATA_END=0x1EFF -D_IXDATA_START=0x0001        #
-#                            -D_IXDATA_END=0x1EFF                              #
-#                            -D_XDATA_START=_IXDATA_START                      #
-#                            -D_XDATA_END=_IXDATA_END -D_CODE_START=0x0000     #
-#                            -D_CODE_END=0x7FFF -D_FIRST_BANK_ADDR=0x10000     #
-#                            -M(CODE)[(_CODEBANK_START+_FIRST_BANK_ADDR)-(_COD #
-#                            EBANK_END+_FIRST_BANK_ADDR)]*_NR_OF_BANKS+0x10000 #
-#                            =0x8000                                           #
-#                            -ww69=i -D_NEAR_CODE_END=_CODE_END                #
-#                            -D?REGISTER_BANK=0 -D_REGISTER_BANK_START=0       #
-#                            -D?PBANK_NUMBER=0x1E -D?PBANK=0x93                #
-#                            -D_BREG_START=0x00 -D?VB=0x20                     #
-#                            -D_FAR_DATA_NR_OF_BANKS=0x0E                      #
-#                            -D_FAR_DATA_START=0x010001                        #
-#                            -D_FAR_DATA_END=0xFFFFFF                          #
-#                            -D_FAR_CODE_START=_CODE_START                     #
-#                            -D_FAR_CODE_END=_CODE_END -f lnk_base.xcl         #
-#                            (-Z(BIT)BREG=_BREG_START -Z(BIT)BIT_N=0-7F        #
+#                            struments\lnk51ew_cc2530F256_banked.xcl"          #
+#                            (-D_IDATA0_START=0x00 -D_IDATA0_END=0xFF          #
+#                            -D_PDATA0_START=0x1E00 -D_PDATA0_END=0x1EFF       #
+#                            -D_IXDATA0_START=0x0001 -D_IXDATA0_END=0x1EFF     #
+#                            -D_XDATA0_START=_IXDATA0_START                    #
+#                            -D_XDATA0_END=_IXDATA0_END                        #
+#                            -D_NEAR_CODE_START=0x0000                         #
+#                            -D_FIRST_BANK_ADDR=0x10000 -D?REGISTER_BANK=0x0   #
+#                            -D_REGISTER_BANK_START=0x0 -D_BREG_START=0x00     #
+#                            -D?VB=0x20 -D?ESP=0x9B -Z(BIT)BREG=_BREG_START    #
+#                            -Z(BIT)BIT_N=0-7F                                 #
 #                            -Z(DATA)REGISTERS+8=_REGISTER_BANK_START          #
 #                            -Z(DATA)BDATA_Z,BDATA_N,BDATA_I=20-2F             #
 #                            -Z(DATA)VREG+_NR_OF_VIRTUAL_REGISTERS=08-7F       #
 #                            -Z(DATA)PSP,XSP=08-7F -Z(DATA)DOVERLAY=08-7F      #
 #                            -Z(DATA)DATA_I,DATA_Z,DATA_N=08-7F                #
 #                            -U(IDATA)0-7F=(DATA)0-7F                          #
-#                            -Z(IDATA)IDATA_I,IDATA_Z,IDATA_N=08-_IDATA_END    #
-#                            -Z(IDATA)ISTACK+_IDATA_STACK_SIZE#08-_IDATA_END   #
+#                            -Z(IDATA)IDATA_I,IDATA_Z,IDATA_N=08-_IDATA0_END   #
+#                            -Z(IDATA)ISTACK+_IDATA_STACK_SIZE#08-_IDATA0_END  #
 #                            -Z(IDATA)IOVERLAY=08-FF -Z(CODE)INTVEC=0          #
-#                            -Z(CODE)CSTART=_CODE_START-_CODE_END              #
+#                            -Z(CODE)CSTART=_NEAR_CODE_START-(_CODEBANK_START- #
+#                            1)                                                #
 #                            -Z(CODE)BIT_ID,BDATA_ID,DATA_ID,IDATA_ID,IXDATA_I #
-#                            D,PDATA_ID,XDATA_ID=_CODE_START-_CODE_END         #
-#                            -Z(CODE)HUGE_ID=_FAR_CODE_START-_FAR_CODE_END     #
+#                            D,PDATA_ID,XDATA_ID=_NEAR_CODE_START-(_CODEBANK_S #
+#                            TART-1)                                           #
 #                            -Z(CODE)BANK_RELAYS,RCODE,DIFUNCT,CODE_C,CODE_N,N #
-#                            EAR_CODE=_CODE_START-_CODE_END                    #
-#                            -P(CODE)BANKED_CODE=_CODE_START-_CODE_END,[(_CODE #
-#                            BANK_START+_FIRST_BANK_ADDR)-(_CODEBANK_END+_FIRS #
-#                            T_BANK_ADDR)]*_NR_OF_BANKS+10000                  #
-#                            -P(CODE)FAR_CODE_C,FAR_CODE_N,FAR_CODE=[_FAR_CODE #
-#                            _START-_FAR_CODE_END]/10000                       #
-#                            -P(CODE)HUGE_CODE_C=_FAR_CODE_START-_FAR_CODE_END #
-#                            -Z(CODE)CHECKSUM#_CODE_END                        #
+#                            EAR_CODE=_NEAR_CODE_START-(_CODEBANK_START-1)     #
+#                            -P(CODE)BANKED_CODE=_NEAR_CODE_START-(_CODEBANK_S #
+#                            TART-1),[(_CODEBANK_START+_FIRST_BANK_ADDR)-(_COD #
+#                            EBANK_END+_FIRST_BANK_ADDR)]*_NR_OF_BANKS+10000   #
+#                            -Z(CODE)CHECKSUM#(_CODEBANK_START-1)              #
+#                            -Z(XDATA)PDATA_Z,PDATA_I=_PDATA0_START-_PDATA0_EN #
+#                            D                                                 #
+#                            -P(XDATA)PDATA_N=_PDATA0_START-_PDATA0_END        #
+#                            -Z(XDATA)PSTACK+_PDATA_STACK_SIZE=_PDATA0_START-_ #
+#                            PDATA0_END                                        #
 #                            -Z(XDATA)EXT_STACK+_EXTENDED_STACK_SIZE=_EXTENDED #
 #                            _STACK_START                                      #
-#                            -Z(XDATA)PSTACK+_PDATA_STACK_SIZE=_PDATA_START-_P #
-#                            DATA_END                                          #
-#                            -Z(XDATA)XSTACK+_XDATA_STACK_SIZE=_XDATA_START-_X #
-#                            DATA_END                                          #
-#                            -Z(XDATA)PDATA_Z,PDATA_I=_PDATA_START-_PDATA_END  #
-#                            -P(XDATA)PDATA_N=_PDATA_START-_PDATA_END          #
-#                            -Z(XDATA)IXDATA_Z,IXDATA_I=_IXDATA_START-_IXDATA_ #
-#                            END                                               #
-#                            -P(XDATA)IXDATA_N=_IXDATA_START-_IXDATA_END       #
-#                            -Z(XDATA)XDATA_Z,XDATA_I=_XDATA_START-_XDATA_END  #
-#                            -P(XDATA)XDATA_N=_XDATA_START-_XDATA_END          #
-#                            -Z(XDATA)XDATA_HEAP+_XDATA_HEAP_SIZE=_XDATA_START #
-#                            -_XDATA_END                                       #
-#                            -Z(CONST)XDATA_ROM_C=_XDATA_START-_XDATA_END      #
-#                            -Z(XDATA)FAR_Z=[_FAR_DATA_START-_FAR_DATA_END]/10 #
-#                            000                                               #
-#                            -Z(XDATA)FAR_I=[_FAR_DATA_START-_FAR_DATA_END]/10 #
-#                            000                                               #
-#                            -Z(CODE)FAR_ID=[_FAR_CODE_START-_FAR_CODE_END]/10 #
-#                            000                                               #
-#                            -Z(XDATA)FAR_HEAP+_FAR_HEAP_SIZE=[_FAR_DATA_START #
-#                            -_FAR_DATA_END]/10000                             #
-#                            -P(XDATA)FAR_N=[_FAR_DATA_START-_FAR_DATA_END]*_F #
-#                            AR_DATA_NR_OF_BANKS+10000                         #
-#                            -P(CONST)FAR_ROM_C=[_FAR_DATA_START-_FAR_DATA_END #
-#                            ]*_FAR_DATA_NR_OF_BANKS+10000                     #
-#                            -Z(XDATA)HUGE_Z,HUGE_I=_FAR_DATA_START-_FAR_DATA_ #
-#                            END                                               #
-#                            -P(XDATA)HUGE_N=_FAR_DATA_START-_FAR_DATA_END     #
-#                            -Z(XDATA)HUGE_HEAP+_HUGE_HEAP_SIZE=_FAR_DATA_STAR #
-#                            T-_FAR_DATA_END                                   #
-#                            -Z(CONST)HUGE_ROM_C=_FAR_DATA_START-_FAR_DATA_END #
-#                            -cx51) -D_BANK0_START=0x00000                     #
+#                            -Z(XDATA)XSTACK+_XDATA_STACK_SIZE=_XDATA0_START-_ #
+#                            XDATA0_END                                        #
+#                            -Z(XDATA)IXDATA_Z,IXDATA_I=_IXDATA0_START-_IXDATA #
+#                            0_END                                             #
+#                            -P(XDATA)IXDATA_N=_IXDATA0_START-_IXDATA0_END     #
+#                            -Z(XDATA)XDATA_Z,XDATA_I=_XDATA0_START-_XDATA0_EN #
+#                            D                                                 #
+#                            -P(XDATA)XDATA_N=_XDATA0_START-_XDATA0_END        #
+#                            -Z(XDATA)XDATA_HEAP+_XDATA_HEAP_SIZE=_XDATA0_STAR #
+#                            T-_XDATA0_END                                     #
+#                            -Z(CONST)XDATA_ROM_C=_XDATA0_START-_XDATA0_END    #
+#                            -cx51                                             #
+#                            -M(CODE)[(_CODEBANK_START+_FIRST_BANK_ADDR)-(_COD #
+#                            EBANK_END+_FIRST_BANK_ADDR)]*_NR_OF_BANKS+0x10000 #
+#                            =0x8000                                           #
+#                            -ww69=i -D_BANK0_START=0x00000                    #
 #                            -D_BANK0_END=0x07FFF -D_BANK1_START=0x18000       #
 #                            -D_BANK1_END=0x1FFFF -D_BANK2_START=0x28000       #
 #                            -D_BANK2_END=0x2FFFF -D_BANK3_START=0x38000       #
@@ -188,10 +165,8 @@
 #                            -P(CODE)BANK5=_BANK5_START-_BANK5_END             #
 #                            -P(CODE)BANK6=_BANK6_START-_BANK6_END             #
 #                            -P(CODE)BANK7=_BANK7_START-_BANK7_END             #
-#                            -D_FLASH_LOCK_BITS_START=((_NR_OF_BANKS*_FIRST_BA #
-#                            NK_ADDR)+0xFFF0)                                  #
-#                            -D_FLASH_LOCK_BITS_END=((_NR_OF_BANKS*_FIRST_BANK #
-#                            _ADDR)+0xFFFF)                                    #
+#                            -D_FLASH_LOCK_BITS_START=0x7FFF0                  #
+#                            -D_FLASH_LOCK_BITS_END=0x7FFFF                    #
 #                            -Z(CODE)FLASH_LOCK_BITS=_FLASH_LOCK_BITS_START-_F #
 #                            LASH_LOCK_BITS_END                                #
 #                            -U(CODE)0x0000=(CODE)_FLASH_LOCK_BITS_START-_FLAS #
@@ -279,6 +254,7 @@ Absolute parts
            _EXTENDED_STACK_SIZE    00000000 
            _EXTENDED_STACK_START   00000000 
            _IDATA_STACK_SIZE       00000040 
+           ?PBANK                  000000A0 
            _NR_OF_VIRTUAL_REGISTERS
                                    00000008 
            _FLASH_LOCK_BITS_END    0003FFFF 
@@ -300,31 +276,24 @@ Absolute parts
            _BANK1_START            00008000 
            _BANK0_END              00007FFF 
            _BANK0_START            00000000 
-           _FAR_CODE_END           00007FFF 
-           _FAR_CODE_START         00000000 
-           _FAR_DATA_END           00FFFFFF 
-           _FAR_DATA_START         00010001 
-           _FAR_DATA_NR_OF_BANKS   0000000E 
+           ?ESP                    0000009B 
            ?VB                     00000020        ?BANKED_ENTER_XDATA (?BANKED_ENTER_XDATA)
                                                    ?BANKED_LEAVE_XDATA (?BANKED_LEAVE_XDATA)
                                                    ?INTERRUPT_ENTER_XSP (?INTERRUPT_ENTER_XSP)
                                                    ?INTERRUPT_LEAVE_XSP (?INTERRUPT_LEAVE_XSP)
            _BREG_START             00000000 
-           ?PBANK                  000000A0 
-           ?PBANK_NUMBER           0000001E 
            _REGISTER_BANK_START    00000000 
            ?REGISTER_BANK          00000000        Segment part 6 (CSTARTUP)
-           _NEAR_CODE_END          00007FFF 
            _FIRST_BANK_ADDR        00010000 
-           _CODE_END               00007FFF 
-           _CODE_START             00000000 
-           _XDATA_END              00001EFF 
-           _XDATA_START            00000001 
-           _IXDATA_END             00001EFF 
-           _IXDATA_START           00000001 
-           _PDATA_END              00001EFF 
-           _PDATA_START            00001E00 
-           _IDATA_END              000000FF 
+           _NEAR_CODE_START        00000000 
+           _XDATA0_END             00001EFF 
+           _XDATA0_START           00000001 
+           _IXDATA0_END            00001EFF 
+           _IXDATA0_START          00000001 
+           _PDATA0_END             00001EFF 
+           _PDATA0_START           00001E00 
+           _IDATA0_END             000000FF 
+           _IDATA0_START           00000000 
            ?CBANK                  0000009F        ?RESET_CODE_BANK (CSTARTUP)
                                                    Segment part 3 (?BANKED_CODE_SUPPORT)
            ?CBANK_MASK             00000007 
@@ -3811,5 +3780,5 @@ ISTACK               IDATA         000000C0 - 000000FF          40   rel    0
      8 bits  of BIT   memory
 
 Errors: none
-Warnings: 1
+Warnings: none
 

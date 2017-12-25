@@ -10,7 +10,7 @@
     <Static>
       <Workspace>
         <ColumnWidths>
-          <Column0>263</Column0>
+          <Column0>124</Column0>
           <Column1>27</Column1>
           <Column2>27</Column2>
           <Column3>27</Column3>
@@ -28,18 +28,13 @@
       <Wnd0>
         <Tabs>
           <Tab>
-            <Identity>TabID-22761-10966</Identity>
+            <Identity>TabID-18141-18686</Identity>
             <TabName>Workspace</TabName>
             <Factory>Workspace</Factory>
             <Session>
               <NodeDict>
                 <ExpandedNode>M230</ExpandedNode>
-                <ExpandedNode>M230/Output</ExpandedNode>
                 <ExpandedNode>M230/application</ExpandedNode>
-                <ExpandedNode>M230/application/Slave_A.c</ExpandedNode>
-                <ExpandedNode>M230/application/Slave_A.c/Output</ExpandedNode>
-                <ExpandedNode>M230/common</ExpandedNode>
-                <ExpandedNode>M230/utilities</ExpandedNode>
               </NodeDict>
             </Session>
           </Tab>
@@ -49,7 +44,7 @@
       <Wnd1>
         <Tabs>
           <Tab>
-            <Identity>TabID-19625-11025</Identity>
+            <Identity>TabID-24477-18977</Identity>
             <TabName>Build</TabName>
             <Factory>Build</Factory>
             <Session/>
@@ -64,19 +59,19 @@
           <Factory>TextEditor</Factory>
           <Filename>$WS_DIR$\..\..\Slave_A\ex_M230\Slave_A.c</Filename>
           <XPos>0</XPos>
-          <YPos>0</YPos>
-          <SelStart>270</SelStart>
-          <SelEnd>270</SelEnd>
+          <YPos>38</YPos>
+          <SelStart>1240</SelStart>
+          <SelEnd>1240</SelEnd>
         </Tab>
-        <ActiveTab>0</ActiveTab>
         <Tab>
           <Factory>TextEditor</Factory>
           <Filename>$WS_DIR$\..\..\Slave_A\ex_M230\Program.c</Filename>
           <XPos>0</XPos>
           <YPos>0</YPos>
-          <SelStart>27877</SelStart>
-          <SelEnd>27877</SelEnd>
+          <SelStart>454</SelStart>
+          <SelEnd>454</SelEnd>
         </Tab>
+        <ActiveTab>1</ActiveTab>
         <Tab>
           <Factory>TextEditor</Factory>
           <Filename>$WS_DIR$\..\..\components\common\hal_defs.h</Filename>
@@ -84,6 +79,14 @@
           <YPos>0</YPos>
           <SelStart>68</SelStart>
           <SelEnd>68</SelEnd>
+        </Tab>
+        <Tab>
+          <Factory>TextEditor</Factory>
+          <Filename>$WS_DIR$\..\..\components\targets\mcu-kit1\hal_board.h</Filename>
+          <XPos>0</XPos>
+          <YPos>36</YPos>
+          <SelStart>0</SelStart>
+          <SelEnd>0</SelEnd>
         </Tab>
       </Pane>
       <ActivePane>0</ActivePane>
@@ -99,9 +102,9 @@
       <Top>
         <Row0>
           <Sizes>
-            <Toolbar-077c1a20>
+            <Toolbar-07461a20>
               <key>iaridepm.enu1</key>
-            </Toolbar-077c1a20>
+            </Toolbar-07461a20>
           </Sizes>
         </Row0>
         <Row1>
@@ -119,14 +122,14 @@
                 <Top>-2</Top>
                 <Left>-2</Left>
                 <Bottom>574</Bottom>
-                <Right>354</Right>
+                <Right>198</Right>
                 <x>-2</x>
                 <y>-2</y>
                 <xscreen>200</xscreen>
                 <yscreen>200</yscreen>
                 <sizeHorzCX>125000</sizeHorzCX>
                 <sizeHorzCY>244798</sizeHorzCY>
-                <sizeVertCX>222500</sizeVertCX>
+                <sizeVertCX>125000</sizeVertCX>
                 <sizeVertCY>705018</sizeVertCY>
               </Rect>
             </Wnd0>

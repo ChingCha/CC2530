@@ -91,6 +91,13 @@
         <Row2>
           <Sizes/>
         </Row2>
+        <Row3>
+          <Sizes>
+            <Toolbar-19737d08>
+              <key>debuggergui.enu1</key>
+            </Toolbar-19737d08>
+          </Sizes>
+        </Row3>
       </Top>
       <Left>
         <Row0>

@@ -10,7 +10,7 @@
 #include "hal_rf.h"
 #include "basic_rf.h"
 #include "hal_keypad.h"
-//#include "Program.h"
+#include "Program.h"
 
 //C_Compiler
 #include <string.h>
@@ -47,8 +47,8 @@ uint8 key;
 uint16 ProgramDelay;
 void Program(uint8 b);
 void Mode(uint8 a);
-uint8 ProgramTextI;
-uint8 ProgramROMI[8];
+//uint8 ProgramTextI;
+//uint8 ProgramROMI[8];
 void main(void)
 {   
 	//uint8 rssi;
@@ -173,14 +173,16 @@ void Mode(uint8 a)
     switch(a)
     {
 		case 1:
-			for(uint8 i = 0;i < 4;i++)
+			halLcdClear();
+			halLcdWriteString(HAL_LCD_LINE_1,0,"Slave_A:Mode1");
+			halLcdWriteString(HAL_LCD_LINE_2,0,"Program:");
+			for(uint8 i = 0;i < 100;i++)
 			{
-				Program(i+1);
-				//READProgram(i);
+				READProgram(i);
+				halLcdWriteIntToChar(HAL_LCD_LINE_2,8,i)
 				for(uint8 j = 0;j < 8;j++)
 				{
-					halLedSetPort(ProgramROMI[j]);
-					//LedProgram(j);
+					LedProgram(j);
 					halMcuWaitMs(250);
 				}
 				halBuzzer(200);
@@ -188,13 +190,17 @@ void Mode(uint8 a)
 				halMcuWaitMs(ProgramDelay);
 			}			
 			break;		
-		case 2:		    
+		case 2:
+			halLcdClear();
+			halLcdWriteString(HAL_LCD_LINE_1,0,"Slave_A:Mode2");
+			halLcdWriteString(HAL_LCD_LINE_2,0,"Program:");
 			for(int i = 0;i < 8;i++)
 			{
-				//READProgram(pRxData[i+2]);
+				READProgram(pRxData[i+2]);
+				halLcdWriteIntToChar(HAL_LCD_LINE_2,8,pRxData[i+2])
 				for(int j = 0;j < 8;j++)
 				{
-					//LedProgram(j);
+					LedProgram(j);
 					halMcuWaitMs(250);
 				}
 				halBuzzer(200);
@@ -210,60 +216,9 @@ void Mode(uint8 a)
     }
 }
 
-void Program(uint8 b)
-{   
-	switch(b)
-	{
-		case 1:
-			ProgramTextI = '1';
-			halLcdWriteChar(HAL_LCD_LINE_2, 0, ProgramTextI);
-			ProgramROMI[0] = 0x81;
-			ProgramROMI[1] = 0x42;
-			ProgramROMI[2] = 0x24;
-			ProgramROMI[3] = 0x18;
-			ProgramROMI[4] = 0x3C;
-			ProgramROMI[5] = 0x7E;
-			ProgramROMI[6] = 0xFF;
-			ProgramROMI[7] = 0x00;
-			break;
-		case 2:
-			ProgramTextI = '2';
-			halLcdWriteChar(HAL_LCD_LINE_2, 0, ProgramTextI);
-			ProgramROMI[0] = 0x01;
-			ProgramROMI[1] = 0x02;
-			ProgramROMI[2] = 0x04;
-			ProgramROMI[3] = 0x08;
-			ProgramROMI[4] = 0x10;
-			ProgramROMI[5] = 0x20;
-			ProgramROMI[6] = 0x40;
-			ProgramROMI[7] = 0x80;
-			break;
-		case 3:
-			ProgramTextI = '3';
-			halLcdWriteChar(HAL_LCD_LINE_2, 0, ProgramTextI);
-			ProgramROMI[0] = 0x01;
-			ProgramROMI[1] = 0x03;
-			ProgramROMI[2] = 0x07;
-			ProgramROMI[3] = 0x0F;
-			ProgramROMI[4] = 0x1F;
-			ProgramROMI[5] = 0x3F;
-			ProgramROMI[6] = 0x7F;
-			ProgramROMI[7] = 0xFF;
-			break;
-		case 4:
-			ProgramTextI = '4';
-			halLcdWriteChar(HAL_LCD_LINE_2, 0, ProgramTextI);
-			ProgramROMI[0] = 0x11;
-			ProgramROMI[1] = 0x00;
-			ProgramROMI[2] = 0x33;
-			ProgramROMI[3] = 0x00;
-			ProgramROMI[4] = 0x77;
-			ProgramROMI[5] = 0x00;
-			ProgramROMI[6] = 0xFF;
-			ProgramROMI[7] = 0x00;
-			break;
-    }	
+void halLcdWriteIntToChar(uint8 lcd_line,uint8 lcd_col,uint8 lcd_text)
+{
+	char *pValue = convInt32ToText(lcd_text);
+	if(lcd_line == HAL_LCD_LINE_1) halLcdWriteString(HAL_LCD_LINE_1,lcd_col,pValue);
+	if(lcd_line == HAL_LCD_LINE_2) halLcdWriteString(HAL_LCD_LINE_2,lcd_col,pValue);
 }
-
-
-
