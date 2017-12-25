@@ -18,9 +18,9 @@
       </Workspace>
       <Build>
         <ColumnWidth0>20</ColumnWidth0>
-        <ColumnWidth1>1155</ColumnWidth1>
-        <ColumnWidth2>308</ColumnWidth2>
-        <ColumnWidth3>77</ColumnWidth3>
+        <ColumnWidth1>1395</ColumnWidth1>
+        <ColumnWidth2>372</ColumnWidth2>
+        <ColumnWidth3>93</ColumnWidth3>
       </Build>
       <TerminalIO/>
     </Static>
@@ -28,7 +28,7 @@
       <Wnd0>
         <Tabs>
           <Tab>
-            <Identity>TabID-21390-24579</Identity>
+            <Identity>TabID-19390-7520</Identity>
             <TabName>Workspace</TabName>
             <Factory>Workspace</Factory>
             <Session>
@@ -44,7 +44,7 @@
       <Wnd1>
         <Tabs>
           <Tab>
-            <Identity>TabID-17208-24658</Identity>
+            <Identity>TabID-3414-7614</Identity>
             <TabName>Build</TabName>
             <Factory>Build</Factory>
             <Session/>
@@ -57,17 +57,25 @@
       <Pane>
         <Tab>
           <Factory>TextEditor</Factory>
-          <Filename>$WS_DIR$\..\..\..\..\..\..\..\..\Program Files (x86)\IAR Systems\Embedded Workbench 6.0 Evaluation\8051\doc\infocenter\index.ENU.html</Filename>
+          <Filename>$WS_DIR$\..\..\..\..\..\..\..\..\Program Files (x86)\IAR Systems\Embedded Workbench 6.0\8051\doc\infocenter\index.ENU.html</Filename>
         </Tab>
         <Tab>
           <Factory>TextEditor</Factory>
           <Filename>$WS_DIR$\Master_A.c</Filename>
           <XPos>0</XPos>
-          <YPos>347</YPos>
-          <SelStart>2314</SelStart>
-          <SelEnd>2314</SelEnd>
+          <YPos>0</YPos>
+          <SelStart>115</SelStart>
+          <SelEnd>115</SelEnd>
         </Tab>
-        <ActiveTab>1</ActiveTab>
+        <Tab>
+          <Factory>TextEditor</Factory>
+          <Filename>$WS_DIR$\..\..\components\common\hal_lcd.h</Filename>
+          <XPos>0</XPos>
+          <YPos>0</YPos>
+          <SelStart>781</SelStart>
+          <SelEnd>781</SelEnd>
+        </Tab>
+        <ActiveTab>2</ActiveTab>
       </Pane>
       <ActivePane>0</ActivePane>
       <Sizes>
@@ -82,9 +90,9 @@
       <Top>
         <Row0>
           <Sizes>
-            <Toolbar-07291a20>
+            <Toolbar-0015dfe0>
               <key>iaridepm.enu1</key>
-            </Toolbar-07291a20>
+            </Toolbar-0015dfe0>
           </Sizes>
         </Row0>
         <Row1>
@@ -101,16 +109,16 @@
               <Rect>
                 <Top>-2</Top>
                 <Left>-2</Left>
-                <Bottom>574</Bottom>
+                <Bottom>755</Bottom>
                 <Right>198</Right>
                 <x>-2</x>
                 <y>-2</y>
                 <xscreen>200</xscreen>
                 <yscreen>200</yscreen>
-                <sizeHorzCX>125000</sizeHorzCX>
-                <sizeHorzCY>244798</sizeHorzCY>
-                <sizeVertCX>125000</sizeVertCX>
-                <sizeVertCY>705018</sizeVertCY>
+                <sizeHorzCX>104167</sizeHorzCX>
+                <sizeHorzCY>200401</sizeHorzCY>
+                <sizeVertCX>104167</sizeVertCX>
+                <sizeVertCY>758517</sizeVertCY>
               </Rect>
             </Wnd0>
           </Sizes>
@@ -129,15 +137,15 @@
                 <Top>-2</Top>
                 <Left>-2</Left>
                 <Bottom>198</Bottom>
-                <Right>1602</Right>
+                <Right>1922</Right>
                 <x>-2</x>
                 <y>-2</y>
-                <xscreen>1604</xscreen>
+                <xscreen>1924</xscreen>
                 <yscreen>200</yscreen>
-                <sizeHorzCX>1002500</sizeHorzCX>
-                <sizeHorzCY>244798</sizeHorzCY>
-                <sizeVertCX>125000</sizeVertCX>
-                <sizeVertCY>244798</sizeVertCY>
+                <sizeHorzCX>1002083</sizeHorzCX>
+                <sizeHorzCY>200401</sizeHorzCY>
+                <sizeVertCX>104167</sizeVertCX>
+                <sizeVertCY>200401</sizeVertCY>
               </Rect>
             </Wnd1>
           </Sizes>

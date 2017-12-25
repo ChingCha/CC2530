@@ -129,6 +129,7 @@ void main(void)
 	ShowMode[1] = 0;
 	ShowMode[2] = 0;
 	Reading = 0;
+	//ReadEEPRom();
 	while(1)
 	{
 		key = halKeypadPushed();
@@ -348,15 +349,15 @@ void ShowZoneMode(void)
 }
 	/**************************************************
 	M230	¦ì¸m		¥\¯à
-				0			S_A		1 or 2
-				1			S_B
-				2			S_C
-				3~10     S_A      MODE2
-				11~18   S_B      MODE2
-				19~26   S_C      MODE2
-				27         S_A     ©µ¿ð
-				28         S_B     ©µ¿ð
-				29         S_C     ©µ¿ð
+			0			S_A		¼Ò¦¡¬ö¿ý1 or 2
+			1			S_B		""
+			2			S_C		""
+			10~18     	S_A     MODE2¸`¥Ø¬ö¿ý
+			20~28   	S_B     ""
+			30~38   	S_C     ""
+			40~44       S_A     ©µ¿ð¼Æ­È¬ö¿ý
+			50~54       S_B     ""
+			60~64       S_C     ""
 	**************************************************/
 void ReadEEPRom(void)
 {
